@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p 8000"
+    "start": "next start -p 8000",
+    "lint": "next lint"
   },
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
@@ -23,6 +24,8 @@
     "@types/lodash": "^4.14.166",
     "@types/node": "^16.0.0",
     "@types/react": "^17.0.0",
+    "eslint": "^7.30.0",
+    "eslint-config-next": "^11.0.1",
     "sass": "^1.32.8",
     "typescript": "^4.1.3"
   }
