@@ -67,7 +67,7 @@ export default function GeometryExpData() {
           <div className="row">
             <div className="col-xs-12 col-sm-6">
               <p>
-                The skeletonization process transforms surface mesh geometries into cell morphologies. To achieve this we used constrained mean curvature flow (<a href="https://doi.org/10.1111/j.1467-8659.2012.03178.x" target="_blank">Tagliasacchi et al., 2012</a>), which collapsed the surface mesh geometry into a skeletal structure. The morphologies consist of points, connected via edges representing the midlines of the surface mesh. Cross-sectional information about the volume and surface area are stored at each point of the skeletonized morphology.
+                The skeletonization process transforms surface mesh geometries into cell morphologies. To achieve this we used constrained mean curvature flow (<a href="https://doi.org/10.1111/j.1467-8659.2012.03178.x" target="_blank" rel="noopener noreferrer">Tagliasacchi et al., 2012</a>), which collapsed the surface mesh geometry into a skeletal structure. The morphologies consist of points, connected via edges representing the midlines of the surface mesh. Cross-sectional information about the volume and surface area are stored at each point of the skeletonized morphology.
               </p>
             </div>
             <div className="col-xs-12 col-sm-6">

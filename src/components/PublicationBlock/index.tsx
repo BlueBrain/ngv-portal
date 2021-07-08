@@ -21,7 +21,7 @@ const PublicationBlock: React.FC<PublicationBlockProps> = ({
       className={`${styles.container} ${className}`}
       href={href}
       target="_blank"
-      rel="noopener"
+      rel="noopener noreferrer"
     >
       <p>{description}</p>
       <p>{authors}</p>

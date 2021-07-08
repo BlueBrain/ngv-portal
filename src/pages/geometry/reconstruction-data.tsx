@@ -42,6 +42,7 @@ export default function GeometryRecData() {
               <a
                 href="https://bbp.epfl.ch/ngv-viewer"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Open the Circuit Viewer
               </a>
