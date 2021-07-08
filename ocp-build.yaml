@@ -1,0 +1,30 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: nvg-portal
+  labels:
+    app: ngv-portal
+  namespace: bbp-ou-nse
+spec:
+  source:
+    git:
+      ref: develop
+      uri: 'https://github.com/BlueBrain/ngv-portal.git'
+    sourceSecret:
+      name: sscx-portal-repo-secret
+    type: Git
+  strategy:
+    type: Docker
+    dockerStrategy:
+      dockerfilePath: Dockerfile
+  output:
+    to:
+      kind: ImageStreamTag
+      name: ngv-portal:latest
+  runPolicy: SerialLatestOnly
+  resources:
+    limits:
+      cpu: '1'
+      memory: 4Gi
+  failedBuildsHistoryLimit: 3
+  successfulBuildsHistoryLimit: 5
