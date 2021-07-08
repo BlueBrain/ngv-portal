@@ -1,7 +1,7 @@
 apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
-  name: nvg-portal
+  name: ngv-portal
   labels:
     app: ngv-portal
   namespace: bbp-ou-nse
