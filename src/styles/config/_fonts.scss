@@ -1,0 +1,19 @@
+@import '_queries';
+
+
+@mixin font-default {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  // @media (max-width: $small) {
+  //   font-size: 11px;
+  // }
+  // @media (min-width: $large) {
+  //   font-size: 19px;
+  // }
+}
+
+$fontSize: (
+  "small": 0.9rem,
+  "medium": 1rem,
+  "large": 1.5rem,
+);

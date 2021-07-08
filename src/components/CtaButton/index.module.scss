@@ -1,0 +1,58 @@
+
+.container {
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: #050a1e;
+  font-size: 1.1em;
+  line-height: 48px;
+  border: 1px solid white;
+  border-radius: 48px;
+  overflow: hidden;
+  color: #dddddd;
+}
+
+.container:hover {
+  color: white;
+}
+
+.text {
+  display: inline-block;
+  padding: 0 7rem 0 2rem;
+  text-align: center;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.container:global(.red) {
+  border-color: #ee7888;
+}
+
+.container:global(.blue) {
+  border-color: #84bbf8;
+}
+
+.arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5rem;
+  text-align: center;
+  height: 48px;
+  line-height: 48px;
+}
+
+.arrow svg {
+  vertical-align: middle;
+}
+
+:global(.red) .arrow {
+  background-color: #342134;
+}
+
+:global(.blue) .arrow {
+  background-color: #1e2335;
+}
+
+// "purple": #6d63bf,

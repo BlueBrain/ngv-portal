@@ -1,0 +1,16 @@
+{
+  "Anatomy Section": [
+    ["astrocyte", "a star-shaped cell which supports neurons and may play a role in signal integration"],
+    ["endfoot", "a portion of an astrocyte that is in contact with the vasculature"],
+    ["microdomain", "anatomically exclusive region occupied by one astrocyte"],
+    ["morphology", "the treelike structure of a neuron or astrocyte point graph: a graph of points connected by edges"],
+    ["TMD", "TheTopology Morphology Descriptor (TMD) allows creation of a ‘barcode’ to describe the elongation and termination of branched structures"]
+  ],
+  "Metabolism Section": [
+    ["metabolite", "a substance formed in or necessary for metabolism"]
+  ],
+  "Blood Flow": [
+    ["constriction", "decrease in diameter of the vasculature"],
+    ["dilation", "increase in diameter of the vasculature"]
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "ngv-portal",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "antd": "^4.9.4",
+    "flexboxgrid": "^6.3.1",
+    "lodash": "^4.17.20",
+    "next": "^11.0.1",
+    "plyr": "^3.6.3",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-icons": "^4.2.0",
+    "react-image-lightbox": "^5.1.1"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.166",
+    "@types/node": "^16.0.0",
+    "@types/react": "^17.0.0",
+    "sass": "^1.32.8",
+    "typescript": "^4.1.3"
+  }
+}
