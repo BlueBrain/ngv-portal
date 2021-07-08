@@ -4,10 +4,10 @@ import NavDesktop from '../NavDesktop';
 import NavMobile from '../NavMobile';
 import Link from 'next/link';
 import { accentColors } from '../../config';
-import SvgRegions from '../../components/Icons/Regions';
-import SvgNeuron from '../../components/Icons/Neuron';
-import SvgMicrocircuit from '../../components/Icons/Microcircuit';
-import SvgSynapse from '../../components/Icons/Synapse';
+// import SvgRegions from '../../components/Icons/Regions';
+// import SvgNeuron from '../../components/Icons/Neuron';
+// import SvgMicrocircuit from '../../components/Icons/Microcircuit';
+// import SvgSynapse from '../../components/Icons/Synapse';
 import { IoIosArrowDropdown } from 'react-icons/io';
 
 const classPrefix = 'nav__';
@@ -64,7 +64,7 @@ export const SecondaryNav: React.FC<NavProps> = ({ initActive, canClose }) => {
           <li>
             <Link href="/geometry/experimental-data">
               <a>
-                <SvgRegions fill={accentColors.blue} />
+                {/* <SvgRegions fill={accentColors.blue} /> */}
                 Experimental Data
               </a>
             </Link>
@@ -72,7 +72,7 @@ export const SecondaryNav: React.FC<NavProps> = ({ initActive, canClose }) => {
           <li>
             <Link href="/geometry/reconstruction-data">
               <a>
-                <SvgNeuron fill={accentColors.blue} />
+                {/* <SvgNeuron fill={accentColors.blue} /> */}
                 Reconstruction Data
               </a>
             </Link>
@@ -80,7 +80,7 @@ export const SecondaryNav: React.FC<NavProps> = ({ initActive, canClose }) => {
           <li>
             <Link href="/geometry/validations">
               <a>
-                <SvgNeuron fill={accentColors.blue} />
+                {/* <SvgNeuron fill={accentColors.blue} /> */}
                 Validations
               </a>
             </Link>
@@ -88,7 +88,7 @@ export const SecondaryNav: React.FC<NavProps> = ({ initActive, canClose }) => {
           <li>
             <Link href="/geometry/predictions">
               <a>
-                <SvgNeuron fill={accentColors.blue} />
+                {/* <SvgNeuron fill={accentColors.blue} /> */}
                 Predictions
               </a>
             </Link>
@@ -114,7 +114,7 @@ export const SecondaryNav: React.FC<NavProps> = ({ initActive, canClose }) => {
           <li>
             <Link href="/metabolism/experimental-data">
               <a>
-                <SvgRegions fill={accentColors.purple} />
+                {/* <SvgRegions fill={accentColors.purple} /> */}
                 Experimental Data
               </a>
             </Link>
@@ -122,7 +122,7 @@ export const SecondaryNav: React.FC<NavProps> = ({ initActive, canClose }) => {
           <li>
             <Link href="/metabolism/reconstruction-data">
               <a>
-                <SvgMicrocircuit fill={accentColors.purple} />
+                {/* <SvgMicrocircuit fill={accentColors.purple} /> */}
                 Reconstruction Data
               </a>
             </Link>
@@ -130,7 +130,7 @@ export const SecondaryNav: React.FC<NavProps> = ({ initActive, canClose }) => {
           <li>
             <Link href="/metabolism/validations">
               <a>
-                <SvgSynapse fill={accentColors.purple} />
+                {/* <SvgSynapse fill={accentColors.purple} /> */}
                 Validations
               </a>
             </Link>
@@ -138,7 +138,7 @@ export const SecondaryNav: React.FC<NavProps> = ({ initActive, canClose }) => {
           <li>
             <Link href="/metabolism/predictions">
               <a>
-                <SvgNeuron fill={accentColors.purple} />
+                {/* <SvgNeuron fill={accentColors.purple} /> */}
                 Predictions
               </a>
             </Link>
@@ -164,7 +164,7 @@ export const SecondaryNav: React.FC<NavProps> = ({ initActive, canClose }) => {
           <li>
             <Link href="/blood-flow/experimental-data">
               <a>
-                <SvgRegions fill={accentColors.red} />
+                {/* <SvgRegions fill={accentColors.red} /> */}
                 Experimental Data
               </a>
             </Link>
@@ -172,7 +172,7 @@ export const SecondaryNav: React.FC<NavProps> = ({ initActive, canClose }) => {
           <li>
             <Link href="/blood-flow/reconstruction-data">
               <a>
-                <SvgMicrocircuit fill={accentColors.red} />
+                {/* <SvgMicrocircuit fill={accentColors.red} /> */}
                 Reconstruction Data
               </a>
             </Link>
@@ -180,7 +180,7 @@ export const SecondaryNav: React.FC<NavProps> = ({ initActive, canClose }) => {
           <li>
             <Link href="/blood-flow/validations">
               <a>
-                <SvgSynapse fill={accentColors.red} />
+                {/* <SvgSynapse fill={accentColors.red} /> */}
                 Validations
               </a>
             </Link>
@@ -188,7 +188,7 @@ export const SecondaryNav: React.FC<NavProps> = ({ initActive, canClose }) => {
           <li>
             <Link href="/blood-flow/predictions">
               <a>
-                <SvgNeuron fill={accentColors.red} />
+                {/* <SvgNeuron fill={accentColors.red} /> */}
                 Predictions
               </a>
             </Link>
