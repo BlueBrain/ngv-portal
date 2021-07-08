@@ -1,0 +1,76 @@
+
+.feedbackButton {
+  position: fixed;
+  right: -2px;
+  top: 50%;
+  background-color: #f4364c;
+  border-radius: 3px;
+  color: #fefefe;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg) translateY(50%);
+  padding: 1rem 0.4rem;
+  user-select: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+
+.feedbackButton:hover {
+  color: white;
+  transform: rotate(180deg) translate3d(2px, 50%, 0);
+}
+
+.closeBtn {
+  position: absolute;
+  top: -1rem;
+  right: 1rem;
+}
+
+.form {
+  position: fixed;
+  right: -24rem;
+  top: 50%;
+  width: 20rem;
+  max-width: calc(100vw - 4rem);
+  transform: translateY(-50%);
+  z-index: 12;
+  padding: 2rem 1rem 1rem 1rem;
+  background-color: white;
+  transition: transform 0.3s ease;
+
+  :global(.ant-btn:not([disabled])) {
+    background-color: #f4364c !important;
+    border-color: #f4364c !important;
+  }
+}
+
+.form::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow: rgb(0 0 0 / 35%) 0 6px 100px 0;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.formVisible {
+  .form {
+    transform: translate3d(-26rem, -50%, 0);
+  }
+
+  .form::after {
+    opacity: 1;
+  }
+
+  .feedbackButton {
+    transform: rotate(180deg) translate3d(-100%, 50%, 0);
+  }
+}
+
+.sendBtn {
+  width: 100px;
+}
