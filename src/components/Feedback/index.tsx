@@ -60,7 +60,7 @@ const Feedback: React.FC = () => {
     const labels = ['triage'];
 
     try {
-      const res = await fetch(`${feedbackUrl}/hippocampushub/hh-feedback`, {
+      const res = await fetch(`${feedbackUrl}/BlueBrain/ngv-portal`, {
         method: 'POST',
         body: JSON.stringify({
           labels,
