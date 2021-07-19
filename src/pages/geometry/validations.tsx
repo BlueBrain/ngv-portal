@@ -69,7 +69,7 @@ export default function GeometryValidations() {
               <h3>Radius distribution</h3>
               <p>During placement, the radii of the astrocytic somata were sampled from a normal distribution, which was fitted on the experimental values of astrocyte soma radii found in a multitude of studies. Soma size is taken into account while being placed so that intersections of somata with other somata and the vasculature are eliminated.</p>
               <strong>Figure legend:<br/></strong>
-              <small>(A) Synthesized somata radius histogram and (B) comparison of average soma radius with reported values (gray)</small>
+              <small>(A) Synthesized somata radius histogram and (B) comparison of average soma radius with reported values (gray).</small>
             </div>
             <div className="col-xs-12 col-sm-6">
               <ImageViewer
@@ -163,7 +163,7 @@ export default function GeometryValidations() {
               <h3>Topological</h3>
               <p>The trees of both reconstructed and synthesized morphologies were converted into persistence diagrams and subsequently into persistence images. First, the topological distance between each pair in the group of experimental morphologies in order to determine the error baseline within the reconstructed population. Then the topological distance between the experimental and synthesized astrocytes for each layer was calculated. The synthesized trees exhibited smaller topological distance to the experimental cells compared to the topological distance within the experimental population.</p>
               <strong>Figure legend:<br/></strong>
-              <small>The topological distance of each layer’s persistence diagram compared to the bio (black continuous line) and its respective standard error (black dashed line). (G, H) Validation of cumulative process surface area and volume as a function of the radial distance from the soma between circuit astrocytes (orange) and bio (blue)</small>
+              <small>The topological distance of each layer’s persistence diagram compared to the bio (black continuous line) and its respective standard error (black dashed line). (G, H) Validation of cumulative process surface area and volume as a function of the radial distance from the soma between circuit astrocytes (orange) and bio (blue).</small>
             </div>
             <div className="col-xs-12 col-sm-6">
               <ImageViewer
