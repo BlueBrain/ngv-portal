@@ -163,7 +163,7 @@ export default function GeometryValidations() {
               <h3>Topological</h3>
               <p>The trees of both reconstructed and synthesized morphologies were converted into persistence diagrams and subsequently into persistence images. First, the topological distance between each pair in the group of experimental morphologies in order to determine the error baseline within the reconstructed population. Then the topological distance between the experimental and synthesized astrocytes for each layer was calculated. The synthesized trees exhibited smaller topological distance to the experimental cells compared to the topological distance within the experimental population.</p>
               <strong>Figure legend:<br/></strong>
-              <p>The topological distance of each layer’s persistence diagram compared to the bio (black continuous line) and its respective standard error (black dashed line). (G, H) Validation of cumulative process surface area and volume as a function of the radial distance from the soma between circuit astrocytes (orange) and bio (blue)</p>
+              <small>The topological distance of each layer’s persistence diagram compared to the bio (black continuous line) and its respective standard error (black dashed line). (G, H) Validation of cumulative process surface area and volume as a function of the radial distance from the soma between circuit astrocytes (orange) and bio (blue)</small>
             </div>
             <div className="col-xs-12 col-sm-6">
               <ImageViewer
