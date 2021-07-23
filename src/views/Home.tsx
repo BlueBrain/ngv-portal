@@ -151,7 +151,7 @@ const Home: React.FC = () => (
     <section id="publications" className="publication-section bg-dark-blue">
       <div className="content">
         <div className="row">
-          <div className="col-xs-12 col-md-6">
+          <div className="col-xs-12 col-md-12">
             <h1 className="text-white text-uppercase mb-1">Publications</h1>
             <p className="color-blue subtitle">Read up on our latest publications!</p>
 
@@ -162,29 +162,6 @@ const Home: React.FC = () => (
               authors={<>Eleftherios Zisis <i>et al.</i>, 2021</>}
             />
 
-            <PublicationBlock
-              className="mt-2"
-              href="#"
-              description={(
-                <>
-                  <strong>The NGV Portal</strong>: Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                  sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                </>
-              )}
-              authors={<>Author <i>et al.</i>, 2021</>}
-            />
-
-            <PublicationBlock
-              className="mt-2"
-              href="#"
-              description={(
-                <>
-                  <strong>The NGV Portal</strong>: Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                  sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                </>
-              )}
-              authors={<>Author <i>et al.</i>, 2021</>}
-            />
           </div>
         </div>
 
