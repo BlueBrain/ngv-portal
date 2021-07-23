@@ -20,7 +20,7 @@ export const HomeNav: React.FC = () => (
       </Link>
     </li>
     <li>
-      <Link href="#">
+      <Link href="/#publications">
         Publications
       </Link>
     </li>
