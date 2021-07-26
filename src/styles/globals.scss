@@ -2215,8 +2215,15 @@ $collapsible-padding: 20px 30px;
     .content {
       box-sizing: border-box;
       max-width: 1280px;
-      margin: 0 auto;
-      padding: 4rem 2rem;
+      align-content: flex-start;
+      padding-left: 10%;
+      justify-content: flex-start;
+    }
+
+    @media (max-width: $small) {
+      .content {
+        padding-left: 0;
+      }
     }
   }
 
@@ -2236,13 +2243,9 @@ $collapsible-padding: 20px 30px;
       margin: 10px auto 0;
     }
 
-    #acknowledgments {
-      max-width: 960px;
-    }
-
     @media (max-width: $small) {
-      #acknowledgments {
-        margin: 0 -60px;
+      .acknowledgments-container {
+        font-size: 1.5rem;
       }
     }
   }
