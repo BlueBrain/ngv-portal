@@ -2236,13 +2236,9 @@ $collapsible-padding: 20px 30px;
       margin: 10px auto 0;
     }
 
-    #acknowledgments {
-      max-width: 960px;
-    }
-
     @media (max-width: $small) {
-      #acknowledgments {
-        margin: 0 -60px;
+      .acknowledgments-container {
+        font-size: 1.5rem;
       }
     }
   }

@@ -192,7 +192,7 @@ const Home: React.FC = () => (
     </section>
 
     <section id="section-5">
-      <h2>
+      <h2 className="acknowledgments-container">
         Acknowledgments
         <span className="accent-border" />
       </h2>
