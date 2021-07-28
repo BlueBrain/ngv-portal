@@ -180,9 +180,9 @@ const Home: React.FC = () => (
             </p>
           </div>
           <div className="col-xs-12">
-            <ImageViewer
+            <img
               src="/ngv-portal/assets/images/Acknowledgments/kaust_logo.png"
-              thumbnailSrc={imgOpt('/ngv-portal/assets/images/Acknowledgments/kaust_logo.png')}
+              alt="kaust_logo"
             />
           </div>
         </div>
