@@ -8,6 +8,8 @@ import PublicationBlock from '../components/PublicationBlock';
 import InfoBox1 from '../components/Home/InfoBox1';
 import SectionCard from '../components/SectionCard';
 import CtaButton from '../components/CtaButton';
+import ImageViewer from '../components/ImageViewer';
+import { imgOpt } from '../utils';
 
 
 const classPrefix = 'Home__';
@@ -170,8 +172,20 @@ const Home: React.FC = () => (
 
     <section id="section-5">
       <h2 className="acknowledgments-container">
-        Acknowledgments
-        <span className="accent-border" />
+        <div className="row">
+          <div className="col-xs-12">
+            <p>
+              <span>Acknowledgments</span>
+              <span className="accent-border" />
+            </p>
+          </div>
+          <div className="col-xs-12">
+            <img
+              src="/ngv-portal/assets/images/Acknowledgments/kaust_logo.png"
+              alt="kaust_logo"
+            />
+          </div>
+        </div>
       </h2>
     </section>
   </div>
