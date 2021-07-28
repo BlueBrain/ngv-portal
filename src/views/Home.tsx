@@ -174,6 +174,21 @@ const Home: React.FC = () => (
         <span className="accent-border" />
       </h2>
     </section>
+
+    <section id="section-6">
+      <h2 className="contact-us-container">
+        <span>CONTACT US</span>
+        <span className="accent-border" />
+      </h2>
+      <p>
+        Let’s stay in touch!
+      </p>
+      <p>
+        For all inquiries, support and collaborations, please email:
+        <a href="mailto:ngv.portal@groupes.epfl.ch">ngv.portal@groupes.epfl.ch</a>
+      </p>
+    </section>
+
   </div>
 );
 

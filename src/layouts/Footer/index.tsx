@@ -16,13 +16,10 @@ const Footer: React.FC<{}> = () => {
           <p>CH-1202 Geneva</p>
           <p>Switzerland</p>
         </div>
-        <div>
+        <div className={`${classPrefix}contact`}>
           <h4 className="text-white">Contact</h4>
           <p>
-            <Link href="#">Submission</Link>
-          </p>
-          <p>
-            <Link href="#">Chat</Link>
+            <Link href="mailto:ngv.portal@groupes.epfl.ch">Submission</Link>
           </p>
         </div>
         <div>
