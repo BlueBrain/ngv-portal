@@ -1407,6 +1407,13 @@ $collapsible-padding: 20px 30px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    > div {
+      @media (max-width: $small) {
+        width: 100%;
+        margin: 10px auto;
+      }
+    }
   }
 
   &__social-media-item {
@@ -2251,6 +2258,30 @@ $collapsible-padding: 20px 30px;
         img {
           max-width: 80%;
         }
+      }
+    }
+  }
+
+  #section-6 {
+    background-color: map-get($basePalette, "grey");
+    text-align: center;
+
+    h2 {
+      text-transform: uppercase;
+      color: map-get($basePalette, "navy-4");
+    }
+
+    p {
+      color: map-get($basePalette, "navy-0");
+    }
+
+    a {
+      margin: 0 5px;
+    }
+
+    @media (max-width: $small) {
+      .contact-us-container {
+        font-size: 1.5rem;
       }
     }
   }
