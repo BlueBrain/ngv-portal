@@ -1,9 +1,12 @@
 
+const day = 60 * 60 * 24;
+
 module.exports = {
   basePath: '/ngv-portal',
   assetPrefix: '/ngv-portal/',
   images: {
     path: '/ngv-portal/_next/image',
+    maxAge: 3 * day,
   },
   compress: false,
   trailingSlash: true,
