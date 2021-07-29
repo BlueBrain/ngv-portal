@@ -87,7 +87,7 @@ const NavDesktop = () => {
       </li>
       <li>
         <NavButton
-          path="/contact"
+          path="/#contact-section"
           name="Contact us"
         />
       </li>
