@@ -20,7 +20,7 @@ else
   docker build \
     --build-arg AUTH_HEADER_ARG="Basic $(echo -n "$NGV_USER:$NGV_PASSWORD" | base64)" \
     -f Dockerfile.static-data-proxy \
-    -t sscx-static-data-proxy .
+    -t ngv-static-data-proxy .
 
   echo "Done"
   echo
