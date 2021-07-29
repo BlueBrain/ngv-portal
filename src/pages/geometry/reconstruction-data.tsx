@@ -6,7 +6,9 @@ import InfoBox from '../../components/InfoBox';
 import DataContainer from '../../components/DataContainer';
 import Collapsible from '../../components/Collapsible';
 import ImageViewer from '../../components/ImageViewer';
+import Video, { composeSources } from '../../components/VideoPlayer';
 import { imgOpt } from '../../utils';
+import { staticDataBaseUrl } from '../../config';
 
 
 export default function GeometryRecData() {
@@ -31,14 +33,52 @@ export default function GeometryRecData() {
 
       <DataContainer>
         <Collapsible title="Final reconstructions">
-          <div className="row">
+          <Video
+            sources={composeSources('/anatomy/reconstruction-data/NGV_DISS149_MASTER_WITH_EFFECTS')}
+            muted
+            defaultSize={720}
+            poster={`${staticDataBaseUrl}/anatomy/reconstruction-data/NGV_DISS149_MASTER_WITH_EFFECTS-poster.jpg`}
+          />
+          <div className="row mt-2 mb-2">
             <div className="col-xs-12 col-sm-4">
-              <span>TODO: add NGV movie v2</span>
+              <Video
+                sources={composeSources('/anatomy/reconstruction-data/NGV_DISS149_MASTER_TURNTABLE_N')}
+                muted
+                autoplay
+                loop
+                defaultSize={360}
+              />
             </div>
             <div className="col-xs-12 col-sm-4">
-              <span>TODO: add 3-4x 360 rotation movies from Alex.</span>
+              <Video
+                sources={composeSources('/anatomy/reconstruction-data/NGV_DISS149_MASTER_TURNTABLE_G')}
+                muted
+                autoplay
+                loop
+                defaultSize={360}
+              />
             </div>
             <div className="col-xs-12 col-sm-4">
+              <Video
+                sources={composeSources('/anatomy/reconstruction-data/NGV_DISS149_MASTER_TURNTABLE_V')}
+                muted
+                autoplay
+                loop
+                defaultSize={360}
+              />
+            </div>
+          </div>
+
+          <Video
+            sources={composeSources('/anatomy/reconstruction-data/NGV_DISS149_MASTER_TURNTABLE_NGV')}
+            muted
+            autoplay
+            loop
+            defaultSize={720}
+          />
+
+          <div className="row mt-2">
+            <div className="col-xs-12 col-sm-4 col-sm-offset-8">
               <a
                 href="https://bbp.epfl.ch/ngv-viewer"
                 target="_blank"
