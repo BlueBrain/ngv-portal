@@ -181,7 +181,7 @@ const Home: React.FC = () => (
           </div>
           <div className="col-xs-12">
             <img
-              src="/ngv-portal/assets/images/Acknowledgments/kaust_logo.png"
+              src="/ngv-portal/assets/images/acknowledgments/kaust_logo.png"
               alt="kaust_logo"
             />
           </div>
