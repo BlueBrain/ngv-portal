@@ -2,7 +2,7 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 
 import { staticDataBaseUrl } from '../../config';
-import { VideoProps } from './video-player';
+import { VideoProps, defaultVideoSizes } from './video-player';
 
 
 
@@ -12,7 +12,11 @@ const codecVideoType = {
   av1: '', // TODO: encode and add av1 videos
 };
 
-export function composeSources(videoBasePath, sizes = [360, 480, 720, 1080], codecs = ['hevc', 'h264']) {
+// h264 should come last as the most supported and less efficient codec so it will be used only if
+// no other options are supported
+const defaultCodecs = ['hevc', 'h264'];
+
+export function composeSources(videoBasePath, sizes = defaultVideoSizes, codecs = defaultCodecs) {
   return sizes
     .reduce((acc, size) => ([...acc, ...codecs.map(codec => ([size, codec]))]), [])
     .map(([size, codec]) => ({

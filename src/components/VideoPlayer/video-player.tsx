@@ -19,6 +19,8 @@ export type VideoProps = {
   poster?: string;
 };
 
+export const defaultVideoSizes = [360, 480, 720, 1080];
+
 
 const Video: React.FC<VideoProps> = ({
   sources = [],
@@ -44,7 +46,7 @@ const Video: React.FC<VideoProps> = ({
       controls: ['play', 'progress', 'settings', 'pip', 'airplay', 'fullscreen'],
       quality: {
         default: defaultSize,
-        options: [360, 480, 720, 1080],
+        options: defaultVideoSizes,
       },
       autoplay,
       muted,
