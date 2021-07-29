@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p 8000",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build-static-data-proxy": "./scripts/build-static-data-proxy.sh",
+    "start-static-data-proxy": "docker run -it --rm -p 8000:8000 ngv-static-data-proxy"
   },
   "dependencies": {
     "@ant-design/icons": "^4.6.2",

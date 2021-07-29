@@ -3,35 +3,61 @@ import Plyr from 'plyr';
 
 import 'plyr/dist/plyr.css';
 
+type VideoSource = {
+  src: string;
+  type?: string;
+  size?: number;
+};
 
-const Video: React.FC<any> = (props) => {
+export type VideoProps = {
+  sources: VideoSource[];
+  loop?: boolean;
+  autoplay?: boolean;
+  muted?: boolean;
+  defaultSize?: number;
+  ratio?: string;
+  poster?: string;
+};
+
+export const defaultVideoSizes = [360, 480, 720, 1080];
+
+
+const Video: React.FC<VideoProps> = ({
+  sources = [],
+  loop = false,
+  autoplay = false,
+  muted = false,
+  defaultSize = 480,
+  ratio = '16:9',
+  poster,
+}) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [videoPlayer, setVideoPlayer] = useState<Plyr | null>(null);
 
   useEffect(() => {
-    console.log('Init video player');
     if (!videoRef?.current) return;
 
     const player = new Plyr(videoRef?.current, {
       settings: ['quality', 'loop'],
+      storage: {
+        enabled: false,
+      },
+      ratio,
       controls: ['play', 'progress', 'settings', 'pip', 'airplay', 'fullscreen'],
-      autoplay: true,
-      muted: true,
+      quality: {
+        default: defaultSize,
+        options: defaultVideoSizes,
+      },
+      autoplay,
+      muted,
       loop: {
-        active: true,
+        active: loop,
       },
     });
     player.source = {
       type: 'video',
-      sources: [{
-        src: props.src || 'http://bbp.epfl.ch/project/media/nmc-portal/Synaptome/mp4/L1_NGC-DA.mp4',
-        type: 'video/mp4',
-        size: 720
-      }, {
-        src: props.src || 'http://bbp.epfl.ch/project/media/nmc-portal/Synaptome/mp4/L1_NGC-DA.mp4',
-        type: 'video/mp4',
-        size: 1080
-      }]
+      sources,
+      poster,
     };
     setVideoPlayer(player);
 
@@ -40,7 +66,6 @@ const Video: React.FC<any> = (props) => {
         videoPlayer.destroy();
       }
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [videoRef]);
 
   return (

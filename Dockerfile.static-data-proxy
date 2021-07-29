@@ -1,0 +1,11 @@
+FROM nginx:alpine
+
+ARG AUTH_HEADER_ARG
+
+RUN echo $AUTH_HEADER_ARG
+
+ENV AUTH_HEADER=$AUTH_HEADER_ARG
+
+COPY nginx.static-data-proxy.conf /etc/nginx/templates/default.conf.template
+
+EXPOSE 8000
