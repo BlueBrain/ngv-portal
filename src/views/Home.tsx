@@ -189,7 +189,7 @@ const Home: React.FC = () => (
       </h2>
     </section>
 
-    <section id="section-6">
+    <section id="contact-section">
       <h2 className="contact-us-container">
         <span>CONTACT US</span>
         <span className="accent-border" />
