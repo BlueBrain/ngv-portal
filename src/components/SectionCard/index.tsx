@@ -44,6 +44,16 @@ const SectionCard: React.FC<SectionCardProps> = ({
         ) : (
           <a href="#" className="disabled-link">{link.label}<sup>*</sup></a>
         ))}
+        <div
+          className="info-btn"
+          onClick={() => setInfoOpened(!infoOpened)}
+        >
+          {infoOpened ? (<FaMinus size={14}/>) : (<FaPlus size={14}/>)}
+        </div>
+
+        <div className={`info`}>
+          {description}
+        </div>
       </div>
 
     </div>
