@@ -130,10 +130,10 @@ const Home: React.FC = () => (
             routeBase="/geometry"
             bgImgSrc="/ngv-portal/assets/images/backgrounds/home-page/sections/1_anatomy.jpg"
             links={[
-              { label: 'Experimental data', href: 'experimental-data' },
-              { label: 'Reconstruction data', href: 'reconstruction-data' },
-              { label: 'Validations', href: 'validations' },
-              { label: 'Predictions', href: 'predictions' },
+              { label: 'Experimental data', href: '/experimental-data' },
+              { label: 'Reconstruction data', href: '/reconstruction-data' },
+              { label: 'Validations', href: '/validations' },
+              { label: 'Predictions', href: '/predictions' },
             ]}
           />
         </div>
