@@ -2197,6 +2197,12 @@ $collapsible-padding: 20px 30px;
       background-size: contain;
     }
 
+    .disabled-link {
+      cursor: not-allowed;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
     @media (max-width: $small) {
       .workflow,
       .image {
