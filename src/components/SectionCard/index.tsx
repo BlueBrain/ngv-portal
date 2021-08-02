@@ -10,6 +10,10 @@ type SectionCardProps = {
   description?: string;
   bgColor?: string;
   routeBase: string;
+  links: {
+    label: string;
+    href?: string;
+  }[];
 };
 
 const SectionCard: React.FC<SectionCardProps> = ({
@@ -18,6 +22,7 @@ const SectionCard: React.FC<SectionCardProps> = ({
   description,
   bgColor,
   routeBase,
+  links,
 }) => {
   return (
     <div className={`section-card ${bgColor}`}>
@@ -34,10 +39,11 @@ const SectionCard: React.FC<SectionCardProps> = ({
         </div>
       </div>
       <div className="body">
-          <a href={`${baseUrl}${routeBase}/experimental-data`}>Experimental data</a>
-          <a href={`${baseUrl}${routeBase}/reconstruction-data`}>Reconstruction data</a>
-          <a href={`${baseUrl}${routeBase}/validations`}>Validations</a>
-          <a href={`${baseUrl}${routeBase}/predictions`}>Predictions</a>
+        {links.map(link => link.href ? (
+          <a href={`${baseUrl}${routeBase}${link.href}`}>{link.label}</a>
+        ) : (
+          <a href="#" className="disabled-link">{link.label}<sup>*</sup></a>
+        ))}
       </div>
 
     </div>

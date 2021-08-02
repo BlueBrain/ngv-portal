@@ -1561,6 +1561,15 @@ $collapsible-padding: 20px 30px;
       white-space: initial;
       line-height: initial;
     }
+
+    li.disabled {
+      cursor: not-allowed;
+      pointer-events: none;
+
+      button {
+        opacity: 0.5;
+      }
+    }
   }
 
   .show-mobile {
@@ -2186,6 +2195,12 @@ $collapsible-padding: 20px 30px;
       background-position-y: top;
       background-repeat: no-repeat;
       background-size: contain;
+    }
+
+    .disabled-link {
+      cursor: not-allowed;
+      pointer-events: none;
+      opacity: 0.5;
     }
 
     @media (max-width: $small) {

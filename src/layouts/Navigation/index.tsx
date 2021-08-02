@@ -11,6 +11,7 @@ import { accentColors } from '../../config';
 import { IoIosArrowDropdown } from 'react-icons/io';
 
 const classPrefix = 'nav__';
+const classDisabled = 'disabled';
 
 export const HomeNav: React.FC = () => (
   <ul className="home-nav">
@@ -95,7 +96,7 @@ export const SecondaryNav: React.FC<NavProps> = ({ initActive, canClose }) => {
           </li>
         </ul>
       </li>
-      <li className={active === 'rec' ? 'active' : undefined}>
+      <li className={`${active === 'rec' ? 'active' : ''} ${classDisabled}`}>
         {/* <span style={{ backgroundColor: accentColors.purple }} /> */}
         <button
           className="top-level-btn"
@@ -145,7 +146,7 @@ export const SecondaryNav: React.FC<NavProps> = ({ initActive, canClose }) => {
           </li>
         </ul>
       </li>
-      <li className={active === 'dig' ? 'active' : undefined}>
+      <li className={`${active === 'dig' ? 'active' : ''} ${classDisabled}`}>
         {/* <span style={{ backgroundColor: accentColors.red }} /> */}
         <button
           className="top-level-btn"

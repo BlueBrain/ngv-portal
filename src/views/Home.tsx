@@ -129,6 +129,12 @@ const Home: React.FC = () => (
             bgColor="blue"
             routeBase="/geometry"
             bgImgSrc="/ngv-portal/assets/images/backgrounds/home-page/sections/1_anatomy.jpg"
+            links={[
+              { label: 'Experimental data', href: '/experimental-data' },
+              { label: 'Reconstruction data', href: '/reconstruction-data' },
+              { label: 'Validations', href: '/validations' },
+              { label: 'Predictions', href: '/predictions' },
+            ]}
           />
         </div>
         <div className="col-xs-12 col-sm-4 mb-2">
@@ -137,6 +143,12 @@ const Home: React.FC = () => (
             bgColor="purple"
             routeBase="/metabolism"
             bgImgSrc="/ngv-portal/assets/images/backgrounds/home-page/sections/2_geometry.jpg"
+            links={[
+              { label: 'Experimental data' },
+              { label: 'Reconstruction data' },
+              { label: 'Validations' },
+              { label: 'Predictions' },
+            ]}
           />
         </div>
         <div className="col-xs-12 col-sm-4 mb-2">
@@ -145,7 +157,16 @@ const Home: React.FC = () => (
             bgColor="red"
             routeBase="/blood-flow"
             bgImgSrc="/ngv-portal/assets/images/backgrounds/home-page/sections/3_bloodflow.jpg"
+            links={[
+              { label: 'Experimental data' },
+              { label: 'Reconstruction data' },
+              { label: 'Validations' },
+              { label: 'Predictions' },
+            ]}
           />
+        </div>
+        <div style={{ maxWidth: '1280px', paddingLeft: '0.5rem' }}>
+          <small className="text-grey"><sup>*</sup> Coming soon</small>
         </div>
       </div>
     </section>
