@@ -1,18 +1,23 @@
 import React from 'react';
 import Head from 'next/head';
+import smoothscroll from 'smoothscroll-polyfill';
 
 import MainLayout from '../layouts/MainLayout';
 import Feedback from '../components/Feedback';
+import { isServer } from '../config';
 
 import '../styles/globals.scss';
 
 
-function MyApp({ Component, pageProps }) {
+if (!isServer) {
+  smoothscroll.polyfill();
+}
+
+function App({ Component, pageProps }) {
   return (
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap" />
       </Head>
 
       <MainLayout>
@@ -25,4 +30,4 @@ function MyApp({ Component, pageProps }) {
 }
 
 
-export default MyApp;
+export default App;

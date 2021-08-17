@@ -23,6 +23,10 @@ html, body {
 
 :root {
   --color-blue: #84bbf8;
+
+  --color-text-high-white: #ffffffdd;
+  --color-text-medium-white: #ffffffa8;
+  --color-text-disabled-white: #ffffff61;
 }
 
 button {
@@ -2101,7 +2105,7 @@ $collapsible-padding: 20px 30px;
     }
   }
 
-  #section-2 {
+  #about {
     h2 {
       color: map-get($basePalette, "navy-3");
       text-align: center;

@@ -58,7 +58,7 @@ const Home: React.FC = () => (
       </div>
     </section>
 
-    <section id="section-2">
+    <section id="about">
       <h2>
         Select and Explore. Download.{' '}
         <span className="nowrap">
@@ -185,7 +185,7 @@ const Home: React.FC = () => (
 
               We built a biologically detailed bottom-up reconstruction and simulation of the
               NGV Unit and the rat neocortical microcircuitry energy metabolism driven by its
-              electrophysiological activity and constrained by bidirectional feedback. 
+              electrophysiological activity and constrained by bidirectional feedback.
 
               A multitude of reactions define energy metabolism at the molecular level. The
               metabolism simulation features the most important biochemical pathways that
