@@ -1,0 +1,57 @@
+@import '../../styles/config/queries.scss';
+
+.container {
+  padding: 40px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: var(--color-text-medium-white);
+
+  @media (max-width: $ant-breakpoint-sm) {
+    padding: 25px 16px;
+  }
+
+  h2, h3, h4, h5 {
+    color: var(--color-text-high-white);
+  }
+
+  a {
+    font-weight: 300;
+    color: var(--color-text-medium-white);
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: var(--color-text-medium-white);
+  }
+
+  p {
+    margin-bottom: 0.8rem;
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 48em) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+.address {
+  opacity: 0.6;
+}
+
+.socialLinks {
+  margin-top: 0.6rem;
+  font-size: 1.4rem;
+  a {
+    margin-right: 0.6rem;
+  }
+  svg {
+    color: #52617d;
+    background-color: #050a30;
+  }
+}
