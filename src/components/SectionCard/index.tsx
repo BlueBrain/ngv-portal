@@ -35,6 +35,7 @@ const SectionCard: React.FC<SectionCardProps> = ({
           width="640"
           height="480"
           layout="responsive"
+          alt={`Small illustration representing ${title}`}
         />
         <div className="title">
           <div className="dash"></div>
@@ -43,9 +44,20 @@ const SectionCard: React.FC<SectionCardProps> = ({
       </div>
       <div className="body">
         {links.map(link => link.href ? (
-          <a href={`${baseUrl}${routeBase}${link.href}`}>{link.label}</a>
+          <a
+            key={link.label}
+            href={`${baseUrl}${routeBase}${link.href}`}
+          >
+            {link.label}
+          </a>
         ) : (
-          <a href="#" className="disabled-link">{link.label}<sup>*</sup></a>
+          <a
+            key={link.label}
+            className="disabled-link"
+            href="#"
+          >
+            {link.label}<sup>*</sup>
+          </a>
         ))}
         <div
           className="info-btn"
