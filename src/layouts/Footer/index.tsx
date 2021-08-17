@@ -51,7 +51,7 @@ const Footer: React.FC<{}> = () => {
           <p><Link href="/#explore">Explore</Link></p>
           <p><Link href="/#publications">Publications</Link></p>
           <p><Link href="/glossary">Glossary</Link></p>
-          <p><Link href="#contact">Contact us</Link></p>
+          <p><Link href="/#contact">Contact us</Link></p>
           <div className="mt-3">
             <span>Follow the Blue Brain</span>
 

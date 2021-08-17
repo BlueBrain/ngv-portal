@@ -47,9 +47,6 @@ const NavDesktop = () => {
 
   const [secondaryNav, setSecondaryNav] = React.useState(false);
   React.useEffect(() => setSecondaryNav(false), [router]);
-  // const downloadItems = useSelector<State, number>(
-  //   state => state.download.items.length,
-  // )
 
   return (
     <ul className={`${classPrefix}basis`}>
@@ -73,21 +70,12 @@ const NavDesktop = () => {
           </div>
         )}
       </li>
-      {/* <li>
-        <NavButton
-          path="/downloads"
-          name="Download"
-          // notifications={downloadItems > 0 ? downloadItems : undefined}
-          notifications={undefined}
-          highlight
-        />
-      </li> */}
       <li>
         <NavButton path="/glossary" name="Glossary" />
       </li>
       <li>
         <NavButton
-          path="/#contact-section"
+          path="/#contact"
           name="Contact us"
         />
       </li>
