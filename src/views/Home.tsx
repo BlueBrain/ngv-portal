@@ -127,7 +127,7 @@ const Home: React.FC = () => (
           <SectionCard
             title="Anatomy"
             bgColor="blue"
-            routeBase="/geometry"
+            routeBase="/anatomy"
             bgImgSrc="/ngv-portal/assets/images/backgrounds/home-page/sections/1_anatomy.jpg"
             links={[
               { label: 'Experimental data', href: '/experimental-data' },
@@ -169,7 +169,7 @@ const Home: React.FC = () => (
             title="Metabolism"
             bgColor="purple"
             routeBase="/metabolism"
-            bgImgSrc="/ngv-portal/assets/images/backgrounds/home-page/sections/2_geometry.jpg"
+            bgImgSrc="/ngv-portal/assets/images/backgrounds/home-page/sections/2_metabolism.jpg"
             links={[
               { label: 'Experimental data' },
               { label: 'Reconstruction data' },

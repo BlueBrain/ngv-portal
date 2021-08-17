@@ -9,7 +9,7 @@ import ImageViewer from '../../components/ImageViewer';
 import { imgOpt } from '../../utils';
 
 
-export default function GeometryPredictions() {
+export default function AnatomyPredictions() {
   return (
     <>
       <Filters primaryColor="blue" backgroundAlt hasData={true}>
@@ -17,7 +17,7 @@ export default function GeometryPredictions() {
           <Title
             primaryColor="blue"
             title="Predictions"
-            subtitle="Geometry"
+            subtitle="Anatomy"
           />
           <div role="information">
             <InfoBox

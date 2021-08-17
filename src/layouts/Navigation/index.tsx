@@ -53,7 +53,7 @@ export const SecondaryNav: React.FC<NavProps> = ({ initActive, canClose }) => {
           style={{ backgroundColor: accentColors.blue }}
           onClick={() => toggleSubmenu('exp')}
         >
-          GEOMETRY{' '}
+          ANATOMY{' '}
           <span className="show-mobile">
             <IoIosArrowDropdown />
           </span>
@@ -63,7 +63,7 @@ export const SecondaryNav: React.FC<NavProps> = ({ initActive, canClose }) => {
           style={{ borderLeftColor: accentColors.blue }}
         >
           <li>
-            <Link href="/geometry/experimental-data">
+            <Link href="/anatomy/experimental-data">
               <a>
                 {/* <SvgRegions fill={accentColors.blue} /> */}
                 Experimental Data
@@ -71,7 +71,7 @@ export const SecondaryNav: React.FC<NavProps> = ({ initActive, canClose }) => {
             </Link>
           </li>
           <li>
-            <Link href="/geometry/reconstruction-data">
+            <Link href="/anatomy/reconstruction-data">
               <a>
                 {/* <SvgNeuron fill={accentColors.blue} /> */}
                 Reconstruction Data
@@ -79,7 +79,7 @@ export const SecondaryNav: React.FC<NavProps> = ({ initActive, canClose }) => {
             </Link>
           </li>
           <li>
-            <Link href="/geometry/validations">
+            <Link href="/anatomy/validations">
               <a>
                 {/* <SvgNeuron fill={accentColors.blue} /> */}
                 Validations
@@ -87,7 +87,7 @@ export const SecondaryNav: React.FC<NavProps> = ({ initActive, canClose }) => {
             </Link>
           </li>
           <li>
-            <Link href="/geometry/predictions">
+            <Link href="/anatomy/predictions">
               <a>
                 {/* <SvgNeuron fill={accentColors.blue} /> */}
                 Predictions

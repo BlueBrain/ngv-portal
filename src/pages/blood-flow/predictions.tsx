@@ -7,7 +7,7 @@ import DataContainer from '../../components/DataContainer';
 import Collapsible from '../../components/Collapsible';
 
 
-export default function GeometryExpData() {
+export default function AnatomyExpData() {
   return (
     <>
       <Filters primaryColor="purple" backgroundAlt hasData={true}>

@@ -10,7 +10,7 @@ import ImageViewer from '../../components/ImageViewer';
 import { imgOpt } from '../../utils';
 
 
-export default function GeometryValidations() {
+export default function AnatomyValidations() {
   return (
     <>
       <Filters primaryColor="blue" backgroundAlt hasData={true}>
@@ -18,7 +18,7 @@ export default function GeometryValidations() {
           <Title
             primaryColor="blue"
             title="Validations"
-            subtitle="Geometry"
+            subtitle="Anatomy"
           />
           <div role="information">
             <InfoBox

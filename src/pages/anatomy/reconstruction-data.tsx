@@ -11,7 +11,7 @@ import { imgOpt } from '../../utils';
 import { staticDataBaseUrl } from '../../config';
 
 
-export default function GeometryRecData() {
+export default function AnatomyRecData() {
   return (
     <>
       <Filters primaryColor="blue" backgroundAlt hasData={true}>
@@ -19,7 +19,7 @@ export default function GeometryRecData() {
           <Title
             primaryColor="blue"
             title="Reconstruction data"
-            subtitle="Geometry"
+            subtitle="Anatomy"
           />
           <div role="information">
             <InfoBox
@@ -33,6 +33,11 @@ export default function GeometryRecData() {
 
       <DataContainer>
         <Collapsible title="Final reconstructions">
+          <p>
+            The movie shows the three main datasets that comprise the NGV, neurons, protoplasmic astrocytes
+            and the microvasculature. In addition, it shows the steps of the building process
+            from the placement of the astrocytic somata to the morphology generation.
+          </p>
           <Video
             sources={composeSources('/anatomy/reconstruction-data/NGV_DISS149_MASTER_WITH_EFFECTS')}
             muted
@@ -242,15 +247,6 @@ export default function GeometryRecData() {
                 thumbnailSrc={imgOpt('/ngv-portal/assets/images/reconstruction-data/results_morphs_illustration_recolored.png')}
               />
             </div>
-          </div>
-        </Collapsible>
-
-        <Collapsible title="NGV circuit and building steps" className="mt-4">
-          <div className="row">
-            <div className="col-xs-12 col-sm-6">
-              <p>The movie shows the three main datasets that comprise the NGV, neurons, protoplasmic astrocytes and the microvasculature. In addition, it shows the steps of the building process from the placement of the astrocytic somata to the morphology generation.</p>
-            </div>
-            <div className="col-xs-12 col-sm-6"></div>
           </div>
         </Collapsible>
       </DataContainer>
