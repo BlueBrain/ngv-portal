@@ -7,6 +7,17 @@ const textContent = {
   </p>),
   emData: (<p>
     This data was collected by electron microscopy from the somatosensory cortex of P14 rat as per Cali et al 2019.
+
+    Image stacks of astrocytic morphologies from P14 rats were provided by the laboratory of
+    Prof. Pierre Magistretti (King Abdullah University of Science and Technology).
+    They were extracted using high-resolution serial block-face imaging,
+    capturing the nanoscale structure of astrocytes with a 20 nm resolution (<a
+      href="https://doi.org/10.1016/j.pneurobio.2019.101696"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Calì et al. 2019
+    </a>).
   </p>),
   extractedMeshes: (<p>
     A framework, called Ultraliser, is developed to create high fidelity, optimized and watertight mesh models
@@ -17,8 +28,7 @@ const textContent = {
   </p>),
   skeletonizedExpMorphs: (<p>
     The skeletonization process transforms surface mesh geometries into cell morphologies.
-    To achieve this we used constrained mean curvature flow
-    (<a
+    To achieve this we used constrained mean curvature flow (<a
       href="https://doi.org/10.1111/j.1467-8659.2012.03178.x"
       target="_blank"
       rel="noopener noreferrer"
