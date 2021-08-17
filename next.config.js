@@ -1,15 +1,21 @@
 
+const basePath = '/ngv-portal'
+
 const day = 60 * 60 * 24;
 
 module.exports = {
-  basePath: '/ngv-portal',
-  assetPrefix: '/ngv-portal/',
+  basePath,
+  assetPrefix: `${basePath}/`,
+  trailingSlash: true,
+  webpack5: true,
   images: {
-    path: '/ngv-portal/_next/image',
-    maxAge: 3 * day,
+    path: `${basePath}/_next/image/`,
+    minimumCacheTTL: 3 * day,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
   },
   compress: false,
-  trailingSlash: true,
   async redirects() {
     return [
       {
@@ -38,5 +44,14 @@ module.exports = {
         permanent: false,
       },
     ]
+  },
+  async headers() {
+    return [{
+      source: '/(.*).(jpg|jpeg|png|webp)',
+      headers: [{
+        key: 'Cache-Control',
+        value: 'public, max-age=259200, s-maxage=259200, stale-while-revalidate=259200',
+      }],
+    },];
   },
 };
