@@ -1,0 +1,15 @@
+
+.container {
+  padding: 30px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: var(--color-text-medium-white);
+
+  h2, h3 {
+    color: var(--color-text-high-white);
+  }
+
+  strong {
+    font-weight: bold;
+  }
+}
