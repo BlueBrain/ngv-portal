@@ -2,7 +2,7 @@ import React from 'react';
 
 import { LightAsync as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { bash, python } from 'react-syntax-highlighter/dist/cjs/languages/hljs';
-import codeStyle from 'react-syntax-highlighter/dist/esm/styles/hljs/stackoverflow-light';
+import codeStyle from 'react-syntax-highlighter/dist/cjs/styles/hljs/stackoverflow-light';
 
 import Filters from '../../layouts/Filters';
 import Title from '../../components/Title';
