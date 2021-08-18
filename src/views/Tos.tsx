@@ -44,11 +44,11 @@ const TermsOfUse: React.FC = () => {
         <p>
           Unless otherwise stated, BBP owns or has a license to all the Data on this Portal.
           Except for the limited permissions expressly stated in these Terms or in the
-          licence terms adhering to the Data, all rights not specifically granted are reserved.
+          license terms adhering to the Data, all rights not specifically granted are reserved.
         </p>
 
 
-        <h2>DATA LICENCE</h2>
+        <h2>DATA LICENSE</h2>
 
         <p>
           You may use, copy, distribute, publicly perform, publicly display or create
@@ -92,7 +92,7 @@ const TermsOfUse: React.FC = () => {
         <p>
           For some Data you find in the Porta, BBP may be bound by its contractual
           and license agreements respecting certain third-party resources. For the Data
-          to whom BBP has a licence, you have to adhere to any license terms and conditions
+          to whom BBP has a license, you have to adhere to any license terms and conditions
           provided with these resources.
         </p>
 
