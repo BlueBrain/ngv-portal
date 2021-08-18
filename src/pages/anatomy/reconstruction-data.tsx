@@ -20,6 +20,8 @@ SyntaxHighlighter.registerLanguage('bash', bash);
 SyntaxHighlighter.registerLanguage('python', python);
 
 const astrocyticPythonCodeStr = [
+  'import morphio',
+  '',
   'astrocyte = morphio.Morphology(PATH_TO_MORPHOLOGY_FILE)',
   'morphology_points = astrocyte.points',
   'morphology_diameters = astrocyte.diameters',
