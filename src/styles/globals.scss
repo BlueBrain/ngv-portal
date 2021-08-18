@@ -25,7 +25,7 @@ html, body {
   --color-blue: #84bbf8;
 
   --color-text-high-white: #ffffffdd;
-  --color-text-medium-white: #ffffffa8;
+  --color-text-medium-white: #ffffffbe;
   --color-text-disabled-white: #ffffff61;
 }
 
@@ -2326,6 +2326,17 @@ $collapsible-padding: 20px 30px;
 .glossary__container {
   max-width: 1080px;
   margin: 0 auto;
+
+  color: var(--color-text-medium-white);
+
+  h4 {
+    color: var(--color-text-high-white);
+  }
+
+  a, a:hover {
+    color: var(--color-text-medium-white);
+    text-decoration: underline;
+  }
 }
 
 
