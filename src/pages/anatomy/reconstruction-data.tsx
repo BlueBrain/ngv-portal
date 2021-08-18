@@ -1,5 +1,9 @@
 import React from 'react';
 
+import { LightAsync as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { bash, python } from 'react-syntax-highlighter/dist/cjs/languages/hljs';
+import codeStyle from 'react-syntax-highlighter/dist/esm/styles/hljs/stackoverflow-light';
+
 import Filters from '../../layouts/Filters';
 import Title from '../../components/Title';
 import InfoBox from '../../components/InfoBox';
@@ -10,6 +14,18 @@ import Video, { composeSources } from '../../components/VideoPlayer';
 import { imgOpt } from '../../utils';
 import { staticDataBaseUrl } from '../../config';
 import textContent from '../../text-content/anatomy/reconstruction-data';
+
+
+SyntaxHighlighter.registerLanguage('bash', bash);
+SyntaxHighlighter.registerLanguage('python', python);
+
+const astrocyticPythonCodeStr = [
+  'astrocyte = morphio.Morphology(PATH_TO_MORPHOLOGY_FILE)',
+  'morphology_points = astrocyte.points',
+  'morphology_diameters = astrocyte.diameters',
+  'morphology_perimeters = astrocyte.perimeters',
+  'morphology_sections = astrocyte.sections',
+].join('\n');
 
 
 export default function AnatomyRecData() {
@@ -175,6 +191,38 @@ export default function AnatomyRecData() {
               />
             </div>
           </div>
+        </Collapsible>
+
+        <Collapsible title="Astrocytic morphologies exploration using Python" className="mt-4">
+          <p>
+            Astrocytic morphologies can be explored using <a
+              href="https://github.com/BlueBrain/MorphIO"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              MorphIO
+            </a> python package.
+          </p>
+
+          <p>MorphIO can be installed via pip:</p>
+
+          <SyntaxHighlighter
+            language="bash"
+            style={codeStyle}
+            customStyle={{ fontSize: '14px' }}
+          >
+            pip install morphio
+          </SyntaxHighlighter>
+
+          <p>and used in python:</p>
+
+          <SyntaxHighlighter
+            language="python"
+            style={codeStyle}
+            customStyle={{ fontSize: '14px' }}
+          >
+            {astrocyticPythonCodeStr}
+          </SyntaxHighlighter>
         </Collapsible>
       </DataContainer>
     </>
