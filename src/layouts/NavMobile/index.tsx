@@ -5,7 +5,6 @@ import { MdClose } from 'react-icons/md';
 import { IoMdMenu } from 'react-icons/io';
 
 import { SecondaryNav } from '../Navigation';
-import Search from '../../components/Search';
 
 
 const classPrefix = 'nav-mobile__';
@@ -39,7 +38,7 @@ const Menu: React.FC<MenuProps> = ({ open, onClose }) => (
           <span>Glossary</span>
         </a>
       </Link>
-      <Link href="/#contact-section">
+      <Link href="/#contact">
         <a>
           <img
             src="/ngv-portal/assets/images/icons/mail-alt.svg"
@@ -48,20 +47,8 @@ const Menu: React.FC<MenuProps> = ({ open, onClose }) => (
           <span>Contact</span>
         </a>
       </Link>
-      <Link href="/downloads">
-        <a>
-          <img
-            src="/ngv-portal/assets/images/icons/download-alt.svg"
-            alt="download"
-          />
-          <span>Download</span>
-        </a>
-      </Link>
     </div>
     <SecondaryNav canClose />
-    <div className="menu-search">
-      <Search />
-    </div>
   </div>
 );
 

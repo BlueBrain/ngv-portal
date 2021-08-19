@@ -44,7 +44,6 @@ export const SecondaryNav: React.FC<NavProps> = ({ initActive, canClose }) => {
   return (
     <ul className="secondary-nav">
       <li className={active === 'exp' ? 'active' : ''}>
-        {/* <span style={{ backgroundColor: accentColors.blue }} /> */}
         <button
           className="top-level-btn"
           style={{ backgroundColor: accentColors.blue }}
@@ -61,40 +60,27 @@ export const SecondaryNav: React.FC<NavProps> = ({ initActive, canClose }) => {
         >
           <li>
             <Link href="/anatomy/experimental-data">
-              <a>
-                {/* <SvgRegions fill={accentColors.blue} /> */}
-                Experimental Data
-              </a>
+              <a>Experimental Data</a>
             </Link>
           </li>
           <li>
             <Link href="/anatomy/reconstruction-data">
-              <a>
-                {/* <SvgNeuron fill={accentColors.blue} /> */}
-                Reconstruction Data
-              </a>
+              <a>Reconstruction Data</a>
             </Link>
           </li>
           <li>
             <Link href="/anatomy/validations">
-              <a>
-                {/* <SvgNeuron fill={accentColors.blue} /> */}
-                Validations
-              </a>
+              <a>Validations</a>
             </Link>
           </li>
           <li>
             <Link href="/anatomy/predictions">
-              <a>
-                {/* <SvgNeuron fill={accentColors.blue} /> */}
-                Predictions
-              </a>
+              <a>Predictions</a>
             </Link>
           </li>
         </ul>
       </li>
       <li className={`${active === 'rec' ? 'active' : ''} ${classDisabled}`}>
-        {/* <span style={{ backgroundColor: accentColors.purple }} /> */}
         <button
           className="top-level-btn"
           style={{ backgroundColor: accentColors.purple }}
@@ -111,40 +97,27 @@ export const SecondaryNav: React.FC<NavProps> = ({ initActive, canClose }) => {
         >
           <li>
             <Link href="/metabolism/experimental-data">
-              <a>
-                {/* <SvgRegions fill={accentColors.purple} /> */}
-                Experimental Data
-              </a>
+              <a>Experimental Data</a>
             </Link>
           </li>
           <li>
             <Link href="/metabolism/reconstruction-data">
-              <a>
-                {/* <SvgMicrocircuit fill={accentColors.purple} /> */}
-                Reconstruction Data
-              </a>
+              <a>Reconstruction Data</a>
             </Link>
           </li>
           <li>
             <Link href="/metabolism/validations">
-              <a>
-                {/* <SvgSynapse fill={accentColors.purple} /> */}
-                Validations
-              </a>
+              <a>Validations</a>
             </Link>
           </li>
           <li>
             <Link href="/metabolism/predictions">
-              <a>
-                {/* <SvgNeuron fill={accentColors.purple} /> */}
-                Predictions
-              </a>
+              <a>Predictions</a>
             </Link>
           </li>
         </ul>
       </li>
       <li className={`${active === 'dig' ? 'active' : ''} ${classDisabled}`}>
-        {/* <span style={{ backgroundColor: accentColors.red }} /> */}
         <button
           className="top-level-btn"
           style={{ backgroundColor: accentColors.red }}
@@ -161,34 +134,22 @@ export const SecondaryNav: React.FC<NavProps> = ({ initActive, canClose }) => {
         >
           <li>
             <Link href="/blood-flow/experimental-data">
-              <a>
-                {/* <SvgRegions fill={accentColors.red} /> */}
-                Experimental Data
-              </a>
+              <a>Experimental Data</a>
             </Link>
           </li>
           <li>
             <Link href="/blood-flow/reconstruction-data">
-              <a>
-                {/* <SvgMicrocircuit fill={accentColors.red} /> */}
-                Reconstruction Data
-              </a>
+              <a>Reconstruction Data</a>
             </Link>
           </li>
           <li>
             <Link href="/blood-flow/validations">
-              <a>
-                {/* <SvgSynapse fill={accentColors.red} /> */}
-                Validations
-              </a>
+              <a>Validations</a>
             </Link>
           </li>
           <li>
             <Link href="/blood-flow/predictions">
-              <a>
-                {/* <SvgNeuron fill={accentColors.red} /> */}
-                Predictions
-              </a>
+              <a>Predictions</a>
             </Link>
           </li>
         </ul>

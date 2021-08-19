@@ -151,6 +151,10 @@ section {
   color: white;
 }
 
+.text-medium-white {
+  color: var(--color-text-medium-white);
+}
+
 .text-capitalize {
   text-transform: capitalize;
 }
@@ -696,13 +700,12 @@ $collapsible-padding: 20px 30px;
 // InfoBox
 .info-box__basis {
   width: 100%;
-  max-width: 480px;
+  max-width: 640px;
   padding: 30px;
   background-color: rgba(229, 233, 244, 0.5);
   border-radius: 15px;
   border: 2px solid #fff;
   box-sizing: border-box;
-  transition: all 0.2s;
 
   &.default {
     border: none;
@@ -734,7 +737,7 @@ $collapsible-padding: 20px 30px;
     line-height: 1.7;
   }
   p {
-    font-weight: 700;
+    font-weight: 500;
     white-space: pre-line;
   }
   span {
@@ -743,7 +746,7 @@ $collapsible-padding: 20px 30px;
   }
   a {
     color: white;
-    font-weight: 700;
+    font-weight: 500;
     text-decoration: underline;
   }
 
@@ -1610,6 +1613,7 @@ $collapsible-padding: 20px 30px;
   border-radius: 1.5rem;
   border: 1px solid map-get($basePalette, "navy-2");
   box-shadow: 0 0 4px 0 rgba(59, 65, 101, 0.6);
+
   @media (max-width: $small) {
     display: flex;
   }
@@ -1638,6 +1642,10 @@ $collapsible-padding: 20px 30px;
     padding: 10px;
     font-size: 1.5rem;
     cursor: pointer;
+  }
+
+  a, a:hover {
+    color: var(--color-text-high-white);
   }
 
   a,
@@ -1669,21 +1677,10 @@ $collapsible-padding: 20px 30px;
     }
   }
 
-  .menu-search {
-    height: 120px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 10px 40px 30px;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-  }
-
   .secondary-nav {
     position: absolute;
     top: 120px;
-    bottom: 120px;
+    bottom: 0;
     width: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -1710,7 +1707,7 @@ $collapsible-padding: 20px 30px;
       font-size: 25px;
       line-height: 75px;
       margin-top: 8px;
-      transition: all 0.7s;
+      transition: transform 0.7s;
     }
 
     li > span {
@@ -2166,6 +2163,7 @@ $collapsible-padding: 20px 30px;
       h2 {
         text-transform: uppercase;
         margin-bottom: 1rem;
+        color: var(--color-text-high-white);
       }
 
       h3 {
@@ -2175,7 +2173,7 @@ $collapsible-padding: 20px 30px;
       }
 
       p {
-        opacity: 0.5;
+        color: var(--color-text-medium-white);
       }
     }
 
