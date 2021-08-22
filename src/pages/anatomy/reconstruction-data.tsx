@@ -1,8 +1,9 @@
 import React from 'react';
-import { Row, Col } from 'antd';
+import { Row, Col, Button } from 'antd';
 import { LightAsync as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { bash, python } from 'react-syntax-highlighter/dist/cjs/languages/hljs';
 import codeStyle from 'react-syntax-highlighter/dist/cjs/styles/hljs/stackoverflow-light';
+import { LinkOutlined} from '@ant-design/icons';
 
 import Filters from '../../layouts/Filters';
 import Title from '../../components/Title';
@@ -96,20 +97,15 @@ export default function AnatomyRecData() {
             defaultSize={720}
           />
 
-          <div className="row mt-2">
-            <div className="col-xs-12 col-sm-4 col-sm-offset-8">
-              <a
-                href="https://bbp.epfl.ch/ngv-viewer"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Open the Circuit Viewer
-              </a>
-              <img
-                style={{ width: '100%', marginTop: '1rem', border: '1px solid grey' }}
-                src="/ngv-portal/assets/images/reconstruction-data/circuit-viewer.png"
-              />
-            </div>
+          <div className="text-right mt-2">
+            <Button
+              size="small"
+              type="primary"
+              href="https://bbp.epfl.ch/ngv-viewer"
+              icon={<LinkOutlined />}
+            >
+              Online Circuit Viewer
+            </Button>
           </div>
         </Collapsible>
 
