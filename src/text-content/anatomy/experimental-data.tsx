@@ -6,8 +6,6 @@ const textContent = {
     extracted from literature measurements and observations or experimentally reconstructed datasets.
   </p>),
   emData: (<p>
-    This data was collected by electron microscopy from the somatosensory cortex of P14 rat as per Cali et al 2019.
-
     Image stacks of astrocytic morphologies from P14 rats were provided by the laboratory of
     Prof. Pierre Magistretti (King Abdullah University of Science and Technology).
     They were extracted using high-resolution serial block-face imaging,
@@ -16,15 +14,15 @@ const textContent = {
       target="_blank"
       rel="noopener noreferrer"
     >
-      Calì et al. 2019
+      Calì <i>et al.</i> 2019
     </a>).
   </p>),
   extractedMeshes: (<p>
     A framework, called Ultraliser, is developed to create high fidelity, optimized and watertight mesh models
     of the NGV data that were, either obtained from the EM stacks or reconstructed by other meshing tools
     that cannot create watertight meshes. This framework was then used to generate polygonal mesh models
-    of all the objects that were produced by Cali et al 2019, including four neurons, four astrocytes and their nuclei,
-    mitochondria and endoplasmic reticula and two vasculature parts.
+    of all the objects that were produced by Calì <i>et al.</i> 2019, including four neurons, four astrocytes
+    and their nuclei, mitochondria and endoplasmic reticula and two vasculature parts.
   </p>),
   skeletonizedExpMorphs: (<p>
     The skeletonization process transforms surface mesh geometries into cell morphologies.
@@ -33,7 +31,7 @@ const textContent = {
       target="_blank"
       rel="noopener noreferrer"
     >
-      Tagliasacchi et al., 2012
+      Tagliasacchi <i>et al.</i>, 2012
     </a>),
     which collapsed the surface mesh geometry into a skeletal structure. The morphologies consist of points,
     connected via edges representing the midlines of the surface mesh.
@@ -47,11 +45,11 @@ const textContent = {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Reichold et al. (2009)
+        Reichold <i>et al.</i> (2009)
       </a>.
       Cylindrical blocks of the rat’s somatosensory cortex vasculature were scanned using
       synchrotron-based X-ray tomographic imaging at the TOMCAT beamline (Swiss Light Source).
-      High energy beams (20KeV) irradiated the tissue with a resolution of (700 nm),
+      High energy beams (20KeV) irradiated the tissue with a resolution of 700 nm,
       resulting in grayscale image stacks, which were segmented into binary images and subsequently converted
       into midlines (skeleton) using custom software for artifact removal and skeletonization.
     </p>

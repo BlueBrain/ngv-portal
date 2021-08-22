@@ -7,6 +7,7 @@
 @import 'antd/lib/select/style/index.css';
 @import 'antd/lib/input/style/index.css';
 @import 'antd/lib/form/style/index.css';
+@import 'antd/lib/grid/style/index.css';
 
 
 @import 'config/_colors';
@@ -53,6 +54,22 @@ a {
 
 section {
   padding: 40px 0;
+}
+
+.column-count-2 {
+  column-count: 2;
+
+  @media (max-width: $ant-breakpoint-md) {
+    column-count: 1;
+  }
+}
+
+.column-count-3 {
+  column-count: 3;
+
+  @media (max-width: $ant-breakpoint-md) {
+    column-count: 1;
+  }
 }
 
 .bg-dark-blue {
@@ -681,9 +698,6 @@ $collapsible-padding: 20px 30px;
 
 // ImageViewer
 .image-viewer__basis {
-  $maxWidth: 600px;
-
-  max-width: $maxWidth;
   position: relative;
 
   img {

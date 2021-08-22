@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Row, Col } from 'antd';
 import { LightAsync as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { bash, python } from 'react-syntax-highlighter/dist/cjs/languages/hljs';
 import codeStyle from 'react-syntax-highlighter/dist/cjs/styles/hljs/stackoverflow-light';
@@ -29,6 +29,8 @@ const astrocyticPythonCodeStr = [
   'morphology_sections = astrocyte.sections',
 ].join('\n');
 
+const imgBase = '/ngv-portal/assets/images/reconstruction-data';
+
 
 export default function AnatomyRecData() {
   return (
@@ -56,8 +58,8 @@ export default function AnatomyRecData() {
             defaultSize={720}
             poster={`${staticDataBaseUrl}/anatomy/reconstruction-data/NGV_DISS149_MASTER_WITH_EFFECTS-poster.jpg`}
           />
-          <div className="row mt-2 mb-2">
-            <div className="col-xs-12 col-sm-4">
+          <Row gutter={16} className="mt-2 mb-2">
+            <Col xs={24} sm={8}>
               <Video
                 sources={composeSources('/anatomy/reconstruction-data/NGV_DISS149_MASTER_TURNTABLE_N')}
                 muted
@@ -65,8 +67,8 @@ export default function AnatomyRecData() {
                 loop
                 defaultSize={360}
               />
-            </div>
-            <div className="col-xs-12 col-sm-4">
+            </Col>
+            <Col xs={24} sm={8}>
               <Video
                 sources={composeSources('/anatomy/reconstruction-data/NGV_DISS149_MASTER_TURNTABLE_G')}
                 muted
@@ -74,17 +76,17 @@ export default function AnatomyRecData() {
                 loop
                 defaultSize={360}
               />
-            </div>
-            <div className="col-xs-12 col-sm-4">
+            </Col>
+            <Col xs={24} sm={8}>
               <Video
-                sources={composeSources('/anatomy/reconstruction-data/NGV_DISS149_MASTER_TURNTABLE_V')}
+                sources={composeSources('/anatomy/reconstruction-data/NGV_DISS149_MASTER_TURNTABLE_G')}
                 muted
                 autoplay
                 loop
                 defaultSize={360}
               />
-            </div>
-          </div>
+            </Col>
+          </Row>
 
           <Video
             sources={composeSources('/anatomy/reconstruction-data/NGV_DISS149_MASTER_TURNTABLE_NGV')}
@@ -112,87 +114,96 @@ export default function AnatomyRecData() {
         </Collapsible>
 
         <Collapsible title="Neuronal circuit" className="mt-4">
-          <div className="row">
-            <div className="col-xs-12 col-sm-6">{textContent.neuronalCircuit}</div>
-            <div className="col-xs-12 col-sm-6">
+          <Row gutter={32}>
+            <Col xs={24} sm={12}>{textContent.neuronalCircuit}</Col>
+            <Col xs={24} sm={12}>
               <ImageViewer
-                src="/ngv-portal/assets/images/reconstruction-data/NGV_DISS149_4k_STILL_NEURONS_WITH_DOF.jpeg"
-                thumbnailSrc={imgOpt('/ngv-portal/assets/images/reconstruction-data/NGV_DISS149_4k_STILL_NEURONS_WITH_DOF.jpeg')}
+                src={`${imgBase}/NGV_DISS149_4k_STILL_NEURONS_WITH_DOF.jpeg`}
+                thumbnailSrc={imgOpt(`${imgBase}/NGV_DISS149_4k_STILL_NEURONS_WITH_DOF.jpeg`)}
               />
-            </div>
-          </div>
+            </Col>
+          </Row>
         </Collapsible>
 
         <Collapsible title="Vasculature Surface Mesh" className="mt-4">
-          <div className="row">
-            <div className="col-xs-12 col-sm-6">{textContent.vasculatureSurfaceMesh}</div>
-            <div className="col-xs-12 col-sm-6">
+          <Row gutter={32}>
+            <Col xs={24} sm={12}>{textContent.vasculatureSurfaceMesh}</Col>
+            <Col xs={24} sm={12}>
               <ImageViewer
-                src="/ngv-portal/assets/images/reconstruction-data/vasculature_stages.png"
-                thumbnailSrc={imgOpt('/ngv-portal/assets/images/reconstruction-data/vasculature_stages.png')}
+                src={`${imgBase}/vasculature_stages.png`}
+                thumbnailSrc={imgOpt(`${imgBase}/vasculature_stages.png`)}
               />
-            </div>
-          </div>
+            </Col>
+          </Row>
         </Collapsible>
 
         <Collapsible title="Astrocytic positions without collision" className="mt-4">
-          <div className="row">
-            <div className="col-xs-12 col-sm-6">{textContent.astrocyticPositionsWithoutCollision}</div>
-            <div className="col-xs-12 col-sm-6">
+          <Row gutter={32}>
+            <Col xs={24} sm={12}>{textContent.astrocyticPositionsWithoutCollision}</Col>
+            <Col xs={24} sm={12}>
               <ImageViewer
-                src="/ngv-portal/assets/images/reconstruction-data/results_illustrations.png"
-                thumbnailSrc={imgOpt('/ngv-portal/assets/images/reconstruction-data/results_illustrations.png')}
+                src={`${imgBase}/results_illustrations.png`}
+                thumbnailSrc={imgOpt(`${imgBase}/results_illustrations.png`)}
               />
-            </div>
-          </div>
+            </Col>
+          </Row>
         </Collapsible>
 
         <Collapsible title="Microdomains" className="mt-4">
-          <div className="row">
-            <div className="col-xs-12 col-sm-6">{textContent.microdomains}</div>
-            <div className="col-xs-12 col-sm-6">
+          <Row gutter={32}>
+            <Col xs={24} sm={12}>{textContent.microdomains}</Col>
+            <Col xs={24} sm={12}>
               <ImageViewer
-                src="/ngv-portal/assets/images/reconstruction-data/results_microdomains_illustration.png"
-                thumbnailSrc={imgOpt('/ngv-portal/assets/images/reconstruction-data/results_microdomains_illustration.png')}
+                src={`${imgBase}/results_microdomains_illustration.png`}
+                thumbnailSrc={imgOpt(`${imgBase}/results_microdomains_illustration.png`)}
               />
-            </div>
-          </div>
+            </Col>
+          </Row>
         </Collapsible>
 
         <Collapsible title="Connectivities" className="mt-4">
-          <div className="row">
-            <div className="col-xs-12 col-sm-6">{textContent.connectivities}</div>
-            <div className="col-xs-12 col-sm-6">
+          <Row gutter={32}>
+            <Col span={24} className="column-count-2 mb-3">{textContent.connectivities.text}</Col>
+            <Col span={24}>
               <ImageViewer
-                src="/ngv-portal/assets/images/reconstruction-data/results_connectivity_illustration_v2.png"
-                thumbnailSrc={imgOpt('/ngv-portal/assets/images/reconstruction-data/results_connectivity_illustration_v2.png')}
+                src={`${imgBase}/results_connectivity_illustration_v2.png`}
+                thumbnailSrc={imgOpt(`${imgBase}/results_connectivity_illustration_v2.png`, { width: 1920 })}
               />
-            </div>
-          </div>
+              {textContent.connectivities.figure}
+            </Col>
+          </Row>
         </Collapsible>
 
         <Collapsible title="Endfeet surface reconstruction" className="mt-4">
-          <div className="row">
-            <div className="col-xs-12 col-sm-6">{textContent.endfeetSurfaceReconstruction}</div>
-            <div className="col-xs-12 col-sm-6">
+          <Row gutter={32}>
+            <Col span={24} className="column-count-2 mb-3">{textContent.endfeetSurfaceReconstruction.text}</Col>
+            <Col span={24}>
               <ImageViewer
-                src="/ngv-portal/assets/images/reconstruction-data/NGV_DISS149_4k_STILL_ENDFEET_WITH_DOF.jpeg"
-                thumbnailSrc={imgOpt('/ngv-portal/assets/images/reconstruction-data/NGV_DISS149_4k_STILL_ENDFEET_WITH_DOF.jpeg')}
+                className="mb-1"
+                src={`${imgBase}/NGV_DISS149_4k_STILL_ENDFEET_WITH_DOF.jpeg`}
+                thumbnailSrc={imgOpt(`${imgBase}/NGV_DISS149_4k_STILL_ENDFEET_WITH_DOF.jpeg`, { width: 1920 })}
               />
-            </div>
-          </div>
+              {textContent.endfeetSurfaceReconstruction.legend}
+            </Col>
+          </Row>
         </Collapsible>
 
         <Collapsible title="Morphological synthesis of astrocytes" className="mt-4">
-          <div className="row">
-            <div className="col-xs-12 col-sm-6">{textContent.morphologicalSynthesisOfAstrocytes}</div>
-            <div className="col-xs-12 col-sm-6">
+          <Row gutter={32}>
+            <Col xs={24} sm={12}>{textContent.morphologicalSynthesisOfAstrocytes}</Col>
+            <Col xs={24} sm={12}>
               <ImageViewer
-                src="/ngv-portal/assets/images/reconstruction-data/results_morphs_illustration_recolored.png"
-                thumbnailSrc={imgOpt('/ngv-portal/assets/images/reconstruction-data/results_morphs_illustration_recolored.png')}
+                src={`${imgBase}/results_morphs_illustration_recolored.png`}
+                thumbnailSrc={imgOpt(`${imgBase}/results_morphs_illustration_recolored.png`)}
               />
-            </div>
-          </div>
+            </Col>
+            {/* <Col xs={24} sm={12}>
+              <ImageViewer
+                src={`${imgBase}/circuit_astrocytes.png`}
+                thumbnailSrc={imgOpt(`${imgBase}/circuit_astrocytes.png`)}
+              />
+            </Col> */}
+          </Row>
         </Collapsible>
 
         <Collapsible title="Astrocytic morphologies exploration using Python" className="mt-4">

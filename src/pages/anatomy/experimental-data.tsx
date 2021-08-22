@@ -1,4 +1,5 @@
 import React from 'react';
+import { Row, Col } from 'antd';
 
 import Filters from '../../layouts/Filters';
 import Title from '../../components/Title';
@@ -9,6 +10,8 @@ import ImageViewer from '../../components/ImageViewer';
 import { imgOpt } from '../../utils';
 import textContent from '../../text-content/anatomy/experimental-data';
 
+
+const imgBase = '/ngv-portal/assets/images/experimental-data';
 
 export default function AnatomyExpData() {
   return (
@@ -29,51 +32,51 @@ export default function AnatomyExpData() {
 
       <DataContainer>
         <Collapsible title="EM Data">
-          <div className="row">
-            <div className="col-xs-12 col-sm-6">{textContent.emData}</div>
-            <div className="col-xs-12 col-sm-6">
+          <Row gutter={32}>
+            <Col xs={24} md={12}>{textContent.emData}</Col>
+            <Col xs={24} md={12}>
               <ImageViewer
-                src="/ngv-portal/assets/images/experimental-data/ngv-em-stack.png"
-                thumbnailSrc={imgOpt('/ngv-portal/assets/images/experimental-data/ngv-em-stack.png')}
+                src={`${imgBase}/ngv-em-stack.jpeg`}
+                thumbnailSrc={imgOpt(`${imgBase}/ngv-em-stack.jpeg`)}
               />
-            </div>
-          </div>
+            </Col>
+          </Row>
         </Collapsible>
 
         <Collapsible title="Extracted meshes" className="mt-4">
-          <div className="row">
-            <div className="col-xs-12 col-sm-6">{textContent.extractedMeshes}</div>
-            <div className="col-xs-12 col-sm-6">
+          <Row gutter={32}>
+            <Col xs={24} md={12}>{textContent.extractedMeshes}</Col>
+            <Col xs={24} md={12}>
               <ImageViewer
-                src="/ngv-portal/assets/images/experimental-data/astrocyte-2-10001.jpeg"
-                thumbnailSrc={imgOpt('/ngv-portal/assets/images/experimental-data/astrocyte-2-10001.jpeg')}
+                src={`${imgBase}/astrocyte-2-10001.jpeg`}
+                thumbnailSrc={imgOpt(`${imgBase}/astrocyte-2-10001.jpeg`)}
               />
-            </div>
-          </div>
+            </Col>
+          </Row>
         </Collapsible>
 
         <Collapsible title="Skeletonized experimental morphologies" className="mt-4">
-          <div className="row">
-            <div className="col-xs-12 col-sm-6">{textContent.skeletonizedExpMorphs}</div>
-            <div className="col-xs-12 col-sm-6">
+          <Row gutter={32}>
+            <Col xs={24} md={12}>{textContent.skeletonizedExpMorphs}</Col>
+            <Col xs={24} md={12} className="pl-2 pr-2 p-2">
               <ImageViewer
-                src="/ngv-portal/assets/images/experimental-data/astrocyte_morphology.png"
-                thumbnailSrc={imgOpt('/ngv-portal/assets/images/experimental-data/astrocyte_morphology.png')}
+                src={`${imgBase}/astrocyte_morphology.png`}
+                thumbnailSrc={imgOpt(`${imgBase}/astrocyte_morphology.png`)}
               />
-            </div>
-          </div>
+            </Col>
+          </Row>
         </Collapsible>
 
         <Collapsible title="Vasculature data" className="mt-4">
-          <div className="row">
-            <div className="col-xs-12 col-sm-6">{textContent.vasculatureData}</div>
-            <div className="col-xs-12 col-sm-6">
+          <Row gutter={32}>
+            <Col xs={24} md={12}>{textContent.vasculatureData}</Col>
+            <Col xs={24} md={12}>
               <ImageViewer
-                src="/ngv-portal/assets/images/experimental-data/vasculature_stages.png"
-                thumbnailSrc={imgOpt('/ngv-portal/assets/images/experimental-data/vasculature_stages.png')}
+                src={`${imgBase}/vasculature_stages.png`}
+                thumbnailSrc={imgOpt(`${imgBase}/vasculature_stages.png`)}
               />
-            </div>
-          </div>
+            </Col>
+          </Row>
         </Collapsible>
       </DataContainer>
     </>

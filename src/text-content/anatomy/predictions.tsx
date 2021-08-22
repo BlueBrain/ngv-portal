@@ -35,19 +35,18 @@ const textContent = {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Abbott et al., 2010
+        Abbott <i>et al.</i>, 2010
       </a>; <a
         href="https://doi.org/10.1016/j.neubiorev.2017.03.002"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Bellot-Saez et al., 2017
+        Bellot-Saez <i>et al.</i>, 2017
       </a>).
     </p>
-    <strong>Figure legend:<br/></strong>
     <small>
-      Spatial kernel density estimate plots of large vessels
-      (A)m capillaries
+      <strong>Figure:</strong> Spatial kernel density estimate plots of large vessels
+      (A) capillaries
       (B), somata coordinates
       (C) and endfeet targets on the surface of the vasculature
       (D). (E) Homogeneous distribution of endfeet targets in Layer I.
@@ -75,10 +74,11 @@ const textContent = {
       and modulating synaptic signaling polarizes its morphology and constrains its location
       to maximize the connections from the vasculature to neurons.
     </p>
-    <strong>Figure legend:<br/></strong>
     <small>
-      Effect of astrocytic proliferation on the feasibility of perivascular processes in the same bounding space.
-      The red data points correspond to the reference circuit with the biological parameters.
+      <strong>Figure:</strong> Effect of astrocytic proliferation on the feasibility of perivascular processes
+      in the same bounding space. The red data points correspond to the reference circuit
+      with the biological parameters.
+
       (A) Increasing the astrocytic density resulted in an increase in the endfeet numbers.
       (B) The number of endfeet per astrocyte decreased despite their total numbers.
       (C) The denser packing resulted in smaller distances to the vessels and domain extents.
@@ -105,9 +105,8 @@ const textContent = {
       there is a hierarchy in cortical composition, the origin of which has been theorized in terms of length,
       conduction delay, volume or/and spine economy minimization.
     </p>
-    <strong>Figure legend:<br/></strong>
     <small>
-      Total process
+      <strong>Figure legend:</strong> Total process
       (A) wiring,
       (B) surface areas and
       (C) volumes per layer of neurons (blue), astrocytes (green) and vasculature (red).
@@ -123,9 +122,8 @@ const textContent = {
       as well as to investigate questions concerning the intricacies of cortical composition
       and their relation to computational capacity.
     </p>
-    <strong>Figure legend:<br/></strong>
     <small>
-      Quantification of the astrocytic interfaces.
+      <strong>Figure:</strong> Quantification of the astrocytic interfaces.
       Histograms of per-astrocyte total endfeet area (A),
       volume (B),
       connected neurons (C),

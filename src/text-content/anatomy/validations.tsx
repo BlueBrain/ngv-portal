@@ -21,14 +21,14 @@ const textContent = {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Appaix et al. (2012)
+          Appaix <i>et al.</i> (2012)
         </a>,
         measuring an average density of 12241 mm<sup>-3</sup>,
         ranging from 9367 mm<sup>-3</sup> to 21479 mm<sup>-3</sup> close to the pia.
         The NGV framework accurately reproduced the density distribution for the selected profile
       </p>
-      <strong>Figure legend:<br/></strong>
       <small>
+        <strong>Figure legend: </strong>
         (A) Astrocyte density histogram (orange) compared to the input density profile (gray).
         (B) Average circuit density (orange) compared to reported values (gray) for different animal ages.
       </small>
@@ -41,9 +41,8 @@ const textContent = {
         from their anatomically exclusive territories. We verified this orderly distribution
         using spatial analysis methods such as the pair correlation function and Ripley’s K-function.
       </p>
-      <strong>Figure Legend:<br/></strong>
       <small>
-        Spatial analysis of the point patterns corresponding to astrocytic somata.
+        <strong>Figure:</strong> Spatial analysis of the point patterns corresponding to astrocytic somata.
         (A) Pair correlation function.
         (B) Ripley’s K-function.
         (C) Distance distribution from each astrocytic soma to its closest neighbor,
@@ -59,8 +58,8 @@ const textContent = {
         Soma size is taken into account while being placed so that intersections of somata with other somata
         and the vasculature are eliminated.
       </p>
-      <strong>Figure legend:<br/></strong>
       <small>
+        <strong>Figure legend: </strong>
         (A) Synthesized somata radius histogram and
         (B) comparison of average soma radius with reported values (gray).
       </small>
@@ -72,9 +71,8 @@ const textContent = {
         The NGV framework produced domain volumes that corresponded to juvenile astrocytic densities,
         capturing the magnitude of the measurements encountered in the literature.
       </p>
-      <strong>Figure legend:<br/></strong>
       <small>
-        NGV microdomains analysis and validation.
+        <strong>Figure:</strong> NGV microdomains analysis and validation.
         (A) Volume distribution of the regular (gray) and overlapping (orange) tessellations.
         (B) Comparison of NGV microdomain volumes (orange) with literature sources.
         (C) Per layer microdomain volume distributions and their respective box plots (red).
@@ -91,7 +89,7 @@ const textContent = {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Moye et al., 2019
+          Moye <i>et al.</i>, 2019
         </a>).
         The relation between the surface area and thickness of the endfeet geometries validated that they agreed
         with the relationship from the study of (<a
@@ -99,12 +97,11 @@ const textContent = {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Calì et al., (2019)
+          Calì <i>et al.</i>, (2019)
         </a>).
       </p>
-      <strong>Figure legend:<br/></strong>
       <small>
-        Validation of astrocytic endfeet processes.
+        <strong>Figure:</strong> Validation of astrocytic endfeet processes.
         (A) Shortest path length of the endfeet perivascular processes from the surface of the astrocytic soma
         to the surface of the vasculature.
         (B) Comparison of the average path length in the NGV (salmon) to the values
@@ -127,12 +124,11 @@ const textContent = {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Calì et al. 2019
+          Calì <i>et al.</i> 2019
         </a>).
       </p>
-      <strong>Figure legend:<br/></strong>
       <small>
-        Validation of astrocytic endfeet surface meshes
+        <strong>Figure:</strong> Validation of astrocytic endfeet surface meshes.
         (A) Endfeet surface area distribution.
         (B) Cumulative distribution comparison between the resulting surface areas and the target ones.
         (C) Coverage percentage of the vasculature surface (turquoise) by the endfeet areas (salmon).
@@ -151,12 +147,11 @@ const textContent = {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Refaeli et al., 2020
+          Refaeli <i>et al.</i>, 2020
         </a>).
       </p>
-      <strong>Figure legend:<br/></strong>
       <small>
-        Validation of astrocytic processes and association with neurons.
+        <strong>Figure:</strong> Validation of astrocytic processes and association with neurons.
         (A) Average number of processes (primary and perisynaptic) per astrocyte
         for the NGV circuit (salmon) and literature sources (turquoise).
         (B) Histogram of the distances for each astrocytic soma to the closest neuronal soma.
@@ -180,9 +175,9 @@ const textContent = {
         consisted of the number and length of sections, the section radial, path distances and branch orders,
         the remote bifurcation angles, and the segment radii and volumes.
       </p>
-      <strong>Figure legend:<br/></strong>
       <small>
-        Morphometric comparison between synthesized (orange) and experimental morphologies (blue).
+        <strong>Figure:</strong> Morphometric comparison between synthesized (orange)
+        and experimental morphologies (blue).
       </small>
     </>),
 
@@ -197,10 +192,9 @@ const textContent = {
         topological distance to the experimental cells compared to the topological distance
         within the experimental population.
       </p>
-      <strong>Figure legend:<br/></strong>
       <small>
-        The topological distance of each layer’s persistence diagram compared to the bio (black continuous line)
-        and its respective standard error (black dashed line).
+        <strong>Figure:</strong> The topological distance of each layer’s persistence diagram
+        compared to the bio (black continuous line) and its respective standard error (black dashed line).
         (G, H) Validation of cumulative process surface area and volume as a function of the radial distance
         from the soma between circuit astrocytes (orange) and bio (blue).
       </small>
