@@ -1,4 +1,5 @@
 import React from 'react';
+import { Row, Col } from 'antd';
 
 import Filters from '../../layouts/Filters';
 import Title from '../../components/Title';
@@ -8,6 +9,9 @@ import Collapsible from '../../components/Collapsible';
 import ImageViewer from '../../components/ImageViewer';
 import { imgOpt } from '../../utils';
 import textContent from '../../text-content/anatomy/validations';
+
+
+const imgBase = '/ngv-portal/assets/images/validations';
 
 
 export default function AnatomyValidations() {
@@ -31,99 +35,119 @@ export default function AnatomyValidations() {
         <Collapsible title="Network level validation with respect to literature data">
           {textContent.networkLevelValidation.description}
 
-          <div className="row mt-4">
-            <div className="col-xs-12 col-sm-6">{textContent.networkLevelValidation.density}</div>
-            <div className="col-xs-12 col-sm-6">
+          <h3 className="mt-4 mb-2">Density</h3>
+          <Row gutter={32}>
+            <Col span={24}>{textContent.networkLevelValidation.density.text}</Col>
+            <Col span={24} className="mt-2 mb-2">
               <ImageViewer
-                src="/ngv-portal/assets/images/validations/validation_density.png"
-                thumbnailSrc={imgOpt('/ngv-portal/assets/images/validations/validation_density.png')}
+                src={`${imgBase}/validation_density.png`}
+                thumbnailSrc={imgOpt(`${imgBase}/validation_density.png`, { width: 1920 })}
               />
-            </div>
-          </div>
+            </Col>
+            <Col span={24}>{textContent.networkLevelValidation.density.legend}</Col>
+          </Row>
 
-          <div className="row mt-4">
-            <div className="col-xs-12 col-sm-6">{textContent.networkLevelValidation.dispersion}</div>
-            <div className="col-xs-12 col-sm-6">
+          <h3 className="mt-4 mb-2">Dispersion</h3>
+          <Row gutter={32}>
+            <Col span={24}>{textContent.networkLevelValidation.dispersion.text}</Col>
+            <Col span={24} className="mt-2 mb-2">
               <ImageViewer
-                src="/ngv-portal/assets/images/validations/repulsion_function.png"
-                thumbnailSrc={imgOpt('/ngv-portal/assets/images/validations/repulsion_function.png')}
+                src={`${imgBase}/repulsion_function.png`}
+                thumbnailSrc={imgOpt(`${imgBase}/repulsion_function.png`, { width: 1920 })}
               />
-            </div>
-          </div>
+            </Col>
+            <Col span={24}>{textContent.networkLevelValidation.dispersion.legend}</Col>
+          </Row>
 
-          <div className="row mt-4">
-            <div className="col-xs-12 col-sm-6">{textContent.networkLevelValidation.radiusDistribution}</div>
-            <div className="col-xs-12 col-sm-6">
+          <h3 className="mt-4 mb-2">Radius distribution</h3>
+          <Row gutter={32}>
+            <Col span={24}>{textContent.networkLevelValidation.radiusDistribution.text}</Col>
+            <Col span={24} className="mt-3 mb-2">
               <ImageViewer
-                src="/ngv-portal/assets/images/validations/validation_radius.png"
-                thumbnailSrc={imgOpt('/ngv-portal/assets/images/validations/validation_radius.png')}
+                src={`${imgBase}/validation_radius.png`}
+                thumbnailSrc={imgOpt(`${imgBase}/validation_radius.png`, { width: 1920 })}
               />
-            </div>
-          </div>
+            </Col>
+            <Col span={24}>{textContent.networkLevelValidation.radiusDistribution.legend}</Col>
+          </Row>
 
-          <div className="row mt-4">
-            <div className="col-xs-12 col-sm-6">{textContent.networkLevelValidation.microdomainVolumes}</div>
-            <div className="col-xs-12 col-sm-6">
+          <h3 className="mt-4 mb-2">Microdomains volumes</h3>
+          <Row gutter={32}>
+            <Col span={24}>{textContent.networkLevelValidation.microdomainVolumes.text}</Col>
+            <Col span={24} className="mt-2 mb-2">
               <ImageViewer
-                src="/ngv-portal/assets/images/validations/validation_microdomains.png"
-                thumbnailSrc={imgOpt('/ngv-portal/assets/images/validations/validation_microdomains.png')}
+                src={`${imgBase}/validation_microdomains.png`}
+                thumbnailSrc={imgOpt(`${imgBase}/validation_microdomains.png`, { width: 1920 })}
               />
-            </div>
-          </div>
+            </Col>
+            <Col span={24}>{textContent.networkLevelValidation.microdomainVolumes.legend}</Col>
+          </Row>
 
-          <div className="row mt-4">
-            <div className="col-xs-12 col-sm-6">{textContent.networkLevelValidation.distanceOfAstrocyteToVasculature}</div>
-            <div className="col-xs-12 col-sm-6">
+          <h3 className="mt-4 mb-2">Distance of astrocyte to vasculature</h3>
+          <Row gutter={32}>
+            <Col span={24} className="column-count-2">{textContent.networkLevelValidation.distanceOfAstrocyteToVasculature.text}</Col>
+            <Col span={24} className="mt-3 mb-1">
               <ImageViewer
-                src="/ngv-portal/assets/images/validations/validation_endfeet_paths.png"
-                thumbnailSrc={imgOpt('/ngv-portal/assets/images/validations/validation_endfeet_paths.png')}
+                src={`${imgBase}/validation_endfeet_paths.png`}
+                thumbnailSrc={imgOpt(`${imgBase}/validation_endfeet_paths.png`, { width: 1920 })}
               />
-            </div>
-          </div>
+            </Col>
+            <Col span={24} className="mt-2">{textContent.networkLevelValidation.distanceOfAstrocyteToVasculature.figure}</Col>
+          </Row>
 
-          <div className="row mt-4">
-            <div className="col-xs-12 col-sm-6">{textContent.networkLevelValidation.endfeetSurfaceMeshes}</div>
-            <div className="col-xs-12 col-sm-6">
+          <h3 className="mt-4 mb-2">Endfeet surface meshes</h3>
+          <Row gutter={32}>
+            <Col span={24} className="column-count-2">{textContent.networkLevelValidation.endfeetSurfaceMeshes.text}</Col>
+            <Col span={24} className="mt-3 mb-1">
               <ImageViewer
-                src="/ngv-portal/assets/images/validations/validation_endfeet_areas.png"
-                thumbnailSrc={imgOpt('/ngv-portal/assets/images/validations/validation_endfeet_areas.png')}
+                src={`${imgBase}/validation_endfeet_areas.png`}
+                thumbnailSrc={imgOpt(`${imgBase}/validation_endfeet_areas.png`, { width: 1920 })}
               />
-            </div>
-          </div>
+            </Col>
+            <Col span={24}>{textContent.networkLevelValidation.endfeetSurfaceMeshes.legend}</Col>
+          </Row>
 
-          <div className="row mt-4">
-            <div className="col-xs-12 col-sm-6">{textContent.networkLevelValidation.numberOfProcesses}</div>
-            <div className="col-xs-12 col-sm-6">
+          <h3 className="mt-4 mb-2">Number of processes</h3>
+          <Row gutter={32}>
+            <Col span={24} className="column-count-2">{textContent.networkLevelValidation.numberOfProcesses.text}</Col>
+            <Col span={24} className="mt-3 mb-1">
               <ImageViewer
-                src="/ngv-portal/assets/images/validations/validation_misc.png"
-                thumbnailSrc={imgOpt('/ngv-portal/assets/images/validations/validation_misc.png')}
+                src={`${imgBase}/validation_misc.png`}
+                thumbnailSrc={imgOpt(`${imgBase}/validation_misc.png`, { width: 1920 })}
               />
-            </div>
-          </div>
+            </Col>
+            <Col span={24}>{textContent.networkLevelValidation.numberOfProcesses.legend}</Col>
+          </Row>
         </Collapsible>
 
         <Collapsible title="Synthesized Cell Validation" className="mt-4">
           {textContent.synthesizedCellValidation.description}
 
-          <div className="row mt-4">
-            <div className="col-xs-12 col-sm-6">{textContent.synthesizedCellValidation.featureBased}</div>
-            <div className="col-xs-12 col-sm-6">
+          <h3 className="mt-4 mb-2">Feature based</h3>
+          <Row gutter={32}>
+            <Col xs={24} md={12}>
+              {textContent.synthesizedCellValidation.featureBased.text}
+              {textContent.synthesizedCellValidation.featureBased.legend}
+            </Col>
+            <Col xs={24} md={12}>
               <ImageViewer
-                src="/ngv-portal/assets/images/validations/validation_circuit_morphometrics.png"
-                thumbnailSrc={imgOpt('/ngv-portal/assets/images/validations/validation_circuit_morphometrics.png')}
+                src={`${imgBase}/validation_circuit_morphometrics.png`}
+                thumbnailSrc={imgOpt(`${imgBase}/validation_circuit_morphometrics.png`)}
               />
-            </div>
-          </div>
+            </Col>
+          </Row>
 
-          <div className="row mt-4">
-            <div className="col-xs-12 col-sm-6">{textContent.synthesizedCellValidation.topological}</div>
-            <div className="col-xs-12 col-sm-6">
+          <h3 className="mt-4 mb-2">Topological</h3>
+          <Row gutter={32}>
+            <Col span={24} className="column-count-2">{textContent.synthesizedCellValidation.topological.text}</Col>
+            <Col span={24} className="mt-3 mb-2">
               <ImageViewer
-                src="/ngv-portal/assets/images/validations/validation_circuit_topologies.png"
-                thumbnailSrc={imgOpt('/ngv-portal/assets/images/validations/validation_circuit_topologies.png')}
+                src={`${imgBase}/validation_circuit_topologies.png`}
+                thumbnailSrc={imgOpt(`${imgBase}/validation_circuit_topologies.png`, { width: 1920 })}
               />
-            </div>
-          </div>
+            </Col>
+            <Col span={24}>{textContent.synthesizedCellValidation.topological.legend}</Col>
+          </Row>
         </Collapsible>
       </DataContainer>
     </>
