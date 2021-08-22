@@ -1,4 +1,5 @@
 import React from 'react';
+import { Row, Col } from 'antd';
 
 import Filters from '../../layouts/Filters';
 import Title from '../../components/Title';
@@ -29,51 +30,57 @@ export default function AnatomyPredictions() {
 
       <DataContainer>
         <Collapsible title="Spatial organization of astrocytic endfeet">
-          <div className="row">
-            <div className="col-xs-12 col-sm-6">{textContent.spatialOrganizationOfAstrocyticEndfeet}</div>
-            <div className="col-xs-12 col-sm-6">
+          <Row gutter={32}>
+            <Col span={24} className="column-count-2">{textContent.spatialOrganizationOfAstrocyticEndfeet.text}</Col>
+            <Col span={24} className="mt-3 mb-1">
               <ImageViewer
                 src="/ngv-portal/assets/images/predictions/predictions_densities.png"
-                thumbnailSrc={imgOpt('/ngv-portal/assets/images/predictions/predictions_densities.png')}
+                thumbnailSrc={imgOpt('/ngv-portal/assets/images/predictions/predictions_densities.png', { width: 1920 })}
               />
-            </div>
-          </div>
+            </Col>
+            <Col span={24}>{textContent.spatialOrganizationOfAstrocyticEndfeet.legend}</Col>
+          </Row>
         </Collapsible>
 
         <Collapsible title="Effect of astrocytic density on endfeet organization" className="mt-4">
-          <div className="row">
-            <div className="col-xs-12 col-sm-6">{textContent.effectOfAstrocyticDensityOnEndfeetOrganization}</div>
-            <div className="col-xs-12 col-sm-6">
+          <Row gutter={32}>
+            <Col span={24} className="column-count-2">{textContent.effectOfAstrocyticDensityOnEndfeetOrganization.text}</Col>
+            <Col span={24} className="mt-3 mb-2">
               <ImageViewer
                 src="/ngv-portal/assets/images/predictions/endfeet_organization.png"
                 thumbnailSrc={imgOpt('/ngv-portal/assets/images/predictions/endfeet_organization.png')}
               />
-            </div>
-          </div>
+            </Col>
+            <Col span={24}>{textContent.effectOfAstrocyticDensityOnEndfeetOrganization.legend}</Col>
+          </Row>
         </Collapsible>
 
         <Collapsible title="Emerging NGV compositional hierarchy" className="mt-4">
-          <div className="row">
-            <div className="col-xs-12 col-sm-6">{textContent.emergingNgvCompositionalHierarchy}</div>
-            <div className="col-xs-12 col-sm-6">
+          <Row gutter={32}>
+            <Col xs={24} md={12}>
+              {textContent.emergingNgvCompositionalHierarchy.text}
+              {textContent.emergingNgvCompositionalHierarchy.legend}
+            </Col>
+            <Col xs={24} md={12}>
               <ImageViewer
                 src="/ngv-portal/assets/images/predictions/predictions_bars.png"
                 thumbnailSrc={imgOpt('/ngv-portal/assets/images/predictions/predictions_bars.png')}
               />
-            </div>
-          </div>
+            </Col>
+          </Row>
         </Collapsible>
 
         <Collapsible title="Astrocyte numbers" className="mt-4">
-          <div className="row">
-            <div className="col-xs-12 col-sm-6">{textContent.astrocyteNumbers}</div>
-            <div className="col-xs-12 col-sm-6">
+          <Row gutter={32}>
+            <Col span={24} className="column-count-2">{textContent.astrocyteNumbers.text}</Col>
+            <Col span={24} className="mt-3 mb-2">
               <ImageViewer
                 src="/ngv-portal/assets/images/predictions/predictions_astrocyte.png"
-                thumbnailSrc={imgOpt('/ngv-portal/assets/images/predictions/predictions_astrocyte.png')}
+                thumbnailSrc={imgOpt('/ngv-portal/assets/images/predictions/predictions_astrocyte.png', { width: 1920 })}
               />
-            </div>
-          </div>
+            </Col>
+            <Col span={24}>{textContent.astrocyteNumbers.legend}</Col>
+          </Row>
         </Collapsible>
       </DataContainer>
     </>
