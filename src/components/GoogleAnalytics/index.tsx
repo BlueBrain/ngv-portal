@@ -23,7 +23,7 @@ const CookiePrefsForm: React.FC = () => {
   };
 
   useEffect(() => {
-    // if (!isProduction) return;
+    if (!isProduction) return;
 
     const cookiePrefs = getCookiePrefs();
     if (!cookiePrefs) {
@@ -57,7 +57,7 @@ const CookiePrefsForm: React.FC = () => {
               <a
                 href="https://www.epfl.ch/about/presidency/presidents-team/legal-affairs/epfl-privacy-policy/cookies-policy/"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 Cookies policy
               </a>
