@@ -1,9 +1,16 @@
+const { withSentryConfig } = require('@sentry/nextjs');
+// https://docs.sentry.io/platforms/javascript/guides/nextjs/
+
+
+const SentryWebpackPluginOptions = {
+  silent: true,
+};
 
 const basePath = '/ngv-portal'
 
 const day = 60 * 60 * 24;
 
-module.exports = {
+const nextConfig = {
   basePath,
   assetPrefix: `${basePath}/`,
   trailingSlash: true,
@@ -55,3 +62,5 @@ module.exports = {
     },];
   },
 };
+
+module.exports = withSentryConfig(nextConfig, SentryWebpackPluginOptions);
