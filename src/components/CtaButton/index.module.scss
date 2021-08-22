@@ -11,6 +11,7 @@
   border-radius: 48px;
   overflow: hidden;
   color: #dddddd;
+  text-align: left;
 }
 
 .container:hover {
@@ -19,9 +20,8 @@
 
 .text {
   display: inline-block;
-  padding: 0 7rem 0 2rem;
   text-align: center;
-  width: 100%;
+  width: calc(100% - 3.6rem);
   white-space: nowrap;
 }
 
@@ -37,7 +37,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 5rem;
+  width: 3.6rem;
   text-align: center;
   height: 48px;
   line-height: 48px;
@@ -54,5 +54,3 @@
 :global(.blue) .arrow {
   background-color: #1e2335;
 }
-
-// "purple": #6d63bf,

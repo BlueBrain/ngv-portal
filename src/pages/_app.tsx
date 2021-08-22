@@ -4,6 +4,7 @@ import smoothscroll from 'smoothscroll-polyfill';
 
 import MainLayout from '../layouts/MainLayout';
 import Feedback from '../components/Feedback';
+import GoogleAnalytics from '../components/GoogleAnalytics';
 import { isServer } from '../config';
 
 import '../styles/globals.scss';
@@ -24,6 +25,7 @@ function App({ Component, pageProps }) {
         <Component {...pageProps} />
 
         <Feedback />
+        <GoogleAnalytics />
       </MainLayout>
     </>
   );
