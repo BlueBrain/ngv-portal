@@ -58,7 +58,7 @@ const Home: React.FC = () => (
       </div>
     </section>
 
-    <section id="about">
+    {/* <section id="about">
       <h2>
         Select and Explore. Download.{' '}
         <span className="nowrap">
@@ -105,7 +105,7 @@ const Home: React.FC = () => (
           />
         </div>
       </div>
-    </section>
+    </section> */}
 
     <section id="explore" className="section-3">
       <div className="intro">
