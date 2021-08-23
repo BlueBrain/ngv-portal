@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-import ScrollTo from '../../components/ScrollTo';
+import ScrollTop from '../../components/ScrollTop';
 
 
 const classPrefix = 'data-container__';
@@ -19,12 +19,10 @@ const DataContainer: React.FC<DataContainerProps> = ({
     <>
       {visible && (
         <div className={`${classPrefix}basis`}>
-          <div className="center">{children}</div>
-          <div className="scroll-to">
-            <ScrollTo anchor="filters" direction="up">
-              Return to the top
-            </ScrollTo>
+          <div className="scroll-top">
+            <ScrollTop />
           </div>
+          <div className="center">{children}</div>
         </div>
       )}
     </>

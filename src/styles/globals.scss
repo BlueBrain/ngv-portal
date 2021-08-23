@@ -404,20 +404,27 @@ $collapsible-padding: 20px 30px;
   width: 100%;
   position: relative;
   box-sizing: border-box;
-  overflow: hidden;
 
   .center {
     background-color: map-get($basePalette, "grey");
-    margin: 4rem auto 60px;
+    padding: 4rem 0 60px;
+    margin: 0 auto;
     max-width: 1080px;
     margin-bottom: calc(100px + 4rem);
   }
 
-  .scroll-to {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    bottom: 0;
+  .scroll-top {
+    position: sticky;
+    float: right;
+    margin: 4rem 0;
+    color: #313254;
+    top: 85vh;
+    transform: translate3d(50%, 0, 0);
+    right: calc((100vw - 1080px) / 4);
+
+    @media (max-width: 1260px) {
+      display: none;
+    }
   }
 }
 
@@ -1145,12 +1152,11 @@ $collapsible-padding: 20px 30px;
 
 // ScrollTop
 .scroll-top__base {
-  $size: 6rem;
+  $size: 5rem;
 
-  display: inline-block;
+  cursor: pointer;
   background-color: map-get($basePalette, "navy-2");
   color: map-get($basePalette, "white");
-  text-decoration: none;
   text-align: center;
   border-radius: $size;
   width: $size;
