@@ -23,6 +23,9 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   compress: false,
+  experimental: {
+    staticPageGenerationTimeout: 120,
+  },
   async redirects() {
     return [
       {
