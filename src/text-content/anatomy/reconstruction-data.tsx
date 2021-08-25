@@ -53,36 +53,41 @@ const textContent = {
     of the NGV networks and providing the synaptic locations that are required from the NGV connectome.
   </p>),
 
-  vasculatureSurfaceMesh: (<>
-    <p>
-      Although most of the steps in the circuit building pipeline use the skeletonized representation
-      of the cerebral microvasculature, the generation of endfeet appositions
-      on the surface of the vasculature requires a more detailed representation of the surface geometry.
-      Thus, starting from the skeletonized dataset we reconstructed a triangular discretization
-      of the surface geometry with variable resolution. The surface mesh was generated based on
-      implicit structures, known as metaobjects (<a
-        href="https://doi.org/10.1093/bioinformatics/btaa461"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Abdellah <i>et al.</i>, 2020
-      </a>, <a
-        href="http://dx.doi.org/10.2312/VisSym/VisSym04/311-320"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Oeltze & Preim, 2004
-      </a>)
-      which allowed the creation of highly-detailed meshes of vasculature datasets (Figure 2D-F).
-    </p>
-    <small>
-      <strong>Figure:</strong> Vasculature meshing.
-      (A) The vasculature dataset consists of points with a diameter linked by edges.
-      (B) Two consecutive points linked by an edge are defined as a segment.
-      (C) A chain of consecutive points between two forking points is defined as a section.
-      (D) Generated surface mesh with overlaid triangles. (E-F) Original vasculature dataset mesh.
-    </small>
-  </>),
+  vasculatureSurfaceMesh: {
+    text: (<>
+      <p>
+        Although most of the steps in the circuit building pipeline use the skeletonized representation
+        of the cerebral microvasculature, the generation of endfeet appositions
+        on the surface of the vasculature requires a more detailed representation of the surface geometry.
+        Thus, starting from the skeletonized dataset we reconstructed a triangular discretization
+        of the surface geometry with variable resolution. The surface mesh was generated based on
+        implicit structures, known as metaobjects (<a
+          href="https://doi.org/10.1093/bioinformatics/btaa461"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Abdellah <i>et al.</i>, 2020
+        </a>, <a
+          href="http://dx.doi.org/10.2312/VisSym/VisSym04/311-320"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Oeltze & Preim, 2004
+        </a>)
+        which allowed the creation of highly-detailed meshes of vasculature datasets (Figure 2D-F).
+      </p>
+    </>),
+
+    legend: (<>
+      <small>
+        <strong>Figure:</strong> Vasculature meshing.
+        (A) The vasculature dataset consists of points with a diameter linked by edges.
+        (B) Two consecutive points linked by an edge are defined as a segment.
+        (C) A chain of consecutive points between two forking points is defined as a section.
+        (D) Generated surface mesh with overlaid triangles. (E-F) Original vasculature dataset mesh.
+      </small>
+    </>),
+  },
 
   astrocyticPositionsWithoutCollision: (<>
     <p>
@@ -102,22 +107,27 @@ const textContent = {
     </small>
   </>),
 
-  microdomains: (<>
-    <p>
-      The morphologies of protoplasmic astrocytes reach out and contact neighboring astrocytes.
-      As they grow one against the other they tile the cortical space forming anatomically exclusive regions.
-    </p>
-    <p>
-      We modelled this organization as polygons, which we generated using mathematical tessellations.
-      Each region represented the accessible space for each astrocyte.
-    </p>
-    <small>
-      <strong>Figure:</strong> Illustrations of the microdomains in the NGV circuit.
-      (A) Cross section of the microdomain tessellation geometry without other entities.
-      (B) Overlay of microdomain edges with astrocytic somata (turquoise) and vasculature (red).
-      (C) Example of microdomain neighborhood, populated with random trees.
-    </small>
-  </>),
+  microdomains: {
+    text: (<>
+      <p>
+        The morphologies of protoplasmic astrocytes reach out and contact neighboring astrocytes.
+        As they grow one against the other they tile the cortical space forming anatomically exclusive regions.
+      </p>
+      <p>
+        We modelled this organization as polygons, which we generated using mathematical tessellations.
+        Each region represented the accessible space for each astrocyte.
+      </p>
+    </>),
+
+    legend: (<>
+      <small>
+        <strong>Figure:</strong> Illustrations of the microdomains in the NGV circuit.
+        (A) Cross section of the microdomain tessellation geometry without other entities.
+        (B) Overlay of microdomain edges with astrocytic somata (turquoise) and vasculature (red).
+        (C) Example of microdomain neighborhood, populated with random trees.
+      </small>
+    </>),
+  },
 
   connectivities: {
     text: (<>
@@ -197,21 +207,26 @@ const textContent = {
     </>),
   },
 
-  morphologicalSynthesisOfAstrocytes: (<>
-    <p>
-      The final stage was to grow stochastic astroglial morphologies, constrained by the astrocytic data
-      produced in the previous steps. To make this possible, we developed a novel algorithm
-      that combined topological branching and space colonization using neuronal synapses as attraction seeds.
-      This allowed us to grow in-silico,  unique astrocytic morphologies that were embedded in space,
-      projecting to the vasculature forming endfeet and encapsulating the synapses in their microdomains.
-    </p>
-    <small>
-      <strong>Figure:</strong> Illustrations of the circuit with the grown morphologies.
-      (A) Overview of the astrocytic circuit.
-      (B) A group of five astrocytes with their endfeet.
-      (C) Closeup of a single astrocytic morphology and its endfoot on the surface of the vasculature.
-    </small>
-  </>),
+  morphologicalSynthesisOfAstrocytes: {
+    text: (<>
+      <p>
+        The final stage was to grow stochastic astroglial morphologies, constrained by the astrocytic data
+        produced in the previous steps. To make this possible, we developed a novel algorithm
+        that combined topological branching and space colonization using neuronal synapses as attraction seeds.
+        This allowed us to grow in-silico,  unique astrocytic morphologies that were embedded in space,
+        projecting to the vasculature forming endfeet and encapsulating the synapses in their microdomains.
+      </p>
+    </>),
+
+    legend: (<>
+      <small>
+        <strong>Figure:</strong> Illustrations of the circuit with the grown morphologies.
+        (A) Overview of the astrocytic circuit.
+        (B) A group of five astrocytes with their endfeet.
+        (C) Closeup of a single astrocytic morphology and its endfoot on the surface of the vasculature.
+      </small>
+    </>),
+  },
 };
 
 export default textContent;

@@ -1,9 +1,10 @@
 import React from 'react';
-import { Row, Col, Button } from 'antd';
+import { Row, Col, Button, Dropdown, Menu } from 'antd';
 import { LightAsync as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { bash, python } from 'react-syntax-highlighter/dist/cjs/languages/hljs';
 import codeStyle from 'react-syntax-highlighter/dist/cjs/styles/hljs/stackoverflow-light';
-import { LinkOutlined} from '@ant-design/icons';
+import { LinkOutlined, DownloadOutlined, DownOutlined } from '@ant-design/icons';
+import { saveAs } from 'file-saver';
 
 import Filters from '../../layouts/Filters';
 import Title from '../../components/Title';
@@ -31,9 +32,29 @@ const astrocyticPythonCodeStr = [
 ].join('\n');
 
 const imgBase = '/ngv-portal/assets/images/reconstruction-data';
+const assetsBase = `${staticDataBaseUrl}/anatomy/reconstruction-data`;
+
+const downloadableMorphologies = [{
+  href: `${assetsBase}/synthesized-astrocyte-morphologies/GLIA_0000000004100.h5`,
+  label: 'Example 1: GLIA_0000000004100',
+}, {
+  href: `${assetsBase}/synthesized-astrocyte-morphologies/GLIA_0000000000100.h5`,
+  label: 'Example 2: GLIA_0000000000100',
+}, {
+  href: `${assetsBase}/synthesized-astrocyte-morphologies/GLIA_00000000002100.h5`,
+  label: 'Example 3: GLIA_00000000002100',
+}, {
+  href: `${assetsBase}/synthesized-astrocyte-morphologies/synthesized-astrocyte-morphologies.tar.xz`,
+  label: 'Large dataset of morphologies (~19GB uncompressed)',
+}];
 
 
 export default function AnatomyRecData() {
+  const downloadMorphology = (e) => {
+    const href = downloadableMorphologies.find(morph => morph.label === e.key).href;
+    saveAs(href);
+  };
+
   return (
     <>
       <Filters primaryColor="blue" backgroundAlt hasData={true}>
@@ -123,7 +144,20 @@ export default function AnatomyRecData() {
 
         <Collapsible title="Vasculature Surface Mesh" className="mt-4">
           <Row gutter={32}>
-            <Col xs={24} sm={12}>{textContent.vasculatureSurfaceMesh}</Col>
+            <Col xs={24} sm={12}>
+              {textContent.vasculatureSurfaceMesh.text}
+              <div className="text-right mt-2 mb-2">
+                <Button
+                  href={`${assetsBase}/vasculature-graph-model/raw_pruned_cap_circuit_coo_inscribed_spec_atlas_translated.h5`}
+                  type="primary"
+                  size="small"
+                  icon={<DownloadOutlined />}
+                >
+                  Vasculature point graph
+                </Button>
+              </div>
+              {textContent.vasculatureSurfaceMesh.legend}
+            </Col>
             <Col xs={24} sm={12}>
               <ImageViewer
                 src={`${imgBase}/vasculature_stages.png`}
@@ -147,7 +181,20 @@ export default function AnatomyRecData() {
 
         <Collapsible title="Microdomains" className="mt-4">
           <Row gutter={32}>
-            <Col xs={24} sm={12}>{textContent.microdomains}</Col>
+            <Col xs={24} sm={12}>
+              {textContent.microdomains.text}
+              <div className="text-right mt-2 mb-2">
+                <Button
+                  href={`${assetsBase}/overlapping-microdomains/overlapping_microdomains.h5`}
+                  type="primary"
+                  size="small"
+                  icon={<DownloadOutlined />}
+                >
+                  Overlapping microdomains
+                </Button>
+              </div>
+              {textContent.microdomains.legend}
+            </Col>
             <Col xs={24} sm={12}>
               <ImageViewer
                 src={`${imgBase}/results_microdomains_illustration.png`}
@@ -172,7 +219,19 @@ export default function AnatomyRecData() {
 
         <Collapsible title="Endfeet surface reconstruction" className="mt-4">
           <Row gutter={32}>
-            <Col span={24} className="column-count-2 mb-3">{textContent.endfeetSurfaceReconstruction.text}</Col>
+            <Col span={24} className="column-count-2 mb-3">
+              {textContent.endfeetSurfaceReconstruction.text}
+              <div className="text-right mt-2">
+                <Button
+                  href={`${assetsBase}/endfeet-data/endfeet_data.json`}
+                  type="primary"
+                  size="small"
+                  icon={<DownloadOutlined />}
+                >
+                  Endfeet data
+                </Button>
+              </div>
+            </Col>
             <Col span={24}>
               <ImageViewer
                 className="mb-1"
@@ -186,7 +245,27 @@ export default function AnatomyRecData() {
 
         <Collapsible title="Morphological synthesis of astrocytes" className="mt-4">
           <Row gutter={32}>
-            <Col xs={24} sm={12}>{textContent.morphologicalSynthesisOfAstrocytes}</Col>
+            <Col xs={24} sm={12}>
+              {textContent.morphologicalSynthesisOfAstrocytes.text}
+
+              <div className="text-right mt-2 mb-2">
+                <Dropdown
+                  overlay={<Menu onClick={downloadMorphology}>
+                    {downloadableMorphologies.map(morph => (<Menu.Item key={morph.label}>{morph.label}</Menu.Item>))}
+                  </Menu>}
+                >
+                  <Button
+                    type="primary"
+                    size="small"
+                    icon={<DownloadOutlined />}
+                  >
+                    Morphologies <DownOutlined />
+                  </Button>
+                </Dropdown>
+              </div>
+
+              {textContent.morphologicalSynthesisOfAstrocytes.legend}
+            </Col>
             <Col xs={24} sm={12}>
               <ImageViewer
                 src={`${imgBase}/results_morphs_illustration_recolored.png`}

@@ -5,6 +5,7 @@ const textContent = {
     The data collection was performed either in the form of constraints and model parameters
     extracted from literature measurements and observations or experimentally reconstructed datasets.
   </p>),
+
   emData: (<p>
     Image stacks of astrocytic morphologies from P14 rats were provided by the laboratory of
     Prof. Pierre Magistretti (King Abdullah University of Science and Technology).
@@ -17,6 +18,7 @@ const textContent = {
       Calì <i>et al.</i> 2019
     </a>).
   </p>),
+
   extractedMeshes: (<p>
     A framework, called Ultraliser, is developed to create high fidelity, optimized and watertight mesh models
     of the NGV data that were, either obtained from the EM stacks or reconstructed by other meshing tools
@@ -24,6 +26,7 @@ const textContent = {
     of all the objects that were produced by Calì <i>et al.</i> 2019, including four neurons, four astrocytes
     and their nuclei, mitochondria and endoplasmic reticula and two vasculature parts.
   </p>),
+
   skeletonizedExpMorphs: (<p>
     The skeletonization process transforms surface mesh geometries into cell morphologies.
     To achieve this we used constrained mean curvature flow (<a
@@ -38,6 +41,7 @@ const textContent = {
     Cross-sectional information about the volume and surface area
     are stored at each point of the skeletonized morphology.
   </p>),
+
   vasculatureData: (<>
     <p>
       A digital reconstruction of a rat cerebral vasculature dataset was produced by <a
