@@ -29,7 +29,13 @@ const Footer: React.FC<{}> = () => {
       <h2 className="mb-2">The Neuro-Glia-Vasculature Portal</h2>
       <div className={styles.row}>
         <div className="mt-2">
-          <p><a href={link.bbpPortal}>Blue Brain Project</a></p>
+          <p><a
+            href={link.bbpPortal}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Blue Brain Project
+          </a></p>
           <p className={styles.address}>
             EPFL/Campus Biotech <br/>
             Chemin des Mines 9 <br/>
@@ -40,14 +46,31 @@ const Footer: React.FC<{}> = () => {
 
         <div className="mt-2">
           <p><Link href="/terms-of-use/">Terms of Use</Link></p>
-          <p><a href={link.privacyPolicy}>Privacy Policy</a></p>
-          <p><a href={link.disclaimer}>Disclaimer</a></p>
-          <p><a href={link.cookies}>Cookies</a></p>
+          <p><a
+            href={link.privacyPolicy}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Privacy Policy
+          </a></p>
+          <p><a
+            href={link.disclaimer}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Disclaimer
+          </a></p>
+          <p><a
+            href={link.cookies}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Cookies
+          </a></p>
         </div>
 
         <div className="mt-2">
           <p><Link href="/">Home</Link></p>
-          <p><Link href="/#about">About</Link></p>
           <p><Link href="/#explore">Explore</Link></p>
           <p><Link href="/#publications">Publications</Link></p>
           <p><Link href="/glossary">Glossary</Link></p>
@@ -56,9 +79,27 @@ const Footer: React.FC<{}> = () => {
             <span>Follow the Blue Brain</span>
 
             <div className={styles.socialLinks}>
-              <a href={link.twitter}><FaTwitterSquare /></a>
-              <a href={link.linkedin}><FaLinkedin /></a>
-              <a href={link.youtube}><FaYoutubeSquare /></a>
+              <a
+                href={link.twitter}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaTwitterSquare />
+              </a>
+              <a
+                href={link.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin />
+              </a>
+              <a
+                href={link.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaYoutubeSquare />
+              </a>
             </div>
           </div>
         </div>
