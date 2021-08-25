@@ -80,24 +80,7 @@ export default function AnatomyExpData() {
 
         <Collapsible title="Skeletonized experimental morphologies" className="mt-4">
           <Row gutter={32}>
-            <Col xs={24} md={12}>
-              {textContent.skeletonizedExpMorphs}
-              <div className="text-right">
-                <Dropdown
-                  overlay={<Menu onClick={downloadMorphology}>
-                    {downloadableMorphologies.map(morph => (<Menu.Item key={morph.label}>{morph.label}</Menu.Item>))}
-                  </Menu>}
-                >
-                  <Button
-                    type="primary"
-                    size="small"
-                    icon={<DownloadOutlined />}
-                  >
-                    Morphologies <DownOutlined />
-                  </Button>
-                </Dropdown>
-              </div>
-            </Col>
+            <Col xs={24} md={12}>{textContent.skeletonizedExpMorphs}</Col>
             <Col xs={24} md={12} className="pl-2 pr-2 p-2">
               <ImageViewer
                 src={`${imgBase}/astrocyte_morphology.png`}
@@ -105,23 +88,28 @@ export default function AnatomyExpData() {
               />
             </Col>
           </Row>
+          <div className="text-right mt-3">
+            <Dropdown
+              overlay={<Menu onClick={downloadMorphology}>
+                {downloadableMorphologies.map(morph => (
+                  <Menu.Item key={morph.label}>{morph.label}</Menu.Item>
+                ))}
+              </Menu>}
+            >
+              <Button
+                type="primary"
+                size="small"
+                icon={<DownloadOutlined />}
+              >
+                Morphologies <DownOutlined />
+              </Button>
+            </Dropdown>
+          </div>
         </Collapsible>
 
         <Collapsible title="Vasculature data" className="mt-4">
           <Row gutter={32}>
-            <Col xs={24} md={12}>
-              {textContent.vasculatureData}
-              <div className="text-right">
-                <Button
-                  href={`${assetsBase}/vasculature-data/raw-vasculature-data.vtk`}
-                  type="primary"
-                  size="small"
-                  icon={<DownloadOutlined />}
-                >
-                  Vasculature dataset
-                </Button>
-              </div>
-            </Col>
+            <Col xs={24} md={12}>{textContent.vasculatureData}</Col>
             <Col xs={24} md={12}>
               <ImageViewer
                 src={`${imgBase}/vasculature_stages.png`}
@@ -129,6 +117,16 @@ export default function AnatomyExpData() {
               />
             </Col>
           </Row>
+          <div className="text-right mt-3">
+            <Button
+              href={`${assetsBase}/vasculature-data/raw-vasculature-data.vtk`}
+              type="primary"
+              size="small"
+              icon={<DownloadOutlined />}
+            >
+              Vasculature dataset
+            </Button>
+          </div>
         </Collapsible>
       </DataContainer>
     </>
