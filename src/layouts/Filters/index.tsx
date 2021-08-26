@@ -2,7 +2,6 @@ import React, { ReactChild, ReactFragment } from 'react';
 
 import ScrollTo from '../../components/ScrollTo';
 import { Color } from '../../types';
-// import './style.scss';
 
 const classPrefix = 'filters__';
 
@@ -22,12 +21,9 @@ const Filters: React.FC<FiltersProps> = ({
   id = 'filters',
 }) => {
   return (
-    <div>
-      <div
-        id={id}
-        className={`${classPrefix}basis ${backgroundAlt ? 'background-alt' : ''}`}
-      >
-        <div className="center">{children}</div>
+    <>
+      <div id={id} className={`${classPrefix}basis ${backgroundAlt ? 'background-alt' : ''}`}>
+        {children}
       </div>
       {!!hasData && (
         <div className="scroll-to">
@@ -36,7 +32,7 @@ const Filters: React.FC<FiltersProps> = ({
           </ScrollTo>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

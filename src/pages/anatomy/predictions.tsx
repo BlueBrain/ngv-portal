@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'antd';
+import Image from 'next/image';
 
 import Filters from '../../layouts/Filters';
 import Title from '../../components/Title';
@@ -15,17 +16,26 @@ export default function AnatomyPredictions() {
   return (
     <>
       <Filters primaryColor="blue" backgroundAlt hasData={true}>
-        <div className="center-col">
-          <Title
-            primaryColor="blue"
-            title="Predictions"
-            subtitle="Anatomy"
-          />
-          <div role="information">
+        <Row gutter={32} align="middle" className="w-100">
+          <Col xs={24} lg={12} className="mt-1 mb-1">
+            <Title
+              primaryColor="blue"
+              title="Predictions"
+              subtitle="Anatomy"
+            />
             <InfoBox content={textContent.pageDescription} color="blue" />
-          </div>
-        </div>
-        <div className="center-col"></div>
+          </Col>
+          <Col xs={24} lg={12} className="mt-1 mb-1">
+            <Image
+              src="/ngv-portal/assets/images/anatomy-illustrations/anatomy-predictions-illustration.png"
+              alt="Illustration for Anatomy predictions"
+              layout="responsive"
+              width="1280"
+              height="720"
+              loading="eager"
+            />
+          </Col>
+        </Row>
       </Filters>
 
       <DataContainer>

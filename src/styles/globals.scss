@@ -76,6 +76,10 @@ section {
   }
 }
 
+.w-100 {
+  width: 100%;
+}
+
 .bg-dark-blue {
   background-color: #34385a;
 }
@@ -1346,47 +1350,18 @@ $collapsible-padding: 20px 30px;
   min-height: 100vh;
   width: 100%;
   position: relative;
-  box-sizing: border-box;
-  // overflow: hidden;
   background-color: map-get($basePalette, "navy-4");
   background-repeat: no-repeat;
   background-position: center;
-  // background-attachment: fixed;
   background-image: url('/ngv-portal/assets/images/backgrounds/dotted.png');
   background-size: cover;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   @media (max-width: $small) {
     padding: 60px 20px;
-  }
-
-  .center {
-    margin: 60px auto 60px;
-    max-width: 2160px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    @media (max-width: $small) {
-      flex-direction: column;
-    }
-  }
-
-  .center-col {
-    // flex: 50%;
-    flex-grow: 1;
-    &:first-child {
-      // margin-right: 40px;
-    }
-    &:last-child {
-      // margin-left: 40px;
-    }
-    @media (max-width: $small) {
-      &:first-child {
-        margin-right: 0;
-      }
-      &:last-child {
-        margin-left: 0;
-      }
-    }
   }
 }
 
@@ -1394,7 +1369,6 @@ $collapsible-padding: 20px 30px;
   position: -webkit-sticky;
   position: sticky;
   bottom: 0;
-  // left: 0;
   width: 100%;
 }
 
