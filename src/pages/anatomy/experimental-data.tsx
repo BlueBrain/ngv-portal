@@ -98,7 +98,7 @@ export default function AnatomyExpData() {
               />
             </Col>
           </Row>
-          <div className="text-right mt-3">
+          {/* <div className="text-right mt-3">
             <Dropdown
               overlay={<Menu onClick={downloadMorphology}>
                 {downloadableMorphologies.map(morph => (
@@ -114,7 +114,7 @@ export default function AnatomyExpData() {
                 Morphologies <DownOutlined />
               </Button>
             </Dropdown>
-          </div>
+          </div> */}
         </Collapsible>
 
         <Collapsible title="Vasculature data" className="mt-4">
