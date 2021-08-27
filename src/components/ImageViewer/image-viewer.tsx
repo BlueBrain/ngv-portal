@@ -63,7 +63,7 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
         onClick={(e: React.MouseEvent) => onThumbnailClick(e)}
         style={{
           aspectRatio,
-          border: border ? '1px solid grey' : 'none',
+          border: border ? '1px solid #cecece' : 'none',
           display: thumbnailLoadError ? 'none' : 'block',
         }}
         onLoad={onThumbnailLoad}

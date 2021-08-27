@@ -127,15 +127,28 @@ export default function AnatomyRecData() {
             loop
             defaultSize={720}
           />
+        </Collapsible>
 
-          <div className="text-right mt-2">
+        <Collapsible title="Explore reconstructions" className="mt-4">
+          <p>Explore the NGV reconstructions interactively in your browser in 3D.</p>
+
+          <ImageViewer
+            src={`${imgBase}/ngv-viewer-screenshot.png`}
+            thumbnailSrc={imgOpt(`${imgBase}/ngv-viewer-screenshot.png`, { width: 1920 })}
+            border
+            aspectRatio="16/9"
+          />
+
+          <div className="text-right" style={{ marginTop: '1.4rem' }}>
             <Button
               size="small"
               type="primary"
               href="https://bbp.epfl.ch/ngv-viewer"
+              target="_blank"
+              rel="noopener noreferrer"
               icon={<LinkOutlined />}
             >
-              Online Circuit Viewer
+              Open NGV Viewer
             </Button>
           </div>
         </Collapsible>
