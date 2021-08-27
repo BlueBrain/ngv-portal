@@ -16,6 +16,12 @@ if (isServer) {
   require('abort-controller/polyfill');
 } else {
   smoothscroll.polyfill();
+
+  // Don't use smooth scrolling for Firefox as in some cases it's causing app not to scroll to the top
+  // when changing route, see https://github.com/vercel/next.js/issues/12105
+  if (!navigator.userAgent.match(/firefox/i)) {
+    document.querySelector("html").style.scrollBehavior = "smooth";
+  }
 }
 
 const nexusClient = createNexusClient({

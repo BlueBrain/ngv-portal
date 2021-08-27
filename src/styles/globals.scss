@@ -21,7 +21,6 @@ html, body {
   @include font-default;
   color: map-get($basePalette, "white");
   background-color: map-get($basePalette, "navy-4");
-  scroll-behavior: smooth;
 }
 
 :root {
