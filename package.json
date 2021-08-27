@@ -21,7 +21,7 @@
     "file-saver": "^2.0.5",
     "flexboxgrid": "^6.3.1",
     "lodash": "^4.17.20",
-    "next": "^11.1.1-canary.10",
+    "next": "^11.1.1-canary.17",
     "plyr": "^3.6.3",
     "react": "17.0.1",
     "react-dom": "17.0.1",
