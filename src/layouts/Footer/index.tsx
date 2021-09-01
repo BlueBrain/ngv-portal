@@ -71,6 +71,7 @@ const Footer: React.FC<{}> = () => {
 
         <div className="mt-2">
           <p><Link href="/">Home</Link></p>
+          <p><Link href="/#about">About</Link></p>
           <p><Link href="/#explore">Explore</Link></p>
           <p><Link href="/#publications">Publications</Link></p>
           <p><Link href="/glossary">Glossary</Link></p>

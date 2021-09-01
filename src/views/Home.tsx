@@ -1,15 +1,12 @@
 import React from 'react';
-import Link from 'next/link';
+import Image from 'next/image';
+import { Row, Col } from 'antd';
 
 import Title from '../components/Title';
 import ImageSlider from '../components/ImageSlider';
-import Button from '../components/Button';
 import PublicationBlock from '../components/PublicationBlock';
-import InfoBox1 from '../components/Home/InfoBox1';
 import SectionCard from '../components/SectionCard';
 import CtaButton from '../components/CtaButton';
-import ImageViewer from '../components/ImageViewer';
-import { imgOpt } from '../utils';
 
 
 const classPrefix = 'Home__';
@@ -58,68 +55,52 @@ const Home: React.FC = () => (
       </div>
     </section>
 
-    {/* <section id="about">
-      <h2>
-        Select and Explore. Download.{' '}
-        <span className="nowrap">
-          Contribute
+    <section className="about-section" id="about">
+      <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+        <h2 className="mb-2 mt-2">
+          <span>ABOUT</span>
           <span className="accent-border" />
-        </span>
-      </h2>
-      <div className="content">
-        <div className="workflow">
-          <InfoBox1
-            icon="checkmark"
-            title="Select and Explore"
-          >
-            <p>
-              Discover how the Blue Brain Project organizes collected data and extrapolates principles
-              to rebuild digitally reconstructed networks towards reconciling discrepancies in literature.
+        </h2>
+        <Row gutter={48}>
+          <Col xs={24} md={{ span: 12, push: 12 }}>
+            <Image
+              src="/ngv-portal/assets/images/backgrounds/home-page/about-section-illustration.png"
+              layout="responsive"
+              width="1280"
+              height="1039"
+              alt=""
+            />
+          </Col>
+          <Col xs={24} md={{ span:12, pull: 12 }}>
+            <p className="mt-1">
+              The NGV portal showcases the digital modeling of the Neuro-Glia-Vasculature system
+              performed within the Blue Brain Project. The process is divided into three main blocks:
             </p>
-          </InfoBox1>
-          <InfoBox1
-            icon="checkmark"
-            title="Download"
-          >
+            <ol>
+              <li>
+                Anatomical reconstruction (Anatomy)
+              </li>
+              <li>
+                Metabolism
+              </li>
+              <li>
+                Blood flow (which includes calcium-regulated modulation of vasculature by the astrocytic endfeet).
+              </li>
+            </ol>
             <p>
-              The Blue Brain Project has made various assets available for download throughout the portal.
-              Enjoy downloading your selected items for your own use.
+              Each type of modeling is developed in the context of the existing Blue Brain microcircuit.
+              The microcircuit is a large-scale electrical model of cortex,
+              which includes well-characterized types of neurons at their known densities and connections.
             </p>
-          </InfoBox1>
-          <InfoBox1
-            icon="checkmark"
-            title="Contribute"
-          >
-            <p>
-              If you wish to share your findings for consideration to be added to the portal.
-              Please submit your data through submissions. We welcome and value your feedback.
-            </p>
-          </InfoBox1>
-        </div>
-        <div className="image">
-          <img
-            id="screenshot"
-            src="/ngv-portal/assets/images/backgrounds/landingpage_mac.png"
-            alt="Image of a computer"
-            loading="lazy"
-          />
-        </div>
+          </Col>
+        </Row>
       </div>
-    </section> */}
+    </section>
 
     <section id="explore" className="section-3">
       <div className="intro">
         <h2 className="text-white">Explore</h2>
         <h3>Navigate the various datasets made available</h3>
-        <p>
-          The NGV portal showcases the digital modeling of the Neuro-Glia-Vasculature system
-          performed within the Blue Brain Project. The process is divided into three main blocks:
-          1. Anatomical reconstruction (Anatomy), 2. Metabolism, and
-          3. Blood flow (which includes calcium-regulated modulation of vasculature by the astrocytic endfeet).
-          Each type of modeling is developed in the context of the existing Blue Brain microcircuit.
-          The microcircuit is a large-scale electrical model of cortex,
-          which includes well-characterized types of neurons at their known densities and connections.
-        </p>
       </div>
 
       <div className="row" style={{ maxWidth: '1280px', margin: '0 auto' }}>

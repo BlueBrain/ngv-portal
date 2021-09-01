@@ -13,13 +13,13 @@ const classDisabled = 'disabled';
 export const HomeNav: React.FC = () => (
   <ul className="home-nav">
     <li>
-      <Link href="/#explore">
-        Explore
+      <Link href="/#about">
+        About
       </Link>
     </li>
     <li>
-      <Link href="/#publications">
-        Publications
+      <Link href="/#explore">
+        Explore
       </Link>
     </li>
   </ul>
