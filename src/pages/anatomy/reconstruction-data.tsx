@@ -268,6 +268,19 @@ export default function AnatomyRecData() {
           <Row gutter={32}>
             <Col xs={24} sm={12}>
               {textContent.morphologicalSynthesisOfAstrocytes.text}
+              <p>
+                To launch the astrocyte analysis Jupyter notebook in your browser using MyBinder, click the badge &nbsp;
+                <a
+                  href="https://mybinder.org/v2/gh/BlueBrain/NeuroM/HEAD?filepath=tutorial%2Fastrocyte_analysis.ipynb"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="https://mybinder.org/badge_logo.svg"
+                    alt="MyBinder link for astrocyte analysis notebook"
+                  />
+                </a>
+              </p>
               {textContent.morphologicalSynthesisOfAstrocytes.legend}
             </Col>
             <Col xs={24} sm={12}>
