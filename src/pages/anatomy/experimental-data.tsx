@@ -20,22 +20,20 @@ const assetsBase = `${staticDataBaseUrl}/anatomy/experimental-data`;
 
 const downloadableMorphologies = [{
   href: `${assetsBase}/astrocyte-morphologies/astrocyte-morphology-1.tar.xz`,
-  filename: 'astrocyte-morphology-1.tar.xz',
   label: 'Astrocyte morphology 1',
 }, {
   href: `${assetsBase}/astrocyte-morphologies/astrocyte-morphology-2.tar.xz`,
-  filename: 'astrocyte-morphology-2.tar.xz',
   label: 'Astrocyte morphology 2',
 }, {
   href: `${assetsBase}/astrocyte-morphologies/astrocyte-morphology-3.tar.xz`,
-  filename: 'astrocyte-morphology-3.tar.xz',
   label: 'Astrocyte morphology 3',
 }];
 
 export default function AnatomyExpData() {
   const downloadMorphology = (e) => {
     const morph = downloadableMorphologies.find(morph => morph.label === e.key);
-    saveAs(morph.href, morph.filename);
+    const filename= morph.href.split('/').reverse()[0];
+    saveAs(morph.href, filename);
   };
 
   return (
