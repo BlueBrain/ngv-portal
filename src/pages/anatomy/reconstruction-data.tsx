@@ -59,7 +59,7 @@ export default function AnatomyRecData() {
   return (
     <>
       <Filters primaryColor="blue" backgroundAlt hasData={true}>
-        <Row gutter={32} align="middle" className="w-100">
+        <Row align="middle" className="w-100">
           <Col xs={24} lg={12} className="mt-1 mb-1">
             <Title
               primaryColor="blue"
