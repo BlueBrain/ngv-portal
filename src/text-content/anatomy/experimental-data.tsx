@@ -21,7 +21,7 @@ const textContent = {
 
   extractedMeshes: (<p>
     A framework, called Ultraliser, is developed to create high fidelity, optimized and watertight mesh models
-    of the NGV data that were, either obtained from the EM stacks or reconstructed by other meshing tools
+    of the NGV data that were either obtained from the EM stacks or reconstructed by other meshing tools
     that cannot create watertight meshes. This framework was then used to generate polygonal mesh models
     of all the objects that were produced by Calì <i>et al.</i> 2019, including four neurons, four astrocytes
     and their nuclei, mitochondria and endoplasmic reticula and two vasculature parts.
