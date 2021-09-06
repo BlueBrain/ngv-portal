@@ -69,13 +69,15 @@ export default function AnatomyPredictions() {
           <Row gutter={32}>
             <Col xs={24} md={12}>
               {textContent.emergingNgvCompositionalHierarchy.text}
-              {textContent.emergingNgvCompositionalHierarchy.legend}
             </Col>
             <Col xs={24} md={12}>
               <ImageViewer
                 src="/ngv-portal/assets/images/predictions/predictions_bars.png"
                 thumbnailSrc={imgOpt('/ngv-portal/assets/images/predictions/predictions_bars.png')}
               />
+              <div className="mt-1">
+                {textContent.emergingNgvCompositionalHierarchy.legend}
+              </div>
             </Col>
           </Row>
         </Collapsible>

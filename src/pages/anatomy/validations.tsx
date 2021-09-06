@@ -137,13 +137,16 @@ export default function AnatomyValidations() {
           <Row gutter={32}>
             <Col xs={24} md={12}>
               {textContent.synthesizedCellValidation.featureBased.text}
-              {textContent.synthesizedCellValidation.featureBased.legend}
+              
             </Col>
             <Col xs={24} md={12}>
               <ImageViewer
                 src={`${imgBase}/validation_circuit_morphometrics.png`}
                 thumbnailSrc={imgOpt(`${imgBase}/validation_circuit_morphometrics.png`)}
               />
+              <div className="mt-1">
+                {textContent.synthesizedCellValidation.featureBased.legend}
+              </div>
             </Col>
           </Row>
 
