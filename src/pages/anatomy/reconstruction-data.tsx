@@ -276,10 +276,23 @@ export default function AnatomyRecData() {
 
         <Collapsible title="Morphological synthesis of astrocytes" className="mt-4">
           <Row gutter={32}>
-            <Col xs={24} sm={12}>
+            <Col xs={24} sm={24} className="column-count-2">
               {textContent.morphologicalSynthesisOfAstrocytes.text}
             </Col>
-            <Col xs={24} sm={12}>
+
+            <Col xs={24} sm={12} className="mt-3">
+              <ImageViewer
+                src={`${imgBase}/astrocytes_illustration_annotated.jpg`}
+                thumbnailSrc={imgOpt(`${imgBase}/astrocytes_illustration_annotated.jpg`)}
+              />
+              <div className="mt-1">
+                <small>
+                  <strong>Figure:</strong> Examples of synthesized astrocytes.
+                </small>
+              </div>
+            </Col>
+
+            <Col xs={24} sm={12} className="mt-3">
               <ImageViewer
                 src={`${imgBase}/results_morphs_illustration_recolored.png`}
                 thumbnailSrc={imgOpt(`${imgBase}/results_morphs_illustration_recolored.png`)}
