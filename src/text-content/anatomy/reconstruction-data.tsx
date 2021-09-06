@@ -89,7 +89,8 @@ const textContent = {
     </>),
   },
 
-  astrocyticPositionsWithoutCollision: (<>
+  astrocyticPositionsWithoutCollision: {
+    text: (<>
     <p>
       We first placed astrocytic somata in space, matching the experimental distributions of cell density
       and dispersion. Previous placement algorithms placed cells with respect to their density
@@ -98,15 +99,19 @@ const textContent = {
       we distributed somata taking into account both the astrocytic density but also the distances between them.
       Moreover, the astrocytic somata were placed without colliding with the vascular geometry.
     </p>
-    <small>
-      <strong>Figure:</strong> Illustrations of the somata distribution in the NGV circuit.
-      (A) Illustration of vasculature mesh (red) and astrocytic somata (turquoise).
-      (B) Evenly distributed astrocytic somata, unaffected by vasculature geometry.
-      (C) Neuronal somata convex hulls (blue) restrict astrocytes (green) from being placed
-      according to their densities and distancing.
-    </small>
   </>),
-
+  legend: (
+    <>    
+      <small>
+        <strong>Figure:</strong> Illustrations of the somata distribution in the NGV circuit.
+        (A) Illustration of vasculature mesh (red) and astrocytic somata (turquoise).
+        (B) Evenly distributed astrocytic somata, unaffected by vasculature geometry.
+        (C) Neuronal somata convex hulls (blue) restrict astrocytes (green) from being placed
+        according to their densities and distancing.
+      </small>
+    </>
+    )
+  },
   microdomains: {
     text: (<>
       <p>
@@ -215,6 +220,19 @@ const textContent = {
         that combined topological branching and space colonization using neuronal synapses as attraction seeds.
         This allowed us to grow in-silico,  unique astrocytic morphologies that were embedded in space,
         projecting to the vasculature forming endfeet and encapsulating the synapses in their microdomains.
+      </p>
+      <p>
+        To launch the astrocyte analysis Jupyter notebook in your browser using MyBinder, click the badge &nbsp;
+        <a
+          href="https://mybinder.org/v2/gh/BlueBrain/NeuroM/HEAD?filepath=tutorial%2Fastrocyte_analysis.ipynb"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://mybinder.org/badge_logo.svg"
+            alt="MyBinder link for astrocyte analysis notebook"
+          />
+        </a>
       </p>
     </>),
 

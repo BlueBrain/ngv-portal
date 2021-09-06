@@ -227,7 +227,7 @@ section {
   background-color: map-get($basePalette, "navy-4");
   height: $height;
   border-radius: $height;
-  line-height: $height;
+  line-height: $height / 2;
   border: $borderWidth solid map-get($basePalette, "white");
   padding: 0 15px;
   transition: all 0.2s;
@@ -330,6 +330,7 @@ section {
 // Collapsible
 
 $collapsible-padding: 26px 30px;
+$collapsible-padding-small: 0.5rem;
 
 @mixin collapsible__basis {
   border-radius: 3px;
@@ -339,6 +340,9 @@ $collapsible-padding: 26px 30px;
     font-size: map-get($fontSize, "large");
     font-weight: 400;
     padding: $collapsible-padding;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     &:hover {
       cursor: pointer;
       background-color: map-get($basePalette, "navy-1");
@@ -354,6 +358,10 @@ $collapsible-padding: 26px 30px;
     color: map-get($basePalette, "navy-4");
     padding: $collapsible-padding;
     overflow: hidden;
+
+    @media (max-width: $ant-breakpoint-sm) {
+      padding: $collapsible-padding-small;
+    }
   }
 
   &.red {
@@ -1266,12 +1274,13 @@ $collapsible-padding: 26px 30px;
       }
     }
 
-    p {
-      border-left: 4px solid map-get($accentPalette, "white");
-      margin: 1rem 1rem 1rem 0;
+    .hint {
+      border-left: 4px solid map-get($accentPalette, "yellow");
+      margin: 2rem 1rem 1rem 0;
       padding-left: 12px;
-      @media (max-width: $small) {
-        margin-left: 1rem;
+      @media (max-width: $ant-breakpoint-sm) {
+        text-align: justify;
+        margin-right: 1.5rem;
       }
     }
   }
@@ -1295,18 +1304,21 @@ $collapsible-padding: 26px 30px;
 
 // layout / Brand
 .brand__basis {
-  .logo,
-  h1 {
-    display: inline-block;
-  }
+  $height: 36px;
+  display: flex;
+  align-items: baseline;
 
   .logo {
     width: 60px;
     padding-right: 12px;
+    margin-right: 12px;
     position: relative;
     @media (max-width: $small) {
-      width: 42px;
-      padding-right: 10px;
+      padding-right: 8px;
+    }
+    @media (max-width: $ant-breakpoint-sm) {
+      width: 40px;
+      margin-right: 8px;
     }
     img {
       vertical-align: initial;
@@ -1323,8 +1335,29 @@ $collapsible-padding: 26px 30px;
     position: absolute;
     top: 0;
     right: -2px;
-    @media (max-width: $small) {
-      height: 1rem;
+  }
+
+  .project {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    line-height: $height;
+    @media (max-width: $ant-breakpoint-sm) {
+      font-size: 12px;
+    }
+
+    .bbp-name {
+      padding-right: 12px;
+      margin-bottom: 0;
+      @media (max-width: $small) {
+        padding-right: 8px;
+      }
+    }
+
+    .name {
+      font-weight: bold;
+      font-size: 1.5em;
+      margin-bottom: 0;
     }
   }
 
@@ -1513,7 +1546,14 @@ $collapsible-padding: 26px 30px;
   z-index: 10;
   @media (max-width: $small) {
     justify-content: center;
+    width:100%;
     top: 5px;
+    top: 10px;
+    left: 10px;
+  }
+
+  @media (max-width: $ant-breakpoint-sm) {
+    width:unset;
   }
 
   .home-nav,
@@ -1603,7 +1643,7 @@ $collapsible-padding: 26px 30px;
 .nav-mobile__basis {
   display: none;
   position: fixed;
-  top: 7px;
+  top: 15px;
   right: 7px;
   font-size: 1.5rem;
   height: calc(2px + 1.5rem);
@@ -1637,8 +1677,8 @@ $collapsible-padding: 26px 30px;
 
   .close-icon {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 2px;
+    right: 6px;
     color: map-get($basePalette, "white");
     padding: 10px;
     font-size: 1.5rem;
@@ -1926,6 +1966,9 @@ $collapsible-padding: 26px 30px;
 
   section {
     padding: 30px 30px 60px;
+    @media (max-width: $ant-breakpoint-sm) {
+      padding: 30px 16px 60px;
+    }
   }
 
   .accent-border {
@@ -1963,6 +2006,7 @@ $collapsible-padding: 26px 30px;
 
   #section-1 {
     min-height: 100vh;
+    position: relative;
     padding-top: 90px;
     padding-bottom: 0;
     background-color: #050a30;
@@ -1988,7 +2032,6 @@ $collapsible-padding: 26px 30px;
       z-index: 9;
       flex: 1 1 0;
       width: 67%;
-      margin-top: -120px;
       padding-left: 10%;
 
       h2 {
@@ -2256,6 +2299,7 @@ $collapsible-padding: 26px 30px;
 
     a {
       margin: 0 5px;
+      color: map-get($basePalette, "navy-3");
     }
 
     @media (max-width: $small) {

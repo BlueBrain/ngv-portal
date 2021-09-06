@@ -28,10 +28,12 @@ const Collapsible: React.FC<CollapsibleProps> = ({
   return (
     <div id="data" className={`${classPrefix}${isCollapsed ? 'collapsed' : 'expanded'} ${color} ${className}`}>
       <div onClick={() => setCollapsed(!isCollapsed)} className="header">
+        <div>
         {title}
-        <span className="arrow">
+        </div>
+        <div className="arrow">
           <IoIosArrowUp />
-        </span>
+        </div>
       </div>
       <div className="content">{children}</div>
     </div>
