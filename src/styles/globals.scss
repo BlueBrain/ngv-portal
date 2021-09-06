@@ -227,7 +227,7 @@ section {
   background-color: map-get($basePalette, "navy-4");
   height: $height;
   border-radius: $height;
-  line-height: $height;
+  line-height: $height / 2;
   border: $borderWidth solid map-get($basePalette, "white");
   padding: 0 15px;
   transition: all 0.2s;
@@ -340,6 +340,9 @@ $collapsible-padding-small: 0.5rem;
     font-size: map-get($fontSize, "large");
     font-weight: 400;
     padding: $collapsible-padding;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     &:hover {
       cursor: pointer;
       background-color: map-get($basePalette, "navy-1");
