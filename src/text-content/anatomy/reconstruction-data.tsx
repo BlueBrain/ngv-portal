@@ -74,7 +74,7 @@ const textContent = {
         >
           Oeltze & Preim, 2004
         </a>)
-        which allowed the creation of highly-detailed meshes of vasculature datasets (Figure 2D-F).
+        which allowed the creation of highly-detailed meshes of vasculature datasets (Figure D-F).
       </p>
     </>),
 
@@ -206,8 +206,7 @@ const textContent = {
     legend: (<>
       <small>
         <strong>Figure:</strong> Example of endfeet area reconstruction.
-        (A-C) Simulation steps of growing areas and closeup
-        (D) of their convergence
+        Perivascular endfeet (blue) wrap around the microvasculature (red).
       </small>
     </>),
   },
