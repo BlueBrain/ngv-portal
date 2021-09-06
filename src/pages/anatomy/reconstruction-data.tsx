@@ -212,7 +212,6 @@ export default function AnatomyRecData() {
           <Row gutter={32}>
             <Col xs={24} sm={12}>
               {textContent.microdomains.text}
-              
             </Col>
             <Col xs={24} sm={12}>
               <ImageViewer

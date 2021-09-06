@@ -120,8 +120,8 @@ export default function AnatomyExpData() {
             <Col xs={24} md={12}>{textContent.vasculatureData}</Col>
             <Col xs={24} md={12}>
               <ImageViewer
-                src={`${imgBase}/vasculature_stages.png`}
-                thumbnailSrc={imgOpt(`${imgBase}/vasculature_stages.png`)}
+                src={`${imgBase}/still_vasculatures_with_dof.jpg`}
+                thumbnailSrc={imgOpt(`${imgBase}/still_vasculatures_with_dof.jpg`)}
               />
             </Col>
           </Row>
