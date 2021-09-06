@@ -44,7 +44,7 @@ const textContent = {
       target="_blank"
       rel="noopener noreferrer"
     >
-      Markram et al., (2015)
+      Markram <i>et al.</i> (2015)
     </a>.
     In this work the input neocortical mesocircuit consisted of a central microcircuit,
     occupying a volume of 0.28 mm<sup>3</sup>, with 23,590 neurons surrounded by
@@ -101,7 +101,7 @@ const textContent = {
     </p>
   </>),
   legend: (
-    <>    
+    <>
       <small>
         <strong>Figure:</strong> Illustrations of the somata distribution in the NGV circuit.
         (A) Illustration of vasculature mesh (red) and astrocytic somata (turquoise).
