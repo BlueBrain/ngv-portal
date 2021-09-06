@@ -52,8 +52,9 @@ const downloadableMorphologies = [{
 
 export default function AnatomyRecData() {
   const downloadMorphology = (e) => {
-    const href = downloadableMorphologies.find(morph => morph.label === e.key).href;
-    saveAs(href);
+    const morph = downloadableMorphologies.find(morph => morph.label === e.key);
+    const filename = morph.href.split('/').reverse()[0];
+    saveAs(morph.href, filename);
   };
 
   return (
@@ -278,7 +279,6 @@ export default function AnatomyRecData() {
           <Row gutter={32}>
             <Col xs={24} sm={12}>
               {textContent.morphologicalSynthesisOfAstrocytes.text}
-              
             </Col>
             <Col xs={24} sm={12}>
               <ImageViewer
