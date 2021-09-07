@@ -125,28 +125,30 @@ const Home: React.FC = () => (
     </section>
 
     <section id="publications" className="publication-section bg-dark-blue">
-      <Row gutter={10} justify="space-between" align="middle" className="section-content">
-        <Col xs={24} sm={10} className="mt-2">
-          <h1 className="text-white text-uppercase mb-1">Publications</h1>
-          <p className="color-blue subtitle">Read up on our latest publications!</p>
+      <div className="section-content">
+        <Row gutter={10} justify="space-between" align="middle">
+          <Col xs={24} sm={10} className="mt-2">
+            <h1 className="text-white text-uppercase mb-1">Publications</h1>
+            <p className="color-blue subtitle">Read up on our latest publications!</p>
 
-          <PublicationBlock
-            className="mt-4"
-            href="https://doi.org/10.1101/2021.01.19.427241"
-            description="Architecture of the Neuro-Glia-Vascular System"
-            authors={<>Eleftherios Zisis <i>et al.</i>, 2021</>}
-          />
-        </Col>
-        <Col xs={24} sm={12} className="mt-2">
-          <Image
-            src="/ngv-portal/assets/images/backgrounds/home-page/publications-section-illustration.png"
-            layout="responsive"
-            width="4"
-            height="3"
-            alt=""
-          />
-        </Col>
-      </Row>
+            <PublicationBlock
+              className="mt-4"
+              href="https://doi.org/10.1101/2021.01.19.427241"
+              description="Architecture of the Neuro-Glia-Vascular System"
+              authors={<>Eleftherios Zisis <i>et al.</i>, 2021</>}
+            />
+          </Col>
+          <Col xs={24} sm={12} className="mt-2">
+            <Image
+              src="/ngv-portal/assets/images/backgrounds/home-page/publications-section-illustration.png"
+              layout="responsive"
+              width="4"
+              height="3"
+              alt=""
+            />
+          </Col>
+        </Row>
+      </div>
     </section>
 
     <section id="section-5">
