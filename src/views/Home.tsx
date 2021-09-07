@@ -57,7 +57,7 @@ const Home: React.FC = () => (
     </section>
 
     <section className="about-section" id="about">
-      <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+      <div className="section-content">
         <h2 className="mb-2 mt-2">
           <span>ABOUT</span>
           <span className="accent-border" />
@@ -99,32 +99,33 @@ const Home: React.FC = () => (
     </section>
 
     <section id="explore" className="section-3">
-      <div className="intro">
-        <h2 className="text-white">Explore</h2>
-        <h3>Navigate the various datasets made available</h3>
-      </div>
+      <div className="section-content">
+        <div className="intro">
+          <h2 className="text-white">Explore</h2>
+          <h3>Navigate the various datasets made available</h3>
+        </div>
 
-      <Row gutter={10} justify="center" style={{ maxWidth: '1280px', margin: '0 auto' }}>
-        {cardsData.map(({title, backgroundColor, routeBase, image, links, description}) => (
-          <Col key={title} xs={24} sm={8} className="mb-2">
-            <SectionCard
-              title={title}
-              bgColor={backgroundColor}
-              routeBase={routeBase}
-              bgImgSrc={image}
-              links={links}
-              description={description}
-            />
-          </Col>
-        ))}
-      </Row>
-      <div style={{ maxWidth: '1280px', paddingLeft: '0.5rem', margin: '0 auto'  }}>
+        <Row gutter={10} justify="center">
+          {cardsData.map(({title, backgroundColor, routeBase, image, links, description}) => (
+            <Col key={title} xs={24} sm={8} className="mb-2">
+              <SectionCard
+                title={title}
+                bgColor={backgroundColor}
+                routeBase={routeBase}
+                bgImgSrc={image}
+                links={links}
+                description={description}
+              />
+            </Col>
+          ))}
+        </Row>
+
         <small className="text-medium-white"><sup>*</sup> Coming soon</small>
       </div>
     </section>
 
     <section id="publications" className="publication-section bg-dark-blue">
-      <Row gutter={10} justify="space-between" align="middle" style={{ maxWidth: '1280px', margin: '0 auto' }}>
+      <Row gutter={10} justify="space-between" align="middle" className="section-content">
         <Col xs={24} sm={10} className="mt-2">
           <h1 className="text-white text-uppercase mb-1">Publications</h1>
           <p className="color-blue subtitle">Read up on our latest publications!</p>
