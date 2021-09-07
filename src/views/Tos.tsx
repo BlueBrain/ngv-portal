@@ -90,7 +90,7 @@ const TermsOfUse: React.FC = () => {
         </p>
 
         <p>
-          For some Data you find in the Porta, BBP may be bound by its contractual
+          For some Data you find in the Portal, BBP may be bound by its contractual
           and license agreements respecting certain third-party resources. For the Data
           to whom BBP has a license, you have to adhere to any license terms and conditions
           provided with these resources.
