@@ -138,7 +138,7 @@ const Home: React.FC = () => (
         </Col>
         <Col xs={24} sm={12} className="mt-2">
           <Image
-            src="/ngv-portal/assets/images/backgrounds/home-page/publications-section-illustration-1.png"
+            src="/ngv-portal/assets/images/backgrounds/home-page/publications-section-illustration.png"
             layout="responsive"
             width="4"
             height="3"
@@ -146,33 +146,6 @@ const Home: React.FC = () => (
           />
         </Col>
       </Row>
-
-      {/* <div className="content">
-        <div className="row">
-          <div className="col-xs-12 col-md-6">
-            <h1 className="text-white text-uppercase mb-1">Publications</h1>
-            <p className="color-blue subtitle">Read up on our latest publications!</p>
-
-            <PublicationBlock
-              className="mt-4"
-              href="https://doi.org/10.1101/2021.01.19.427241"
-              description="Architecture of the Neuro-Glia-Vascular System"
-              authors={<>Eleftherios Zisis <i>et al.</i>, 2021</>}
-            />
-
-          </div>
-          <div className="col-xs-12 col-md-6">
-            <Image
-              src="/ngv-portal/assets/images/backgrounds/home-page/publications-section-illustration-1.png"
-              layout="responsive"
-              width="4"
-              height="3"
-              alt=""
-            />
-          </div>
-        </div>
-
-      </div> */}
     </section>
 
     <section id="section-5">
