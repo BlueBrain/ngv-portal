@@ -44,7 +44,7 @@ const textContent = {
       target="_blank"
       rel="noopener noreferrer"
     >
-      Markram et al., (2015)
+      Markram <i>et al.</i> (2015)
     </a>.
     In this work the input neocortical mesocircuit consisted of a central microcircuit,
     occupying a volume of 0.28 mm<sup>3</sup>, with 23,590 neurons surrounded by
@@ -74,7 +74,7 @@ const textContent = {
         >
           Oeltze & Preim, 2004
         </a>)
-        which allowed the creation of highly-detailed meshes of vasculature datasets (Figure 2D-F).
+        which allowed the creation of highly-detailed meshes of vasculature datasets (Figure D-F).
       </p>
     </>),
 
@@ -89,7 +89,8 @@ const textContent = {
     </>),
   },
 
-  astrocyticPositionsWithoutCollision: (<>
+  astrocyticPositionsWithoutCollision: {
+    text: (<>
     <p>
       We first placed astrocytic somata in space, matching the experimental distributions of cell density
       and dispersion. Previous placement algorithms placed cells with respect to their density
@@ -98,15 +99,19 @@ const textContent = {
       we distributed somata taking into account both the astrocytic density but also the distances between them.
       Moreover, the astrocytic somata were placed without colliding with the vascular geometry.
     </p>
-    <small>
-      <strong>Figure:</strong> Illustrations of the somata distribution in the NGV circuit.
-      (A) Illustration of vasculature mesh (red) and astrocytic somata (turquoise).
-      (B) Evenly distributed astrocytic somata, unaffected by vasculature geometry.
-      (C) Neuronal somata convex hulls (blue) restrict astrocytes (green) from being placed
-      according to their densities and distancing.
-    </small>
   </>),
-
+  legend: (
+    <>
+      <small>
+        <strong>Figure:</strong> Illustrations of the somata distribution in the NGV circuit.
+        (A) Illustration of vasculature mesh (red) and astrocytic somata (turquoise).
+        (B) Evenly distributed astrocytic somata, unaffected by vasculature geometry.
+        (C) Neuronal somata convex hulls (blue) restrict astrocytes (green) from being placed
+        according to their densities and distancing.
+      </small>
+    </>
+    )
+  },
   microdomains: {
     text: (<>
       <p>
@@ -201,8 +206,7 @@ const textContent = {
     legend: (<>
       <small>
         <strong>Figure:</strong> Example of endfeet area reconstruction.
-        (A-C) Simulation steps of growing areas and closeup
-        (D) of their convergence
+        Perivascular endfeet (blue) wrap around the microvasculature (red).
       </small>
     </>),
   },
@@ -215,6 +219,19 @@ const textContent = {
         that combined topological branching and space colonization using neuronal synapses as attraction seeds.
         This allowed us to grow in-silico,  unique astrocytic morphologies that were embedded in space,
         projecting to the vasculature forming endfeet and encapsulating the synapses in their microdomains.
+      </p>
+      <p>
+        To launch the astrocyte analysis Jupyter notebook in your browser using MyBinder, click the badge &nbsp;
+        <a
+          href="https://mybinder.org/v2/gh/BlueBrain/NeuroM/HEAD?filepath=tutorial%2Fastrocyte_analysis.ipynb"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://mybinder.org/badge_logo.svg"
+            alt="MyBinder link for astrocyte analysis notebook"
+          />
+        </a>
       </p>
     </>),
 

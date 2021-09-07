@@ -60,7 +60,7 @@ export default function AnatomyRecData() {
   return (
     <>
       <Filters primaryColor="blue" backgroundAlt hasData={true}>
-        <Row gutter={32} align="middle" className="w-100">
+        <Row align="middle" className="w-100">
           <Col xs={24} lg={12} className="mt-1 mb-1">
             <Title
               primaryColor="blue"
@@ -91,8 +91,8 @@ export default function AnatomyRecData() {
             defaultSize={720}
             poster={`${staticDataBaseUrl}/anatomy/reconstruction-data/NGV_DISS149_MASTER_WITH_EFFECTS-poster.jpg`}
           />
-          <Row gutter={16} className="mt-2 mb-2">
-            <Col xs={24} sm={8}>
+          <Row gutter={16} className="mt-2 mb-1">
+            <Col xs={24} sm={8} className="mb-1">
               <Video
                 sources={composeSources('/anatomy/reconstruction-data/NGV_DISS149_MASTER_TURNTABLE_N')}
                 muted
@@ -101,7 +101,7 @@ export default function AnatomyRecData() {
                 defaultSize={360}
               />
             </Col>
-            <Col xs={24} sm={8}>
+            <Col xs={24} sm={8} className="mb-1">
               <Video
                 sources={composeSources('/anatomy/reconstruction-data/NGV_DISS149_MASTER_TURNTABLE_G')}
                 muted
@@ -110,7 +110,7 @@ export default function AnatomyRecData() {
                 defaultSize={360}
               />
             </Col>
-            <Col xs={24} sm={8}>
+            <Col xs={24} sm={8} className="mb-1">
               <Video
                 sources={composeSources('/anatomy/reconstruction-data/NGV_DISS149_MASTER_TURNTABLE_G')}
                 muted
@@ -170,13 +170,15 @@ export default function AnatomyRecData() {
           <Row gutter={32}>
             <Col xs={24} sm={12}>
               {textContent.vasculatureSurfaceMesh.text}
-              {textContent.vasculatureSurfaceMesh.legend}
             </Col>
             <Col xs={24} sm={12}>
               <ImageViewer
                 src={`${imgBase}/vasculature_stages.png`}
                 thumbnailSrc={imgOpt(`${imgBase}/vasculature_stages.png`)}
               />
+              <div className="mt-1">
+              {textContent.vasculatureSurfaceMesh.legend}
+              </div>
             </Col>
           </Row>
           <div className="text-right mt-3">
@@ -193,12 +195,15 @@ export default function AnatomyRecData() {
 
         <Collapsible title="Astrocytic positions without collision" className="mt-4">
           <Row gutter={32}>
-            <Col xs={24} sm={12}>{textContent.astrocyticPositionsWithoutCollision}</Col>
+            <Col xs={24} sm={12}>{textContent.astrocyticPositionsWithoutCollision.text}</Col>
             <Col xs={24} sm={12}>
               <ImageViewer
                 src={`${imgBase}/results_illustrations.png`}
                 thumbnailSrc={imgOpt(`${imgBase}/results_illustrations.png`)}
               />
+              <div className="mt-1">
+                {textContent.astrocyticPositionsWithoutCollision.legend}
+              </div>
             </Col>
           </Row>
         </Collapsible>
@@ -207,13 +212,15 @@ export default function AnatomyRecData() {
           <Row gutter={32}>
             <Col xs={24} sm={12}>
               {textContent.microdomains.text}
-              {textContent.microdomains.legend}
             </Col>
             <Col xs={24} sm={12}>
               <ImageViewer
                 src={`${imgBase}/results_microdomains_illustration.png`}
                 thumbnailSrc={imgOpt(`${imgBase}/results_microdomains_illustration.png`)}
               />
+              <div className="mt-1">
+                {textContent.microdomains.legend}
+              </div>
             </Col>
           </Row>
           <div className="text-right mt-3">
@@ -236,7 +243,9 @@ export default function AnatomyRecData() {
                 src={`${imgBase}/results_connectivity_illustration_v2.png`}
                 thumbnailSrc={imgOpt(`${imgBase}/results_connectivity_illustration_v2.png`, { width: 1920 })}
               />
-              {textContent.connectivities.figure}
+              <div className="mt-1">
+                {textContent.connectivities.figure}
+              </div>
             </Col>
           </Row>
         </Collapsible>
@@ -267,28 +276,30 @@ export default function AnatomyRecData() {
 
         <Collapsible title="Morphological synthesis of astrocytes" className="mt-4">
           <Row gutter={32}>
-            <Col xs={24} sm={12}>
+            <Col xs={24} sm={24} className="column-count-2">
               {textContent.morphologicalSynthesisOfAstrocytes.text}
-              <p>
-                To launch the astrocyte analysis Jupyter notebook in your browser using MyBinder, click the badge &nbsp;
-                <a
-                  href="https://mybinder.org/v2/gh/BlueBrain/NeuroM/HEAD?filepath=tutorial%2Fastrocyte_analysis.ipynb"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="https://mybinder.org/badge_logo.svg"
-                    alt="MyBinder link for astrocyte analysis notebook"
-                  />
-                </a>
-              </p>
-              {textContent.morphologicalSynthesisOfAstrocytes.legend}
             </Col>
-            <Col xs={24} sm={12}>
+
+            <Col xs={24} sm={12} className="mt-3">
+              <ImageViewer
+                src={`${imgBase}/astrocytes_illustration_annotated.jpg`}
+                thumbnailSrc={imgOpt(`${imgBase}/astrocytes_illustration_annotated.jpg`)}
+              />
+              <div className="mt-1">
+                <small>
+                  <strong>Figure:</strong> Examples of synthesized astrocytes.
+                </small>
+              </div>
+            </Col>
+
+            <Col xs={24} sm={12} className="mt-3">
               <ImageViewer
                 src={`${imgBase}/results_morphs_illustration_recolored.png`}
                 thumbnailSrc={imgOpt(`${imgBase}/results_morphs_illustration_recolored.png`)}
               />
+              <div className="mt-1">
+                {textContent.morphologicalSynthesisOfAstrocytes.legend}
+              </div>
             </Col>
           </Row>
           <div className="text-right mt-2">

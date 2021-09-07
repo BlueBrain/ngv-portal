@@ -39,7 +39,7 @@ export default function AnatomyExpData() {
   return (
     <>
       <Filters primaryColor="blue" backgroundAlt hasData={true}>
-        <Row gutter={32} align="middle" className="w-100">
+        <Row align="middle" className="w-100">
           <Col xs={24} lg={12} className="mt-1 mb-1">
             <Title
               primaryColor="blue"
@@ -120,8 +120,8 @@ export default function AnatomyExpData() {
             <Col xs={24} md={12}>{textContent.vasculatureData}</Col>
             <Col xs={24} md={12}>
               <ImageViewer
-                src={`${imgBase}/vasculature_stages.png`}
-                thumbnailSrc={imgOpt(`${imgBase}/vasculature_stages.png`)}
+                src={`${imgBase}/still_vasculatures_with_dof.jpg`}
+                thumbnailSrc={imgOpt(`${imgBase}/still_vasculatures_with_dof.jpg`)}
               />
             </Col>
           </Row>

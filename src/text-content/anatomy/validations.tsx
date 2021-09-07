@@ -113,7 +113,7 @@ const textContent = {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Calì <i>et al.</i>, (2019)
+            Calì <i>et al.</i> (2019)
           </a>).
         </p>
       </>),
@@ -144,7 +144,7 @@ const textContent = {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Calì <i>et al.</i> 2019
+            Calì <i>et al.</i>, 2019
           </a>).
         </p>
       </>),

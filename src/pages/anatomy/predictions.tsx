@@ -16,7 +16,7 @@ export default function AnatomyPredictions() {
   return (
     <>
       <Filters primaryColor="blue" backgroundAlt hasData={true}>
-        <Row gutter={32} align="middle" className="w-100">
+        <Row align="middle" className="w-100">
           <Col xs={24} lg={12} className="mt-1 mb-1">
             <Title
               primaryColor="blue"
@@ -69,13 +69,15 @@ export default function AnatomyPredictions() {
           <Row gutter={32}>
             <Col xs={24} md={12}>
               {textContent.emergingNgvCompositionalHierarchy.text}
-              {textContent.emergingNgvCompositionalHierarchy.legend}
             </Col>
             <Col xs={24} md={12}>
               <ImageViewer
                 src="/ngv-portal/assets/images/predictions/predictions_bars.png"
                 thumbnailSrc={imgOpt('/ngv-portal/assets/images/predictions/predictions_bars.png')}
               />
+              <div className="mt-1">
+                {textContent.emergingNgvCompositionalHierarchy.legend}
+              </div>
             </Col>
           </Row>
         </Collapsible>
