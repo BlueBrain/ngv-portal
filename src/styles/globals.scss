@@ -2237,23 +2237,23 @@ $collapsible-padding-small: 0.5rem;
 
   .publication-section {
     min-height: 30vh;
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
     color: white;
 
-    .content {
-      box-sizing: border-box;
-      max-width: 1280px;
-      align-content: flex-start;
-      padding-left: 10%;
-      justify-content: flex-start;
-    }
+    // .content {
+    //   box-sizing: border-box;
+    //   max-width: 1280px;
+    //   align-content: flex-start;
+    //   padding-left: 10%;
+    //   justify-content: flex-start;
+    // }
 
-    @media (max-width: $small) {
-      .content {
-        padding-left: 0;
-      }
-    }
+    // @media (max-width: $small) {
+    //   .content {
+    //     padding-left: 0;
+    //   }
+    // }
   }
 
   #section-5 {

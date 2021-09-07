@@ -104,29 +104,52 @@ const Home: React.FC = () => (
         <h3>Navigate the various datasets made available</h3>
       </div>
 
-        <Row gutter={10} justify="center" style={{ maxWidth: '1280px', margin: '0 auto' }}>
-          {cardsData.map(({title, backgroundColor, routeBase, image, links, description}) => (
-            <Col key={title} xs={24} sm={8} className="mb-2">
-              <SectionCard
-                title={title}
-                bgColor={backgroundColor}
-                routeBase={routeBase}
-                bgImgSrc={image}
-                links={links}
-                description={description}
-              />
-            </Col>
-          ))}
-        </Row>
-        <div style={{ maxWidth: '1280px', paddingLeft: '0.5rem', margin: '0 auto'  }}>
-          <small className="text-medium-white"><sup>*</sup> Coming soon</small>
-        </div>
+      <Row gutter={10} justify="center" style={{ maxWidth: '1280px', margin: '0 auto' }}>
+        {cardsData.map(({title, backgroundColor, routeBase, image, links, description}) => (
+          <Col key={title} xs={24} sm={8} className="mb-2">
+            <SectionCard
+              title={title}
+              bgColor={backgroundColor}
+              routeBase={routeBase}
+              bgImgSrc={image}
+              links={links}
+              description={description}
+            />
+          </Col>
+        ))}
+      </Row>
+      <div style={{ maxWidth: '1280px', paddingLeft: '0.5rem', margin: '0 auto'  }}>
+        <small className="text-medium-white"><sup>*</sup> Coming soon</small>
+      </div>
     </section>
 
     <section id="publications" className="publication-section bg-dark-blue">
-      <div className="content">
+      <Row gutter={10} justify="space-between" align="middle" style={{ maxWidth: '1280px', margin: '0 auto' }}>
+        <Col xs={24} sm={10} className="mt-2">
+          <h1 className="text-white text-uppercase mb-1">Publications</h1>
+          <p className="color-blue subtitle">Read up on our latest publications!</p>
+
+          <PublicationBlock
+            className="mt-4"
+            href="https://doi.org/10.1101/2021.01.19.427241"
+            description="Architecture of the Neuro-Glia-Vascular System"
+            authors={<>Eleftherios Zisis <i>et al.</i>, 2021</>}
+          />
+        </Col>
+        <Col xs={24} sm={12} className="mt-2">
+          <Image
+            src="/ngv-portal/assets/images/backgrounds/home-page/publications-section-illustration-1.png"
+            layout="responsive"
+            width="4"
+            height="3"
+            alt=""
+          />
+        </Col>
+      </Row>
+
+      {/* <div className="content">
         <div className="row">
-          <div className="col-xs-12 col-md-12">
+          <div className="col-xs-12 col-md-6">
             <h1 className="text-white text-uppercase mb-1">Publications</h1>
             <p className="color-blue subtitle">Read up on our latest publications!</p>
 
@@ -138,9 +161,18 @@ const Home: React.FC = () => (
             />
 
           </div>
+          <div className="col-xs-12 col-md-6">
+            <Image
+              src="/ngv-portal/assets/images/backgrounds/home-page/publications-section-illustration-1.png"
+              layout="responsive"
+              width="4"
+              height="3"
+              alt=""
+            />
+          </div>
         </div>
 
-      </div>
+      </div> */}
     </section>
 
     <section id="section-5">
