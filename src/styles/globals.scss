@@ -1111,6 +1111,8 @@ $collapsible-padding-small: 0.5rem;
 
 // ScrollTo
 .scroll-to__basis {
+  box-shadow: 0 -8px 12px 0px rgba(0,0,0,0.3);
+  overflow: hidden;
   display: block;
   font-weight: 400;
   font-size: map-get($fontSize, "large");
