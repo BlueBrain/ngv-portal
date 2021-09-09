@@ -1111,6 +1111,8 @@ $collapsible-padding-small: 0.5rem;
 
 // ScrollTo
 .scroll-to__basis {
+  box-shadow: 0 -8px 12px 0px rgba(0,0,0,0.3);
+  overflow: hidden;
   display: block;
   font-weight: 400;
   font-size: map-get($fontSize, "large");
@@ -1966,9 +1968,16 @@ $collapsible-padding-small: 0.5rem;
 
   section {
     padding: 30px 30px 60px;
+    overflow: hidden;
     @media (max-width: $ant-breakpoint-sm) {
       padding: 30px 16px 60px;
     }
+  }
+
+  .section-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
   }
 
   .accent-border {
