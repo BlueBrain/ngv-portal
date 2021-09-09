@@ -5,6 +5,9 @@ import NavMobile from '../NavMobile';
 import Link from 'next/link';
 import { accentColors } from '../../config';
 import { IoIosArrowDropdown } from 'react-icons/io';
+import { NavItem, navItems } from './constans';
+import { useRouter } from 'next/router';
+import { useMemo } from 'react';
 
 
 const classPrefix = 'nav__';
@@ -30,130 +33,60 @@ type NavProps = {
   canClose?: boolean;
 };
 
-export const SecondaryNav: React.FC<NavProps> = ({ initActive, canClose }) => {
-  const [active, setActive] = React.useState(initActive);
+export const SecondaryNav: React.FC<NavProps> = ({ canClose }) => {
+  const router = useRouter();
+  const [previewTab, setPreviewTab] = React.useState<NavItem>(null);
+  
+  const initialSelectedTabId = useMemo(() => {
+    const selectedTab = navItems.find((item) => (router.pathname.includes(item.href)));
+    return selectedTab? selectedTab.id: navItems[0].id;
+  }, [router.pathname])
+  const [selectedTabId, setSelectedTabId] = React.useState<string>(initialSelectedTabId);
 
-  const toggleSubmenu = (name: string) => {
-    if (active !== name) {
-      setActive(name);
-    } else if (canClose) {
-      setActive(undefined);
+  const handleClick = (id) => {
+    if(id !== selectedTabId) {
+      setSelectedTabId(id)
+    } else {
+      setSelectedTabId(null)
     }
-  };
+  }
 
   return (
-    <ul className="secondary-nav">
-      <li className={active === 'exp' ? 'active' : ''}>
-        <button
-          className="top-level-btn"
-          style={{ backgroundColor: accentColors.blue }}
-          onClick={() => toggleSubmenu('exp')}
-        >
-          ANATOMY{' '}
-          <span className="show-mobile">
-            <IoIosArrowDropdown />
-          </span>
-        </button>
-        <ul
-          className="submenu"
-          style={{ borderLeftColor: accentColors.blue }}
-        >
-          <li>
-            <Link href="/anatomy/experimental-data">
-              <a>Experimental Data</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/anatomy/reconstruction-data">
-              <a>Reconstruction Data</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/anatomy/validations">
-              <a>Validations</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/anatomy/predictions">
-              <a>Predictions</a>
-            </Link>
-          </li>
-        </ul>
+    <ul className="secondary-nav" onMouseLeave={() => !canClose && setPreviewTab(null)}>
+      {navItems.map(item => {
+        const isActive = previewTab ? previewTab === item: selectedTabId === item.id;
+        return (
+          <li key={item.id} className={`${isActive ? 'active' : ''} ${item.disabled? classDisabled:''}`}>
+          <button
+            className="top-level-btn"
+            style={{ backgroundColor: item.color }}
+            onClick={() => handleClick(item.id)}
+            onMouseEnter={() => !canClose && setPreviewTab(item)}
+          >
+            {item.label.toUpperCase()}&nbsp;
+            <span className="show-mobile">
+              <IoIosArrowDropdown />
+            </span>
+          </button>
+          <ul
+            className="submenu"
+            style={{ borderLeftColor: item.color }}
+          >
+            {
+              item.children.map(child => {
+                return (
+                  <li key={child.label}>
+                  <Link href={`${item.href}${child.href}`}>
+                    {child.label}
+                  </Link>
+                </li>
+                )
+              })
+            }
+          </ul>
       </li>
-      <li className={`${active === 'rec' ? 'active' : ''} ${classDisabled}`}>
-        <button
-          className="top-level-btn"
-          style={{ backgroundColor: accentColors.purple }}
-          onClick={() => toggleSubmenu('rec')}
-        >
-          METABOLISM{' '}
-          <span className="show-mobile">
-            <IoIosArrowDropdown />
-          </span>
-        </button>
-        <ul
-          className="submenu"
-          style={{ borderLeftColor: accentColors.purple }}
-        >
-          <li>
-            <Link href="/metabolism/experimental-data">
-              <a>Experimental Data</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/metabolism/reconstruction-data">
-              <a>Reconstruction Data</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/metabolism/validations">
-              <a>Validations</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/metabolism/predictions">
-              <a>Predictions</a>
-            </Link>
-          </li>
-        </ul>
-      </li>
-      <li className={`${active === 'dig' ? 'active' : ''} ${classDisabled}`}>
-        <button
-          className="top-level-btn"
-          style={{ backgroundColor: accentColors.red }}
-          onClick={() => toggleSubmenu('dig')}
-        >
-          BLOOD FLOW{' '}
-          <span className="show-mobile">
-            <IoIosArrowDropdown />
-          </span>
-        </button>
-        <ul
-          className="submenu"
-          style={{ borderLeftColor: accentColors.red }}
-        >
-          <li>
-            <Link href="/blood-flow/experimental-data">
-              <a>Experimental Data</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/blood-flow/reconstruction-data">
-              <a>Reconstruction Data</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/blood-flow/validations">
-              <a>Validations</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/blood-flow/predictions">
-              <a>Predictions</a>
-            </Link>
-          </li>
-        </ul>
-      </li>
+        )
+      })}
     </ul>
   );
 };

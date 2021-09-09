@@ -1836,17 +1836,19 @@ $collapsible-padding-small: 0.5rem;
 
   @media (max-width: 1280px) {
     li {
-      margin-right: 18px;
-      button {
-        width: auto !important;
-      }
+      margin-right: 40px;
     }
   }
 
-  .flyout {
+  .menu-container {
+    padding-top: 20px;
+    width: 460px;
     position: absolute;
+  }
+
+  .flyout {
+    
     left: 0;
-    top: 60px;
     background: map-get($basePalette, "white");
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -1868,6 +1870,7 @@ $collapsible-padding-small: 0.5rem;
     // margin-right: 10px;
     padding: 5px 17px;
     display: flex;
+    max-width: 260px;
 
     li {
       margin: 0;
@@ -1917,8 +1920,8 @@ $collapsible-padding-small: 0.5rem;
       display: flex;
       position: absolute;
       left: 260px;
-      width: 220px;
-      top: 0;
+      width: 200px;
+      top: 20px;
       bottom: 0;
       background: map-get($basePalette, "white");
       // border-left-width: 10px;

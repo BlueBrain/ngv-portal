@@ -14,7 +14,7 @@ type ButtonProps = {
   onClick?: (e: any) => void;
   children: ReactChild | ReactFragment;
   uppercase?: boolean;
-};
+} & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 const Button: React.FC<ButtonProps> = ({
   primary,
@@ -26,16 +26,18 @@ const Button: React.FC<ButtonProps> = ({
   children,
   large,
   uppercase,
+  ...restProps
 }) => {
   return (
     <button
-      style={{ width: width }}
+      style={{ width: `${width}px` }}
       onClick={onClick}
       className={`${classPrefix}basis ${primary ? 'primary' : ''} ${
         discrete ? 'discrete' : ''
       } ${active ? 'active' : ''} ${large ? 'large' : ''} ${
         uppercase ? 'uppercase' : ''
       }`}
+      {...restProps}
     >
       {children}
       {notifications && <span className="notifications">{notifications}</span>}
