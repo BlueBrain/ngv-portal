@@ -3,7 +3,8 @@ import { accentColors } from '../../config';
 export enum Urls  {
   ANATOMY = '/anatomy',
   METABOLISM = '/metabolism',
-  BLOOD_FLOW = 'blood-flow',
+  BLOOD_FLOW = '/blood-flow',
+  
   EXPERIMENTAL_DATA = '/experimental-data',
   RECONSTRUCION_DATA = '/reconstruction-data',
   VALIDATION  = '/validations',
