@@ -3,7 +3,6 @@ import Brand from '../Brand';
 import NavDesktop from '../NavDesktop';
 import NavMobile from '../NavMobile';
 import Link from 'next/link';
-import { accentColors } from '../../config';
 import { IoIosArrowDropdown } from 'react-icons/io';
 import { NavItem, navItems } from './constans';
 import { useRouter } from 'next/router';

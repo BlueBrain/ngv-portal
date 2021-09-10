@@ -18,6 +18,7 @@ type NavButtonProps = {
   highlight?: boolean;
   toggleClick?: () => void;
   onMouseLeave?: () => void;
+  onMouseEnter?: () => void;
 };
 
 const NavButton: React.FC<NavButtonProps> = ({
@@ -26,7 +27,8 @@ const NavButton: React.FC<NavButtonProps> = ({
   notifications,
   home,
   highlight,
-  onMouseLeave
+  onMouseLeave,
+  onMouseEnter
 }) => {
   const router = useRouter();
   const isEqual = router.pathname === path;
@@ -37,6 +39,7 @@ const NavButton: React.FC<NavButtonProps> = ({
       discrete={!highlight && !home}
       notifications={notifications}
       onMouseLeave={onMouseLeave}
+      onMouseEnter={onMouseEnter}
       uppercase
     >
       {name}
@@ -58,23 +61,26 @@ const NavDesktop = () => {
   const router = useRouter();
   const [mouseOverButton, setMouseOverButton] = useState(false);
   const [mouseOverMenu, setMouseOverMenu]=useState(false);
+  let buttonTimeout, menuTimeout;
 
   const enterButton = () => {
+    clearTimeout(buttonTimeout)
     setMouseOverButton(true)
   }
 
   const leaveButton = () => {
-    setTimeout(() => {
+    buttonTimeout = setTimeout(() => {
       setMouseOverButton(false)
     }, delay);
   }
 
   const enterMenu = () => {
+    clearTimeout(menuTimeout)
     setMouseOverMenu(true)
   }
 
   const leaveMenu = () => {
-     setTimeout(() => {
+    menuTimeout = setTimeout(() => {
        setMouseOverMenu(false);
      }, delay);
   }
@@ -93,7 +99,7 @@ const NavDesktop = () => {
       >
         {isOpen ? (
           <>
-            <NavButton path="/" name="Home" home onMouseLeave={leaveButton}/>
+            <NavButton path="/" name="Home" home onMouseEnter={enterButton} onMouseLeave={leaveButton}/>
             <div className="menu-container" onMouseEnter={enterMenu} onMouseLeave={leaveMenu}>
               <div className="flyout">
               <HomeNav />
