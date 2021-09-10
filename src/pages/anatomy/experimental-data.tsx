@@ -40,7 +40,14 @@ export default function AnatomyExpData() {
     <>
       <Filters primaryColor="blue" backgroundAlt hasData={true}>
         <Row align="middle" className="w-100">
-          <Col xs={24} lg={12} className="mt-1 mb-1">
+          <Col xs={24} lg={0} >
+            <Title
+              primaryColor="blue"
+              title="Experimental data"
+              subtitle="Anatomy"
+            />
+          </Col>
+          <Col xs={0} lg={12} className="mt-1 mb-1">
             <Title
               primaryColor="blue"
               title="Experimental data"
@@ -57,6 +64,9 @@ export default function AnatomyExpData() {
               height="720"
               loading="eager"
             />
+          </Col>
+          <Col xs={24} lg={0} className="mt-1 mb-1">
+            <InfoBox content={textContent.pageDescription} color="blue" />
           </Col>
         </Row>
       </Filters>

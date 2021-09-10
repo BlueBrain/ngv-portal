@@ -747,6 +747,10 @@ $collapsible-padding-small: 0.5rem;
   border: 2px solid #fff;
   box-sizing: border-box;
 
+  @media (max-width: $ant-breakpoint-lg) {
+    margin: 0 auto;
+  }
+
   &.default {
     border: none;
   }
@@ -1195,6 +1199,10 @@ $collapsible-padding-small: 0.5rem;
   margin-bottom: 60px;
   max-width: 100%;
   overflow: hidden;
+
+  @media (max-width: $ant-breakpoint-lg) {
+    margin-bottom: 20px;
+  }
 
   &.yellow {
     & h2 {
