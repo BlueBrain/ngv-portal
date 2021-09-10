@@ -1,6 +1,6 @@
 import React from 'react';
-import { Row, Col, Dropdown, Menu, Button } from 'antd';
-import { DownloadOutlined, DownOutlined } from '@ant-design/icons';
+import { Row, Col, Button } from 'antd';
+import { DownloadOutlined } from '@ant-design/icons';
 import Image from 'next/image';
 import { saveAs } from 'file-saver';
 
@@ -55,7 +55,13 @@ export default function AnatomyExpData() {
             />
             <InfoBox content={textContent.pageDescription} color="blue" />
           </Col>
-          <Col xs={24} lg={12} className="mt-1 mb-1">
+          <Col
+            xs={{span: 24, offset: 0}}
+            sm={{span: 18, offset: 3}}
+            md={{span: 12, offset: 6}}
+            lg={{span: 12, offset: 0}}
+            className="mt-1 mb-1"
+          >
             <Image
               src="/ngv-portal/assets/images/anatomy-illustrations/anatomy-experimental-data-illustration.png"
               alt="Illustration for Anatomy experimental data"
