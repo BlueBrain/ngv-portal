@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { words } from 'lodash';
 import { useRouter } from 'next/router';
 import { Form, Input, Button, Select } from 'antd';
 import { GatewayOutlined, UserOutlined, CloseOutlined } from '@ant-design/icons';
@@ -21,9 +22,7 @@ const Feedback: React.FC = () => {
   const [formVisible, setFormVisible] = useState(false);
   const issueSelectRef = useRef<HTMLSelectElement>(null);
 
-  const [type, setType] = useState(null);
-  const [component, setComponent] = useState('');
-  const [details, setDetails] = useState('');
+  const [feedback, setFeedback] = useState('');
   const [contact, setContact] = useState(storage?.getItem(FEEDBACK_CONTACT_KEY) ?? '');
 
   const [sending, setSending] = useState(false);
@@ -43,11 +42,9 @@ const Feedback: React.FC = () => {
     setFormVisible(false);
 
     setTimeout(() => {
-      setType(null);
-      setComponent('');
-      setDetails('');
+      setFeedback('');
 
-      setResponseStatus(null)
+      setResponseStatus(null);
     }, 200);
   }
 
@@ -57,23 +54,21 @@ const Feedback: React.FC = () => {
 
     const pageUrl = `${deploymentUrl}${router.basePath}${router.asPath}`;
 
-    const labels = ['triage'];
+    const labels = ['User feedback'];
 
     try {
       const res = await fetch(`${feedbackUrl}/BlueBrain/ngv-portal`, {
         method: 'POST',
         body: JSON.stringify({
           labels,
-          title: details.slice(0, 100),
+          title: words(feedback).slice(0, 8).join(' '),
           body: [
             `Field | Element`,
             `--- | ---`,
-            `Issue type | ${type || '--'}`,
             `Page URL | [${router.asPath}](${pageUrl})`,
-            `Component | ${component || '--'}`,
             `Contact | ${contact || '--'}`,
             ``,
-            `${details.slice(100)}`,
+            `${feedback}`,
           ].join('\n'),
         }),
         headers: {
@@ -114,36 +109,13 @@ const Feedback: React.FC = () => {
         </div>
         <Form size="small" onSubmitCapture={sendFeedback}>
           <Form.Item>
-            <Select
-              placeholder="Feedback type (optional)"
-              ref={issueSelectRef}
-              disabled={sending}
-              getPopupContainer={() => document.getElementById('feedbackForm')}
-              value={type}
-              onChange={(value) => setType(value as string)}
-            >
-              <Option value="content">Content</Option>
-              <Option value="layout">Layout, UI</Option>
-              <Option value="navigation">Navigation, UX</Option>
-            </Select>
-          </Form.Item>
-          <Form.Item>
-            <Input
-              placeholder="Component / page section (optional)"
-              prefix={<GatewayOutlined />}
-              disabled={sending}
-              value={component}
-              onChange={e => setComponent(e.target.value)}
-            />
-          </Form.Item>
-          <Form.Item>
             <TextArea
               placeholder="Tell us about your experience..."
               rows={4}
               disabled={sending}
               autoSize={{ minRows: 4, maxRows: 4 }}
-              value={details}
-              onChange={e => setDetails(e.target.value)}
+              value={feedback}
+              onChange={e => setFeedback(e.target.value)}
             />
           </Form.Item>
           <Form.Item>
@@ -167,7 +139,7 @@ const Feedback: React.FC = () => {
               className={styles.sendBtn}
               type="primary"
               danger
-              disabled={!details || responseStatus === 'success'}
+              disabled={!feedback || responseStatus === 'success'}
               loading={sending}
               onClick={sendFeedback}
             >
