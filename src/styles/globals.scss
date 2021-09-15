@@ -2474,3 +2474,64 @@ $collapsible-padding-small: 0.5rem;
 .ril-image-current {
   background-color: white;
 }
+
+
+@media (min-width: $ant-breakpoint-xs) {
+  .show-xs {
+    display: block;
+  }
+
+  .hide-xs {
+    display: none;
+  }
+}
+
+@media (min-width: $ant-breakpoint-sm) {
+  .show-sm {
+    display: block;
+  }
+
+  .hide-sm {
+    display: none;
+  }
+}
+
+@media (min-width: $ant-breakpoint-md) {
+  .show-md {
+    display: block;
+  }
+
+  .hide-md {
+    display: none;
+  }
+}
+
+@media (min-width: $ant-breakpoint-lg) {
+  .show-lg {
+    display: block;
+  }
+
+  .hide-lg {
+    display: none;
+  }
+}
+
+@media (min-width: $ant-breakpoint-xl) {
+  .show-xl {
+    display: block;
+  }
+
+  .hide-xl {
+    display: none;
+  }
+}
+
+@media (min-width: $ant-breakpoint-xxl) {
+  .show-xxl {
+    display: block;
+  }
+
+  .hide-xxl {
+    display: none;
+  }
+}
