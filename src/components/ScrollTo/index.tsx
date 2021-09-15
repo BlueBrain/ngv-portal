@@ -24,7 +24,7 @@ const ScrollTo: React.FC<ScrollToProps> = ({
   const scroll = () => {
     const target = document.querySelector(`#${anchor}`);
     if (target) {
-      target.scrollIntoView();
+      target.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
