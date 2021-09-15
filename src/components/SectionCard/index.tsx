@@ -6,7 +6,7 @@ import { baseUrl } from '../../config';
 
 
 type SectionCardProps = {
-  title: string;
+  title: string | React.ReactNode;
   bgImgSrc?: string;
   description?: ReactNode;
   bgColor?: string;
@@ -37,12 +37,13 @@ const SectionCard: React.FC<SectionCardProps> = ({
           layout="responsive"
           alt={`Small illustration representing ${title}`}
         />
+      </div>
+      <div className="body">
         <div className="title">
           <div className="dash"></div>
           <h3 className="text-white">{title}</h3>
         </div>
-      </div>
-      <div className="body">
+
         {links.map(link => link.href ? (
           <a
             key={link.label}

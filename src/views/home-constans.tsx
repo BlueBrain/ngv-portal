@@ -1,7 +1,8 @@
 import { ReactNode } from "react";
 
 interface Cards {
-  title: string,
+  id: string,
+  title: string | React.ReactNode,
   description: ReactNode;
   image: string;
   backgroundColor: 'purple' | 'blue' | 'red';
@@ -11,6 +12,7 @@ interface Cards {
 
 export const cardsData: Cards[] = [
   {
+    id: 'anatomy',
     title: 'Anatomy',
     backgroundColor: "blue",
     routeBase: "/anatomy",
@@ -49,7 +51,8 @@ export const cardsData: Cards[] = [
       </p>
     </div>)
   }, {
-    title:"Metabolism",
+    id: 'metabolism',
+    title:<>Metabolism<sup>*</sup></>,
     backgroundColor: "purple",
     routeBase: "/metabolism",
     image:"/ngv-portal/assets/images/backgrounds/home-page/sections/2_metabolism.jpg",
@@ -100,7 +103,8 @@ export const cardsData: Cards[] = [
     </div>),
   },
   {
-    title:"Blood flow",
+    id: 'blood-flow',
+    title:<>Blood flow<sup>*</sup></>,
     backgroundColor: "red",
     routeBase:"/blood-flow",
     image: "/ngv-portal/assets/images/backgrounds/home-page/sections/3_bloodflow.jpg",

@@ -106,8 +106,8 @@ const Home: React.FC = () => (
         </div>
 
         <Row gutter={10} justify="center">
-          {cardsData.map(({title, backgroundColor, routeBase, image, links, description}) => (
-            <Col key={title} xs={24} sm={8} className="mb-2">
+          {cardsData.map(({id, title, backgroundColor, routeBase, image, links, description}) => (
+            <Col key={id} xs={24} sm={8} className="mb-2">
               <SectionCard
                 title={title}
                 bgColor={backgroundColor}
