@@ -747,6 +747,10 @@ $collapsible-padding-small: 0.5rem;
   border: 2px solid #fff;
   box-sizing: border-box;
 
+  @media (max-width: $ant-breakpoint-sm) {
+    padding: 1.2rem 1rem;
+  }
+
   &.default {
     border: none;
   }
@@ -765,6 +769,22 @@ $collapsible-padding-small: 0.5rem;
   }
   &.grey {
     background-color: map-get($accentPalette, "grey");
+  }
+
+  .content {
+    overflow: hidden;
+    max-height: 1000rem;
+    transition: max-height 1s ease-in-out;
+
+    p {
+      margin-top: 0;
+    }
+  }
+
+  @media (max-width: $ant-breakpoint-sm) {
+    .content.collapsed {
+      max-height: 9rem;
+    }
   }
 
   h3 {
@@ -792,6 +812,13 @@ $collapsible-padding-small: 0.5rem;
 
   a:hover {
     color: white;
+  }
+
+  .collapse-ctrl {
+    font-weight: bold;
+    display: inline-block;
+    padding: 0.2rem;
+    cursor: pointer;
   }
 }
 
@@ -2475,59 +2502,59 @@ $collapsible-padding-small: 0.5rem;
 
 
 .show-xs {
-  display: block;
+  display: block !important;
 }
 
 .hide-xs {
-  display: none;
+  display: none !important;
 }
 
 @media (min-width: $ant-breakpoint-sm) {
   .show-sm {
-    display: block;
+    display: block !important;
   }
 
   .hide-sm {
-    display: none;
+    display: none !important;
   }
 }
 
 @media (min-width: $ant-breakpoint-md) {
   .show-md {
-    display: block;
+    display: block !important;
   }
 
   .hide-md {
-    display: none;
+    display: none !important;
   }
 }
 
 @media (min-width: $ant-breakpoint-lg) {
   .show-lg {
-    display: block;
+    display: block !important;
   }
 
   .hide-lg {
-    display: none;
+    display: none !important;
   }
 }
 
 @media (min-width: $ant-breakpoint-xl) {
   .show-xl {
-    display: block;
+    display: block !important;
   }
 
   .hide-xl {
-    display: none;
+    display: none !important;
   }
 }
 
 @media (min-width: $ant-breakpoint-xxl) {
   .show-xxl {
-    display: block;
+    display: block !important;
   }
 
   .hide-xxl {
-    display: none;
+    display: none !important;
   }
 }
