@@ -2474,14 +2474,12 @@ $collapsible-padding-small: 0.5rem;
 }
 
 
-@media (min-width: $ant-breakpoint-xs) {
-  .show-xs {
-    display: block;
-  }
+.show-xs {
+  display: block;
+}
 
-  .hide-xs {
-    display: none;
-  }
+.hide-xs {
+  display: none;
 }
 
 @media (min-width: $ant-breakpoint-sm) {
