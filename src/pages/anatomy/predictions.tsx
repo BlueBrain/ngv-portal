@@ -16,26 +16,35 @@ export default function AnatomyPredictions() {
   return (
     <>
       <Filters primaryColor="blue" backgroundAlt hasData={true}>
-        <Row align="middle" className="w-100">
-          <Col xs={24} lg={12} className="mt-1 mb-1">
-            <Title
-              primaryColor="blue"
-              title="Predictions"
-              subtitle="Anatomy"
-            />
-            <InfoBox content={textContent.pageDescription} color="blue" />
-          </Col>
-          <Col xs={24} lg={12} className="mt-1 mb-1">
-            <Image
-              src="/ngv-portal/assets/images/anatomy-illustrations/anatomy-predictions-illustration.png"
-              alt="Illustration for Anatomy predictions"
-              layout="responsive"
-              width="1280"
-              height="720"
-              loading="eager"
-            />
-          </Col>
-        </Row>
+        <div className="w-100">
+          <Title
+            className="show-xs hide-lg mt-2"
+            primaryColor="blue"
+            title="Predictions"
+            subtitle="Anatomy"
+          />
+          <Row align="middle">
+            <Col xs={24} lg={{ span: 12, push: 12 }} className="mt-1 mb-1">
+              <Image
+                src="/ngv-portal/assets/images/anatomy-illustrations/anatomy-predictions-illustration.png"
+                alt="Illustration for Anatomy predictions"
+                layout="responsive"
+                width="1280"
+                height="720"
+                loading="eager"
+              />
+            </Col>
+            <Col xs={24} lg={{ span: 12, pull: 12 }} className="mt-1 mb-1">
+              <Title
+                className="hide-xs show-lg"
+                primaryColor="blue"
+                title="Predictions"
+                subtitle="Anatomy"
+              />
+              <InfoBox content={textContent.pageDescription} color="blue" />
+            </Col>
+          </Row>
+        </div>
       </Filters>
 
       <DataContainer>
