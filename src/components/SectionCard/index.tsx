@@ -57,7 +57,7 @@ const SectionCard: React.FC<SectionCardProps> = ({
             className="disabled-link"
             href="#"
           >
-            {link.label}<sup>*</sup>
+            {link.label}
           </a>
         ))}
         <div
