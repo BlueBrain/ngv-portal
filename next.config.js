@@ -17,7 +17,7 @@ const nextConfig = {
   webpack5: true,
   images: {
     path: `${basePath}/_next/image/`,
-    minimumCacheTTL: 3 * day,
+    minimumCacheTTL: 30 * day,
   },
   eslint: {
     ignoreDuringBuilds: true,
