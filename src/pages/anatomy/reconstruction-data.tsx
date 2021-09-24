@@ -121,7 +121,7 @@ export default function AnatomyRecData() {
             </Col>
             <Col xs={24} sm={8} className="mb-1">
               <Video
-                sources={composeSources('/anatomy/reconstruction-data/NGV_DISS149_MASTER_TURNTABLE_G')}
+                sources={composeSources('/anatomy/reconstruction-data/NGV_DISS149_MASTER_TURNTABLE_V')}
                 muted
                 autoplay
                 loop
