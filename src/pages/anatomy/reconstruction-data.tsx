@@ -85,7 +85,11 @@ export default function AnatomyRecData() {
                 title="Reconstruction data"
                 subtitle="Anatomy"
               />
-              <InfoBox content={textContent.pageDescription} color="blue" />
+              <InfoBox
+                content={textContent.pageDescription}
+                collapse={true}
+                color="blue"
+              />
             </Col>
           </Row>
         </div>

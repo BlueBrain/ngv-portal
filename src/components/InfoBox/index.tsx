@@ -9,12 +9,14 @@ type InfoBoxProps = {
   title?: string;
   content: React.ReactNode;
   color?: Color;
+  collapse?: Boolean;
 };
 
 const InfoBox: React.FC<InfoBoxProps> = ({
   title,
   content,
   color = 'default',
+  collapse = false,
 }) => {
   const [collapsed, setCollapsed] = useState(true);
 
@@ -23,13 +25,15 @@ const InfoBox: React.FC<InfoBoxProps> = ({
   return (
     <div className={`${classPrefix}basis ${color}`}>
       {title && <h3 className="text-white">{title}</h3>}
-      <div className={`content ${collapsed ? 'collapsed' : ''}`}>{content}</div>
-      <div
-        className="collapse-ctrl mt-2 hide-sm"
-        onClick={toggleCollapse}
-      >
-        {collapsed ? 'Show more' : 'Show less'}
-      </div>
+      <div className={`content ${(collapse && collapsed) ? 'collapsed' : ''}`}>{content}</div>
+      {collapse && (
+        <div
+          className="collapse-ctrl mt-2 hide-sm"
+          onClick={toggleCollapse}
+        >
+          {collapsed ? 'Show more' : 'Show less'}
+        </div>
+      )}
     </div>
   );
 };
