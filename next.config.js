@@ -9,6 +9,7 @@ const SentryWebpackPluginOptions = {
 const basePath = '/ngv-portal'
 
 const day = 60 * 60 * 24;
+const imgCacheTTL = 30 * day;
 
 const nextConfig = {
   basePath,
@@ -17,7 +18,7 @@ const nextConfig = {
   webpack5: true,
   images: {
     path: `${basePath}/_next/image/`,
-    minimumCacheTTL: 30 * day,
+    minimumCacheTTL: imgCacheTTL,
   },
   eslint: {
     ignoreDuringBuilds: true,
@@ -57,10 +58,10 @@ const nextConfig = {
   },
   async headers() {
     return [{
-      source: '/(.*).(jpg|jpeg|png|webp)',
+      source: '/assets/*.(jpg|jpeg|png)',
       headers: [{
         key: 'Cache-Control',
-        value: 'public, max-age=259200, s-maxage=259200, stale-while-revalidate=259200',
+        value: `public, max-age=${imgCacheTTL}, s-maxage=${imgCacheTTL}, stale-while-revalidate=${imgCacheTTL}`,
       }],
     },];
   },
