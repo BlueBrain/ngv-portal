@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Lightbox from 'react-image-lightbox';
 import noop from 'lodash/noop';
 
@@ -29,7 +30,7 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
   alt,
   canExpand = true,
   border = false,
-  loading = 'eager',
+  loading = 'lazy',
   aspectRatio = null,
   onThumbnailLoad = noop,
   onThumbnailError = noop,
