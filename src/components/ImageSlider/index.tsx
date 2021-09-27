@@ -65,6 +65,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
             alt={domImage.alt}
             objectFit="cover"
             layout="fill"
+            loading="eager"
             priority
           />
         </div>

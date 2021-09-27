@@ -55,6 +55,7 @@ export default function AnatomyExpData() {
                 width="1280"
                 height="720"
                 loading="eager"
+                priority
               />
             </Col>
             <Col xs={24} lg={{ span: 12, pull: 12 }} className="mt-1 mb-1">
