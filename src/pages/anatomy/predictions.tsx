@@ -8,8 +8,8 @@ import InfoBox from '../../components/InfoBox';
 import DataContainer from '../../components/DataContainer';
 import Collapsible from '../../components/Collapsible';
 import ImageViewer from '../../components/ImageViewer';
-import { imgOpt } from '../../utils';
 import textContent from '../../text-content/anatomy/predictions';
+import { antBreakpoint } from '../../config';
 
 
 export default function AnatomyPredictions() {
@@ -31,6 +31,7 @@ export default function AnatomyPredictions() {
                 layout="responsive"
                 width="1280"
                 height="720"
+                sizes={`(min-width: ${antBreakpoint.lg}) 640px, 100vw`}
                 loading="eager"
                 priority
               />
@@ -55,7 +56,10 @@ export default function AnatomyPredictions() {
             <Col span={24} className="mt-3 mb-1">
               <ImageViewer
                 src="/ngv-portal/assets/images/predictions/predictions_densities.png"
-                thumbnailSrc={imgOpt('/ngv-portal/assets/images/predictions/predictions_densities.png', { width: 1920 })}
+                width={2481}
+                height={2219}
+                sizes={`(max-width: 1080px) 100vw, 1080px`}
+                alt="Densities prediction plots"
               />
             </Col>
             <Col span={24}>{textContent.spatialOrganizationOfAstrocyticEndfeet.legend}</Col>
@@ -68,7 +72,10 @@ export default function AnatomyPredictions() {
             <Col span={24} className="mt-3 mb-2">
               <ImageViewer
                 src="/ngv-portal/assets/images/predictions/endfeet_organization.png"
-                thumbnailSrc={imgOpt('/ngv-portal/assets/images/predictions/endfeet_organization.png')}
+                width={5400}
+                height={3600}
+                sizes={`(max-width: 1080px) 100vw, 1080px`}
+                alt="Endfeet organization prediction plots"
               />
             </Col>
             <Col span={24}>{textContent.effectOfAstrocyticDensityOnEndfeetOrganization.legend}</Col>
@@ -83,7 +90,10 @@ export default function AnatomyPredictions() {
             <Col xs={24} md={12}>
               <ImageViewer
                 src="/ngv-portal/assets/images/predictions/predictions_bars.png"
-                thumbnailSrc={imgOpt('/ngv-portal/assets/images/predictions/predictions_bars.png')}
+                width={546}
+                height={840}
+                sizes={`(max-width: 1080px) 100vw, 1080px`}
+                alt="Composition prediction plots"
               />
               <div className="mt-1">
                 {textContent.emergingNgvCompositionalHierarchy.legend}
@@ -98,7 +108,10 @@ export default function AnatomyPredictions() {
             <Col span={24} className="mt-3 mb-2">
               <ImageViewer
                 src="/ngv-portal/assets/images/predictions/predictions_astrocyte.png"
-                thumbnailSrc={imgOpt('/ngv-portal/assets/images/predictions/predictions_astrocyte.png', { width: 1920 })}
+                width={4389}
+                height={3529}
+                sizes={`(max-width: 1080px) 100vw, 1080px`}
+                alt="Astrocyte prediction plots"
               />
             </Col>
             <Col span={24}>{textContent.astrocyteNumbers.legend}</Col>

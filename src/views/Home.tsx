@@ -8,6 +8,7 @@ import PublicationBlock from '../components/PublicationBlock';
 import SectionCard from '../components/SectionCard';
 import CtaButton from '../components/CtaButton';
 import { cardsData } from './home-constans';
+import { antBreakpoint } from '../config';
 
 
 const classPrefix = 'Home__';
@@ -69,7 +70,8 @@ const Home: React.FC = () => (
               layout="responsive"
               width="1280"
               height="1039"
-              alt=""
+              sizes={`(min-width: ${antBreakpoint.md}) 640px, 100vw`}
+              alt="NGV Portal illustration"
             />
           </Col>
           <Col xs={24} md={{ span:12, pull: 12 }}>
@@ -135,9 +137,10 @@ const Home: React.FC = () => (
             <Image
               src="/ngv-portal/assets/images/backgrounds/home-page/publications-section-illustration.png"
               layout="responsive"
-              width="4"
-              height="3"
-              alt=""
+              width="1000"
+              height="674"
+              sizes={`(min-width: ${antBreakpoint.sm}) 640px, 100vw`}
+              alt="Example publication illustration"
             />
           </Col>
           <Col xs={{ span: 24 }} sm={{ span: 10, pull: 12 }} className="mt-2">

@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Lightbox from 'react-image-lightbox';
-import noop from 'lodash/noop';
 
 import 'react-image-lightbox/style.css';
 
@@ -11,37 +10,27 @@ const classPrefix = 'image-viewer__';
 export type ImageViewerProps = {
   className?: string;
   src: string;
-  loading?: 'eager' | 'lazy';
-  thumbnailSrc?: string;
-  alt?: string;
+  alt: string;
   color?: string;
-  canDownload?: boolean;
   canExpand?: boolean;
-  border?: boolean;
   aspectRatio?: string;
-  onThumbnailLoad?: () => void;
-  onThumbnailError?: () => void;
+  width: number;
+  height: number;
+  sizes?: string;
+  border?: boolean;
 };
 
 const ImageViewer: React.FC<ImageViewerProps> = ({
-  className = '',
   src,
-  thumbnailSrc,
   alt,
+  height,
+  width,
+  sizes,
+  className = '',
   canExpand = true,
   border = false,
-  loading = 'lazy',
-  aspectRatio = null,
-  onThumbnailLoad = noop,
-  onThumbnailError = noop,
 }) => {
   const [expanded, setExpanded] = useState(false);
-  const [thumbnailLoadError, setThumbnailLoadError] = useState(false);
-
-  const onThumbnailLoadError = () => {
-    setThumbnailLoadError(true);
-    onThumbnailError();
-  };
 
   const onThumbnailClick = (e: React.MouseEvent) => {
     if (!canExpand) return;
@@ -50,25 +39,19 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
     e.stopPropagation();
   };
 
-  useEffect(() => {
-    setThumbnailLoadError(false);
-  }, [src]);
-
   return (
-    <div className={`${classPrefix}basis ${className}`} style={{ aspectRatio }}>
-      <img
-        key={src}
-        src={thumbnailSrc || src}
-        loading={loading}
-        alt={alt}
+    <div
+      className={`${classPrefix}basis ${className}`}
+      style={{ border: border ? '1px solid #cecece' : 'none', }}
+    >
+      <Image
+        src={src}
+        alt={`${alt} thumbnail`}
         onClick={(e: React.MouseEvent) => onThumbnailClick(e)}
-        style={{
-          aspectRatio,
-          border: border ? '1px solid #cecece' : 'none',
-          display: thumbnailLoadError ? 'none' : 'block',
-        }}
-        onLoad={onThumbnailLoad}
-        onError={onThumbnailLoadError}
+        layout="responsive"
+        height={height}
+        width={width}
+        sizes={sizes}
       />
       {expanded && (
         <Lightbox

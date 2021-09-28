@@ -10,9 +10,8 @@ import InfoBox from '../../components/InfoBox';
 import DataContainer from '../../components/DataContainer';
 import Collapsible from '../../components/Collapsible';
 import ImageViewer from '../../components/ImageViewer';
-import { imgOpt } from '../../utils';
 import textContent from '../../text-content/anatomy/experimental-data';
-import { staticDataBaseUrl } from '../../config';
+import { staticDataBaseUrl, antBreakpoint } from '../../config';
 
 
 const imgBase = '/ngv-portal/assets/images/experimental-data';
@@ -54,6 +53,7 @@ export default function AnatomyExpData() {
                 layout="responsive"
                 width="1280"
                 height="720"
+                sizes={`(min-width: ${antBreakpoint.lg}) 640px, 100vw`}
                 loading="eager"
                 priority
               />
@@ -78,7 +78,10 @@ export default function AnatomyExpData() {
             <Col xs={24} md={12}>
               <ImageViewer
                 src={`${imgBase}/ngv-em-stack.jpeg`}
-                thumbnailSrc={imgOpt(`${imgBase}/ngv-em-stack.jpeg`)}
+                width={3840}
+                height={3597}
+                sizes={`(min-width: ${antBreakpoint.md}) 480px, 100vw`}
+                alt="EM stack image"
               />
             </Col>
           </Row>
@@ -90,7 +93,10 @@ export default function AnatomyExpData() {
             <Col xs={24} md={12}>
               <ImageViewer
                 src={`${imgBase}/astrocyte-2-10001.jpeg`}
-                thumbnailSrc={imgOpt(`${imgBase}/astrocyte-2-10001.jpeg`)}
+                width={2715}
+                height={2755}
+                sizes={`(min-width: ${antBreakpoint.md}) 480px, 100vw`}
+                alt="extracted mesh render"
               />
             </Col>
           </Row>
@@ -102,7 +108,10 @@ export default function AnatomyExpData() {
             <Col xs={24} md={12} className="pl-2 pr-2 p-2">
               <ImageViewer
                 src={`${imgBase}/astrocyte_morphology.png`}
-                thumbnailSrc={imgOpt(`${imgBase}/astrocyte_morphology.png`)}
+                width={1581}
+                height={1479}
+                sizes={`(min-width: ${antBreakpoint.md}) 480px, 100vw`}
+                alt="astrocyte morphology render"
               />
             </Col>
           </Row>
@@ -131,7 +140,10 @@ export default function AnatomyExpData() {
             <Col xs={24} md={12}>
               <ImageViewer
                 src={`${imgBase}/still_vasculatures_with_dof.jpg`}
-                thumbnailSrc={imgOpt(`${imgBase}/still_vasculatures_with_dof.jpg`)}
+                width={1497}
+                height={2019}
+                sizes={`(min-width: ${antBreakpoint.md}) 480px, 100vw`}
+                alt="vasculature render"
               />
             </Col>
           </Row>

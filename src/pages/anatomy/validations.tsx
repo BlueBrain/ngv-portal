@@ -8,7 +8,7 @@ import InfoBox from '../../components/InfoBox';
 import DataContainer from '../../components/DataContainer';
 import Collapsible from '../../components/Collapsible';
 import ImageViewer from '../../components/ImageViewer';
-import { imgOpt } from '../../utils';
+import { antBreakpoint } from '../../config';
 import textContent from '../../text-content/anatomy/validations';
 
 
@@ -34,6 +34,7 @@ export default function AnatomyValidations() {
                 layout="responsive"
                 width="1280"
                 height="720"
+                sizes={`(min-width: ${antBreakpoint.lg}) 640px, 100vw`}
                 loading="eager"
                 priority
               />
@@ -61,7 +62,10 @@ export default function AnatomyValidations() {
             <Col span={24} className="mt-2 mb-2">
               <ImageViewer
                 src={`${imgBase}/validation_density.png`}
-                thumbnailSrc={imgOpt(`${imgBase}/validation_density.png`, { width: 1920 })}
+                width={2597}
+                height={1133}
+                sizes={`(max-width: 1080px) 100vw, 1080px`}
+                alt="Validation density plot"
               />
             </Col>
             <Col span={24}>{textContent.networkLevelValidation.density.legend}</Col>
@@ -73,7 +77,10 @@ export default function AnatomyValidations() {
             <Col span={24} className="mt-2 mb-2">
               <ImageViewer
                 src={`${imgBase}/repulsion_function.png`}
-                thumbnailSrc={imgOpt(`${imgBase}/repulsion_function.png`, { width: 1920 })}
+                width={1669}
+                height={884}
+                sizes={`(max-width: 1080px) 100vw, 1080px`}
+                alt="repulsion function plots"
               />
             </Col>
             <Col span={24}>{textContent.networkLevelValidation.dispersion.legend}</Col>
@@ -85,7 +92,10 @@ export default function AnatomyValidations() {
             <Col span={24} className="mt-3 mb-2">
               <ImageViewer
                 src={`${imgBase}/validation_radius.png`}
-                thumbnailSrc={imgOpt(`${imgBase}/validation_radius.png`, { width: 1920 })}
+                width={1945}
+                height={685}
+                sizes={`(max-width: 1080px) 100vw, 1080px`}
+                alt="Soma radius distribution plots"
               />
             </Col>
             <Col span={24}>{textContent.networkLevelValidation.radiusDistribution.legend}</Col>
@@ -97,7 +107,10 @@ export default function AnatomyValidations() {
             <Col span={24} className="mt-2 mb-2">
               <ImageViewer
                 src={`${imgBase}/validation_microdomains.png`}
-                thumbnailSrc={imgOpt(`${imgBase}/validation_microdomains.png`, { width: 1920 })}
+                width={2567}
+                height={1603}
+                sizes={`(max-width: 1080px) 100vw, 1080px`}
+                alt="Microdomain validation plots"
               />
             </Col>
             <Col span={24}>{textContent.networkLevelValidation.microdomainVolumes.legend}</Col>
@@ -109,7 +122,10 @@ export default function AnatomyValidations() {
             <Col span={24} className="mt-3 mb-1">
               <ImageViewer
                 src={`${imgBase}/validation_endfeet_paths.png`}
-                thumbnailSrc={imgOpt(`${imgBase}/validation_endfeet_paths.png`, { width: 1920 })}
+                width={2994}
+                height={699}
+                sizes={`(max-width: 1080px) 100vw, 1080px`}
+                alt="Endfeet paths validation plots"
               />
             </Col>
             <Col span={24} className="mt-2">{textContent.networkLevelValidation.distanceOfAstrocyteToVasculature.figure}</Col>
@@ -121,7 +137,10 @@ export default function AnatomyValidations() {
             <Col span={24} className="mt-3 mb-1">
               <ImageViewer
                 src={`${imgBase}/validation_endfeet_areas.png`}
-                thumbnailSrc={imgOpt(`${imgBase}/validation_endfeet_areas.png`, { width: 1920 })}
+                width={3089}
+                height={812}
+                sizes={`(max-width: 1080px) 100vw, 1080px`}
+                alt="Endfeet areas validation plots"
               />
             </Col>
             <Col span={24}>{textContent.networkLevelValidation.endfeetSurfaceMeshes.legend}</Col>
@@ -133,7 +152,10 @@ export default function AnatomyValidations() {
             <Col span={24} className="mt-3 mb-1">
               <ImageViewer
                 src={`${imgBase}/validation_misc.png`}
-                thumbnailSrc={imgOpt(`${imgBase}/validation_misc.png`, { width: 1920 })}
+                width={2745}
+                height={1043}
+                sizes={`(max-width: 1080px) 100vw, 1080px`}
+                alt="Misc. validation plots"
               />
             </Col>
             <Col span={24}>{textContent.networkLevelValidation.numberOfProcesses.legend}</Col>
@@ -151,7 +173,10 @@ export default function AnatomyValidations() {
             <Col xs={24} md={12}>
               <ImageViewer
                 src={`${imgBase}/validation_circuit_morphometrics.png`}
-                thumbnailSrc={imgOpt(`${imgBase}/validation_circuit_morphometrics.png`)}
+                width={1867}
+                height={1844}
+                sizes={`(min-width: ${antBreakpoint.md}) 480px, 100vw`}
+                alt="Circuit morphometrics validation plots"
               />
               <div className="mt-1">
                 {textContent.synthesizedCellValidation.featureBased.legend}
@@ -165,7 +190,10 @@ export default function AnatomyValidations() {
             <Col span={24} className="mt-3 mb-2">
               <ImageViewer
                 src={`${imgBase}/validation_circuit_topologies.png`}
-                thumbnailSrc={imgOpt(`${imgBase}/validation_circuit_topologies.png`, { width: 1920 })}
+                width={4853}
+                height={3177}
+                sizes={`(max-width: 1080px) 100vw, 1080px`}
+                alt="Topological validation plots"
               />
             </Col>
             <Col span={24}>{textContent.synthesizedCellValidation.topological.legend}</Col>

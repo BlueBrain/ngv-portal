@@ -14,8 +14,7 @@ import DataContainer from '../../components/DataContainer';
 import Collapsible from '../../components/Collapsible';
 import ImageViewer from '../../components/ImageViewer';
 import Video, { composeSources } from '../../components/VideoPlayer';
-import { imgOpt } from '../../utils';
-import { staticDataBaseUrl } from '../../config';
+import { staticDataBaseUrl, antBreakpoint } from '../../config';
 import textContent from '../../text-content/anatomy/reconstruction-data';
 
 
@@ -75,6 +74,7 @@ export default function AnatomyRecData() {
                 layout="responsive"
                 width="1280"
                 height="720"
+                sizes={`(min-width: ${antBreakpoint.lg}) 640px, 100vw`}
                 loading="eager"
                 priority
               />
@@ -149,9 +149,11 @@ export default function AnatomyRecData() {
 
           <ImageViewer
             src={`${imgBase}/ngv-viewer-screenshot.png`}
-            thumbnailSrc={imgOpt(`${imgBase}/ngv-viewer-screenshot.png`, { width: 1920 })}
+            width={1920}
+            height={1080}
+            sizes={`(max-width: 1080px) 100vw, 1080px`}
+            alt="NGV viewer screenshot"
             border
-            aspectRatio="16/9"
           />
 
           <div className="text-right" style={{ marginTop: '1.4rem' }}>
@@ -174,7 +176,10 @@ export default function AnatomyRecData() {
             <Col xs={24} sm={12}>
               <ImageViewer
                 src={`${imgBase}/NGV_DISS149_4k_STILL_NEURONS_WITH_DOF.jpeg`}
-                thumbnailSrc={imgOpt(`${imgBase}/NGV_DISS149_4k_STILL_NEURONS_WITH_DOF.jpeg`)}
+                width={3840}
+                height={2160}
+                sizes={`(min-width: ${antBreakpoint.sm}) 480px, 100vw`}
+                alt="Neuronal circuit render"
               />
             </Col>
           </Row>
@@ -188,7 +193,10 @@ export default function AnatomyRecData() {
             <Col xs={24} sm={12}>
               <ImageViewer
                 src={`${imgBase}/vasculature_stages.png`}
-                thumbnailSrc={imgOpt(`${imgBase}/vasculature_stages.png`)}
+                width={1600}
+                height={1381}
+                sizes={`(min-width: ${antBreakpoint.sm}) 480px, 100vw`}
+                alt="Vasculature stages"
               />
               <div className="mt-1">
               {textContent.vasculatureSurfaceMesh.legend}
@@ -213,7 +221,10 @@ export default function AnatomyRecData() {
             <Col xs={24} sm={12}>
               <ImageViewer
                 src={`${imgBase}/results_illustrations.png`}
-                thumbnailSrc={imgOpt(`${imgBase}/results_illustrations.png`)}
+                width={2780}
+                height={2091}
+                sizes={`(min-width: ${antBreakpoint.sm}) 480px, 100vw`}
+                alt="Astrocyte and vasculature network render"
               />
               <div className="mt-1">
                 {textContent.astrocyticPositionsWithoutCollision.legend}
@@ -230,7 +241,10 @@ export default function AnatomyRecData() {
             <Col xs={24} sm={12}>
               <ImageViewer
                 src={`${imgBase}/results_microdomains_illustration.png`}
-                thumbnailSrc={imgOpt(`${imgBase}/results_microdomains_illustration.png`)}
+                width={2732}
+                height={2118}
+                sizes={`(min-width: ${antBreakpoint.sm}) 480px, 100vw`}
+                alt="Microdomains render"
               />
               <div className="mt-1">
                 {textContent.microdomains.legend}
@@ -255,7 +269,10 @@ export default function AnatomyRecData() {
             <Col span={24}>
               <ImageViewer
                 src={`${imgBase}/results_connectivity_illustration_v2.png`}
-                thumbnailSrc={imgOpt(`${imgBase}/results_connectivity_illustration_v2.png`, { width: 1920 })}
+                width={3768}
+                height={2312}
+                sizes={`(max-width: 1080px) 100vw, 1080px`}
+                alt="Connectivity render"
               />
               <div className="mt-1">
                 {textContent.connectivities.figure}
@@ -271,7 +288,10 @@ export default function AnatomyRecData() {
               <ImageViewer
                 className="mb-1"
                 src={`${imgBase}/NGV_DISS149_4k_STILL_ENDFEET_WITH_DOF.jpeg`}
-                thumbnailSrc={imgOpt(`${imgBase}/NGV_DISS149_4k_STILL_ENDFEET_WITH_DOF.jpeg`, { width: 1920 })}
+                width={3840}
+                height={2160}
+                sizes={`(max-width: 1080px) 100vw, 1080px`}
+                alt="Endfeet render"
               />
               {textContent.endfeetSurfaceReconstruction.legend}
             </Col>
@@ -297,7 +317,10 @@ export default function AnatomyRecData() {
             <Col xs={24} sm={12} className="mt-3">
               <ImageViewer
                 src={`${imgBase}/astrocytes_illustration_annotated.jpg`}
-                thumbnailSrc={imgOpt(`${imgBase}/astrocytes_illustration_annotated.jpg`)}
+                width={5120}
+                height={5075}
+                sizes={`(min-width: ${antBreakpoint.md}) 480px, 100vw`}
+                alt="Example renders of synthesized astrocytes"
               />
               <div className="mt-1">
                 <small>
@@ -309,7 +332,10 @@ export default function AnatomyRecData() {
             <Col xs={24} sm={12} className="mt-3">
               <ImageViewer
                 src={`${imgBase}/results_morphs_illustration_recolored.png`}
-                thumbnailSrc={imgOpt(`${imgBase}/results_morphs_illustration_recolored.png`)}
+                width={2587}
+                height={2176}
+                sizes={`(min-width: ${antBreakpoint.md}) 480px, 100vw`}
+                alt="Morphology illustration"
               />
               <div className="mt-1">
                 {textContent.morphologicalSynthesisOfAstrocytes.legend}
