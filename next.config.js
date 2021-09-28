@@ -58,7 +58,7 @@ const nextConfig = {
   },
   async headers() {
     return [{
-      source: '/assets/*.(jpg|jpeg|png)',
+      source: '/(.*).(jpg|jpeg|png|webp)',
       headers: [{
         key: 'Cache-Control',
         value: `public, max-age=${imgCacheTTL}, s-maxage=${imgCacheTTL}, stale-while-revalidate=${imgCacheTTL}`,
