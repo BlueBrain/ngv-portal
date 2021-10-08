@@ -4,7 +4,7 @@ import Filters from '../../layouts/Filters';
 import Title from '../../components/Title';
 import InfoBox from '../../components/InfoBox';
 import DataContainer from '../../components/DataContainer';
-import Collapsible from '../../components/Collapsible';
+import DataSection from '../../components/DataSection';
 
 
 export default function GeometryExpData() {
@@ -29,21 +29,21 @@ export default function GeometryExpData() {
       </Filters>
 
       <DataContainer>
-        <Collapsible title="Model itself">
+        <DataSection title="Model itself">
           <span>TODO: add content</span>
-        </Collapsible>
+        </DataSection>
 
-        <Collapsible title="Explanation of coupling between Neurodamus ond Julia" className="mt-4">
+        <DataSection title="Explanation of coupling between Neurodamus ond Julia" className="mt-4">
           <span>TODO: add content</span>
-        </Collapsible>
+        </DataSection>
 
-        <Collapsible title="Simulation results for 1, 2, 3" className="mt-4">
+        <DataSection title="Simulation results for 1, 2, 3" className="mt-4">
           <span>TODO: add content</span>
-        </Collapsible>
+        </DataSection>
 
-        <Collapsible title="Vasculature data" className="mt-4">
+        <DataSection title="Vasculature data" className="mt-4">
           <span>TODO: add content</span>
-        </Collapsible>
+        </DataSection>
       </DataContainer>
     </>
   );

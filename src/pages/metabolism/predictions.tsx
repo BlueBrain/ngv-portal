@@ -4,7 +4,7 @@ import Filters from '../../layouts/Filters';
 import Title from '../../components/Title';
 import InfoBox from '../../components/InfoBox';
 import DataContainer from '../../components/DataContainer';
-import Collapsible from '../../components/Collapsible';
+import DataSection from '../../components/DataSection';
 
 
 export default function GeometryExpData() {
@@ -29,25 +29,25 @@ export default function GeometryExpData() {
       </Filters>
 
       <DataContainer>
-        <Collapsible title="ATP consumption for different cell types, layers, activities">
+        <DataSection title="ATP consumption for different cell types, layers, activities">
           <span>TODO: add content</span>
-        </Collapsible>
+        </DataSection>
 
-        <Collapsible title="Comparison of ephys simulation with metabolic constraints and without" className="mt-4">
+        <DataSection title="Comparison of ephys simulation with metabolic constraints and without" className="mt-4">
           <span>TODO: add content</span>
-        </Collapsible>
+        </DataSection>
 
-        <Collapsible title="Comparison of EXC and INH neurons metabolism" className="mt-4">
+        <DataSection title="Comparison of EXC and INH neurons metabolism" className="mt-4">
           <span>TODO: add content</span>
-        </Collapsible>
+        </DataSection>
 
-        <Collapsible title="Application in disease: Transient ischemic attack" className="mt-4">
+        <DataSection title="Application in disease: Transient ischemic attack" className="mt-4">
           <span>TODO: add content</span>
-        </Collapsible>
+        </DataSection>
 
-        <Collapsible title="Analysis of stimulation effects: Lactate concentration in response to stimulation" className="mt-4">
+        <DataSection title="Analysis of stimulation effects: Lactate concentration in response to stimulation" className="mt-4">
           <span>TODO: add content</span>
-        </Collapsible>
+        </DataSection>
       </DataContainer>
     </>
   );

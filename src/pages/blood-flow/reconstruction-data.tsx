@@ -4,7 +4,7 @@ import Filters from '../../layouts/Filters';
 import Title from '../../components/Title';
 import InfoBox from '../../components/InfoBox';
 import DataContainer from '../../components/DataContainer';
-import Collapsible from '../../components/Collapsible';
+import DataSection from '../../components/DataSection';
 
 
 export default function AnatomyExpData() {
@@ -29,21 +29,21 @@ export default function AnatomyExpData() {
       </Filters>
 
       <DataContainer>
-        <Collapsible title="Concentration of Molecules">
+        <DataSection title="Concentration of Molecules">
           <span>TODO: add content</span>
-        </Collapsible>
+        </DataSection>
 
-        <Collapsible title="Enzyme parameters for reaction rates" className="mt-4">
+        <DataSection title="Enzyme parameters for reaction rates" className="mt-4">
           <span>TODO: add content</span>
-        </Collapsible>
+        </DataSection>
 
-        <Collapsible title="Equations describing changes of concentrations" className="mt-4">
+        <DataSection title="Equations describing changes of concentrations" className="mt-4">
           <span>TODO: add content</span>
-        </Collapsible>
+        </DataSection>
 
-        <Collapsible title="Experimental data form validation: BOLD.." className="mt-4">
+        <DataSection title="Experimental data form validation: BOLD.." className="mt-4">
           <span>TODO: add content</span>
-        </Collapsible>
+        </DataSection>
       </DataContainer>
     </>
   );

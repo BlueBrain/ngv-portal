@@ -4,7 +4,7 @@ import Filters from '../../layouts/Filters';
 import Title from '../../components/Title';
 import InfoBox from '../../components/InfoBox';
 import DataContainer from '../../components/DataContainer';
-import Collapsible from '../../components/Collapsible';
+import DataSection from '../../components/DataSection';
 
 
 export default function GeometryExpData() {
@@ -29,13 +29,13 @@ export default function GeometryExpData() {
       </Filters>
 
       <DataContainer>
-        <Collapsible title="Concentrations of molecules">
+        <DataSection title="Concentrations of molecules">
           <span>TODO: add content</span>
-        </Collapsible>
+        </DataSection>
 
-        <Collapsible title="BOLD and OGI" className="mt-4">
+        <DataSection title="BOLD and OGI" className="mt-4">
           <span>TODO: add content</span>
-        </Collapsible>
+        </DataSection>
       </DataContainer>
     </>
   );
