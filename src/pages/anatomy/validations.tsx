@@ -6,7 +6,7 @@ import Filters from '../../layouts/Filters';
 import Title from '../../components/Title';
 import InfoBox from '../../components/InfoBox';
 import DataContainer from '../../components/DataContainer';
-import Collapsible from '../../components/Collapsible';
+import DataSection from '../../components/DataSection';
 import ImageViewer from '../../components/ImageViewer';
 import { antBreakpoint } from '../../config';
 import textContent from '../../text-content/anatomy/validations';
@@ -53,7 +53,7 @@ export default function AnatomyValidations() {
       </Filters>
 
       <DataContainer>
-        <Collapsible title="Network level validation with respect to literature data">
+        <DataSection title="Network level validation with respect to literature data">
           {textContent.networkLevelValidation.description}
 
           <h3 className="mt-4 mb-2">Density</h3>
@@ -160,9 +160,9 @@ export default function AnatomyValidations() {
             </Col>
             <Col span={24}>{textContent.networkLevelValidation.numberOfProcesses.legend}</Col>
           </Row>
-        </Collapsible>
+        </DataSection>
 
-        <Collapsible title="Synthesized Cell Validation" className="mt-4">
+        <DataSection title="Synthesized Cell Validation" className="mt-4">
           {textContent.synthesizedCellValidation.description}
 
           <h3 className="mt-4 mb-2">Feature based</h3>
@@ -198,7 +198,7 @@ export default function AnatomyValidations() {
             </Col>
             <Col span={24}>{textContent.synthesizedCellValidation.topological.legend}</Col>
           </Row>
-        </Collapsible>
+        </DataSection>
       </DataContainer>
     </>
   );

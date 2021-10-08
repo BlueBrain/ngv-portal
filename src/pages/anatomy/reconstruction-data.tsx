@@ -11,7 +11,7 @@ import Filters from '../../layouts/Filters';
 import Title from '../../components/Title';
 import InfoBox from '../../components/InfoBox';
 import DataContainer from '../../components/DataContainer';
-import Collapsible from '../../components/Collapsible';
+import DataSection from '../../components/DataSection';
 import ImageViewer from '../../components/ImageViewer';
 import Video, { composeSources } from '../../components/VideoPlayer';
 import { staticDataBaseUrl, antBreakpoint } from '../../config';
@@ -97,7 +97,7 @@ export default function AnatomyRecData() {
       </Filters>
 
       <DataContainer>
-        <Collapsible title="Final reconstructions">
+        <DataSection title="Final reconstructions">
           {textContent.finalReconstructions}
           <Video
             sources={composeSources('/anatomy/reconstruction-data/NGV_DISS149_MASTER_WITH_EFFECTS')}
@@ -142,9 +142,9 @@ export default function AnatomyRecData() {
             loop
             defaultSize={720}
           />
-        </Collapsible>
+        </DataSection>
 
-        <Collapsible title="Explore reconstructions" className="mt-4">
+        <DataSection title="Explore reconstructions" className="mt-4">
           <p>Explore the NGV reconstructions interactively in your browser in 3D.</p>
 
           <ImageViewer
@@ -168,14 +168,14 @@ export default function AnatomyRecData() {
               Open NGV Viewer
             </Button>
           </div>
-        </Collapsible>
+        </DataSection>
 
-        <Collapsible title="Neuronal circuit" className="mt-4">
+        <DataSection title="Neuronal circuit" className="mt-4">
           <Row gutter={32}>
             <Col xs={24} sm={12}>{textContent.neuronalCircuit}</Col>
             <Col xs={24} sm={12}>
               <ImageViewer
-                src={`${imgBase}/NGV_DISS149_4k_STILL_NEURONS_WITH_DOF.jpeg`}
+                src={`${imgBase}/NGV_DISS149_4k_STILL_NEURONS_WITH_DOF.jpg`}
                 width={3840}
                 height={2160}
                 sizes={`(min-width: ${antBreakpoint.sm}) 480px, 100vw`}
@@ -183,9 +183,9 @@ export default function AnatomyRecData() {
               />
             </Col>
           </Row>
-        </Collapsible>
+        </DataSection>
 
-        <Collapsible title="Vasculature Surface Mesh" className="mt-4">
+        <DataSection title="Vasculature Surface Mesh" className="mt-4">
           <Row gutter={32}>
             <Col xs={24} sm={12}>
               {textContent.vasculatureSurfaceMesh.text}
@@ -213,9 +213,9 @@ export default function AnatomyRecData() {
               Vasculature point graph
             </Button>
           </div>
-        </Collapsible>
+        </DataSection>
 
-        <Collapsible title="Astrocytic positions without collision" className="mt-4">
+        <DataSection title="Astrocytic positions without collision" className="mt-4">
           <Row gutter={32}>
             <Col xs={24} sm={12}>{textContent.astrocyticPositionsWithoutCollision.text}</Col>
             <Col xs={24} sm={12}>
@@ -231,9 +231,9 @@ export default function AnatomyRecData() {
               </div>
             </Col>
           </Row>
-        </Collapsible>
+        </DataSection>
 
-        <Collapsible title="Microdomains" className="mt-4">
+        <DataSection title="Microdomains" className="mt-4">
           <Row gutter={32}>
             <Col xs={24} sm={12}>
               {textContent.microdomains.text}
@@ -261,9 +261,9 @@ export default function AnatomyRecData() {
               Overlapping microdomains
             </Button>
           </div>
-        </Collapsible>
+        </DataSection>
 
-        <Collapsible title="Connectivities" className="mt-4">
+        <DataSection title="Connectivities" className="mt-4">
           <Row gutter={32}>
             <Col span={24} className="column-count-2 mb-3">{textContent.connectivities.text}</Col>
             <Col span={24}>
@@ -279,9 +279,9 @@ export default function AnatomyRecData() {
               </div>
             </Col>
           </Row>
-        </Collapsible>
+        </DataSection>
 
-        <Collapsible title="Endfeet surface reconstruction" className="mt-4">
+        <DataSection title="Endfeet surface reconstruction" className="mt-4">
           <Row gutter={32}>
             <Col span={24} className="column-count-2 mb-3">{textContent.endfeetSurfaceReconstruction.text}</Col>
             <Col span={24}>
@@ -306,9 +306,9 @@ export default function AnatomyRecData() {
               Endfeet data
             </Button>
           </div>
-        </Collapsible>
+        </DataSection>
 
-        <Collapsible title="Morphological synthesis of astrocytes" className="mt-4">
+        <DataSection title="Morphological synthesis of astrocytes" className="mt-4">
           <Row gutter={32}>
             <Col xs={24} sm={24} className="column-count-2">
               {textContent.morphologicalSynthesisOfAstrocytes.text}
@@ -357,9 +357,9 @@ export default function AnatomyRecData() {
               </Button>
             </Dropdown>
           </div>
-        </Collapsible>
+        </DataSection>
 
-        <Collapsible title="Astrocytic morphologies exploration using Python" className="mt-4">
+        <DataSection title="Astrocytic morphologies exploration using Python" className="mt-4">
           <p>
             Astrocytic morphologies can be explored using <a
               href="https://github.com/BlueBrain/MorphIO"
@@ -389,7 +389,7 @@ export default function AnatomyRecData() {
           >
             {astrocyticPythonCodeStr}
           </SyntaxHighlighter>
-        </Collapsible>
+        </DataSection>
       </DataContainer>
     </>
   );

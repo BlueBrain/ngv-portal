@@ -6,7 +6,7 @@ import Filters from '../../layouts/Filters';
 import Title from '../../components/Title';
 import InfoBox from '../../components/InfoBox';
 import DataContainer from '../../components/DataContainer';
-import Collapsible from '../../components/Collapsible';
+import DataSection from '../../components/DataSection';
 import ImageViewer from '../../components/ImageViewer';
 import textContent from '../../text-content/anatomy/predictions';
 import { antBreakpoint } from '../../config';
@@ -50,7 +50,7 @@ export default function AnatomyPredictions() {
       </Filters>
 
       <DataContainer>
-        <Collapsible title="Spatial organization of astrocytic endfeet">
+        <DataSection title="Spatial organization of astrocytic endfeet">
           <Row gutter={32}>
             <Col span={24} className="column-count-2">{textContent.spatialOrganizationOfAstrocyticEndfeet.text}</Col>
             <Col span={24} className="mt-3 mb-1">
@@ -64,9 +64,9 @@ export default function AnatomyPredictions() {
             </Col>
             <Col span={24}>{textContent.spatialOrganizationOfAstrocyticEndfeet.legend}</Col>
           </Row>
-        </Collapsible>
+        </DataSection>
 
-        <Collapsible title="Effect of astrocytic density on endfeet organization" className="mt-4">
+        <DataSection title="Effect of astrocytic density on endfeet organization" className="mt-4">
           <Row gutter={32}>
             <Col span={24} className="column-count-2">{textContent.effectOfAstrocyticDensityOnEndfeetOrganization.text}</Col>
             <Col span={24} className="mt-3 mb-2">
@@ -80,9 +80,9 @@ export default function AnatomyPredictions() {
             </Col>
             <Col span={24}>{textContent.effectOfAstrocyticDensityOnEndfeetOrganization.legend}</Col>
           </Row>
-        </Collapsible>
+        </DataSection>
 
-        <Collapsible title="Emerging NGV compositional hierarchy" className="mt-4">
+        <DataSection title="Emerging NGV compositional hierarchy" className="mt-4">
           <Row gutter={32}>
             <Col xs={24} md={12}>
               {textContent.emergingNgvCompositionalHierarchy.text}
@@ -100,9 +100,9 @@ export default function AnatomyPredictions() {
               </div>
             </Col>
           </Row>
-        </Collapsible>
+        </DataSection>
 
-        <Collapsible title="Astrocyte numbers" className="mt-4">
+        <DataSection title="Astrocyte numbers" className="mt-4">
           <Row gutter={32}>
             <Col span={24} className="column-count-2">{textContent.astrocyteNumbers.text}</Col>
             <Col span={24} className="mt-3 mb-2">
@@ -116,7 +116,7 @@ export default function AnatomyPredictions() {
             </Col>
             <Col span={24}>{textContent.astrocyteNumbers.legend}</Col>
           </Row>
-        </Collapsible>
+        </DataSection>
       </DataContainer>
     </>
   );

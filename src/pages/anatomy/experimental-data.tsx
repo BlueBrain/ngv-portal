@@ -8,7 +8,7 @@ import Filters from '../../layouts/Filters';
 import Title from '../../components/Title';
 import InfoBox from '../../components/InfoBox';
 import DataContainer from '../../components/DataContainer';
-import Collapsible from '../../components/Collapsible';
+import DataSection from '../../components/DataSection';
 import ImageViewer from '../../components/ImageViewer';
 import textContent from '../../text-content/anatomy/experimental-data';
 import { staticDataBaseUrl, antBreakpoint } from '../../config';
@@ -72,7 +72,7 @@ export default function AnatomyExpData() {
       </Filters>
 
       <DataContainer>
-        <Collapsible title="EM Data">
+        <DataSection title="EM Data">
           <Row gutter={32}>
             <Col xs={24} md={12}>{textContent.emData}</Col>
             <Col xs={24} md={12}>
@@ -85,9 +85,9 @@ export default function AnatomyExpData() {
               />
             </Col>
           </Row>
-        </Collapsible>
+        </DataSection>
 
-        <Collapsible title="Extracted meshes" className="mt-4">
+        <DataSection title="Extracted meshes" className="mt-4">
           <Row gutter={32}>
             <Col xs={24} md={12}>{textContent.extractedMeshes}</Col>
             <Col xs={24} md={12}>
@@ -100,9 +100,9 @@ export default function AnatomyExpData() {
               />
             </Col>
           </Row>
-        </Collapsible>
+        </DataSection>
 
-        <Collapsible title="Skeletonized experimental morphologies" className="mt-4">
+        <DataSection title="Skeletonized experimental morphologies" className="mt-4">
           <Row gutter={32}>
             <Col xs={24} md={12}>{textContent.skeletonizedExpMorphs}</Col>
             <Col xs={24} md={12} className="pl-2 pr-2 p-2">
@@ -132,9 +132,9 @@ export default function AnatomyExpData() {
               </Button>
             </Dropdown>
           </div> */}
-        </Collapsible>
+        </DataSection>
 
-        <Collapsible title="Vasculature data" className="mt-4">
+        <DataSection title="Vasculature data" className="mt-4">
           <Row gutter={32}>
             <Col xs={24} md={12}>{textContent.vasculatureData}</Col>
             <Col xs={24} md={12}>
@@ -157,7 +157,7 @@ export default function AnatomyExpData() {
               Vasculature dataset
             </Button>
           </div>
-        </Collapsible>
+        </DataSection>
       </DataContainer>
     </>
   );
