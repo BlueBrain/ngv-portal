@@ -1,8 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 
-// import './style.scss';
-
 const classPrefix = 'brand__';
 
 const Brand: React.FC = () => {
@@ -22,11 +20,6 @@ const Brand: React.FC = () => {
           <h2 className="text-white name">NGV Portal</h2>
         </a>
       </Link>
-      {/* <Link href="/">
-        <a>
-          <h1 className="text-white" >NGV Portal</h1>
-        </a>
-      </Link> */}
     </div>
   );
 };
