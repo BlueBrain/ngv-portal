@@ -26,6 +26,8 @@ html, body {
 :root {
   --color-blue: #84bbf8;
 
+  --color-bbp-logo: #00ECFD;
+
   --color-text-high-white: #ffffffdd;
   --color-text-medium-white: #ffffffbe;
   --color-text-disabled-white: #ffffff61;
@@ -994,12 +996,7 @@ $data-section-padding-small: 0.5rem;
 
   .logo {
     width: 60px;
-    padding-right: 12px;
     margin-right: 12px;
-    position: relative;
-    @media (max-width: $small) {
-      padding-right: 8px;
-    }
     @media (max-width: $ant-breakpoint-sm) {
       width: 40px;
       margin-right: 8px;
@@ -1008,17 +1005,6 @@ $data-section-padding-small: 0.5rem;
       vertical-align: initial;
     }
     box-sizing: content-box;
-  }
-
-  .logo:after {
-    content: ' ';
-    height: 20px;
-    width: 2px;
-    display: block;
-    background: map-get($basePalette, "white");
-    position: absolute;
-    top: 0;
-    right: -2px;
   }
 
   .project {
@@ -1031,10 +1017,27 @@ $data-section-padding-small: 0.5rem;
     }
 
     .bbp-name {
+      position: relative;
+      color: var(--color-bbp-logo);
       padding-right: 12px;
       margin-bottom: 0;
       @media (max-width: $small) {
         padding-right: 8px;
+      }
+
+      &:after {
+        content: ' ';
+        height: 20px;
+        width: 2px;
+        display: block;
+        background: map-get($basePalette, "white");
+        position: absolute;
+        top: calc($height / 2 - 10px);
+        right: -2px;
+        @media (max-width: $small) {
+          height: 16px;
+          top: calc($height / 2 - 8px);
+        }
       }
     }
 
@@ -1042,6 +1045,10 @@ $data-section-padding-small: 0.5rem;
       font-weight: bold;
       font-size: 1.5em;
       margin-bottom: 0;
+      margin-left: 12px;
+      @media (max-width: $small) {
+        margin-left: 8px;
+      }
     }
   }
 
