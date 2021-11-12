@@ -119,7 +119,7 @@ const textContent = {
         As they grow one against the other they tile the cortical space forming anatomically exclusive regions.
       </p>
       <p>
-        We modelled this organization as polygons, which we generated using mathematical tessellations.
+        We modeled this organization as polygons, which we generated using mathematical tessellations.
         Each region represented the accessible space for each astrocyte.
       </p>
     </>),

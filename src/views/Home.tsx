@@ -30,7 +30,7 @@ const Home: React.FC = () => (
       <div className="title">
         <Title
           title={<span>Neuro-Glia-<br/>Vasculature <br/> Portal</span>}
-          hint="Welcome to the NGV Portal created by the <b>EPFL Blue Brain Project</b>. Come and explore the various datasets and visuals made available to understand how we reconstruct in silico the Neuro-Glia-Vasculature ensemble of the rat brain."
+          hint="Welcome to the NGV Portal created by the <b>EPFL Blue Brain Project</b>. Come and explore the various datasets and visuals made available to understand how we reconstruct <i>in silico</i> the Neuro-Glia-Vasculature ensemble architecture of the rat brain."
           primary
         />
         <div className="cta">
@@ -76,7 +76,7 @@ const Home: React.FC = () => (
           </Col>
           <Col xs={24} md={{ span:12, pull: 12 }}>
             <p className="mt-1">
-              The NGV portal showcases the digital modeling of the Neuro-Glia-Vasculature system
+              The NGV Portal showcases the digital modeling of the Neuro-Glia-Vasculature system
               performed within the Blue Brain Project. The process is divided into three main blocks:
             </p>
             <ol>
@@ -159,23 +159,20 @@ const Home: React.FC = () => (
       </div>
     </section>
 
-    <section id="section-5">
-      <h2 className="acknowledgments-container">
-        <div className="row">
-          <div className="col-xs-12">
-            <p>
-              <span>Acknowledgments</span>
-              <span className="accent-border" />
-            </p>
-          </div>
-          <div className="col-xs-12">
-            <img
-              src="/ngv-portal/assets/images/acknowledgments/kaust_logo.png"
-              alt="kaust_logo"
-            />
-          </div>
-        </div>
-      </h2>
+    <section id="acknowledgments">
+      <div className="acknowledgments-container">
+        <h2>
+          <span>Acknowledgments</span>
+          <span className="accent-border" />
+        </h2>
+
+        <p className="mt-2">
+          This publication is based upon work supported by the King Abdullah University of Science and Technology (KAUST) Office of Sponsored Research (OSR) under Award No. OSR-2017-CRG6-3438
+        </p>
+        <p>
+          We are also grateful to Bruno Weber of ETH Zurich for providing a previously published vasculature data set. In addition we thank Claudia Savoia for project coordination, Caitlin Monney for portal design, Jean-Denis Courcol, Pavlo Getta, and Stefano Antonel for portal technical support and development.
+        </p>
+      </div>
     </section>
 
     <section id="contact">

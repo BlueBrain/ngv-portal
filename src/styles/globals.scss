@@ -1737,13 +1737,16 @@ $data-section-padding-small: 0.5rem;
     color: white;
   }
 
-  #section-5 {
+  #acknowledgments {
     text-align: center;
 
     h2 {
       text-transform: uppercase;
-      text-align: center;
       color: map-get($basePalette, "navy-4");
+    }
+
+    p {
+      color: map-get($basePalette, "navy-0");
     }
 
     span {
@@ -1751,17 +1754,8 @@ $data-section-padding-small: 0.5rem;
     }
 
     .acknowledgments-container {
-      img {
-        max-width: 40%;
-      }
-    }
-
-    @media (max-width: $small) {
-      .acknowledgments-container {
-        img {
-          max-width: 80%;
-        }
-      }
+      max-width: 1080px;
+      margin: 0 auto;
     }
   }
 

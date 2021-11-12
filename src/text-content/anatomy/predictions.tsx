@@ -132,9 +132,10 @@ const textContent = {
     text: (<>
       <p>
         Focusing around the central player of the NGV, the astrocyte, we extracted connectivity statistics,
-        opening a window to the NGV network organization. We showed that an in silico circuit of the NGV architecture
-        could indeed be used to simultaneously quantify both compositional (densities, wiring, surface areas, and volume)
-        and organizational (connectivities, distance distributions, correlations) aspects of its entities,
+        opening a window to the NGV network organization. We showed that an <i>in silico</i> circuit
+        of the NGV architecture could indeed be used to simultaneously quantify both compositional
+        (densities, wiring, surface areas, and volume) and organizational
+        (connectivities, distance distributions, correlations) aspects of its entities,
         as well as to investigate questions concerning the intricacies of cortical composition
         and their relation to computational capacity.
       </p>

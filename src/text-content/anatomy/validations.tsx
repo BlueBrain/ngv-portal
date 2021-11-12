@@ -124,7 +124,7 @@ const textContent = {
           (A) Shortest path length of the endfeet perivascular processes from the surface of the astrocytic soma
           to the surface of the vasculature.
           (B) Comparison of the average path length in the NGV (salmon) to the values
-          reported by Moye et al., 2019 (turqoise).
+          reported by Moye et al., 2019 (turquoise).
           (C) Relationship between endfeet surface areas and thicknesses in the NGV circuit (salmon)
           and in the work of Cali et al., 2020 (turquoise).
         </small>
