@@ -150,9 +150,9 @@ const Home: React.FC = () => (
             </div>
 
             <PublicationBlock
-              href="https://doi.org/10.1101/2021.01.19.427241"
-              description="Architecture of the Neuro-Glia-Vascular System"
+              description="Digital reconstruction of the neuro-glia-vascular architecture"
               authors={<>Eleftherios Zisis <i>et al.</i>, 2021</>}
+              href="https://doi.org/10.1093/cercor/bhab254"
             />
           </Col>
         </Row>
