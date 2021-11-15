@@ -1,5 +1,7 @@
 
 const textContent = {
+  pageDescriptionMeta: 'The digital reconstruction of the NGV provides an array of predictions across its many levels of organization. These predictions provide insights to link underlying structure with function. In addition, predictions are also a means to validate the component models of the NGV model and identify missing data that could guide targeted experiments.',
+
   pageDescription: <p>
     The digital reconstruction of the NGV provides an array of predictions
     across its many levels of organization. These predictions provide insights to link underlying structure

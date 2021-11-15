@@ -1,5 +1,7 @@
 
 const textContent = {
+  pageDescriptionMeta: 'The NGV digital reconstruction was built from sparse data distributed across numerous studies. The data collection was performed either in the form of constraints and model parameters extracted from literature measurements and observations or experimentally reconstructed datasets',
+
   pageDescription: (<p>
     The NGV digital reconstruction was built from sparse data distributed across numerous studies.
     The data collection was performed either in the form of constraints and model parameters

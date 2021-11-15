@@ -1,5 +1,7 @@
 
 const textContent = {
+  pageDescriptionMeta: 'To ensure biological fidelity, we validated that input constraints could be reproduced for each step in the circuit building process and compared structural measurements with corresponding values extracted from the literature and experimental data.',
+
   pageDescription: (<p>
     To ensure biological fidelity, we validated that input constraints could be reproduced
     for each step in the circuit building process and compared structural measurements with corresponding values

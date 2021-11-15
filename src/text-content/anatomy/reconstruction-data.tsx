@@ -1,5 +1,7 @@
 
 const textContent = {
+  pageDescriptionMeta: 'The NGV anatomy model is reconstructed using the NGV circuit building framework, written in Python, using a component-based design. There are three main datasets in the NGV digital reconstruction: the neuronal, glial, and vascular datasets linked together with pairwise connectivities.',
+
   pageDescription: (<p>
     The NGV anatomy model is reconstructed using the NGV circuit building framework, written in Python,
     using a component-based design. A component is defined as a standalone processing
