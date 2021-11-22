@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Filters from '../../layouts/Filters';
-import Title from '../../components/Title';
-import InfoBox from '../../components/InfoBox';
-import DataContainer from '../../components/DataContainer';
-import DataSection from '../../components/DataSection';
+import Filters from '../../../layouts/Filters';
+import Title from '../../../components/Title';
+import InfoBox from '../../../components/InfoBox';
+import DataContainer from '../../../components/DataContainer';
+import DataSection from '../../../components/DataSection';
 
 
 export default function GeometryExpData() {
@@ -14,7 +14,7 @@ export default function GeometryExpData() {
         <div className="center-col">
           <Title
             primaryColor="purple"
-            title="Validations"
+            title="Predictions"
             subtitle="Metabolism"
           />
           <div role="information">
@@ -29,11 +29,23 @@ export default function GeometryExpData() {
       </Filters>
 
       <DataContainer>
-        <DataSection title="Concentrations of molecules">
+        <DataSection title="ATP consumption for different cell types, layers, activities">
           <span>TODO: add content</span>
         </DataSection>
 
-        <DataSection title="BOLD and OGI" className="mt-4">
+        <DataSection title="Comparison of ephys simulation with metabolic constraints and without" className="mt-4">
+          <span>TODO: add content</span>
+        </DataSection>
+
+        <DataSection title="Comparison of EXC and INH neurons metabolism" className="mt-4">
+          <span>TODO: add content</span>
+        </DataSection>
+
+        <DataSection title="Application in disease: Transient ischemic attack" className="mt-4">
+          <span>TODO: add content</span>
+        </DataSection>
+
+        <DataSection title="Analysis of stimulation effects: Lactate concentration in response to stimulation" className="mt-4">
           <span>TODO: add content</span>
         </DataSection>
       </DataContainer>

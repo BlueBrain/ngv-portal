@@ -1,20 +1,20 @@
 import React from 'react';
 
-import Filters from '../../layouts/Filters';
-import Title from '../../components/Title';
-import InfoBox from '../../components/InfoBox';
-import DataContainer from '../../components/DataContainer';
-import DataSection from '../../components/DataSection';
+import Filters from '../../../layouts/Filters';
+import Title from '../../../components/Title';
+import InfoBox from '../../../components/InfoBox';
+import DataContainer from '../../../components/DataContainer';
+import DataSection from '../../../components/DataSection';
 
 
-export default function AnatomyExpData() {
+export default function GeometryExpData() {
   return (
     <>
       <Filters primaryColor="purple" backgroundAlt hasData={true}>
         <div className="center-col">
           <Title
             primaryColor="purple"
-            title="Experimental data"
+            title="Validations"
             subtitle="Metabolism"
           />
           <div role="information">
@@ -29,23 +29,14 @@ export default function AnatomyExpData() {
       </Filters>
 
       <DataContainer>
-        <DataSection title="Concentration of Molecules">
+        <DataSection title="Concentrations of molecules">
           <span>TODO: add content</span>
         </DataSection>
 
-        <DataSection title="Enzyme parameters for reaction rates" className="mt-4">
-          <span>TODO: add content</span>
-        </DataSection>
-
-        <DataSection title="Equations describing changes of concentrations" className="mt-4">
-          <span>TODO: add content</span>
-        </DataSection>
-
-        <DataSection title="Experimental data form validation: BOLD.." className="mt-4">
+        <DataSection title="BOLD and OGI" className="mt-4">
           <span>TODO: add content</span>
         </DataSection>
       </DataContainer>
     </>
   );
 }
-

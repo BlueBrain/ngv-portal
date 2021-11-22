@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start -p 8000",
     "lint": "next lint",
     "build-static-data-proxy": "./scripts/build-static-data-proxy.sh",
@@ -22,6 +23,7 @@
     "flexboxgrid": "^6.3.1",
     "lodash": "^4.17.20",
     "next": "^11.1.1-canary.17",
+    "next-sitemap": "^1.6.203",
     "plyr": "^3.6.3",
     "react": "17.0.1",
     "react-dom": "17.0.1",

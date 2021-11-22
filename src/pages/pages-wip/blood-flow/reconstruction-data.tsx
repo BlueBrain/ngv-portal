@@ -1,20 +1,20 @@
 import React from 'react';
 
-import Filters from '../../layouts/Filters';
-import Title from '../../components/Title';
-import InfoBox from '../../components/InfoBox';
-import DataContainer from '../../components/DataContainer';
-import DataSection from '../../components/DataSection';
+import Filters from '../../../layouts/Filters';
+import Title from '../../../components/Title';
+import InfoBox from '../../../components/InfoBox';
+import DataContainer from '../../../components/DataContainer';
+import DataSection from '../../../components/DataSection';
 
 
-export default function GeometryExpData() {
+export default function AnatomyExpData() {
   return (
     <>
       <Filters primaryColor="purple" backgroundAlt hasData={true}>
         <div className="center-col">
           <Title
             primaryColor="purple"
-            title="Reconstruction data"
+            title="Experimental data"
             subtitle="Metabolism"
           />
           <div role="information">
@@ -29,22 +29,23 @@ export default function GeometryExpData() {
       </Filters>
 
       <DataContainer>
-        <DataSection title="Model itself">
+        <DataSection title="Concentration of Molecules">
           <span>TODO: add content</span>
         </DataSection>
 
-        <DataSection title="Explanation of coupling between Neurodamus ond Julia" className="mt-4">
+        <DataSection title="Enzyme parameters for reaction rates" className="mt-4">
           <span>TODO: add content</span>
         </DataSection>
 
-        <DataSection title="Simulation results for 1, 2, 3" className="mt-4">
+        <DataSection title="Equations describing changes of concentrations" className="mt-4">
           <span>TODO: add content</span>
         </DataSection>
 
-        <DataSection title="Vasculature data" className="mt-4">
+        <DataSection title="Experimental data form validation: BOLD.." className="mt-4">
           <span>TODO: add content</span>
         </DataSection>
       </DataContainer>
     </>
   );
 }
+

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Filters from '../../layouts/Filters';
-import Title from '../../components/Title';
-import InfoBox from '../../components/InfoBox';
-import DataContainer from '../../components/DataContainer';
-import DataSection from '../../components/DataSection';
+import Filters from '../../../layouts/Filters';
+import Title from '../../../components/Title';
+import InfoBox from '../../../components/InfoBox';
+import DataContainer from '../../../components/DataContainer';
+import DataSection from '../../../components/DataSection';
 
 
 export default function AnatomyExpData() {
