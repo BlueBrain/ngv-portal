@@ -1,5 +1,6 @@
 import Head from 'next/head';
 
+import { googleSiteVerificationCode } from '../config';
 import HomeView from '../views/Home';
 
 
@@ -8,6 +9,7 @@ export default function Home() {
     <>
       <Head>
         <title>Home / NGV Portal</title>
+        <meta name="google-site-verification" content={googleSiteVerificationCode} />
         <meta
           name="description"
           content="The NGV Portal showcases the digital modeling of the Neuro-Glia-Vasculature system performed within the Blue Brain Project."

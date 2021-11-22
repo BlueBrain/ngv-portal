@@ -27,6 +27,8 @@ export const baseUrl = '/ngv-portal';
 
 export const staticDataBaseUrl = process.env.NEXT_PUBLIC_STATIC_DATA_BASE_URL;
 
+export const googleSiteVerificationCode = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION_CODE;
+
 export const feedbackUrl = process.env.NEXT_PUBLIC_FEEDBACK_URL;
 
 export const gtm = {
