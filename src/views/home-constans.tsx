@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 
+import { baseUrl } from '../config';
+
 interface Cards {
   id: string,
   title: string | React.ReactNode,
@@ -14,9 +16,9 @@ export const cardsData: Cards[] = [
   {
     id: 'anatomy',
     title: 'Anatomy',
-    backgroundColor: "blue",
-    routeBase: "/anatomy",
-    image:"/ngv-portal/assets/images/backgrounds/home-page/sections/1_anatomy.jpg",
+    backgroundColor: 'blue',
+    routeBase: '/anatomy',
+    image:`${baseUrl}/assets/images/backgrounds/home-page/sections/1_anatomy.jpg`,
     links:[
       { label: 'Experimental data', href: '/experimental-data' },
       { label: 'Reconstruction data', href: '/reconstruction-data' },
@@ -53,9 +55,9 @@ export const cardsData: Cards[] = [
   }, {
     id: 'metabolism',
     title:<>Metabolism<sup>*</sup></>,
-    backgroundColor: "purple",
-    routeBase: "/metabolism",
-    image:"/ngv-portal/assets/images/backgrounds/home-page/sections/2_metabolism.jpg",
+    backgroundColor: 'purple',
+    routeBase: '/metabolism',
+    image:`${baseUrl}/assets/images/backgrounds/home-page/sections/2_metabolism.jpg`,
     links: [
       { label: 'Experimental data' },
       { label: 'Reconstruction data' },
@@ -105,9 +107,9 @@ export const cardsData: Cards[] = [
   {
     id: 'blood-flow',
     title:<>Blood flow<sup>*</sup></>,
-    backgroundColor: "red",
-    routeBase:"/blood-flow",
-    image: "/ngv-portal/assets/images/backgrounds/home-page/sections/3_bloodflow.jpg",
+    backgroundColor: 'red',
+    routeBase:'/blood-flow',
+    image: `${baseUrl}/assets/images/backgrounds/home-page/sections/3_bloodflow.jpg`,
     links: [
       { label: 'Experimental data' },
       { label: 'Reconstruction data' },

@@ -14,7 +14,7 @@ import DataContainer from '../../components/DataContainer';
 import DataSection from '../../components/DataSection';
 import ImageViewer from '../../components/ImageViewer';
 import Video, { composeSources } from '../../components/VideoPlayer';
-import { staticDataBaseUrl, antBreakpoint } from '../../config';
+import { staticDataBaseUrl, antBreakpoint, baseUrl } from '../../config';
 import textContent from '../../text-content/anatomy/reconstruction-data';
 
 
@@ -31,7 +31,7 @@ const astrocyticPythonCodeStr = [
   'morphology_sections = astrocyte.sections',
 ].join('\n');
 
-const imgBase = '/ngv-portal/assets/images/reconstruction-data';
+const imgBase = `${baseUrl}/assets/images/reconstruction-data`;
 const assetsBase = `${staticDataBaseUrl}/anatomy/reconstruction-data`;
 
 const downloadableMorphologies = [{
@@ -69,7 +69,7 @@ export default function AnatomyRecDataView() {
           <Row align="middle" className="w-100">
             <Col xs={24} lg={{ span: 12, push: 12 }} className="mt-1 mb-1">
               <Image
-                src="/ngv-portal/assets/images/anatomy-illustrations/anatomy-reconstruction-data-illustration.png"
+                src={`${baseUrl}/assets/images/anatomy-illustrations/anatomy-reconstruction-data-illustration.png`}
                 alt="Illustration for Anatomy reconstruction data"
                 layout="responsive"
                 width="1280"

@@ -9,7 +9,7 @@ import DataContainer from '../../components/DataContainer';
 import DataSection from '../../components/DataSection';
 import ImageViewer from '../../components/ImageViewer';
 import textContent from '../../text-content/anatomy/predictions';
-import { antBreakpoint } from '../../config';
+import { antBreakpoint, baseUrl } from '../../config';
 
 
 export default function AnatomyPredictionsView() {
@@ -26,7 +26,7 @@ export default function AnatomyPredictionsView() {
           <Row align="middle">
             <Col xs={24} lg={{ span: 12, push: 12 }} className="mt-1 mb-1">
               <Image
-                src="/ngv-portal/assets/images/anatomy-illustrations/anatomy-predictions-illustration.png"
+                src={`${baseUrl}/assets/images/anatomy-illustrations/anatomy-predictions-illustration.png`}
                 alt="Illustration for Anatomy predictions"
                 layout="responsive"
                 width="1280"
@@ -55,7 +55,7 @@ export default function AnatomyPredictionsView() {
             <Col span={24} className="column-count-2">{textContent.spatialOrganizationOfAstrocyticEndfeet.text}</Col>
             <Col span={24} className="mt-3 mb-1">
               <ImageViewer
-                src="/ngv-portal/assets/images/predictions/predictions_densities.png"
+                src={`${baseUrl}/assets/images/predictions/predictions_densities.png`}
                 width={2481}
                 height={2219}
                 sizes={`(max-width: 1080px) 100vw, 1080px`}
@@ -71,7 +71,7 @@ export default function AnatomyPredictionsView() {
             <Col span={24} className="column-count-2">{textContent.effectOfAstrocyticDensityOnEndfeetOrganization.text}</Col>
             <Col span={24} className="mt-3 mb-2">
               <ImageViewer
-                src="/ngv-portal/assets/images/predictions/endfeet_organization.png"
+                src={`${baseUrl}/assets/images/predictions/endfeet_organization.png`}
                 width={5400}
                 height={3600}
                 sizes={`(max-width: 1080px) 100vw, 1080px`}
@@ -89,7 +89,7 @@ export default function AnatomyPredictionsView() {
             </Col>
             <Col xs={24} md={12}>
               <ImageViewer
-                src="/ngv-portal/assets/images/predictions/predictions_bars.png"
+                src={`${baseUrl}/assets/images/predictions/predictions_bars.png`}
                 width={546}
                 height={840}
                 sizes={`(max-width: 1080px) 100vw, 1080px`}
@@ -107,7 +107,7 @@ export default function AnatomyPredictionsView() {
             <Col span={24} className="column-count-2">{textContent.astrocyteNumbers.text}</Col>
             <Col span={24} className="mt-3 mb-2">
               <ImageViewer
-                src="/ngv-portal/assets/images/predictions/predictions_astrocyte.png"
+                src={`${baseUrl}/assets/images/predictions/predictions_astrocyte.png`}
                 width={4389}
                 height={3529}
                 sizes={`(max-width: 1080px) 100vw, 1080px`}

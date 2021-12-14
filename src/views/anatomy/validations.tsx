@@ -8,11 +8,11 @@ import InfoBox from '../../components/InfoBox';
 import DataContainer from '../../components/DataContainer';
 import DataSection from '../../components/DataSection';
 import ImageViewer from '../../components/ImageViewer';
-import { antBreakpoint } from '../../config';
+import { antBreakpoint, baseUrl } from '../../config';
 import textContent from '../../text-content/anatomy/validations';
 
 
-const imgBase = '/ngv-portal/assets/images/validations';
+const imgBase = `${baseUrl}/assets/images/validations`;
 
 
 export default function AnatomyValidationsView() {
@@ -29,7 +29,7 @@ export default function AnatomyValidationsView() {
           <Row align="middle">
             <Col xs={24} lg={{ span: 12, push: 12 }} className="mt-1 mb-1">
               <Image
-                src="/ngv-portal/assets/images/anatomy-illustrations/anatomy-validations-illustration.png"
+                src={`${baseUrl}/assets/images/anatomy-illustrations/anatomy-validations-illustration.png`}
                 alt="Illustration for Anatomy validations"
                 layout="responsive"
                 width="1280"
