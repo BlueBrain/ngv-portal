@@ -12,4 +12,4 @@ deploy_prod:
   script:
     - curl -X POST -k -s -S -f -o /dev/null "$BUILD_PROD_WEBHOOK_URL"
   only:
-    - master
+    - main
