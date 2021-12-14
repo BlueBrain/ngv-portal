@@ -1,5 +1,6 @@
 
 import { baseUrl } from '../config';
+import { saveAs } from 'file-saver';
 
 
 type OptImgUrlParams = {
@@ -13,3 +14,8 @@ export function imgOpt(url: string, params?: OptImgUrlParams) {
 
   return `${baseUrl}/_next/image/?url=${encodeURIComponent(url)}&w=${width}&q=${quality}`;
 }
+
+export function downloadAsJson(data, name) {
+  const dataBlob = new Blob([JSON.stringify(data)]);
+  saveAs(dataBlob, name);
+};
