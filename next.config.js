@@ -10,7 +10,7 @@ const SentryWebpackPluginOptions = {
   silent: true,
 };
 
-const basePath = '/ngv-portal'
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '/ngv-portal';
 
 const day = 60 * 60 * 24;
 const imgCacheTTL = 30 * day;
