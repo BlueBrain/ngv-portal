@@ -1,7 +1,15 @@
-trigger_build:
+deploy_dev:
   stage: deploy
   image: curlimages/curl
   script:
-    - curl -X POST -k -s -S -f -o /dev/null "$BUILD_WEBHOOK_URL"
+    - curl -X POST -k -s -S -f -o /dev/null "$BUILD_DEV_WEBHOOK_URL"
   only:
     - develop
+
+deploy_prod:
+  stage: deploy
+  image: curlimages/curl
+  script:
+    - curl -X POST -k -s -S -f -o /dev/null "$BUILD_PROD_WEBHOOK_URL"
+  only:
+    - master
