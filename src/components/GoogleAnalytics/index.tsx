@@ -23,7 +23,7 @@ const CookiePrefsForm: React.FC = () => {
   };
 
   useEffect(() => {
-    if (!isProduction) return;
+    if (!isProduction || !gtm.id) return;
 
     const cookiePrefs = getCookiePrefs();
     if (!cookiePrefs) {
