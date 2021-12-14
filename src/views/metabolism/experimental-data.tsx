@@ -1,18 +1,15 @@
-import React, { ReactNode } from 'react';
-import { Row, Col, Table } from 'antd';
+import React from 'react';
+import { Row, Col } from 'antd';
 import Image from 'next/image';
 
-import Filters from '../../layouts/Filters';
-import Title from '../../components/Title';
-import InfoBox from '../../components/InfoBox';
-import DataContainer from '../../components/DataContainer';
-import DataSection from '../../components/DataSection';
-import ResponsiveTable from '../../components/ResponsiveTable';
-import HttpDownloadButton from '../../components/HttpDownloadButton';
-import textContent from '../../text-content/metabolism/experimental-data';
-import ConcentrationsTable from '../../components/ExperimentalData/ConcentrationsTable';
-import { antBreakpoint } from '../../config';
-import { downloadAsJson } from '../../utils';
+import Filters from '@/layouts/Filters';
+import Title from '@/components/Title';
+import InfoBox from '@/components/InfoBox';
+import DataContainer from '@/components/DataContainer';
+import DataSection from '@/components/DataSection';
+import textContent from '@/text-content/metabolism/experimental-data';
+import ConcentrationsTable from '@/components/Metabolism/ExperimentalData/ConcentrationsTable';
+import { antBreakpoint } from '@/config';
 
 export default function MetabolismExpDataView() {
 
