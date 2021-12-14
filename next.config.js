@@ -1,6 +1,10 @@
 const { withSentryConfig } = require('@sentry/nextjs');
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
 
+const withBundleAnalyzer = require('@next/bundle-analyzer') ({
+  enabled: process.env.ANALYZE === "true",
+})
+
 
 const SentryWebpackPluginOptions = {
   silent: true,
@@ -67,4 +71,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withSentryConfig(nextConfig, SentryWebpackPluginOptions);
+module.exports = withBundleAnalyzer(withSentryConfig(nextConfig, SentryWebpackPluginOptions));
