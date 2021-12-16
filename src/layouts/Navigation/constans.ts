@@ -19,7 +19,8 @@ export type NavItem = {
   disabled?: boolean;
   children: Array<{
     label: string;
-    href: Urls
+    href: Urls;
+    disabled?: boolean;
   }>
 }
 
@@ -39,14 +40,13 @@ export const navItems: NavItem[] = [
   {
     color: accentColors.purple,
     id: 'rec',
-    label: 'metabolism',
+    label: 'metabolism - unitary model',
     href: Urls.METABOLISM,
-    disabled: true,
     children: [
       {label: 'Experimental Data', href: Urls.EXPERIMENTAL_DATA},
-      {label: 'Reconstruction Data', href: Urls.RECONSTRUCION_DATA},
-      {label: 'Validations', href: Urls.VALIDATION},
-      {label: 'Predictions', href: Urls.PREDICTION}
+      {label: 'Reconstruction Data', href: Urls.RECONSTRUCION_DATA, disabled: true},
+      {label: 'Validations', href: Urls.VALIDATION, disabled: true},
+      {label: 'Predictions', href: Urls.PREDICTION, disabled: true}
     ]
   },
   {

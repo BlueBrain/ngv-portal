@@ -54,12 +54,12 @@ export const cardsData: Cards[] = [
     </div>)
   }, {
     id: 'metabolism',
-    title:<>Metabolism<sup>*</sup></>,
+    title:<>Metabolism - Unitary Model</>,
     backgroundColor: 'purple',
     routeBase: '/metabolism',
     image:`${baseUrl}/assets/images/backgrounds/home-page/sections/2_metabolism.jpg`,
     links: [
-      { label: 'Experimental data' },
+      { label: 'Experimental data', href: '/experimental-data' },
       { label: 'Reconstruction data' },
       { label: 'Validations' },
       { label: 'Predictions' },
