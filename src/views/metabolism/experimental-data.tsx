@@ -10,24 +10,27 @@ import DataSection from '@/components/DataSection';
 import textContent from '@/text-content/metabolism/experimental-data';
 import ConcentrationsTable from '@/components/Metabolism/ExperimentalData/ConcentrationsTable';
 import { antBreakpoint, baseUrl } from '@/config';
+import { Color } from '@/types';
+
+const primaryColor: Color = "purple"
 
 export default function MetabolismExpDataView() {
 
   return (
     <>
-      <Filters primaryColor="blue" backgroundAlt hasData={true}>
+      <Filters primaryColor={primaryColor} backgroundAlt hasData={true}>
         <div className="w-100">
           <Title
             className="show-xs hide-lg mt-2"
-            primaryColor="blue"
+            primaryColor={primaryColor}
             title="Experimental data"
-            subtitle="Anatomy"
+            subtitle="Metabolism"
           />
           <Row align="middle">
             <Col xs={24} lg={{ span: 12, push: 12 }} className="mt-1 mb-1">
               <Image
                 src={`${baseUrl}/assets/images/anatomy-illustrations/anatomy-experimental-data-illustration.png`}
-                alt="Illustration for Anatomy experimental data"
+                alt="Illustration for Metabolism experimental data"
                 layout="responsive"
                 width="1280"
                 height="720"
@@ -41,9 +44,9 @@ export default function MetabolismExpDataView() {
                 className="hide-xs show-lg"
                 primaryColor="blue"
                 title="Experimental data"
-                subtitle="Anatomy"
+                subtitle="Metabolism"
               />
-              <InfoBox content={textContent.pageDescription} color="blue" />
+              <InfoBox content={textContent.pageDescription} color={primaryColor} />
             </Col>
           </Row>
         </div>
