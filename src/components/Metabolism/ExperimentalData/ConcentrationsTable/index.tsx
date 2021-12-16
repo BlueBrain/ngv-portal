@@ -7,6 +7,8 @@ import HttpDownloadButton from '@/components/HttpDownloadButton';
 import ReferenceLink from './ReferenceLink';
 import { downloadAsJson } from '@/utils';
 
+import styles from './styles.module.scss';
+
 // TODO: fetch this from nexus
 const data = require('@/../public/assets/files/concentration_table_full.json');
 
@@ -58,7 +60,7 @@ export default function MetabolismExpDataView() {
       <Input.Search
         placeholder="Search term"
         value={searchStr}
-        style={{ width: '20%' }}
+        className={styles.concentrationsSearch}
         onChange={e => setSearchStr(e.target.value)}
         allowClear
       />
