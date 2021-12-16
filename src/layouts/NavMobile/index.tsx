@@ -5,7 +5,7 @@ import { MdClose } from 'react-icons/md';
 import { IoMdMenu } from 'react-icons/io';
 
 import { SecondaryNav } from '../Navigation';
-import { baseUrl } from '../../config';
+import { basePath } from '../../config';
 
 
 const classPrefix = 'nav-mobile__';
@@ -24,7 +24,7 @@ const Menu: React.FC<MenuProps> = ({ open, onClose }) => (
       <Link href="/">
         <a>
           <img
-            src={`${baseUrl}/assets/images/icons/home.svg`}
+            src={`${basePath}/assets/images/icons/home.svg`}
             alt="home"
           />
           <span>Home</span>
@@ -33,7 +33,7 @@ const Menu: React.FC<MenuProps> = ({ open, onClose }) => (
       <Link href="/glossary">
         <a>
           <img
-            src={`${baseUrl}/assets/images/icons/globe.svg`}
+            src={`${basePath}/assets/images/icons/globe.svg`}
             alt="globe"
           />
           <span>Glossary</span>
@@ -42,7 +42,7 @@ const Menu: React.FC<MenuProps> = ({ open, onClose }) => (
       <Link href="/#contact">
         <a>
           <img
-            src={`${baseUrl}/assets/images/icons/mail-alt.svg`}
+            src={`${basePath}/assets/images/icons/mail-alt.svg`}
             alt="mail"
           />
           <span>Contact</span>

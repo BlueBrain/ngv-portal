@@ -9,7 +9,7 @@ import DataContainer from '@/components/DataContainer';
 import DataSection from '@/components/DataSection';
 import textContent from '@/text-content/metabolism/experimental-data';
 import ConcentrationsTable from '@/components/Metabolism/ExperimentalData/ConcentrationsTable';
-import { antBreakpoint, baseUrl } from '@/config';
+import { antBreakpoint, basePath } from '@/config';
 import { Color } from '@/types';
 
 const primaryColor: Color = "purple"
@@ -29,7 +29,7 @@ export default function MetabolismExpDataView() {
           <Row align="middle">
             <Col xs={24} lg={{ span: 12, push: 12 }} className="mt-1 mb-1">
               <Image
-                src={`${baseUrl}/assets/images/anatomy-illustrations/anatomy-experimental-data-illustration.png`}
+                src={`${basePath}/assets/images/anatomy-illustrations/anatomy-experimental-data-illustration.png`}
                 alt="Illustration for Metabolism experimental data"
                 layout="responsive"
                 width="1280"

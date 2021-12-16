@@ -8,7 +8,7 @@ import PublicationBlock from '../components/PublicationBlock';
 import SectionCard from '../components/SectionCard';
 import CtaButton from '../components/CtaButton';
 import { cardsData } from './home-constans';
-import { antBreakpoint, baseUrl } from '../config';
+import { antBreakpoint, basePath } from '../config';
 
 
 const classPrefix = 'Home__';
@@ -17,13 +17,13 @@ const Home: React.FC = () => (
   <div className={`${classPrefix}basis`}>
     <section id="section-1" className="content">
       <ImageSlider images={[{
-        src: `${baseUrl}/assets/images/backgrounds/home-page/1_ngv_background.jpg`,
+        src: `${basePath}/assets/images/backgrounds/home-page/1_ngv_background.jpg`,
         alt: 'NGV background 1',
       }, {
-        src: `${baseUrl}/assets/images/backgrounds/home-page/2_ngv_background.jpg`,
+        src: `${basePath}/assets/images/backgrounds/home-page/2_ngv_background.jpg`,
         alt: 'NGV background 2',
       }, {
-        src: `${baseUrl}/assets/images/backgrounds/home-page/3_ngv_background.jpg`,
+        src: `${basePath}/assets/images/backgrounds/home-page/3_ngv_background.jpg`,
         alt: 'NGV background 3'
       }]}/>
       <div className="gradient"></div>
@@ -66,7 +66,7 @@ const Home: React.FC = () => (
         <Row gutter={48}>
           <Col xs={24} md={{ span: 12, push: 12 }}>
             <Image
-              src={`${baseUrl}/assets/images/backgrounds/home-page/about-section-illustration.png`}
+              src={`${basePath}/assets/images/backgrounds/home-page/about-section-illustration.png`}
               layout="responsive"
               width="1280"
               height="1039"
@@ -135,7 +135,7 @@ const Home: React.FC = () => (
         <Row gutter={10} justify="space-between" align="middle">
           <Col xs={{ span: 24 }} sm={{ span: 12, push: 12 }} className="mt-2">
             <Image
-              src={`${baseUrl}/assets/images/backgrounds/home-page/publications-section-illustration.png`}
+              src={`${basePath}/assets/images/backgrounds/home-page/publications-section-illustration.png`}
               layout="responsive"
               width="1000"
               height="674"
