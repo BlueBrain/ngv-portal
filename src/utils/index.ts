@@ -1,5 +1,5 @@
 
-import { baseUrl } from '../config';
+import { basePath } from '../config';
 import { saveAs } from 'file-saver';
 
 
@@ -12,7 +12,7 @@ export function imgOpt(url: string, params?: OptImgUrlParams) {
   const width = params?.width || 1080;
   const quality = params?.quality || 80;
 
-  return `${baseUrl}/_next/image/?url=${encodeURIComponent(url)}&w=${width}&q=${quality}`;
+  return `${basePath}/_next/image/?url=${encodeURIComponent(url)}&w=${width}&q=${quality}`;
 }
 
 export function downloadAsJson(data, name) {

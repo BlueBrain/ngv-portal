@@ -11,10 +11,10 @@ import DataContainer from '../../components/DataContainer';
 import DataSection from '../../components/DataSection';
 import ImageViewer from '../../components/ImageViewer';
 import textContent from '../../text-content/anatomy/experimental-data';
-import { staticDataBaseUrl, antBreakpoint, baseUrl } from '../../config';
+import { staticDataBaseUrl, antBreakpoint, basePath } from '../../config';
 
 
-const imgBase = `${baseUrl}/assets/images/experimental-data`;
+const imgBase = `${basePath}/assets/images/experimental-data`;
 const assetsBase = `${staticDataBaseUrl}/anatomy/experimental-data`;
 
 const downloadableMorphologies = [{
@@ -48,7 +48,7 @@ export default function AnatomyExpDataView() {
           <Row align="middle">
             <Col xs={24} lg={{ span: 12, push: 12 }} className="mt-1 mb-1">
               <Image
-                src={`${baseUrl}/assets/images/anatomy-illustrations/anatomy-experimental-data-illustration.png`}
+                src={`${basePath}/assets/images/anatomy-illustrations/anatomy-experimental-data-illustration.png`}
                 alt="Illustration for Anatomy experimental data"
                 layout="responsive"
                 width="1280"

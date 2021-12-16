@@ -2,7 +2,7 @@ import React, { ReactChild, ReactFragment } from 'react';
 
 import ScrollTo from '../../components/ScrollTo';
 import { Color } from '../../types';
-import { baseUrl } from '../../config';
+import { basePath } from '../../config';
 
 const classPrefix = 'filters__';
 
@@ -26,7 +26,7 @@ const Filters: React.FC<FiltersProps> = ({
       <div
         id={id}
         className={`${classPrefix}basis ${backgroundAlt ? 'background-alt' : ''}`}
-        style={{ backgroundImage: `url('${baseUrl}/assets/images/backgrounds/dotted.png')` }}
+        style={{ backgroundImage: `url('${basePath}/assets/images/backgrounds/dotted.png')` }}
       >
         {children}
       </div>

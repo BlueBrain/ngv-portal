@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-import { baseUrl } from '../../config';
+import { basePath } from '../../config';
 
 const classPrefix = 'brand__';
 
@@ -11,7 +11,7 @@ const Brand: React.FC = () => {
       <div className="logo">
         <a href="https://www.epfl.ch/">
           <img
-            src={`${baseUrl}/assets/images/epfl-logo.svg`}
+            src={`${basePath}/assets/images/epfl-logo.svg`}
             alt="EPFL logo"
           />
         </a>

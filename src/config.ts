@@ -23,7 +23,7 @@ export const isServer = typeof window === 'undefined';
 export const isProduction = process.env.NODE_ENV === 'production';
 
 export const deploymentUrl = 'https://bbp.epfl.ch';
-export const baseUrl = process.env.NEXT_PUBLIC_BASE_PATH || '/ngv-portal';
+export const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '/ngv-portal';
 
 export const staticDataBaseUrl = process.env.NEXT_PUBLIC_STATIC_DATA_BASE_URL;
 

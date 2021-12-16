@@ -2,7 +2,7 @@ import React, { ReactNode, useState } from 'react';
 import Image from 'next/image';
 import { FaMinus, FaPlus } from 'react-icons/fa';
 
-import { baseUrl } from '../../config';
+import { basePath } from '../../config';
 
 
 type SectionCardProps = {
@@ -47,7 +47,7 @@ const SectionCard: React.FC<SectionCardProps> = ({
         {links.map(link => link.href ? (
           <a
             key={link.label}
-            href={`${baseUrl}${routeBase}${link.href}`}
+            href={`${basePath}${routeBase}${link.href}`}
           >
             {link.label}
           </a>
