@@ -69,16 +69,16 @@ export const SecondaryNav: React.FC<NavProps> = ({ canClose }) => {
           </button>
           <ul
             className="submenu"
-            style={{ borderLeftColor: item.color }}
+            style={{ borderLeftColor: item.color, borderStyle: 'solid' }}
           >
             {
               item.children.map(child => {
                 return (
-                  <li key={child.label}>
-                  <Link href={`${item.href}${child.href}`}>
-                    {child.label}
-                  </Link>
-                </li>
+                  <li key={child.label} className={`${child.disabled? classDisabled:''}`}>
+                    <Link href={`${item.href}${child.href}`}>
+                      {child.label}
+                    </Link>
+                  </li>
                 )
               })
             }
