@@ -1,4 +1,6 @@
-import React, { ReactNode} from 'react';
+import React, { ReactNode, useState } from 'react';
+import { Input } from 'antd';
+import Fuse from 'fuse.js'
 
 import ResponsiveTable from '@/components/ResponsiveTable';
 import HttpDownloadButton from '@/components/HttpDownloadButton';
@@ -22,15 +24,44 @@ const columns = [
   { dataIndex: 'references' as keyof ConcentrationsData, title: 'Reference', },
 ];
 
+const fuseOptions = {
+  keys: [
+    { name: 'id', weight: 2 },
+    { name: 'name', weight: 1 },
+    { name: 'value', weight: 0.5 },
+    { name: 'reference_info.title', weight: 0.5 },
+  ]
+};
+
+const fuse = new Fuse(data, fuseOptions);
+
+function fuzzySearch(searchStr) {
+  if (!searchStr) return data;
+  
+  const filtered = fuse.search(searchStr).map(result => result.item);
+  return filtered;
+}
+
 export default function MetabolismExpDataView() {
 
-  const concentrationsData: ConcentrationsData[] = data.map(row => ({
-    ...row,
-    references: (<ReferenceLink referenceInfo={row.reference_info} rowId={row.id}/>),
-  }));
+  const [searchStr, setSearchStr] = useState('');
+
+  const concentrationsData: ConcentrationsData[] = fuzzySearch(searchStr)
+    .map(row => ({
+      ...row,
+      references: (<ReferenceLink referenceInfo={row.reference_info} rowId={row.id}/>),
+    }));
 
   return (
     <>
+      
+      <Input.Search
+        placeholder="Search term"
+        value={searchStr}
+        style={{ width: '20%' }}
+        onChange={e => setSearchStr(e.target.value)}
+        allowClear
+      />
 
       <ResponsiveTable<ConcentrationsData>
         columns={columns}
