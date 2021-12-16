@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
-import MetabolismExpDataView from '../../views/metabolism/experimental-data';
-import textContent from '../../text-content/metabolism/experimental-data';
+import MetabolismExpDataView from '@/views/metabolism/experimental-data';
+import textContent from '@/text-content/metabolism/experimental-data';
 
 
 export default function MetabolismExpDataPage() {
