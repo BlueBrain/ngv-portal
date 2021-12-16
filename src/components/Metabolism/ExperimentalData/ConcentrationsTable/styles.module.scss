@@ -1,0 +1,10 @@
+@import '@/styles/config/queries.scss';
+
+.concentrationsSearch {
+  width: 30%;
+  margin: 10px 0;
+
+  @media (max-width: $ant-breakpoint-sm) {
+    width: 100%;
+  }
+}
