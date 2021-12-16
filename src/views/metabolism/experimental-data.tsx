@@ -9,7 +9,7 @@ import DataContainer from '@/components/DataContainer';
 import DataSection from '@/components/DataSection';
 import textContent from '@/text-content/metabolism/experimental-data';
 import ConcentrationsTable from '@/components/Metabolism/ExperimentalData/ConcentrationsTable';
-import { antBreakpoint } from '@/config';
+import { antBreakpoint, baseUrl } from '@/config';
 
 export default function MetabolismExpDataView() {
 
@@ -26,7 +26,7 @@ export default function MetabolismExpDataView() {
           <Row align="middle">
             <Col xs={24} lg={{ span: 12, push: 12 }} className="mt-1 mb-1">
               <Image
-                src="/ngv-portal/assets/images/anatomy-illustrations/anatomy-experimental-data-illustration.png"
+                src={`${baseUrl}/assets/images/anatomy-illustrations/anatomy-experimental-data-illustration.png`}
                 alt="Illustration for Anatomy experimental data"
                 layout="responsive"
                 width="1280"
