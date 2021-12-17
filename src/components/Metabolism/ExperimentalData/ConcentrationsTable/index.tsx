@@ -19,6 +19,11 @@ type ConcentrationsData = {
   references: ReactNode;
 }
 
+type ReferenceInfo = {
+  title: string;
+  url: string;
+}
+
 const columns = [
   { dataIndex: 'id' as keyof ConcentrationsData, title: 'ID', width: 150, },
   { dataIndex: 'name' as keyof ConcentrationsData, title: 'Name', width: 250, },
@@ -51,7 +56,9 @@ export default function MetabolismExpDataView() {
   const concentrationsData: ConcentrationsData[] = fuzzySearch(searchStr)
     .map(row => ({
       ...row,
-      references: (<ReferenceLink referenceInfo={row.reference_info} rowId={row.id}/>),
+      references: row.reference_info.map((referenceInfo: ReferenceInfo) => (
+        <ReferenceLink referenceInfo={referenceInfo} key={row.id + referenceInfo.url}/>
+      )),
     }));
 
   return (
