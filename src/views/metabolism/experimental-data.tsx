@@ -42,7 +42,7 @@ export default function MetabolismExpDataView() {
             <Col xs={24} lg={{ span: 12, pull: 12 }} className="mt-1 mb-1">
               <Title
                 className="hide-xs show-lg"
-                primaryColor="blue"
+                primaryColor={primaryColor}
                 title="Experimental data"
                 subtitle="Metabolism"
               />
