@@ -455,6 +455,9 @@ $data-section-padding-small: 0.5rem;
   &.grey {
     background-color: map-get($accentPalette, "grey");
   }
+  &.purple {
+    background-color: map-get($accentPalette, "purple");
+  }
 
   .content {
     overflow: hidden;
@@ -826,6 +829,9 @@ $data-section-padding-small: 0.5rem;
   &.grey {
     background-color: map-get($accentPalette, "grey");
   }
+  &.purple {
+    background-color: map-get($accentPalette, "purple");
+  }
 }
 
 .scroll-to__direction {
@@ -928,6 +934,16 @@ $data-section-padding-small: 0.5rem;
 
     & h4 {
       color: map-get($accentPalette, "grey");
+    }
+  }
+
+  &.purple {
+    & h2 {
+      border-color: map-get($accentPalette, "purple");
+    }
+
+    & h4 {
+      color: map-get($accentPalette, "purple");
     }
   }
 
