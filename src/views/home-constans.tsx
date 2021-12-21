@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 
 import { basePath } from '../config';
+import { Urls } from '@/layouts/Navigation/constans';
 
 interface Cards {
   id: string,
@@ -59,8 +60,8 @@ export const cardsData: Cards[] = [
     routeBase: '/metabolism',
     image:`${basePath}/assets/images/backgrounds/home-page/sections/2_metabolism.jpg`,
     links: [
-      { label: 'Experimental data', href: '/experimental-data' },
-      { label: 'Reconstruction data' },
+      { label: 'Experimental data', href: Urls.EXPERIMENTAL_DATA },
+      { label: 'Digital Reconstruction', href: Urls.DIGITAL_RECONSTRUCTION },
       { label: 'Validations' },
       { label: 'Predictions' },
     ],
