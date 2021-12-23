@@ -53,7 +53,7 @@ export default function MetabolismExpDataView() {
       </Filters>
 
       <DataContainer>
-        <DataSection title="Model initial values table">
+        <DataSection title="Initial values of variables">
           <Row gutter={32}>
             <Col xs={24} md={24}>{textContent.concentrationsOfMolecules}</Col>
             <Col xs={24} md={24}>
