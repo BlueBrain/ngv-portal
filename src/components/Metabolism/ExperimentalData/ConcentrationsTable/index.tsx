@@ -85,7 +85,7 @@ export default function MetabolismExpDataView() {
         <HttpDownloadButton
           onClick={() => downloadAsJson(data, 'concentrations-factsheet.json')}
         >
-          download
+          initial values
         </HttpDownloadButton>
       </div>
 
