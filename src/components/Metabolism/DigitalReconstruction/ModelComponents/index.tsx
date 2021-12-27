@@ -3,6 +3,7 @@ import { Modal } from 'antd';
 
 import EnzymeDetails from './EnzymeDetails';
 import ComponentPicker from './ComponentPicker';
+import EnzymesDropdown from './EnzymesDropdown';
 
 // TODO: fetch this from nexus
 import intermediateMapping from '@/../public/assets/files/metabolism/digital-reconstruction/ngvportal_imgpicker_mapping_dict.json';
@@ -10,7 +11,10 @@ import intermediateMapping from '@/../public/assets/files/metabolism/digital-rec
 
 export default function ModelComponents() {
 
-  const [infoKeys, setInfoKeys] = useState(['AAT--neuron-mitochondrion']);
+  const defaultComponent = 'AAT--neuron-mitochondrion';
+  const [componentKey, setComponentKey] = useState(defaultComponent);
+  const inermediateDictDefaultSelectedValue = intermediateMapping[componentKey];
+  const [infoKeys, setInfoKeys] = useState(inermediateDictDefaultSelectedValue);
   const [modalVisible, setModalVisible] = useState(false);
 
   const eventHandler = (event) => {
@@ -25,8 +29,23 @@ export default function ModelComponents() {
     setModalVisible(true);
   }
 
+  const dropdownClicked = (selectedStr) => {
+    setInfoKeys(intermediateMapping[selectedStr] || []);
+    setComponentKey(selectedStr);
+    setModalVisible(true);
+  }
+
   return (
     <>
+      <EnzymesDropdown
+        intermediateMapping={intermediateMapping}
+        componentKey={componentKey}
+        prefix="Choose component"
+        sufix="or select from image below"
+        style={{ width: 300 }}
+        onClick={dropdownClicked}
+      />
+
       <ComponentPicker onClick={eventHandler} />
 
       <Modal
