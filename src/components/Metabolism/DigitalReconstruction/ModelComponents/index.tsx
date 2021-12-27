@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import EnzymeDetails from './EnzymeDetails';
 import ComponentPicker from './ComponentPicker';
 
 // TODO: fetch this from nexus
@@ -24,6 +25,8 @@ export default function ModelComponents() {
   return (
     <>
       <ComponentPicker onClick={eventHandler} />
+
+      <EnzymeDetails infoKeys={infoKeys}/>
     </>
   );
 }
