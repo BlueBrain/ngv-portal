@@ -1,0 +1,43 @@
+@import '@/styles/config/queries.scss';
+
+.modelComponentPicker {
+
+  :global(font.clickable) {
+    cursor: pointer;
+    display: inline-block;
+    white-space: break-spaces;
+  }
+
+  :global(font.clickable:hover) {
+    // TODO: fix this animation
+    // animation: zoom 0.2s linear forwards;
+    color: #037fff;
+    background: white;
+    padding: 5px;
+    border: solid 1px;
+    border-radius: 5px;
+
+    @keyframes zoom {
+      0% {
+        transform: scale(1.0);
+      }
+      100% {
+        transform: scale(2.0);
+      }
+    }
+  }
+
+  :global(svg) {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+
+  @media (max-width: $ant-breakpoint-sm) {
+    display: none;
+  }
+}
+
+.blue {
+  color: #037fff;
+}

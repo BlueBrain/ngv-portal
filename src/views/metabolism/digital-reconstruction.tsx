@@ -8,6 +8,7 @@ import InfoBox from '@/components/InfoBox';
 import DataContainer from '@/components/DataContainer';
 import DataSection from '@/components/DataSection';
 import textContent from '@/text-content/metabolism/digital-reconstruction';
+import ModelComponents from '@/components/Metabolism/DigitalReconstruction/ModelComponents';
 import { antBreakpoint, basePath } from '@/config';
 import { Color } from '@/types';
 
@@ -52,10 +53,10 @@ export default function MetabolismDigitalRecView() {
       </Filters>
 
       <DataContainer>
-        <DataSection title="">
+        <DataSection title="Model components">
           <Row gutter={32}>
             <Col xs={24} md={24}>
-              
+              <ModelComponents />
             </Col>
           </Row>
         </DataSection>
