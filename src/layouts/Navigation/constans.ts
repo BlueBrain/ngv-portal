@@ -7,6 +7,7 @@ export enum Urls  {
   
   EXPERIMENTAL_DATA = '/experimental-data',
   RECONSTRUCION_DATA = '/reconstruction-data',
+  DIGITAL_RECONSTRUCTION = '/digital-reconstruction',
   VALIDATION  = '/validations',
   PREDICTION = '/predictions'
 }
@@ -44,7 +45,7 @@ export const navItems: NavItem[] = [
     href: Urls.METABOLISM,
     children: [
       {label: 'Experimental Data', href: Urls.EXPERIMENTAL_DATA},
-      {label: 'Reconstruction Data', href: Urls.RECONSTRUCION_DATA, disabled: true},
+      {label: 'Digital Reconstruction', href: Urls.DIGITAL_RECONSTRUCTION},
       {label: 'Validations', href: Urls.VALIDATION, disabled: true},
       {label: 'Predictions', href: Urls.PREDICTION, disabled: true}
     ]
