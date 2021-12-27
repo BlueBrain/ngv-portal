@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Modal } from 'antd';
 
 import EnzymeDetails from './EnzymeDetails';
 import ComponentPicker from './ComponentPicker';
@@ -10,6 +11,7 @@ import intermediateMapping from '@/../public/assets/files/metabolism/digital-rec
 export default function ModelComponents() {
 
   const [infoKeys, setInfoKeys] = useState(['AAT--neuron-mitochondrion']);
+  const [modalVisible, setModalVisible] = useState(false);
 
   const eventHandler = (event) => {
     const { target } = event; 
@@ -20,13 +22,23 @@ export default function ModelComponents() {
     const itemParentPairStr = `${itemText}--${parent}`;
 
     setInfoKeys(intermediateMapping[itemParentPairStr] || []);
+    setModalVisible(true);
   }
 
   return (
     <>
       <ComponentPicker onClick={eventHandler} />
 
-      <EnzymeDetails infoKeys={infoKeys}/>
+      <Modal
+        centered
+        width={1000}
+        visible={modalVisible}
+        onOk={() => setModalVisible(false)}
+        onCancel={() => setModalVisible(false)}
+      >
+        <EnzymeDetails infoKeys={infoKeys}/>
+      </Modal>
+      
     </>
   );
 }
