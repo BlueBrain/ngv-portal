@@ -28,7 +28,6 @@ export default function ComponentPicker({
         value={componentKey}
         style={style}
         defaultActiveFirstOption={false}
-        onSearch={onClick}
         onChange={onClick}
       >
         {options}
