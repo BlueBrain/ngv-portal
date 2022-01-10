@@ -29,7 +29,7 @@ export default function ModelComponents() {
     setModalVisible(true);
   }
 
-  const dropdownClicked = (selectedStr) => {
+  const dropdownClicked = (selectedStr = defaultComponent) => {
     setInfoKeys(intermediateMapping[selectedStr] || []);
     setComponentKey(selectedStr);
     setModalVisible(true);

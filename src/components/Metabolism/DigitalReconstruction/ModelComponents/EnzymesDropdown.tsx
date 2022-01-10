@@ -24,11 +24,12 @@ export default function ComponentPicker({
       <h3 className={styles.dropdownPrefix}>{ prefix }</h3>
 
       <Select
-        showSearch
         value={componentKey}
         style={style}
         defaultActiveFirstOption={false}
-        onChange={onClick}
+        onSelect={onClick}
+        showArrow={true}
+        showSearch={true}
       >
         {options}
       </Select>
