@@ -15,7 +15,7 @@ export default function ModelComponents() {
   const [componentKey, setComponentKey] = useState(defaultComponent);
   const inermediateDictDefaultSelectedValue = intermediateMapping[componentKey];
   const [infoKeys, setInfoKeys] = useState(inermediateDictDefaultSelectedValue);
-  const [modalVisible, setModalVisible] = useState(false);
+  const [showDetailsModal, setShowDetailsModal] = useState(false);
 
   const eventHandler = (event) => {
     const { target } = event; 
@@ -26,13 +26,13 @@ export default function ModelComponents() {
     const itemParentPairStr = `${itemText}--${parent}`;
 
     setInfoKeys(intermediateMapping[itemParentPairStr] || []);
-    setModalVisible(true);
+    setShowDetailsModal(true);
   }
 
   const dropdownClicked = (selectedStr = defaultComponent) => {
     setInfoKeys(intermediateMapping[selectedStr] || []);
     setComponentKey(selectedStr);
-    setModalVisible(true);
+    setShowDetailsModal(true);
   }
 
   return (
@@ -51,9 +51,9 @@ export default function ModelComponents() {
       <Modal
         centered
         width={1000}
-        visible={modalVisible}
-        onOk={() => setModalVisible(false)}
-        onCancel={() => setModalVisible(false)}
+        visible={showDetailsModal}
+        onOk={() => setShowDetailsModal(false)}
+        onCancel={() => setShowDetailsModal(false)}
       >
         <EnzymeDetails infoKeys={infoKeys}/>
       </Modal>
