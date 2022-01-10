@@ -10,7 +10,7 @@ export default function ComponentPicker({
   intermediateMapping,
   componentKey,
   prefix,
-  sufix,
+  suffix,
   style,
   onClick,
 }) {
@@ -34,7 +34,7 @@ export default function ComponentPicker({
         {options}
       </Select>
 
-      <h3 className={styles.dropdownSufix}>{ sufix }</h3>
+      <h3 className={styles.dropdownSuffix}>{ suffix }</h3>
     </>
   );
 }
