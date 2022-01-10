@@ -52,8 +52,8 @@ export default function ModelComponents() {
         centered
         width={1000}
         visible={showDetailsModal}
-        onOk={() => setShowDetailsModal(false)}
         onCancel={() => setShowDetailsModal(false)}
+        footer={null}
       >
         <EnzymeDetails infoKeys={infoKeys}/>
       </Modal>
