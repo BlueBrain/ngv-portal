@@ -10,16 +10,15 @@ const rawHTML = `
 export default function ComponentPicker(props) {
   return (
     <>
-
-      <h3>
+      <p className={`${styles.interactiveImageExplanation} ${styles.hideOnMobile}`}>
         This is an interactive image. Click on the
         <span className={styles.blue}> blue </span>
         elements to see the details.
-      </h3>
+      </p>
 
       <div
         onClick={props.onClick}
-        className={styles.modelComponentPicker}
+        className={`${styles.modelComponentPicker} ${styles.hideOnMobile}`}
         dangerouslySetInnerHTML={{ __html: rawHTML }}
       />
     </>

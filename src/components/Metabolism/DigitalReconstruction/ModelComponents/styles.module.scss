@@ -1,7 +1,6 @@
 @import '@/styles/config/queries.scss';
 
 .modelComponentPicker {
-
   :global(font.clickable) {
     cursor: pointer;
     display: inline-block;
@@ -32,10 +31,10 @@
     height: auto;
     overflow: visible;
   }
+}
 
-  @media (max-width: $ant-breakpoint-sm) {
-    display: none;
-  }
+.interactiveImageExplanation {
+  margin: 20px 0;
 }
 
 .blue {
@@ -46,9 +45,24 @@
   margin-right: 10px;
   margin-bottom: 10px;
   display: inline-block;
+  @media (max-width: $ant-breakpoint-sm) {
+    margin: 0px;
+  }
 }
 .dropdownSuffix {
   margin-left: 10px;
   display: inline-block;
   margin-bottom: 10px;
+}
+.dropdownWidth {
+  width: 300px;
+  @media (max-width: $ant-breakpoint-sm) {
+    width: 90%;
+  }
+}
+
+.hideOnMobile {
+  @media (max-width: $ant-breakpoint-sm) {
+    display: none;
+  }
 }

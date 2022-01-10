@@ -11,7 +11,6 @@ export default function ComponentPicker({
   componentKey,
   prefix,
   suffix,
-  style,
   onClick,
 }) {
 
@@ -21,11 +20,11 @@ export default function ComponentPicker({
 
   return (
     <>
-      <h3 className={styles.dropdownPrefix}>{ prefix }</h3>
+      <p className={styles.dropdownPrefix}>{ prefix }</p>
 
       <Select
+        className={styles.dropdownWidth}
         value={componentKey}
-        style={style}
         defaultActiveFirstOption={false}
         onSelect={onClick}
         showArrow={true}
@@ -34,7 +33,7 @@ export default function ComponentPicker({
         {options}
       </Select>
 
-      <h3 className={styles.dropdownSuffix}>{ suffix }</h3>
+      <p className={`${styles.hideOnMobile} ${styles.dropdownSuffix}`}>{ suffix }</p>
     </>
   );
 }

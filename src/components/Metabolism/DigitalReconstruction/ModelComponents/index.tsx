@@ -40,9 +40,8 @@ export default function ModelComponents() {
       <EnzymesDropdown
         intermediateMapping={intermediateMapping}
         componentKey={componentKey}
-        prefix="Choose component"
-        sufix="or select from image below"
-        style={{ width: 300 }}
+        prefix="Choose a component"
+        suffix="or select from the image below."
         onClick={dropdownClicked}
       />
 
@@ -50,7 +49,7 @@ export default function ModelComponents() {
 
       <Modal
         centered
-        width={1000}
+        width={'80%'}
         visible={showDetailsModal}
         onCancel={() => setShowDetailsModal(false)}
         footer={null}

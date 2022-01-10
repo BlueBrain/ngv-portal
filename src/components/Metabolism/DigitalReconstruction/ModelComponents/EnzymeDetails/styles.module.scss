@@ -15,18 +15,25 @@
     "plots-container plots-container";
 
   @media (max-width: $ant-breakpoint-sm) {
-    width: 100%;
+    grid-template-columns: 1fr;
+    grid-auto-flow: column;
+    grid-template-areas:
+      "name"
+      "formula"
+      "parameters"
+      "metabolites"
+      "rates"
+      "plots-container";
+    overflow: scroll;
   }
 
   :global(code) {
     margin-top: 5px;
     display: block;
-
     background-color: #eee;
     border-radius: 3px;
     font-family: courier, monospace;
     padding: 0 3px;
-
   }
 }
 
