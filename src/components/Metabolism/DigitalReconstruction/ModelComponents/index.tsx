@@ -10,8 +10,9 @@ import intermediateMapping from '@/../public/assets/files/metabolism/digital-rec
 
 
 export default function ModelComponents() {
+  const mappingTextSeparator = '--';
+  const defaultComponent = `AAT${mappingTextSeparator}neuron-mitochondrion`;
 
-  const defaultComponent = 'AAT--neuron-mitochondrion';
   const [componentKey, setComponentKey] = useState(defaultComponent);
   const inermediateDictDefaultSelectedValue = intermediateMapping[componentKey];
   const [infoKeys, setInfoKeys] = useState(inermediateDictDefaultSelectedValue);
@@ -23,7 +24,7 @@ export default function ModelComponents() {
     
     const itemText = target.innerText.replaceAll(' ', '');
     const parent = target.getAttribute('parent-id');
-    const itemParentPairStr = `${itemText}--${parent}`;
+    const itemParentPairStr = `${itemText}${mappingTextSeparator}${parent}`;
 
     setInfoKeys(intermediateMapping[itemParentPairStr] || []);
     setShowDetailsModal(true);
@@ -43,6 +44,8 @@ export default function ModelComponents() {
         prefix="Choose a component"
         suffix="or select from the image below."
         onClick={dropdownClicked}
+        mappingSeparator={mappingTextSeparator}
+        viewSeparator={' '}
       />
 
       <ComponentPicker onClick={eventHandler} />

@@ -12,11 +12,20 @@ export default function ComponentPicker({
   prefix,
   suffix,
   onClick,
+  mappingSeparator,
+  viewSeparator,
 }) {
 
   const options = Object.keys(intermediateMapping).map(e => (
-    <Option key={e} value={e}>{e}</Option>
+    <Option key={e} value={e}>
+      { e.replace(mappingSeparator, viewSeparator) }
+    </Option>
   ));
+
+  const componentSelected = (componentStr) => {
+    const newStr = componentStr.replace(viewSeparator, mappingSeparator);
+    onClick(newStr);
+  };
 
   return (
     <>
@@ -26,7 +35,7 @@ export default function ComponentPicker({
         className={styles.dropdownWidth}
         value={componentKey}
         defaultActiveFirstOption={false}
-        onSelect={onClick}
+        onSelect={componentSelected}
         showArrow={true}
         showSearch={true}
       >
