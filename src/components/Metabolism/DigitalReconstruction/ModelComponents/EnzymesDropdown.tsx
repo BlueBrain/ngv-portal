@@ -33,7 +33,7 @@ export default function ComponentPicker({
         {options}
       </Select>
 
-      <p className={`${styles.hideOnMobile} ${styles.dropdownSuffix}`}>{ suffix }</p>
+      <p className={styles.dropdownSuffix}>{ suffix }</p>
     </>
   );
 }

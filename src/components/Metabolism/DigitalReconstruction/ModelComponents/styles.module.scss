@@ -53,16 +53,13 @@
   margin-left: 10px;
   display: inline-block;
   margin-bottom: 10px;
+  @media (max-width: $ant-breakpoint-sm) {
+    margin: 0px;
+  }
 }
 .dropdownWidth {
   width: 300px;
   @media (max-width: $ant-breakpoint-sm) {
     width: 100%;
-  }
-}
-
-.hideOnMobile {
-  @media (max-width: $ant-breakpoint-sm) {
-    display: none;
   }
 }
