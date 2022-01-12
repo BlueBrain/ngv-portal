@@ -4,6 +4,7 @@ import { Modal } from 'antd';
 import EnzymeDetails from './EnzymeDetails';
 import ComponentPicker from './ComponentPicker';
 import EnzymesDropdown from './EnzymesDropdown';
+import textContent from '@/text-content/metabolism/digital-reconstruction';
 
 // TODO: fetch this from nexus
 import intermediateMapping from '@/../public/assets/files/metabolism/digital-reconstruction/ngvportal_imgpicker_mapping_dict.json';
@@ -38,6 +39,8 @@ export default function ModelComponents() {
 
   return (
     <>
+      {textContent.modelComponents}
+
       <EnzymesDropdown
         intermediateMapping={intermediateMapping}
         componentKey={componentKey}
