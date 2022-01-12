@@ -1,23 +1,20 @@
 import React from 'react';
-import Image from 'next/image';
 
 import textContent from '@/text-content/metabolism/digital-reconstruction';
+import ImageViewer from '@/components/ImageViewer';
 import { antBreakpoint, basePath } from '@/config';
 
 export default function ModelOverview() {
   return (
     <>
-      <h3>{textContent.modelOverview}</h3>
+      <h4>{textContent.modelOverview}</h4>
 
-      <Image
+      <ImageViewer
         src={`${basePath}/assets/images/metabolism/digital-reconstruction/model_overview.png`}
+        width={2141}
+        height={1528}
+        sizes={`(min-width: ${antBreakpoint.sm}) 640px, 100vw`}
         alt="Model of neuron and astrocyte with metabolism"
-        layout="responsive"
-        width="1280"
-        height="720"
-        sizes={`(min-width: ${antBreakpoint.lg}) 640px, 100vw`}
-        loading="eager"
-        priority
       />
     </>
   );
