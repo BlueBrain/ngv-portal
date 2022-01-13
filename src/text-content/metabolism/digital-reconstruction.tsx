@@ -1,8 +1,8 @@
 
 import { Urls } from '@/layouts/Navigation/constans';
-import { baseUrl } from '@/config';
+import { basePath } from '@/config';
 
-const expDataUrl = baseUrl + Urls.METABOLISM + Urls.EXPERIMENTAL_DATA;
+const expDataUrl = basePath + Urls.METABOLISM + Urls.EXPERIMENTAL_DATA;
 
 const textContent = {
   pageDescriptionMeta: 'The NGV unit model is reconstructed and simulated using Julia scientific computing language. The experimental data for the metabolism model is listed in the experimental data section',
