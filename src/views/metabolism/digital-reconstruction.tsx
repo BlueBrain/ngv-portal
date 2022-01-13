@@ -62,7 +62,7 @@ export default function MetabolismDigitalRecView() {
           </Row>
         </DataSection>
 
-        <DataSection title="Model components">
+        <DataSection title="Model components" className="mt-4">
           <Row gutter={32}>
             <Col xs={24} md={24}>
               <ModelComponents />
