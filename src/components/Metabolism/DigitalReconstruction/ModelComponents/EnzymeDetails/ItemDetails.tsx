@@ -58,7 +58,7 @@ const ItemDetails: React.FC<ItemDetailsProps> = ({enzymeData}) => {
           { enzymeData?.comment  || '' }
           { enzymeData?.rates_functions?.map(r => (
             <SyntaxHighlighter
-              language="bash"
+              language="julia"
               style={codeStyle}
               customStyle={{ fontSize: '14px' }}
               key={r}
