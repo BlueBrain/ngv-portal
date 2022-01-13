@@ -22,6 +22,7 @@ const nextConfig = {
   webpack5: true,
   images: {
     path: `${basePath}/_next/image/`,
+    domains: ['localhost', 'ngv-portal-static-data'],
     minimumCacheTTL: imgCacheTTL,
   },
   eslint: {
