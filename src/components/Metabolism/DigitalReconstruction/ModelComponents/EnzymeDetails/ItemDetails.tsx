@@ -5,7 +5,7 @@ import { LightAsync as SyntaxHighlighter } from 'react-syntax-highlighter';
 import styles from './styles.module.scss';
 
 import ImageViewer from '@/components/ImageViewer';
-import { clusterStaticDataBaseUrl, basePath } from '@/config';
+import { clusterStaticDataBaseUrl, staticDataBaseUrl } from '@/config';
 import { EnzymeDataItemType } from './index';
 
 
@@ -14,7 +14,7 @@ type ItemDetailsProps = {
 }
 
 const clusterImgBase = `${clusterStaticDataBaseUrl}/metabolism/digital-reconstruction`;
-const fullImgBase = `${basePath}/data/metabolism/digital-reconstruction`;
+const fullImgBase = `${staticDataBaseUrl}/metabolism/digital-reconstruction`;
 
 const ItemDetails: React.FC<ItemDetailsProps> = ({enzymeData}) => {
   return (
