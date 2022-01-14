@@ -5,7 +5,7 @@ import { LightAsync as SyntaxHighlighter } from 'react-syntax-highlighter';
 import styles from './styles.module.scss';
 
 import ImageViewer from '@/components/ImageViewer';
-import { clusterStaticDataBaseUrl, staticDataBaseUrl } from '@/config';
+import { staticDataBaseUrl } from '@/config';
 import { EnzymeDataItemType } from './index';
 
 
@@ -13,7 +13,6 @@ type ItemDetailsProps = {
   enzymeData: EnzymeDataItemType;
 }
 
-const clusterImgBase = `${clusterStaticDataBaseUrl}/metabolism/digital-reconstruction`;
 const fullImgBase = `${staticDataBaseUrl}/metabolism/digital-reconstruction`;
 
 const ItemDetails: React.FC<ItemDetailsProps> = ({enzymeData}) => {
@@ -74,7 +73,7 @@ const ItemDetails: React.FC<ItemDetailsProps> = ({enzymeData}) => {
           <h2>Plots</h2>
           <ImageViewer
             src={`${fullImgBase}/${enzymeData?.figure_combo}`}
-            thumbnailSrc={`${clusterImgBase}/${enzymeData?.figure_combo}`}
+            thumbnailSrc={`${fullImgBase}/${enzymeData?.figure_combo}`}
             alt="Enzyme combo plot"
             border
           />

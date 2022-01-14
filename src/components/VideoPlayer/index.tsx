@@ -1,7 +1,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 
-import { clusterStaticDataBaseUrl } from '../../config';
+import { staticDataBaseUrl } from '../../config';
 import { VideoProps, defaultVideoSizes } from './video-player';
 
 
@@ -21,7 +21,7 @@ export function composeSources(videoBasePath, sizes = defaultVideoSizes, codecs 
     .reduce((acc, size) => ([...acc, ...codecs.map(codec => ([size, codec]))]), [])
     .map(([size, codec]) => ({
       size,
-      src: `${clusterStaticDataBaseUrl}${videoBasePath}.${size}p.${codec}.mp4`,
+      src: `${staticDataBaseUrl}${videoBasePath}.${size}p.${codec}.mp4`,
       type: codecVideoType[codec],
     }));
 }
