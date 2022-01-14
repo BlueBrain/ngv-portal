@@ -25,7 +25,7 @@ export const isProduction = process.env.NODE_ENV === 'production';
 export const deploymentUrl = 'https://bbp.epfl.ch';
 export const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '/ngv-portal';
 
-export const staticDataBaseUrl = process.env.NEXT_PUBLIC_STATIC_DATA_BASE_URL;
+export const clusterStaticDataBaseUrl = process.env.NEXT_PUBLIC_CLUSTER_STATIC_DATA_BASE_URL;
 
 export const googleSiteVerificationCode = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION_CODE;
 
