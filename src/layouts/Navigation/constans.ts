@@ -46,7 +46,7 @@ export const navItems: NavItem[] = [
     children: [
       {label: 'Experimental Data', href: Urls.EXPERIMENTAL_DATA},
       {label: 'Digital Reconstruction', href: Urls.DIGITAL_RECONSTRUCTION},
-      {label: 'Validations', href: Urls.VALIDATION, disabled: true},
+      {label: 'Validations', href: Urls.VALIDATION},
       {label: 'Predictions', href: Urls.PREDICTION, disabled: true}
     ]
   },
