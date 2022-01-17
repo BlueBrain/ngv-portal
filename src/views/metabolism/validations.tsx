@@ -10,6 +10,7 @@ import DataSection from '@/components/DataSection';
 import { antBreakpoint, basePath } from '@/config';
 import textContent from '@/text-content/metabolism/validations';
 import { Color } from '@/types';
+import ValidationTemplate from '@/components/Metabolism/Validations/ValidationTemplate';
 
 const primaryColor: Color = "purple"
 
