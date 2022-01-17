@@ -65,6 +65,17 @@ export default function MetabolismValidationsView() {
             </Col>
           </Row>
         </DataSection>
+
+        <DataSection title="OGI">
+          <Row gutter={32}>
+            <Col xs={24} md={24}>
+              <ValidationTemplate
+                textKey="ogi"
+                imagePath="ogi.png"
+              />
+            </Col>
+          </Row>
+        </DataSection>
       </DataContainer>
     </>
   );

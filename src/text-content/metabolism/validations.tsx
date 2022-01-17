@@ -16,6 +16,15 @@ const textContent = {
       BOLD response was calculated from the simulation and compared to literature data.
     </p>
   </div>),
+
+  ogi: (<div>
+    <p>
+      OGI - Oxygen Glucose Index
+    </p>
+    <p>
+      OGI was calculated from the simulation and compared to literature data.
+    </p>
+  </div>),
 };
 
 export default textContent;
