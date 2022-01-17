@@ -55,10 +55,13 @@ export default function MetabolismValidationsView() {
       </Filters>
 
       <DataContainer>
-        <DataSection title="">
+        <DataSection title="BOLD">
           <Row gutter={32}>
             <Col xs={24} md={24}>
-
+              <ValidationTemplate
+                textKey="bold"
+                imagePath="bold.png"
+              />
             </Col>
           </Row>
         </DataSection>

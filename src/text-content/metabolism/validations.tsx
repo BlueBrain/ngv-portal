@@ -7,6 +7,15 @@ const textContent = {
   supplementaryMaterialLegend: (<p>
     To reproduce figures please refer to supplementary <a href="#">material</a>
   </p>),
+  
+  bold: (<div>
+    <p>
+      BOLD - Blood-Oxygen-Level-Dependent signal
+    </p>
+    <p>
+      BOLD response was calculated from the simulation and compared to literature data.
+    </p>
+  </div>),
 };
 
 export default textContent;
