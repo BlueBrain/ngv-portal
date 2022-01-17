@@ -56,9 +56,7 @@ export default function AnatomyPredictionsView() {
             <Col span={24} className="mt-3 mb-1">
               <ImageViewer
                 src={`${basePath}/assets/images/predictions/predictions_densities.png`}
-                width={2481}
-                height={2219}
-                sizes={`(max-width: 1080px) 100vw, 1080px`}
+                aspectRatio="2481 / 2219"
                 alt="Densities prediction plots"
               />
             </Col>
@@ -72,9 +70,7 @@ export default function AnatomyPredictionsView() {
             <Col span={24} className="mt-3 mb-2">
               <ImageViewer
                 src={`${basePath}/assets/images/predictions/endfeet_organization.png`}
-                width={5400}
-                height={3600}
-                sizes={`(max-width: 1080px) 100vw, 1080px`}
+                aspectRatio="5400 / 3600"
                 alt="Endfeet organization prediction plots"
               />
             </Col>
@@ -90,9 +86,7 @@ export default function AnatomyPredictionsView() {
             <Col xs={24} md={12}>
               <ImageViewer
                 src={`${basePath}/assets/images/predictions/predictions_bars.png`}
-                width={546}
-                height={840}
-                sizes={`(max-width: 1080px) 100vw, 1080px`}
+                aspectRatio="546 / 840"
                 alt="Composition prediction plots"
               />
               <div className="mt-1">
@@ -108,9 +102,7 @@ export default function AnatomyPredictionsView() {
             <Col span={24} className="mt-3 mb-2">
               <ImageViewer
                 src={`${basePath}/assets/images/predictions/predictions_astrocyte.png`}
-                width={4389}
-                height={3529}
-                sizes={`(max-width: 1080px) 100vw, 1080px`}
+                aspectRatio="4389 / 3529"
                 alt="Astrocyte prediction plots"
               />
             </Col>

@@ -11,11 +11,11 @@ import DataContainer from '../../components/DataContainer';
 import DataSection from '../../components/DataSection';
 import ImageViewer from '../../components/ImageViewer';
 import textContent from '../../text-content/anatomy/experimental-data';
-import { staticDataBaseUrl, antBreakpoint, basePath } from '../../config';
+import { clusterStaticDataBaseUrl, antBreakpoint, basePath } from '../../config';
 
 
 const imgBase = `${basePath}/assets/images/experimental-data`;
-const assetsBase = `${staticDataBaseUrl}/anatomy/experimental-data`;
+const assetsBase = `${clusterStaticDataBaseUrl}/anatomy/experimental-data`;
 
 const downloadableMorphologies = [{
   href: `${assetsBase}/astrocyte-morphologies/astrocyte-morphology-1.tar.xz`,
@@ -78,9 +78,7 @@ export default function AnatomyExpDataView() {
             <Col xs={24} md={12}>
               <ImageViewer
                 src={`${imgBase}/ngv-em-stack.jpeg`}
-                width={3840}
-                height={3597}
-                sizes={`(min-width: ${antBreakpoint.md}) 480px, 100vw`}
+                aspectRatio="3840 / 3597"
                 alt="EM stack image"
               />
             </Col>
@@ -93,9 +91,7 @@ export default function AnatomyExpDataView() {
             <Col xs={24} md={12}>
               <ImageViewer
                 src={`${imgBase}/astrocyte-2-10001.jpeg`}
-                width={2715}
-                height={2755}
-                sizes={`(min-width: ${antBreakpoint.md}) 480px, 100vw`}
+                aspectRatio="2715 / 2755"
                 alt="extracted mesh render"
               />
             </Col>
@@ -108,9 +104,7 @@ export default function AnatomyExpDataView() {
             <Col xs={24} md={12} className="pl-2 pr-2 p-2">
               <ImageViewer
                 src={`${imgBase}/astrocyte_morphology.png`}
-                width={1581}
-                height={1479}
-                sizes={`(min-width: ${antBreakpoint.md}) 480px, 100vw`}
+                aspectRatio="1581 / 1479"
                 alt="astrocyte morphology render"
               />
             </Col>
@@ -140,9 +134,7 @@ export default function AnatomyExpDataView() {
             <Col xs={24} md={12}>
               <ImageViewer
                 src={`${imgBase}/still_vasculatures_with_dof.jpg`}
-                width={1497}
-                height={2019}
-                sizes={`(min-width: ${antBreakpoint.md}) 480px, 100vw`}
+                aspectRatio="1497 / 2019"
                 alt="vasculature render"
               />
             </Col>

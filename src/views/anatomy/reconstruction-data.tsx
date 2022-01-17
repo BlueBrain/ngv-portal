@@ -14,7 +14,7 @@ import DataContainer from '../../components/DataContainer';
 import DataSection from '../../components/DataSection';
 import ImageViewer from '../../components/ImageViewer';
 import Video, { composeSources } from '../../components/VideoPlayer';
-import { staticDataBaseUrl, antBreakpoint, basePath } from '../../config';
+import { clusterStaticDataBaseUrl, antBreakpoint, basePath } from '../../config';
 import textContent from '../../text-content/anatomy/reconstruction-data';
 
 
@@ -32,7 +32,7 @@ const astrocyticPythonCodeStr = [
 ].join('\n');
 
 const imgBase = `${basePath}/assets/images/reconstruction-data`;
-const assetsBase = `${staticDataBaseUrl}/anatomy/reconstruction-data`;
+const assetsBase = `${clusterStaticDataBaseUrl}/anatomy/reconstruction-data`;
 
 const downloadableMorphologies = [{
   href: `${assetsBase}/synthesized-astrocyte-morphologies/GLIA_0000000004100.h5`,
@@ -103,7 +103,7 @@ export default function AnatomyRecDataView() {
             sources={composeSources('/anatomy/reconstruction-data/NGV_DISS149_MASTER_WITH_EFFECTS')}
             muted
             defaultSize={720}
-            poster={`${staticDataBaseUrl}/anatomy/reconstruction-data/NGV_DISS149_MASTER_WITH_EFFECTS-poster.jpg`}
+            poster={`${clusterStaticDataBaseUrl}/anatomy/reconstruction-data/NGV_DISS149_MASTER_WITH_EFFECTS-poster.jpg`}
           />
           <Row gutter={16} className="mt-2 mb-1">
             <Col xs={24} sm={8} className="mb-1">
@@ -149,9 +149,7 @@ export default function AnatomyRecDataView() {
 
           <ImageViewer
             src={`${imgBase}/ngv-viewer-screenshot.png`}
-            width={1920}
-            height={1080}
-            sizes={`(max-width: 1080px) 100vw, 1080px`}
+            aspectRatio="1920 / 1080"
             alt="NGV viewer screenshot"
             border
           />
@@ -176,9 +174,7 @@ export default function AnatomyRecDataView() {
             <Col xs={24} sm={12}>
               <ImageViewer
                 src={`${imgBase}/NGV_DISS149_4k_STILL_NEURONS_WITH_DOF.jpg`}
-                width={3840}
-                height={2160}
-                sizes={`(min-width: ${antBreakpoint.sm}) 480px, 100vw`}
+                aspectRatio="3840 / 2160"
                 alt="Neuronal circuit render"
               />
             </Col>
@@ -193,9 +189,7 @@ export default function AnatomyRecDataView() {
             <Col xs={24} sm={12}>
               <ImageViewer
                 src={`${imgBase}/vasculature_stages.png`}
-                width={1600}
-                height={1381}
-                sizes={`(min-width: ${antBreakpoint.sm}) 480px, 100vw`}
+                aspectRatio="1600 / 1381"
                 alt="Vasculature stages"
               />
               <div className="mt-1">
@@ -221,9 +215,7 @@ export default function AnatomyRecDataView() {
             <Col xs={24} sm={12}>
               <ImageViewer
                 src={`${imgBase}/results_illustrations.png`}
-                width={2780}
-                height={2091}
-                sizes={`(min-width: ${antBreakpoint.sm}) 480px, 100vw`}
+                aspectRatio="2780 / 2091"
                 alt="Astrocyte and vasculature network render"
               />
               <div className="mt-1">
@@ -241,9 +233,7 @@ export default function AnatomyRecDataView() {
             <Col xs={24} sm={12}>
               <ImageViewer
                 src={`${imgBase}/results_microdomains_illustration.png`}
-                width={2732}
-                height={2118}
-                sizes={`(min-width: ${antBreakpoint.sm}) 480px, 100vw`}
+                aspectRatio="2732 / 2118"
                 alt="Microdomains render"
               />
               <div className="mt-1">
@@ -269,9 +259,7 @@ export default function AnatomyRecDataView() {
             <Col span={24}>
               <ImageViewer
                 src={`${imgBase}/results_connectivity_illustration_v2.png`}
-                width={3768}
-                height={2312}
-                sizes={`(max-width: 1080px) 100vw, 1080px`}
+                aspectRatio="3768 / 2312"
                 alt="Connectivity render"
               />
               <div className="mt-1">
@@ -288,9 +276,7 @@ export default function AnatomyRecDataView() {
               <ImageViewer
                 className="mb-1"
                 src={`${imgBase}/NGV_DISS149_4k_STILL_ENDFEET_WITH_DOF.jpeg`}
-                width={3840}
-                height={2160}
-                sizes={`(max-width: 1080px) 100vw, 1080px`}
+                aspectRatio="3840 / 2160"
                 alt="Endfeet render"
               />
               {textContent.endfeetSurfaceReconstruction.legend}
@@ -317,9 +303,7 @@ export default function AnatomyRecDataView() {
             <Col xs={24} sm={12} className="mt-3">
               <ImageViewer
                 src={`${imgBase}/astrocytes_illustration_annotated.jpg`}
-                width={5120}
-                height={5075}
-                sizes={`(min-width: ${antBreakpoint.md}) 480px, 100vw`}
+                aspectRatio="5120 / 5075"
                 alt="Example renders of synthesized astrocytes"
               />
               <div className="mt-1">
@@ -332,9 +316,7 @@ export default function AnatomyRecDataView() {
             <Col xs={24} sm={12} className="mt-3">
               <ImageViewer
                 src={`${imgBase}/results_morphs_illustration_recolored.png`}
-                width={2587}
-                height={2176}
-                sizes={`(min-width: ${antBreakpoint.md}) 480px, 100vw`}
+                aspectRatio="2587 / 2176"
                 alt="Morphology illustration"
               />
               <div className="mt-1">

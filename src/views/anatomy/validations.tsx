@@ -62,9 +62,7 @@ export default function AnatomyValidationsView() {
             <Col span={24} className="mt-2 mb-2">
               <ImageViewer
                 src={`${imgBase}/validation_density.png`}
-                width={2597}
-                height={1133}
-                sizes={`(max-width: 1080px) 100vw, 1080px`}
+                aspectRatio="2597 / 1133"
                 alt="Validation density plot"
               />
             </Col>
@@ -77,9 +75,7 @@ export default function AnatomyValidationsView() {
             <Col span={24} className="mt-2 mb-2">
               <ImageViewer
                 src={`${imgBase}/repulsion_function.png`}
-                width={1669}
-                height={884}
-                sizes={`(max-width: 1080px) 100vw, 1080px`}
+                aspectRatio="1669 / 884"
                 alt="repulsion function plots"
               />
             </Col>
@@ -92,9 +88,7 @@ export default function AnatomyValidationsView() {
             <Col span={24} className="mt-3 mb-2">
               <ImageViewer
                 src={`${imgBase}/validation_radius.png`}
-                width={1945}
-                height={685}
-                sizes={`(max-width: 1080px) 100vw, 1080px`}
+                aspectRatio="1945 / 685"
                 alt="Soma radius distribution plots"
               />
             </Col>
@@ -107,9 +101,7 @@ export default function AnatomyValidationsView() {
             <Col span={24} className="mt-2 mb-2">
               <ImageViewer
                 src={`${imgBase}/validation_microdomains.png`}
-                width={2567}
-                height={1603}
-                sizes={`(max-width: 1080px) 100vw, 1080px`}
+                aspectRatio="2567 / 1603"
                 alt="Microdomain validation plots"
               />
             </Col>
@@ -122,9 +114,7 @@ export default function AnatomyValidationsView() {
             <Col span={24} className="mt-3 mb-1">
               <ImageViewer
                 src={`${imgBase}/validation_endfeet_paths.png`}
-                width={2994}
-                height={699}
-                sizes={`(max-width: 1080px) 100vw, 1080px`}
+                aspectRatio="2994 / 699"
                 alt="Endfeet paths validation plots"
               />
             </Col>
@@ -137,9 +127,7 @@ export default function AnatomyValidationsView() {
             <Col span={24} className="mt-3 mb-1">
               <ImageViewer
                 src={`${imgBase}/validation_endfeet_areas.png`}
-                width={3089}
-                height={812}
-                sizes={`(max-width: 1080px) 100vw, 1080px`}
+                aspectRatio="3089 / 812"
                 alt="Endfeet areas validation plots"
               />
             </Col>
@@ -152,9 +140,7 @@ export default function AnatomyValidationsView() {
             <Col span={24} className="mt-3 mb-1">
               <ImageViewer
                 src={`${imgBase}/validation_misc.png`}
-                width={2745}
-                height={1043}
-                sizes={`(max-width: 1080px) 100vw, 1080px`}
+                aspectRatio="2745 / 1043"
                 alt="Misc. validation plots"
               />
             </Col>
@@ -173,9 +159,7 @@ export default function AnatomyValidationsView() {
             <Col xs={24} md={12}>
               <ImageViewer
                 src={`${imgBase}/validation_circuit_morphometrics.png`}
-                width={1867}
-                height={1844}
-                sizes={`(min-width: ${antBreakpoint.md}) 480px, 100vw`}
+                aspectRatio="1867 / 1844"
                 alt="Circuit morphometrics validation plots"
               />
               <div className="mt-1">
@@ -190,9 +174,7 @@ export default function AnatomyValidationsView() {
             <Col span={24} className="mt-3 mb-2">
               <ImageViewer
                 src={`${imgBase}/validation_circuit_topologies.png`}
-                width={4853}
-                height={3177}
-                sizes={`(max-width: 1080px) 100vw, 1080px`}
+                aspectRatio="4853 / 3177"
                 alt="Topological validation plots"
               />
             </Col>
