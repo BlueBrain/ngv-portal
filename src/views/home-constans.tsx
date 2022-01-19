@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
-import { basePath } from '../config';
-import { Urls } from '@/layouts/Navigation/constans';
+import { basePath } from '@/config';
+import { PagesTitle, Urls } from '@/layouts/Navigation/constans';
 
 interface Cards {
   id: string,
@@ -16,15 +16,15 @@ interface Cards {
 export const cardsData: Cards[] = [
   {
     id: 'anatomy',
-    title: 'Anatomy',
+    title: PagesTitle.ANATOMY,
     backgroundColor: 'blue',
-    routeBase: '/anatomy',
+    routeBase: Urls.ANATOMY,
     image:`${basePath}/assets/images/backgrounds/home-page/sections/1_anatomy.jpg`,
     links:[
-      { label: 'Experimental data', href: '/experimental-data' },
-      { label: 'Reconstruction data', href: '/reconstruction-data' },
-      { label: 'Validations', href: '/validations' },
-      { label: 'Predictions', href: '/predictions' },
+      { label: PagesTitle.EXPERIMENTAL_DATA, href: Urls.EXPERIMENTAL_DATA },
+      { label: PagesTitle.RECONSTRUCION_DATA, href: Urls.RECONSTRUCION_DATA },
+      { label: PagesTitle.VALIDATION, href: Urls.VALIDATION },
+      { label: PagesTitle.PREDICTION, href: Urls.PREDICTION },
     ],
     description: (<div>
       <p>
@@ -55,15 +55,15 @@ export const cardsData: Cards[] = [
     </div>)
   }, {
     id: 'metabolism',
-    title:<>Metabolism - Unitary Model</>,
+    title: PagesTitle.METABOLISM_UNITARY_MODEL,
     backgroundColor: 'purple',
-    routeBase: '/metabolism',
+    routeBase: Urls.METABOLISM,
     image:`${basePath}/assets/images/backgrounds/home-page/sections/2_metabolism.jpg`,
     links: [
-      { label: 'Experimental data', href: Urls.EXPERIMENTAL_DATA },
-      { label: 'Digital Reconstruction', href: Urls.DIGITAL_RECONSTRUCTION },
-      { label: 'Validations', href: Urls.VALIDATION },
-      { label: 'Predictions' },
+      { label: PagesTitle.EXPERIMENTAL_DATA, href: Urls.EXPERIMENTAL_DATA },
+      { label: PagesTitle.DIGITAL_RECONSTRUCTION, href: Urls.DIGITAL_RECONSTRUCTION },
+      { label: PagesTitle.VALIDATION, href: Urls.VALIDATION },
+      { label: PagesTitle.PREDICTION },
     ],
     description: (<div>
       <p>
@@ -107,15 +107,15 @@ export const cardsData: Cards[] = [
   },
   {
     id: 'blood-flow',
-    title:<>Blood flow<sup>*</sup></>,
+    title:<>{PagesTitle.BLOOD_FLOW}<sup>*</sup></>,
     backgroundColor: 'red',
-    routeBase:'/blood-flow',
+    routeBase: Urls.BLOOD_FLOW,
     image: `${basePath}/assets/images/backgrounds/home-page/sections/3_bloodflow.jpg`,
     links: [
-      { label: 'Experimental data' },
-      { label: 'Reconstruction data' },
-      { label: 'Validations' },
-      { label: 'Predictions' },
+      { label: PagesTitle.EXPERIMENTAL_DATA },
+      { label: PagesTitle.RECONSTRUCION_DATA },
+      { label: PagesTitle.VALIDATION },
+      { label: PagesTitle.PREDICTION },
     ],
     description: (<div>
       <p>

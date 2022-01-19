@@ -10,6 +10,7 @@ import DataSection from '../../components/DataSection';
 import ImageViewer from '../../components/ImageViewer';
 import { antBreakpoint, basePath } from '../../config';
 import textContent from '../../text-content/anatomy/validations';
+import { PagesTitle } from '../../layouts/Navigation/constans';
 
 
 const imgBase = `${basePath}/assets/images/validations`;
@@ -23,7 +24,7 @@ export default function AnatomyValidationsView() {
           <Title
             className="show-xs hide-lg mt-2"
             primaryColor="blue"
-            title="Validations"
+            title={PagesTitle.VALIDATION}
             subtitle="Anatomy"
           />
           <Row align="middle">
@@ -43,7 +44,7 @@ export default function AnatomyValidationsView() {
               <Title
                 className="hide-xs show-lg"
                 primaryColor="blue"
-                title="Validations"
+                title={PagesTitle.VALIDATION}
                 subtitle="Anatomy"
               />
               <InfoBox content={textContent.pageDescription} color="blue" />

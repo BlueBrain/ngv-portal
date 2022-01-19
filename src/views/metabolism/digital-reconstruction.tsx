@@ -12,6 +12,7 @@ import ModelComponents from '@/components/Metabolism/DigitalReconstruction/Model
 import ModelOverview from '@/components/Metabolism/DigitalReconstruction/ModelOverview';
 import { antBreakpoint, basePath } from '@/config';
 import { Color } from '@/types';
+import { PagesTitle } from '@/layouts/Navigation/constans';
 
 const primaryColor: Color = "purple"
 
@@ -24,7 +25,7 @@ export default function MetabolismDigitalRecView() {
           <Title
             className="show-xs hide-lg mt-2"
             primaryColor={primaryColor}
-            title="Digital reconstruction"
+            title={PagesTitle.DIGITAL_RECONSTRUCTION}
             subtitle="Metabolism"
           />
           <Row align="middle">
@@ -44,7 +45,7 @@ export default function MetabolismDigitalRecView() {
               <Title
                 className="hide-xs show-lg"
                 primaryColor={primaryColor}
-                title="Digital reconstruction"
+                title={PagesTitle.DIGITAL_RECONSTRUCTION}
                 subtitle="Metabolism"
               />
               <InfoBox content={textContent.pageDescription} color={primaryColor} />
