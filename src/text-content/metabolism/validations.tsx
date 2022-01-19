@@ -43,6 +43,12 @@ const textContent = {
       Lactate
     </p>
   </div>),
+
+  nadh: (<div>
+    <p>
+      NADH
+    </p>
+  </div>),
 };
 
 export default textContent;

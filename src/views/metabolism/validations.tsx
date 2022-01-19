@@ -109,6 +109,17 @@ export default function MetabolismValidationsView() {
             </Col>
           </Row>
         </DataSection>
+
+        <DataSection title="NADH">
+          <Row gutter={32}>
+            <Col xs={24} md={24}>
+              <ValidationTemplate
+                textKey="nadh"
+                imagePath="nadh.png"
+              />
+            </Col>
+          </Row>
+        </DataSection>
       </DataContainer>
     </>
   );
