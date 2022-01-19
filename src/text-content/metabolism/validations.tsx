@@ -31,6 +31,12 @@ const textContent = {
       ATP / Energy
     </p>
   </div>),
+
+  glucose: (<div>
+    <p>
+      Glucose
+    </p>
+  </div>),
 };
 
 export default textContent;

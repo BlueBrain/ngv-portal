@@ -87,6 +87,17 @@ export default function MetabolismValidationsView() {
             </Col>
           </Row>
         </DataSection>
+
+        <DataSection title="Glucose">
+          <Row gutter={32}>
+            <Col xs={24} md={24}>
+              <ValidationTemplate
+                textKey="glucose"
+                imagePath="glucose.png"
+              />
+            </Col>
+          </Row>
+        </DataSection>
       </DataContainer>
     </>
   );
