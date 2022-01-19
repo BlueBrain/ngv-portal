@@ -37,6 +37,12 @@ const textContent = {
       Glucose
     </p>
   </div>),
+
+  lactate: (<div>
+    <p>
+      Lactate
+    </p>
+  </div>),
 };
 
 export default textContent;
