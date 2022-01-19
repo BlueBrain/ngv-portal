@@ -25,6 +25,12 @@ const textContent = {
       OGI was calculated from the simulation and compared to literature data.
     </p>
   </div>),
+
+  atp: (<div>
+    <p>
+      ATP / Energy
+    </p>
+  </div>),
 };
 
 export default textContent;

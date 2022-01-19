@@ -76,6 +76,17 @@ export default function MetabolismValidationsView() {
             </Col>
           </Row>
         </DataSection>
+
+        <DataSection title="ATP / Energy">
+          <Row gutter={32}>
+            <Col xs={24} md={24}>
+              <ValidationTemplate
+                textKey="atp"
+                imagePath="atp.png"
+              />
+            </Col>
+          </Row>
+        </DataSection>
       </DataContainer>
     </>
   );
