@@ -1,12 +1,11 @@
 import React from 'react';
-import codeStyle from 'react-syntax-highlighter/dist/cjs/styles/hljs/stackoverflow-light';
-import { LightAsync as SyntaxHighlighter } from 'react-syntax-highlighter';
 
 import styles from './styles.module.scss';
 
 import ImageViewer from '@/components/ImageViewer';
 import { staticDataBaseUrl } from '@/config';
 import { EnzymeDataItemType } from './index';
+import FormulaRenderer from './FormulaRenderer';
 
 
 type ItemDetailsProps = {
@@ -27,15 +26,12 @@ const ItemDetails: React.FC<ItemDetailsProps> = ({enzymeData}) => {
         <div className={styles.formula}>
           <h2>Processes</h2>
           { enzymeData?.model_component_process?.map(p => (
-            <SyntaxHighlighter
-              language="julia"
-              style={codeStyle}
-              customStyle={{ fontSize: '14px' }}
-              wrapLongLines
-              key={p}
-            >
-              { p }
-            </SyntaxHighlighter>
+            <>
+              <FormulaRenderer
+                formula={p}
+                key={p}
+              />
+            </>
           )) }
         </div>
 
@@ -57,15 +53,12 @@ const ItemDetails: React.FC<ItemDetailsProps> = ({enzymeData}) => {
           <h2>Equations</h2>
           { enzymeData?.comment  || '' }
           { enzymeData?.rates_functions?.map(r => (
-            <SyntaxHighlighter
-              language="julia"
-              style={codeStyle}
-              customStyle={{ fontSize: '14px' }}
-              key={r}
-              wrapLongLines
-            >
-              { r }
-            </SyntaxHighlighter>
+            <>
+              <FormulaRenderer
+                formula={r}
+                key={r}
+              />
+            </>
           )) }
         </div>
 
