@@ -62,7 +62,7 @@ export const cardsData: Cards[] = [
     links: [
       { label: 'Experimental data', href: Urls.EXPERIMENTAL_DATA },
       { label: 'Digital Reconstruction', href: Urls.DIGITAL_RECONSTRUCTION },
-      { label: 'Validations' },
+      { label: 'Validations', href: Urls.VALIDATION },
       { label: 'Predictions' },
     ],
     description: (<div>
