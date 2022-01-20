@@ -12,7 +12,7 @@ export enum Urls {
   PREDICTION = '/predictions'
 }
 
-export enum PagesTitle {
+export enum PageTitles {
   ANATOMY = 'Anatomy',
   METABOLISM_UNITARY_MODEL = 'Metabolism - Unitary Model',
   BLOOD_FLOW = 'Blood flow',
@@ -44,10 +44,10 @@ export const navItems: NavItem[] = [
     label: 'anatomy',
     href: Urls.ANATOMY,
     children: [
-      {label: PagesTitle.EXPERIMENTAL_DATA, href: Urls.EXPERIMENTAL_DATA},
-      {label: PagesTitle.RECONSTRUCION_DATA, href: Urls.RECONSTRUCION_DATA},
-      {label: PagesTitle.VALIDATION, href: Urls.VALIDATION},
-      {label: PagesTitle.PREDICTION, href: Urls.PREDICTION}
+      {label: PageTitles.EXPERIMENTAL_DATA, href: Urls.EXPERIMENTAL_DATA},
+      {label: PageTitles.RECONSTRUCION_DATA, href: Urls.RECONSTRUCION_DATA},
+      {label: PageTitles.VALIDATION, href: Urls.VALIDATION},
+      {label: PageTitles.PREDICTION, href: Urls.PREDICTION}
     ]
   },
   {
@@ -56,10 +56,10 @@ export const navItems: NavItem[] = [
     label: 'metabolism - unitary model',
     href: Urls.METABOLISM,
     children: [
-      {label: PagesTitle.EXPERIMENTAL_DATA, href: Urls.EXPERIMENTAL_DATA},
-      {label: PagesTitle.DIGITAL_RECONSTRUCTION, href: Urls.DIGITAL_RECONSTRUCTION},
-      {label: PagesTitle.VALIDATION, href: Urls.VALIDATION},
-      {label: PagesTitle.PREDICTION, href: Urls.PREDICTION, disabled: true}
+      {label: PageTitles.EXPERIMENTAL_DATA, href: Urls.EXPERIMENTAL_DATA},
+      {label: PageTitles.DIGITAL_RECONSTRUCTION, href: Urls.DIGITAL_RECONSTRUCTION},
+      {label: PageTitles.VALIDATION, href: Urls.VALIDATION},
+      {label: PageTitles.PREDICTION, href: Urls.PREDICTION, disabled: true}
     ]
   },
   {
@@ -69,10 +69,10 @@ export const navItems: NavItem[] = [
     href: Urls.BLOOD_FLOW,
     disabled: true,
     children: [
-      {label: PagesTitle.EXPERIMENTAL_DATA, href: Urls.EXPERIMENTAL_DATA},
-      {label: PagesTitle.RECONSTRUCION_DATA, href: Urls.RECONSTRUCION_DATA},
-      {label: PagesTitle.VALIDATION, href: Urls.VALIDATION},
-      {label: PagesTitle.PREDICTION, href: Urls.PREDICTION}
+      {label: PageTitles.EXPERIMENTAL_DATA, href: Urls.EXPERIMENTAL_DATA},
+      {label: PageTitles.RECONSTRUCION_DATA, href: Urls.RECONSTRUCION_DATA},
+      {label: PageTitles.VALIDATION, href: Urls.VALIDATION},
+      {label: PageTitles.PREDICTION, href: Urls.PREDICTION}
     ]
   },
 ]

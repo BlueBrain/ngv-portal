@@ -11,7 +11,7 @@ import textContent from '@/text-content/metabolism/experimental-data';
 import ConcentrationsTable from '@/components/Metabolism/ExperimentalData/ConcentrationsTable';
 import { antBreakpoint, basePath } from '@/config';
 import { Color } from '@/types';
-import { PagesTitle } from '@/layouts/Navigation/constans';
+import { PageTitles } from '@/layouts/Navigation/constans';
 
 const primaryColor: Color = "purple"
 
@@ -24,7 +24,7 @@ export default function MetabolismExpDataView() {
           <Title
             className="show-xs hide-lg mt-2"
             primaryColor={primaryColor}
-            title={PagesTitle.EXPERIMENTAL_DATA}
+            title={PageTitles.EXPERIMENTAL_DATA}
             subtitle="Metabolism"
           />
           <Row align="middle">
@@ -44,7 +44,7 @@ export default function MetabolismExpDataView() {
               <Title
                 className="hide-xs show-lg"
                 primaryColor={primaryColor}
-                title={PagesTitle.EXPERIMENTAL_DATA}
+                title={PageTitles.EXPERIMENTAL_DATA}
                 subtitle="Metabolism"
               />
               <InfoBox content={textContent.pageDescription} color={primaryColor} />
