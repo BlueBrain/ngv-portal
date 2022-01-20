@@ -12,6 +12,7 @@ import DataSection from '../../components/DataSection';
 import ImageViewer from '../../components/ImageViewer';
 import textContent from '../../text-content/anatomy/experimental-data';
 import { clusterStaticDataBaseUrl, antBreakpoint, basePath } from '../../config';
+import { PageTitles } from '../../layouts/Navigation/constans';
 
 
 const imgBase = `${basePath}/assets/images/experimental-data`;
@@ -42,7 +43,7 @@ export default function AnatomyExpDataView() {
           <Title
             className="show-xs hide-lg mt-2"
             primaryColor="blue"
-            title="Experimental data"
+            title={PageTitles.EXPERIMENTAL_DATA}
             subtitle="Anatomy"
           />
           <Row align="middle">
@@ -62,7 +63,7 @@ export default function AnatomyExpDataView() {
               <Title
                 className="hide-xs show-lg"
                 primaryColor="blue"
-                title="Experimental data"
+                title={PageTitles.EXPERIMENTAL_DATA}
                 subtitle="Anatomy"
               />
               <InfoBox content={textContent.pageDescription} color="blue" />

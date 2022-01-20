@@ -11,6 +11,7 @@ import { antBreakpoint, basePath } from '@/config';
 import textContent from '@/text-content/metabolism/validations';
 import { Color } from '@/types';
 import ValidationTemplate from '@/components/Metabolism/Validations/ValidationTemplate';
+import { PageTitles } from '@/layouts/Navigation/constans';
 
 const primaryColor: Color = "purple"
 
@@ -25,7 +26,7 @@ export default function MetabolismValidationsView() {
           <Title
             className="show-xs hide-lg mt-2"
             primaryColor={primaryColor}
-            title="Validations"
+            title={PageTitles.VALIDATION}
             subtitle="Metabolism"
           />
           <Row align="middle">
@@ -45,7 +46,7 @@ export default function MetabolismValidationsView() {
               <Title
                 className="hide-xs show-lg"
                 primaryColor={primaryColor}
-                title="Validations"
+                title={PageTitles.VALIDATION}
                 subtitle="Metabolism"
               />
               <InfoBox content={textContent.pageDescription} color={primaryColor} />

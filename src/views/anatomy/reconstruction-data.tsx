@@ -16,6 +16,7 @@ import ImageViewer from '../../components/ImageViewer';
 import Video, { composeSources } from '../../components/VideoPlayer';
 import { clusterStaticDataBaseUrl, antBreakpoint, basePath } from '../../config';
 import textContent from '../../text-content/anatomy/reconstruction-data';
+import { PageTitles } from '@/layouts/Navigation/constans';
 
 
 SyntaxHighlighter.registerLanguage('bash', bash);
@@ -63,7 +64,7 @@ export default function AnatomyRecDataView() {
           <Title
             className="show-xs hide-lg mt-2"
             primaryColor="blue"
-            title="Reconstruction data"
+            title={PageTitles.RECONSTRUCION_DATA}
             subtitle="Anatomy"
           />
           <Row align="middle" className="w-100">
@@ -83,7 +84,7 @@ export default function AnatomyRecDataView() {
               <Title
                 className="hide-xs show-lg"
                 primaryColor="blue"
-                title="Reconstruction data"
+                title={PageTitles.RECONSTRUCION_DATA}
                 subtitle="Anatomy"
               />
               <InfoBox
