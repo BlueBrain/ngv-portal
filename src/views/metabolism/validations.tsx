@@ -66,7 +66,7 @@ export default function MetabolismValidationsView() {
           </Row>
         </DataSection>
 
-        <DataSection title="OGI">
+        <DataSection title="OGI" className="mt-4">
           <Row gutter={32}>
             <Col xs={24} md={24}>
               <ValidationTemplate
@@ -77,7 +77,7 @@ export default function MetabolismValidationsView() {
           </Row>
         </DataSection>
 
-        <DataSection title="ATP / Energy">
+        <DataSection title="ATP / Energy" className="mt-4">
           <Row gutter={32}>
             <Col xs={24} md={24}>
               <ValidationTemplate
@@ -88,7 +88,7 @@ export default function MetabolismValidationsView() {
           </Row>
         </DataSection>
 
-        <DataSection title="Glucose">
+        <DataSection title="Glucose" className="mt-4">
           <Row gutter={32}>
             <Col xs={24} md={24}>
               <ValidationTemplate
@@ -99,7 +99,7 @@ export default function MetabolismValidationsView() {
           </Row>
         </DataSection>
 
-        <DataSection title="Lactate">
+        <DataSection title="Lactate" className="mt-4">
           <Row gutter={32}>
             <Col xs={24} md={24}>
               <ValidationTemplate
@@ -110,7 +110,7 @@ export default function MetabolismValidationsView() {
           </Row>
         </DataSection>
 
-        <DataSection title="NADH">
+        <DataSection title="NADH" className="mt-4">
           <Row gutter={32}>
             <Col xs={24} md={24}>
               <ValidationTemplate
