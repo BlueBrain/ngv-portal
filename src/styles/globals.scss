@@ -19,7 +19,6 @@
 @import 'config/_fonts';
 @import 'config/_queries';
 
-
 html, body {
   @include font-default;
   color: map-get($basePalette, "white");
