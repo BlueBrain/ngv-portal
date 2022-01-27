@@ -30,6 +30,16 @@
     width: 100%;
     height: auto;
     overflow: visible;
+    
+    // fixes issue with safari render
+    sub {
+      position: static;
+      vertical-align: sub;
+    }
+    sup {
+      position: static;
+      vertical-align: super;
+    }
   }
 }
 
