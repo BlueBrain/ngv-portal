@@ -10,6 +10,7 @@ import DataSection from '@/components/DataSection';
 import textContent from '@/text-content/metabolism/digital-reconstruction';
 import ModelComponents from '@/components/Metabolism/DigitalReconstruction/ModelComponents';
 import ModelOverview from '@/components/Metabolism/DigitalReconstruction/ModelOverview';
+import SimulationResults from '@/components/Metabolism/DigitalReconstruction/SimulationResults';
 import { antBreakpoint, basePath } from '@/config';
 import { Color } from '@/types';
 import { PageTitles } from '@/layouts/Navigation/constans';
@@ -67,7 +68,15 @@ export default function MetabolismDigitalRecView() {
           <Row gutter={32}>
             <Col xs={24} md={24}>
               <ModelComponents />
-              </Col>
+            </Col>
+          </Row>
+        </DataSection>
+
+        <DataSection title="Simulation results" className="mt-4">
+          <Row gutter={32}>
+            <Col xs={24} md={24}>
+              <SimulationResults />
+            </Col>
           </Row>
         </DataSection>
       </DataContainer>
