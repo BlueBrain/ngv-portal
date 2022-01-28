@@ -12,6 +12,8 @@ const textContent = {
   modelComponents: (<p>To access the equations, parameters and initial values for the metabolism model components, i.e. for reactions and transport processes, please make a selection below.</p>),
   
   modelOverview: (<p>NGV unit and the metabolism of the microcircuit models.</p>),
+
+  simulationResults: (<p>To run the simulations, please refer to supplementary <a href="#">material</a>.</p>),
 };
 
 export default textContent;
