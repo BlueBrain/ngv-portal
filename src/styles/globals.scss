@@ -1166,6 +1166,7 @@ $data-section-padding-small: 0.5rem;
   left: 60px;
   right: 60px;
   z-index: 10;
+
   @media (max-width: $small) {
     justify-content: center;
     width:100%;
@@ -1198,13 +1199,13 @@ $data-section-padding-small: 0.5rem;
       font-weight: 700;
       text-decoration: none;
       &:hover {
-        color: map-get($basePalette, "grey-2");
+        color: map-get($basePalette, "navy-4");
       }
     }
   }
 
   .top-level-btn:hover {
-    color: map-get($basePalette, "white") !important;
+    color: map-get($basePalette, "white");
   }
 
   .secondary-nav {
@@ -1238,6 +1239,10 @@ $data-section-padding-small: 0.5rem;
 
       button {
         opacity: 0.5;
+      }
+
+      a {
+        color: map-get($basePalette, "grey-2");
       }
     }
   }
@@ -1361,15 +1366,20 @@ $data-section-padding-small: 0.5rem;
       font-size: map-get($fontSize, "large");
       box-shadow: 0 6px 10px -10px rgba(59, 65, 101, 0.6);
       height: 75px;
-      padding-left: 40px;
+      padding-left: 30px;
+      display: flex;
+      align-items: center;
+
+      span.btn-text {
+        width: 90%;
+        white-space: break-spaces;
+        line-height: 20px;
+      }
     }
 
     button svg {
-      float: right;
-      margin-right: 30px;
       font-size: 25px;
       line-height: 75px;
-      margin-top: 8px;
       transition: transform 0.7s;
     }
 
@@ -1418,6 +1428,11 @@ $data-section-padding-small: 0.5rem;
 
     li > ul > li svg {
       margin-right: 10px;
+    }
+
+    .active .submenu {
+      border-width: 0 5px 5px 5px;
+      border-style: solid;
     }
   }
 }
@@ -1486,8 +1501,6 @@ $data-section-padding-small: 0.5rem;
   }
 
   .home-nav {
-    border-bottom: 1px solid map-get($basePalette, "white");
-    border-right: 1px solid map-get($basePalette, "grey-2");
     padding: 5px 17px;
     display: flex;
     max-width: 260px;
@@ -1503,6 +1516,9 @@ $data-section-padding-small: 0.5rem;
     width: 260px;
 
     .submenu {
+      border-width: 0 0 0 10px;
+      border-style: solid;
+
       li {
         height: 32px;
       }
@@ -1510,9 +1526,8 @@ $data-section-padding-small: 0.5rem;
 
     button {
       border-bottom: 1px solid map-get($basePalette, "white");
-      color: map-get($basePalette, "grey-2");
       text-transform: none;
-      padding-left: 40px;
+      padding-left: 20px;
     }
 
     li {
@@ -1551,6 +1566,10 @@ $data-section-padding-small: 0.5rem;
 
     li > ul > li {
       margin: 5px 0;
+    }
+
+    .color-tint {
+      width: 10px;
     }
   }
 }

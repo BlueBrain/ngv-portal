@@ -64,19 +64,19 @@ const NavDesktop = () => {
   let buttonTimeout, menuTimeout;
 
   const enterButton = () => {
-    clearTimeout(buttonTimeout)
-    setMouseOverButton(true)
+    clearTimeout(buttonTimeout);
+    setMouseOverButton(true);
   }
 
   const leaveButton = () => {
     buttonTimeout = setTimeout(() => {
-      setMouseOverButton(false)
+      setMouseOverButton(false);
     }, delay);
   }
 
   const enterMenu = () => {
-    clearTimeout(menuTimeout)
-    setMouseOverMenu(true)
+    clearTimeout(menuTimeout);
+    setMouseOverMenu(true);
   }
 
   const leaveMenu = () => {

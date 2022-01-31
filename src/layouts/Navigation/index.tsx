@@ -39,14 +39,14 @@ export const SecondaryNav: React.FC<NavProps> = ({ canClose }) => {
   const initialSelectedTabId = useMemo(() => {
     const selectedTab = navItems.find((item) => (router.pathname.includes(item.href)));
     return selectedTab? selectedTab.id: navItems[0].id;
-  }, [router.pathname])
+  }, [router.pathname]);
   const [selectedTabId, setSelectedTabId] = React.useState<string>(initialSelectedTabId);
 
   const handleClick = (id) => {
     if(id !== selectedTabId) {
-      setSelectedTabId(id)
+      setSelectedTabId(id);
     } else {
-      setSelectedTabId(null)
+      setSelectedTabId(null);
     }
   }
 
@@ -55,36 +55,37 @@ export const SecondaryNav: React.FC<NavProps> = ({ canClose }) => {
       {navItems.map(item => {
         const isActive = previewTab ? previewTab === item: selectedTabId === item.id;
         return (
-          <li key={item.id} className={`${isActive ? 'active' : ''} ${item.disabled? classDisabled:''}`}>
-          <button
-            className="top-level-btn"
-            style={{ backgroundColor: item.color }}
-            onClick={() => handleClick(item.id)}
-            onMouseEnter={() => !canClose && setPreviewTab(item)}
-          >
-            {item.label.toUpperCase()}&nbsp;
-            <span className="show-mobile">
-              <IoIosArrowDropdown />
-            </span>
-          </button>
-          <ul
-            className="submenu"
-            style={{ borderLeftColor: item.color, borderStyle: 'solid' }}
-          >
-            {
-              item.children.map(child => {
-                return (
-                  <li key={child.label} className={`${child.disabled? classDisabled:''}`}>
+          <li key={item.id} className={`${isActive ? 'active' : ''} ${item.disabled ? classDisabled : ''}`}>
+            <div className="color-tint" style={{ backgroundColor: item.color }} />
+            <button
+              className="top-level-btn"
+              style={isActive ? { backgroundColor: item.color } : {}}
+              onClick={() => handleClick(item.id)}
+              onMouseEnter={() => !canClose && setPreviewTab(item)}
+            >
+              <span className="btn-text">
+                {item.label.toUpperCase()}&nbsp;
+              </span>
+              <span className="show-mobile">
+                <IoIosArrowDropdown />
+              </span>
+            </button>
+            <ul
+              className="submenu"
+              style={{ borderLeftColor: item.color }}
+            >
+              {
+                item.children.map(child => (
+                  <li key={child.label} className={`${child.disabled ? classDisabled : ''}`}>
                     <Link href={`${item.href}${child.href}`}>
                       {child.label}
                     </Link>
                   </li>
-                )
-              })
-            }
-          </ul>
-      </li>
-        )
+                ))
+              }
+            </ul>
+          </li>
+        );
       })}
     </ul>
   );
