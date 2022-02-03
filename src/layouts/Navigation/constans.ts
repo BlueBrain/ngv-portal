@@ -9,7 +9,7 @@ export enum Urls {
   RECONSTRUCION_DATA = '/reconstruction-data',
   DIGITAL_RECONSTRUCTION = '/digital-reconstruction',
   VALIDATION  = '/validations',
-  PREDICTION = '/predictions'
+  PREDICTION = '/predictions',
 }
 
 export enum PageTitles {
@@ -26,9 +26,9 @@ export enum PageTitles {
 
 export type NavItem = {
   color: string;
-  id: 'exp' | 'rec' | 'dig',
-  label: string,
-  href: Urls,
+  id: 'exp' | 'rec' | 'dig';
+  label: string;
+  href: Urls;
   disabled?: boolean;
   children: Array<{
     label: string;
@@ -47,7 +47,7 @@ export const navItems: NavItem[] = [
       {label: PageTitles.EXPERIMENTAL_DATA, href: Urls.EXPERIMENTAL_DATA},
       {label: PageTitles.RECONSTRUCION_DATA, href: Urls.RECONSTRUCION_DATA},
       {label: PageTitles.VALIDATION, href: Urls.VALIDATION},
-      {label: PageTitles.PREDICTION, href: Urls.PREDICTION}
+      {label: PageTitles.PREDICTION, href: Urls.PREDICTION},
     ]
   },
   {
@@ -59,7 +59,7 @@ export const navItems: NavItem[] = [
       {label: PageTitles.EXPERIMENTAL_DATA, href: Urls.EXPERIMENTAL_DATA},
       {label: PageTitles.DIGITAL_RECONSTRUCTION, href: Urls.DIGITAL_RECONSTRUCTION},
       {label: PageTitles.VALIDATION, href: Urls.VALIDATION},
-      {label: PageTitles.PREDICTION, href: Urls.PREDICTION, disabled: true}
+      {label: PageTitles.PREDICTION, href: Urls.PREDICTION, disabled: true},
     ]
   },
   {
@@ -72,7 +72,7 @@ export const navItems: NavItem[] = [
       {label: PageTitles.EXPERIMENTAL_DATA, href: Urls.EXPERIMENTAL_DATA},
       {label: PageTitles.RECONSTRUCION_DATA, href: Urls.RECONSTRUCION_DATA},
       {label: PageTitles.VALIDATION, href: Urls.VALIDATION},
-      {label: PageTitles.PREDICTION, href: Urls.PREDICTION}
+      {label: PageTitles.PREDICTION, href: Urls.PREDICTION},
     ]
   },
 ]
