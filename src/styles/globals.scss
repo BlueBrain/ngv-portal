@@ -1407,7 +1407,7 @@ $data-section-padding-small: 0.5rem;
     }
 
     li.active button {
-      color: map-get($basePalette, "white");
+      color: map-get($basePalette, "almost-white");
     }
 
     li.active button svg {
@@ -1542,7 +1542,7 @@ $data-section-padding-small: 0.5rem;
     }
 
     li.active button {
-      color: map-get($basePalette, "white");
+      color: map-get($basePalette, "almost-white");
     }
 
     li.active > ul {
