@@ -15,7 +15,7 @@ import ImageAndDescriptionTemplate from '@/components/ImageAndDescriptionTemplat
 
 const primaryColor: Color = "purple"
 
-const imgBase = `${basePath}/assets/images/predictions`;
+const imgBase = `${basePath}/assets/images/metabolism/predictions`;
 const assetsBase = 'metabolism/predictions';
 
 export default function MetabolismPredictionsView() {
