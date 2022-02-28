@@ -10,13 +10,15 @@ import DataSection from '@/components/DataSection';
 import { antBreakpoint, basePath } from '@/config';
 import textContent from '@/text-content/metabolism/validations';
 import { Color } from '@/types';
-import ValidationTemplate from '@/components/Metabolism/Validations/ValidationTemplate';
+import ImageAndDescriptionTemplate from '@/components/ImageAndDescriptionTemplate';
 import { PageTitles } from '@/layouts/Navigation/constans';
 
 const primaryColor: Color = "purple"
 
 const imgBase = `${basePath}/assets/images/validations`;
 
+const assetsBase = 'metabolism/validations';
+const extraHtml = <div>{ textContent.supplementaryMaterialLegend }</div>;
 
 export default function MetabolismValidationsView() {
   return (
@@ -59,9 +61,11 @@ export default function MetabolismValidationsView() {
         <DataSection title="BOLD">
           <Row gutter={32}>
             <Col xs={24} md={24}>
-              <ValidationTemplate
+              <ImageAndDescriptionTemplate
                 textKey="bold"
                 imagePath="bold.png"
+                assetsBase={assetsBase}
+                extraHtml={extraHtml}
               />
             </Col>
           </Row>
@@ -70,9 +74,11 @@ export default function MetabolismValidationsView() {
         <DataSection title="OGI" className="mt-4">
           <Row gutter={32}>
             <Col xs={24} md={24}>
-              <ValidationTemplate
+              <ImageAndDescriptionTemplate
                 textKey="ogi"
                 imagePath="ogi.png"
+                assetsBase={assetsBase}
+                extraHtml={extraHtml}
               />
             </Col>
           </Row>
@@ -81,9 +87,11 @@ export default function MetabolismValidationsView() {
         <DataSection title="ATP / Energy" className="mt-4">
           <Row gutter={32}>
             <Col xs={24} md={24}>
-              <ValidationTemplate
+              <ImageAndDescriptionTemplate
                 textKey="atp"
                 imagePath="atp.png"
+                assetsBase={assetsBase}
+                extraHtml={extraHtml}
               />
             </Col>
           </Row>
@@ -92,9 +100,11 @@ export default function MetabolismValidationsView() {
         <DataSection title="Glucose" className="mt-4">
           <Row gutter={32}>
             <Col xs={24} md={24}>
-              <ValidationTemplate
+              <ImageAndDescriptionTemplate
                 textKey="glucose"
                 imagePath="glucose.png"
+                assetsBase={assetsBase}
+                extraHtml={extraHtml}
               />
             </Col>
           </Row>
@@ -103,9 +113,11 @@ export default function MetabolismValidationsView() {
         <DataSection title="Lactate" className="mt-4">
           <Row gutter={32}>
             <Col xs={24} md={24}>
-              <ValidationTemplate
+              <ImageAndDescriptionTemplate
                 textKey="lactate"
                 imagePath="lactate.png"
+                assetsBase={assetsBase}
+                extraHtml={extraHtml}
               />
             </Col>
           </Row>
@@ -114,9 +126,11 @@ export default function MetabolismValidationsView() {
         <DataSection title="NADH" className="mt-4">
           <Row gutter={32}>
             <Col xs={24} md={24}>
-              <ValidationTemplate
+              <ImageAndDescriptionTemplate
                 textKey="nadh"
                 imagePath="nadh.png"
+                assetsBase={assetsBase}
+                extraHtml={extraHtml}
               />
             </Col>
           </Row>
