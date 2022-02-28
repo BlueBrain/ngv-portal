@@ -2,6 +2,7 @@ import Head from 'next/head';
 
 import MetabolismValidationsView from '@/views/metabolism/validations';
 import textContent from '@/text-content/metabolism/validations';
+import { basePath } from '@/config';
 
 
 export default function MetabolismValidationsPage() {
@@ -17,7 +18,7 @@ export default function MetabolismValidationsPage() {
         <meta property="og:description" content={textContent.pageDescriptionMeta} />
         <meta
           property="og:image"
-          content="https://bbp.epfl.ch/ngv-portal/assets/images/anatomy-illustrations/anatomy-validations-illustration.png"
+          content={`${basePath}/assets/images/metabolism/validations/Infographic.png`}
         />
       </Head>
 
