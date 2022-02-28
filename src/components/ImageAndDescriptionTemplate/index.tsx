@@ -1,11 +1,9 @@
-import React, { ReactNode } from 'react';
-import dynamic from 'next/dynamic'
+import React, { ReactNode, useState, useEffect } from 'react';
 
 import ImageViewer from '@/components/ImageViewer';
 import { basePath } from '@/config';
 
 import styles from './styles.module.scss';
-
 
 type ImageAndDescriptionTemplate = {
   textKey: string;
@@ -22,14 +20,19 @@ const ImageAndDescriptionTemplate: React.FC<ImageAndDescriptionTemplate> = ({
   assetsBase,
   extraHtml,
 }) => {
-  const textContent = dynamic(() => import(`@/text-content/${assetsBase}`))
   const imgBase = `${basePath}/assets/images/${assetsBase}`;
+
+  const [textContent, setTextContent] = useState();
+
+  useEffect(() => {
+    import(`@/text-content/${assetsBase}`).then(m => {
+      setTextContent(m.default[textKey] || '');
+    });
+  });
 
   return (
     <>
-      <div>
-        { textContent[textKey]}
-      </div>
+      <div>{ textContent }</div>
 
       <ImageViewer
         src={`${imgBase}/${imagePath}`}
