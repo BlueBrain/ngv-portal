@@ -5,14 +5,18 @@ import Image from 'next/image';
 import Filters from '@/layouts/Filters';
 import Title from '@/components/Title';
 import InfoBox from '@/components/InfoBox';
+import DataContainer from '@/components/DataContainer';
+import DataSection from '@/components/DataSection';
 import { antBreakpoint, basePath } from '@/config';
 import textContent from '@/text-content/metabolism/predictions';
 import { Color } from '@/types';
 import { PageTitles } from '@/layouts/Navigation/constans';
+import ImageAndDescriptionTemplate from '@/components/ImageAndDescriptionTemplate';
 
 const primaryColor: Color = "purple"
 
-const imgBase = `${basePath}/assets/images/metabolism/predictions`;
+const imgBase = `${basePath}/assets/images/predictions`;
+const assetsBase = 'metabolism/predictions';
 
 export default function MetabolismPredictionsView() {
   return (
@@ -50,6 +54,20 @@ export default function MetabolismPredictionsView() {
           </Row>
         </div>
       </Filters>
+
+      <DataContainer>
+        <DataSection title="Glycolytic oscillations">
+          <Row gutter={32}>
+            <Col xs={24} md={24}>
+              <ImageAndDescriptionTemplate
+                textKey="oscillation"
+                imagePath="oscillation.png"
+                assetsBase={assetsBase}
+              />
+            </Col>
+          </Row>
+        </DataSection>
+      </DataContainer>
     </>
   );
 }
