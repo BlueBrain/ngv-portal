@@ -30,7 +30,7 @@ export default function MetabolismExpDataView() {
           <Row align="middle">
             <Col xs={24} lg={{ span: 12, push: 12 }} className="mt-1 mb-1">
               <Image
-                src={`${basePath}/assets/images/anatomy-illustrations/anatomy-experimental-data-illustration.png`}
+                src={`${basePath}/assets/images/metabolism/experimental-data/Infographic.png`}
                 alt="Illustration for Metabolism experimental data"
                 layout="responsive"
                 width="1280"

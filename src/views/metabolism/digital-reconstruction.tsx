@@ -32,7 +32,7 @@ export default function MetabolismDigitalRecView() {
           <Row align="middle">
             <Col xs={24} lg={{ span: 12, push: 12 }} className="mt-1 mb-1">
               <Image
-                src={`${basePath}/assets/images/anatomy-illustrations/anatomy-experimental-data-illustration.png`}
+                src={`${basePath}/assets/images/metabolism/digital-reconstruction/Infographic.png`}
                 alt="Illustration for Metabolism Digital reconstruction"
                 layout="responsive"
                 width="1280"
