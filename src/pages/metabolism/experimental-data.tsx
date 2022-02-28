@@ -2,6 +2,7 @@ import Head from 'next/head';
 
 import MetabolismExpDataView from '@/views/metabolism/experimental-data';
 import textContent from '@/text-content/metabolism/experimental-data';
+import { basePath } from '@/config';
 
 
 export default function MetabolismExpDataPage() {
@@ -17,7 +18,7 @@ export default function MetabolismExpDataPage() {
         <meta property="og:description" content={textContent.pageDescriptionMeta} />
         <meta
           property="og:image"
-          content="https://bbp.epfl.ch/ngv-portal/ngv-portal/assets/images/anatomy-illustrations/anatomy-experimental-data-illustration.png"
+          content={`${basePath}/assets/images/metabolism/experimental-data/Infographic.png`}
         />
       </Head>
 

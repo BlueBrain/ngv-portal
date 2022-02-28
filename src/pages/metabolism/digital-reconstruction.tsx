@@ -2,6 +2,7 @@ import Head from 'next/head';
 
 import MetabolismDigitalRecView from '@/views/metabolism/digital-reconstruction';
 import textContent from '@/text-content/metabolism/digital-reconstruction';
+import { basePath } from '@/config';
 
 
 export default function MetabolismDigitalRecPage() {
@@ -17,7 +18,7 @@ export default function MetabolismDigitalRecPage() {
         <meta property="og:description" content={textContent.pageDescriptionMeta} />
         <meta
           property="og:image"
-          content="https://bbp.epfl.ch/ngv-portal/ngv-portal/assets/images/anatomy-illustrations/anatomy-experimental-data-illustration.png"
+          content={`${basePath}/assets/images/metabolism/digital-reconstruction/Infographic.png`}
         />
       </Head>
 
