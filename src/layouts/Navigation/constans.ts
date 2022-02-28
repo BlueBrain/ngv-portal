@@ -59,7 +59,7 @@ export const navItems: NavItem[] = [
       {label: PageTitles.EXPERIMENTAL_DATA, href: Urls.EXPERIMENTAL_DATA},
       {label: PageTitles.DIGITAL_RECONSTRUCTION, href: Urls.DIGITAL_RECONSTRUCTION},
       {label: PageTitles.VALIDATION, href: Urls.VALIDATION},
-      {label: PageTitles.PREDICTION, href: Urls.PREDICTION, disabled: true},
+      {label: PageTitles.PREDICTION, href: Urls.PREDICTION},
     ]
   },
   {
