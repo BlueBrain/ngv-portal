@@ -67,6 +67,18 @@ export default function MetabolismPredictionsView() {
             </Col>
           </Row>
         </DataSection>
+
+        <DataSection title="Energy consumption" className="mt-4">
+          <Row gutter={32}>
+            <Col xs={24} md={24}>
+              <ImageAndDescriptionTemplate
+                textKey="energy"
+                imagePath="energy.png"
+                assetsBase={assetsBase}
+              />
+            </Col>
+          </Row>
+        </DataSection>
       </DataContainer>
     </>
   );
