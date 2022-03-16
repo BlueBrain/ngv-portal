@@ -58,7 +58,20 @@ export default function MetabolismValidationsView() {
       </Filters>
 
       <DataContainer>
-        <DataSection title="BOLD">
+        <DataSection title="Concentration of molecules">
+          <Row gutter={32}>
+            <Col xs={24} md={24}>
+              <ImageAndDescriptionTemplate
+                textKey="concentrations"
+                imagePath="concentrations.png"
+                assetsBase={assetsBase}
+                extraHtml={extraHtml}
+              />
+            </Col>
+          </Row>
+        </DataSection>
+
+        <DataSection title="BOLD" className="mt-4">
           <Row gutter={32}>
             <Col xs={24} md={24}>
               <ImageAndDescriptionTemplate

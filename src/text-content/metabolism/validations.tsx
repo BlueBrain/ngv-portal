@@ -7,6 +7,12 @@ const textContent = {
   supplementaryMaterialLegend: (<p>
     To reproduce figures please refer to supplementary <a href="#">material</a>
   </p>),
+
+  concentrations: (<div>
+    <p>
+    The figure shows (at natural log scale) comparison of simulated concentrations (orange) to the values reported in the literature (blue). Only a selection of the molecules of the most common interest is shown.
+    </p>
+  </div>),
   
   bold: (<div>
     <p>
