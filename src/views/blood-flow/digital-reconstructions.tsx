@@ -12,7 +12,7 @@ import { antBreakpoint, basePath } from '@/config';
 import { Color } from '@/types';
 import { PageTitles } from '@/layouts/Navigation/constans';
 
-const primaryColor: Color = "purple"
+const primaryColor: Color = "red";
 
 export default function BloodFlowDigitalRecView() {
 
