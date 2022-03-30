@@ -7,7 +7,7 @@ export enum Urls {
   
   EXPERIMENTAL_DATA = '/experimental-data',
   RECONSTRUCION_DATA = '/reconstruction-data',
-  DIGITAL_RECONSTRUCTION = '/digital-reconstruction',
+  DIGITAL_RECONSTRUCTION = '/digital-reconstructions',
   VALIDATION  = '/validations',
   PREDICTION = '/predictions',
 }
@@ -19,7 +19,7 @@ export enum PageTitles {
   
   EXPERIMENTAL_DATA = 'Experimental data',
   RECONSTRUCION_DATA = 'Reconstruction data',
-  DIGITAL_RECONSTRUCTION = 'Digital reconstruction',
+  DIGITAL_RECONSTRUCTION = 'Digital reconstructions',
   VALIDATION  = 'Validations',
   PREDICTION = 'Predictions',
 }

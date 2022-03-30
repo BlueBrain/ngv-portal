@@ -18,7 +18,7 @@ export default function MetabolismExpDataPage() {
         <meta property="og:description" content={textContent.pageDescriptionMeta} />
         <meta
           property="og:image"
-          content={`${basePath}/assets/images/metabolism/experimental-data/Infographic.png`}
+          content={`${basePath}/assets/images/metabolism/experimental-data/infographic.png`}
         />
       </Head>
 

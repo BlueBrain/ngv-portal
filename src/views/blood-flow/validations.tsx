@@ -32,7 +32,7 @@ export default function BloodFlowValidationsView() {
           <Row align="middle">
             <Col xs={24} lg={{ span: 12, push: 12 }} className="mt-1 mb-1">
               <Image
-                src={`${basePath}/assets/images/blood-flow/validations/Infographic.png`}
+                src={`${basePath}/assets/images/blood-flow/validations/infographic.png`}
                 alt="Illustration for BloodFlow Validations"
                 layout="responsive"
                 width="1280"

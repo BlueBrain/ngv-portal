@@ -17,7 +17,7 @@ export default function BloodFlowPredictionsPage() {
         <meta property="og:description" content={textContent.pageDescriptionMeta} />
         <meta
           property="og:image"
-          content={`${basePath}/assets/images/blood-flow/predictions/Infographic.png`}
+          content={`${basePath}/assets/images/blood-flow/predictions/infographic.png`}
         />
       </Head>
 

@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
-import BloodFlowDigitalRecView from '@/views/blood-flow/digital-reconstruction';
-import textContent from '@/text-content/blood-flow/digital-reconstruction';
+import BloodFlowDigitalRecView from '@/views/blood-flow/digital-reconstructions';
+import textContent from '@/text-content/blood-flow/digital-reconstructions';
 import { basePath } from '@/config';
 
 
@@ -9,7 +9,7 @@ export default function BloodFlowDigitalRecPage() {
   return (
     <>
       <Head>
-        <title>Digital reconstruction / Blood Flow / NGV Portal</title>
+        <title>Digital reconstructions / Blood Flow / NGV Portal</title>
         <meta
           name="description"
           content={textContent.pageDescriptionMeta}
@@ -18,7 +18,7 @@ export default function BloodFlowDigitalRecPage() {
         <meta property="og:description" content={textContent.pageDescriptionMeta} />
         <meta
           property="og:image"
-          content={`${basePath}/assets/images/blood-flow/digital-reconstruction/Infographic.png`}
+          content={`${basePath}/assets/images/blood-flow/digital-reconstructions/infographic.png`}
         />
       </Head>
 

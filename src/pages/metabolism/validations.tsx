@@ -18,7 +18,7 @@ export default function MetabolismValidationsPage() {
         <meta property="og:description" content={textContent.pageDescriptionMeta} />
         <meta
           property="og:image"
-          content={`${basePath}/assets/images/metabolism/validations/Infographic.png`}
+          content={`${basePath}/assets/images/metabolism/validations/infographic.png`}
         />
       </Head>
 

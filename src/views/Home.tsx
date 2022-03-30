@@ -149,7 +149,7 @@ const Home: React.FC = () => (
             </div>
 
             <PublicationBlock
-              description="Digital reconstruction of the neuro-glia-vascular architecture"
+              description="Digital reconstructions of the neuro-glia-vascular architecture"
               authors={<>Eleftherios Zisis <i>et al.</i>, 2021</>}
               href="https://doi.org/10.1093/cercor/bhab254"
             />

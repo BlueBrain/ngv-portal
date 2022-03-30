@@ -34,7 +34,7 @@ export default function MetabolismValidationsView() {
           <Row align="middle">
             <Col xs={24} lg={{ span: 12, push: 12 }} className="mt-1 mb-1">
               <Image
-                src={`${basePath}/assets/images/metabolism/validations/Infographic.png`}
+                src={`${basePath}/assets/images/metabolism/validations/infographic.png`}
                 alt="Illustration for Metabolism Validations"
                 layout="responsive"
                 width="1280"

@@ -32,7 +32,7 @@ export default function MetabolismPredictionsView() {
           <Row align="middle">
             <Col xs={24} lg={{ span: 12, push: 12 }} className="mt-1 mb-1">
               <Image
-                src={`${imgBase}/Infographic.png`}
+                src={`${imgBase}/infographic.png`}
                 alt="Illustration for Metabolism Predictions"
                 layout="responsive"
                 width="1280"

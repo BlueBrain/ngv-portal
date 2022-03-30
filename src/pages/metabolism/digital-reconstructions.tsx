@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
-import MetabolismDigitalRecView from '@/views/metabolism/digital-reconstruction';
-import textContent from '@/text-content/metabolism/digital-reconstruction';
+import MetabolismDigitalRecView from '@/views/metabolism/digital-reconstructions';
+import textContent from '@/text-content/metabolism/digital-reconstructions';
 import { basePath } from '@/config';
 
 
@@ -9,7 +9,7 @@ export default function MetabolismDigitalRecPage() {
   return (
     <>
       <Head>
-        <title>Digital reconstruction / Metabolism / NGV Portal</title>
+        <title>Digital reconstructions / Metabolism / NGV Portal</title>
         <meta
           name="description"
           content={textContent.pageDescriptionMeta}
@@ -18,7 +18,7 @@ export default function MetabolismDigitalRecPage() {
         <meta property="og:description" content={textContent.pageDescriptionMeta} />
         <meta
           property="og:image"
-          content={`${basePath}/assets/images/metabolism/digital-reconstruction/Infographic.png`}
+          content={`${basePath}/assets/images/metabolism/digital-reconstructions/infographic.png`}
         />
       </Head>
 
