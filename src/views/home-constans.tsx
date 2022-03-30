@@ -61,7 +61,7 @@ export const cardsData: Cards[] = [
     image:`${basePath}/assets/images/backgrounds/home-page/sections/2_metabolism.jpg`,
     links: [
       { label: PageTitles.EXPERIMENTAL_DATA, href: Urls.EXPERIMENTAL_DATA },
-      { label: PageTitles.DIGITAL_RECONSTRUCTION, href: Urls.DIGITAL_RECONSTRUCTION },
+      { label: PageTitles.DIGITAL_RECONSTRUCTIONS, href: Urls.DIGITAL_RECONSTRUCTIONS },
       { label: PageTitles.VALIDATION, href: Urls.VALIDATION },
       { label: PageTitles.PREDICTION, href: Urls.PREDICTION },
     ],
@@ -113,7 +113,7 @@ export const cardsData: Cards[] = [
     image: `${basePath}/assets/images/backgrounds/home-page/sections/3_bloodflow.jpg`,
     links: [
       { label: PageTitles.EXPERIMENTAL_DATA, href: Urls.EXPERIMENTAL_DATA },
-      { label: PageTitles.RECONSTRUCION_DATA, href: Urls.DIGITAL_RECONSTRUCTION },
+      { label: PageTitles.RECONSTRUCION_DATA, href: Urls.DIGITAL_RECONSTRUCTIONS },
       { label: PageTitles.VALIDATION, href: Urls.VALIDATION },
       { label: PageTitles.PREDICTION, href: Urls.PREDICTION },
     ],

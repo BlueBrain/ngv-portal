@@ -18,7 +18,7 @@ export default function BloodFlowValidationsPage() {
         <meta property="og:description" content={textContent.pageDescriptionMeta} />
         <meta
           property="og:image"
-          content={`${basePath}/assets/images/blood-flow/validations/Infographic.png`}
+          content={`${basePath}/assets/images/blood-flow/validations/infographic.png`}
         />
       </Head>
 

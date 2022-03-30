@@ -27,7 +27,7 @@ type EnzymeDetailsProps = {
 }
 
 // TODO: fetch this from nexus
-const enzymeData: EnzymeDataType = require('@/../public/assets/files/metabolism/digital-reconstruction/ngv_portal_metab_model_v2_processed.json');
+const enzymeData: EnzymeDataType = require('@/../public/assets/files/metabolism/digital-reconstructions/ngv_portal_metab_model_v2_processed.json');
 
 const EnzymeDetails: React.FC<EnzymeDetailsProps> = ({infoKeys}) => {
 

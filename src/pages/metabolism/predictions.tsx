@@ -17,7 +17,7 @@ export default function MetabolismPredictionsPage() {
         <meta property="og:description" content={textContent.pageDescriptionMeta} />
         <meta
           property="og:image"
-          content={`${basePath}/assets/images/metabolism/predictions/Infographic.png`}
+          content={`${basePath}/assets/images/metabolism/predictions/infographic.png`}
         />
       </Head>
 

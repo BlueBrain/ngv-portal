@@ -7,14 +7,17 @@ import Title from '@/components/Title';
 import InfoBox from '@/components/InfoBox';
 import DataContainer from '@/components/DataContainer';
 import DataSection from '@/components/DataSection';
-import textContent from '@/text-content/blood-flow/digital-reconstruction';
+import textContent from '@/text-content/metabolism/digital-reconstructions';
+import ModelComponents from '@/components/Metabolism/DigitalReconstruction/ModelComponents';
+import ModelOverview from '@/components/Metabolism/DigitalReconstruction/ModelOverview';
+import SimulationResults from '@/components/Metabolism/DigitalReconstruction/SimulationResults';
 import { antBreakpoint, basePath } from '@/config';
 import { Color } from '@/types';
 import { PageTitles } from '@/layouts/Navigation/constans';
 
 const primaryColor: Color = "purple"
 
-export default function BloodFlowDigitalRecView() {
+export default function MetabolismDigitalRecView() {
 
   return (
     <>
@@ -23,14 +26,14 @@ export default function BloodFlowDigitalRecView() {
           <Title
             className="show-xs hide-lg mt-2"
             primaryColor={primaryColor}
-            title={PageTitles.DIGITAL_RECONSTRUCTION}
-            subtitle="BloodFlow"
+            title={PageTitles.DIGITAL_RECONSTRUCTIONS}
+            subtitle="Metabolism"
           />
           <Row align="middle">
             <Col xs={24} lg={{ span: 12, push: 12 }} className="mt-1 mb-1">
               <Image
-                src={`${basePath}/assets/images/blood-flow/digital-reconstruction/Infographic.png`}
-                alt="Illustration for BloodFlow Digital reconstruction"
+                src={`${basePath}/assets/images/metabolism/digital-reconstructions/infographic.png`}
+                alt="Illustration for Metabolism Digital reconstructions"
                 layout="responsive"
                 width="1280"
                 height="720"
@@ -43,8 +46,8 @@ export default function BloodFlowDigitalRecView() {
               <Title
                 className="hide-xs show-lg"
                 primaryColor={primaryColor}
-                title={PageTitles.DIGITAL_RECONSTRUCTION}
-                subtitle="BloodFlow"
+                title={PageTitles.DIGITAL_RECONSTRUCTIONS}
+                subtitle="Metabolism"
               />
               <InfoBox content={textContent.pageDescription} color={primaryColor} />
             </Col>
@@ -53,16 +56,26 @@ export default function BloodFlowDigitalRecView() {
       </Filters>
 
       <DataContainer>
-        <DataSection title="Placeholder">
+        <DataSection title="Model overview">
           <Row gutter={32}>
             <Col xs={24} md={24}>
+              <ModelOverview />
             </Col>
           </Row>
         </DataSection>
 
-        <DataSection title="Placeholder 2" className="mt-4">
+        <DataSection title="Model components" className="mt-4">
           <Row gutter={32}>
             <Col xs={24} md={24}>
+              <ModelComponents />
+            </Col>
+          </Row>
+        </DataSection>
+
+        <DataSection title="Simulation results" className="mt-4">
+          <Row gutter={32}>
+            <Col xs={24} md={24}>
+              <SimulationResults />
             </Col>
           </Row>
         </DataSection>

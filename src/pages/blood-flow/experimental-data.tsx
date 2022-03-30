@@ -18,7 +18,7 @@ export default function BloodFlowExpDataPage() {
         <meta property="og:description" content={textContent.pageDescriptionMeta} />
         <meta
           property="og:image"
-          content={`${basePath}/assets/images/blood-flow/experimental-data/Infographic.png`}
+          content={`${basePath}/assets/images/blood-flow/experimental-data/infographic.png`}
         />
       </Head>
 

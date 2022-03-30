@@ -1,11 +1,11 @@
 import React from 'react';
 
-import textContent from '@/text-content/metabolism/digital-reconstruction';
+import textContent from '@/text-content/metabolism/digital-reconstructions';
 import ImageViewer from '@/components/ImageViewer';
 import { basePath } from '@/config';
 import ImageAndDescriptionTemplate from '@/components/ImageAndDescriptionTemplate';
 
-const assetsBase = 'metabolism/digital-reconstruction';
+const assetsBase = 'metabolism/digital-reconstructions';
 
 export default function SimulationResults() {
   return (
