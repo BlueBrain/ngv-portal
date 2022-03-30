@@ -38,6 +38,7 @@
     ["constriction", "decrease in diameter of the vasculature."],
     ["density", "mass per unit volume."],
     ["dilation", "increase in diameter of the vasculature."],
+    ["effective resistance", "sum of the edges resistances along a path. When loops are present, the effective resistance considered resistances along each possible path, weighted by the length of the path."],
     ["elasticity", "flexibility of the vessel wall. Property of the arterial walls depending on resistance and compliance. Elasticity helps to moderate blood pressure and blood flow."],
     ["flow", "total volume of fluid passing with a given velocity a section (area) of a vessel per unit of time."],
     ["impedance (transfer impedance)", "ratio representing input pressure over output flow."],
