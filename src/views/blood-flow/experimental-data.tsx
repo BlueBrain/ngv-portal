@@ -11,8 +11,10 @@ import textContent from '@/text-content/blood-flow/experimental-data';
 import { antBreakpoint, basePath } from '@/config';
 import { Color } from '@/types';
 import { PageTitles } from '@/layouts/Navigation/constans';
+import ImageAndDescriptionTemplate from '@/components/ImageAndDescriptionTemplate';
 
 const primaryColor: Color = "purple"
+const assetsBase = 'blood-flow/experimental-data';
 
 export default function BloodFlowExpDataView() {
 
@@ -29,7 +31,7 @@ export default function BloodFlowExpDataView() {
           <Row align="middle">
             <Col xs={24} lg={{ span: 12, push: 12 }} className="mt-1 mb-1">
               <Image
-                src={`${basePath}/assets/images/blood-flow/experimental-data/Infographic.png`}
+                src={`${basePath}/assets/images/metabolism/experimental-data/Infographic.png`}
                 alt="Illustration for BloodFlow experimental data"
                 layout="responsive"
                 width="1280"
@@ -53,9 +55,14 @@ export default function BloodFlowExpDataView() {
       </Filters>
 
       <DataContainer>
-      <DataSection title="Placeholder">
+        <DataSection title="Vasculature data">
           <Row gutter={32}>
             <Col xs={24} md={24}>
+              <ImageAndDescriptionTemplate
+                textKey="vasculatureData"
+                imagePath="vasculature-data.png"
+                assetsBase={assetsBase}
+              />
             </Col>
           </Row>
         </DataSection>
