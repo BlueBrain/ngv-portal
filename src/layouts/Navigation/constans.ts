@@ -7,7 +7,7 @@ export enum Urls {
   
   EXPERIMENTAL_DATA = '/experimental-data',
   RECONSTRUCION_DATA = '/reconstruction-data',
-  DIGITAL_RECONSTRUCTION = '/digital-reconstructions',
+  DIGITAL_RECONSTRUCTIONS = '/digital-reconstructions',
   VALIDATION  = '/validations',
   PREDICTION = '/predictions',
 }
@@ -19,7 +19,7 @@ export enum PageTitles {
   
   EXPERIMENTAL_DATA = 'Experimental data',
   RECONSTRUCION_DATA = 'Reconstruction data',
-  DIGITAL_RECONSTRUCTION = 'Digital reconstructions',
+  DIGITAL_RECONSTRUCTIONS = 'Digital reconstructions',
   VALIDATION  = 'Validations',
   PREDICTION = 'Predictions',
 }
@@ -57,7 +57,7 @@ export const navItems: NavItem[] = [
     href: Urls.METABOLISM,
     children: [
       {label: PageTitles.EXPERIMENTAL_DATA, href: Urls.EXPERIMENTAL_DATA},
-      {label: PageTitles.DIGITAL_RECONSTRUCTION, href: Urls.DIGITAL_RECONSTRUCTION},
+      {label: PageTitles.DIGITAL_RECONSTRUCTIONS, href: Urls.DIGITAL_RECONSTRUCTIONS},
       {label: PageTitles.VALIDATION, href: Urls.VALIDATION},
       {label: PageTitles.PREDICTION, href: Urls.PREDICTION},
     ]
@@ -69,7 +69,7 @@ export const navItems: NavItem[] = [
     href: Urls.BLOOD_FLOW,
     children: [
       {label: PageTitles.EXPERIMENTAL_DATA, href: Urls.EXPERIMENTAL_DATA},
-      {label: PageTitles.DIGITAL_RECONSTRUCTION, href: Urls.DIGITAL_RECONSTRUCTION},
+      {label: PageTitles.DIGITAL_RECONSTRUCTIONS, href: Urls.DIGITAL_RECONSTRUCTIONS},
       {label: PageTitles.VALIDATION, href: Urls.VALIDATION},
       {label: PageTitles.PREDICTION, href: Urls.PREDICTION},
     ]

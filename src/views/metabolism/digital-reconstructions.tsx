@@ -26,7 +26,7 @@ export default function MetabolismDigitalRecView() {
           <Title
             className="show-xs hide-lg mt-2"
             primaryColor={primaryColor}
-            title={PageTitles.DIGITAL_RECONSTRUCTION}
+            title={PageTitles.DIGITAL_RECONSTRUCTIONS}
             subtitle="Metabolism"
           />
           <Row align="middle">
@@ -46,7 +46,7 @@ export default function MetabolismDigitalRecView() {
               <Title
                 className="hide-xs show-lg"
                 primaryColor={primaryColor}
-                title={PageTitles.DIGITAL_RECONSTRUCTION}
+                title={PageTitles.DIGITAL_RECONSTRUCTIONS}
                 subtitle="Metabolism"
               />
               <InfoBox content={textContent.pageDescription} color={primaryColor} />
