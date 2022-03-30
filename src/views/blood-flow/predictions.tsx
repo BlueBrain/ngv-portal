@@ -12,7 +12,7 @@ import textContent from '@/text-content/blood-flow/predictions';
 import { Color } from '@/types';
 import { PageTitles } from '@/layouts/Navigation/constans';
 
-const primaryColor: Color = "purple"
+const primaryColor: Color = "red";
 
 const imgBase = `${basePath}/assets/images/blood-flow/predictions`;
 const assetsBase = 'blood-flow/predictions';

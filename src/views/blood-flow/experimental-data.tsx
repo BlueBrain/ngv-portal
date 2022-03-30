@@ -13,7 +13,7 @@ import { Color } from '@/types';
 import { PageTitles } from '@/layouts/Navigation/constans';
 import ImageAndDescriptionTemplate from '@/components/ImageAndDescriptionTemplate';
 
-const primaryColor: Color = "purple"
+const primaryColor: Color = "red";
 const assetsBase = 'blood-flow/experimental-data';
 
 export default function BloodFlowExpDataView() {

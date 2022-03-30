@@ -459,6 +459,9 @@ $data-section-padding-small: 0.5rem;
   &.purple {
     background-color: map-get($accentPalette, "purple");
   }
+  &.red {
+    background-color: map-get($accentPalette, "red");
+  }
 
   .content {
     overflow: hidden;
@@ -833,6 +836,9 @@ $data-section-padding-small: 0.5rem;
   &.purple {
     background-color: map-get($accentPalette, "purple");
   }
+  &.red {
+    background-color: map-get($accentPalette, "red");
+  }
 }
 
 .scroll-to__direction {
@@ -945,6 +951,16 @@ $data-section-padding-small: 0.5rem;
 
     & h4 {
       color: map-get($accentPalette, "purple");
+    }
+  }
+
+  &.red {
+    & h2 {
+      border-color: map-get($accentPalette, "red");
+    }
+
+    & h4 {
+      color: map-get($accentPalette, "red");
     }
   }
 
