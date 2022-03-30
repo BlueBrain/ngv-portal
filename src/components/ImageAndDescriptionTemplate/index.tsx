@@ -10,7 +10,9 @@ type ImageAndDescriptionTemplate = {
   imagePath: string;
   imageAlt?: string;
   assetsBase: string;
-  extraHtml?: ReactNode; 
+  extraHtml?: ReactNode;
+  columnFormat?: boolean;
+  imgLegend?: ReactNode;
 }
 
 const ImageAndDescriptionTemplate: React.FC<ImageAndDescriptionTemplate> = ({
@@ -19,6 +21,8 @@ const ImageAndDescriptionTemplate: React.FC<ImageAndDescriptionTemplate> = ({
   imageAlt,
   assetsBase,
   extraHtml,
+  columnFormat = false,
+  imgLegend,
 }) => {
   const imgBase = `${basePath}/assets/images/${assetsBase}`;
 
@@ -32,12 +36,18 @@ const ImageAndDescriptionTemplate: React.FC<ImageAndDescriptionTemplate> = ({
 
   return (
     <>
-      <div>{ textContent }</div>
-
-      <ImageViewer
-        src={`${imgBase}/${imagePath}`}
-        alt={imageAlt || `${textKey} image`}
-      />
+      <div className={columnFormat ? styles.containerColumn : styles.container}>
+        <div className={styles.text}>
+          { textContent }
+        </div>
+        <div className={styles.image}>
+          <ImageViewer
+            src={`${imgBase}/${imagePath}`}
+            alt={imageAlt || `${textKey} image`}
+          />
+          { imgLegend }
+        </div>
+      </div>
 
       { extraHtml }
     </>
