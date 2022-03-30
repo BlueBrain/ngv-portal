@@ -32,7 +32,7 @@ export default function BloodFlowExpDataView() {
             <Col xs={24} lg={{ span: 12, push: 12 }} className="mt-1 mb-1">
               <Image
                 src={`${basePath}/assets/images/metabolism/experimental-data/infographic.png`}
-                alt="Illustration for BloodFlow experimental data"
+                alt="Illustration for Blood Flow experimental data"
                 layout="responsive"
                 width="1280"
                 height="720"
