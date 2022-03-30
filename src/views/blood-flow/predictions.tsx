@@ -14,7 +14,7 @@ import { PageTitles } from '@/layouts/Navigation/constans';
 
 const primaryColor: Color = "red";
 
-const imgBase = `${basePath}/assets/images/blood-flow/predictions`;
+const imgBase = `${basePath}/assets/images/metabolism/predictions`;
 const assetsBase = 'blood-flow/predictions';
 
 export default function BloodFlowPredictionsView() {
@@ -32,7 +32,7 @@ export default function BloodFlowPredictionsView() {
             <Col xs={24} lg={{ span: 12, push: 12 }} className="mt-1 mb-1">
               <Image
                 src={`${imgBase}/infographic.png`}
-                alt="Illustration for BloodFlow Predictions"
+                alt="Illustration for Blood Flow Predictions"
                 layout="responsive"
                 width="1280"
                 height="720"
