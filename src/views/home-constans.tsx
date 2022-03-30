@@ -107,15 +107,15 @@ export const cardsData: Cards[] = [
   },
   {
     id: 'blood-flow',
-    title:<>{PageTitles.BLOOD_FLOW}<sup>*</sup></>,
+    title:<>{PageTitles.BLOOD_FLOW}</>,
     backgroundColor: 'red',
     routeBase: Urls.BLOOD_FLOW,
     image: `${basePath}/assets/images/backgrounds/home-page/sections/3_bloodflow.jpg`,
     links: [
-      { label: PageTitles.EXPERIMENTAL_DATA },
-      { label: PageTitles.RECONSTRUCION_DATA },
-      { label: PageTitles.VALIDATION },
-      { label: PageTitles.PREDICTION },
+      { label: PageTitles.EXPERIMENTAL_DATA, href: Urls.EXPERIMENTAL_DATA },
+      { label: PageTitles.RECONSTRUCION_DATA, href: Urls.DIGITAL_RECONSTRUCTION },
+      { label: PageTitles.VALIDATION, href: Urls.VALIDATION },
+      { label: PageTitles.PREDICTION, href: Urls.PREDICTION },
     ],
     description: (<div>
       <p>

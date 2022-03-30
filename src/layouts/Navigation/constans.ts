@@ -67,10 +67,9 @@ export const navItems: NavItem[] = [
     id: 'dig',
     label: 'blood flow',
     href: Urls.BLOOD_FLOW,
-    disabled: true,
     children: [
       {label: PageTitles.EXPERIMENTAL_DATA, href: Urls.EXPERIMENTAL_DATA},
-      {label: PageTitles.RECONSTRUCION_DATA, href: Urls.RECONSTRUCION_DATA},
+      {label: PageTitles.DIGITAL_RECONSTRUCTION, href: Urls.DIGITAL_RECONSTRUCTION},
       {label: PageTitles.VALIDATION, href: Urls.VALIDATION},
       {label: PageTitles.PREDICTION, href: Urls.PREDICTION},
     ]

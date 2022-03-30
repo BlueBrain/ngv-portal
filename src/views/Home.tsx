@@ -122,7 +122,6 @@ const Home: React.FC = () => (
           ))}
         </Row>
 
-        <small className="text-medium-white"><sup>*</sup> Coming soon</small>
       </div>
     </section>
 
