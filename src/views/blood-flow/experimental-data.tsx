@@ -79,6 +79,18 @@ export default function BloodFlowExpDataView() {
             </Col>
           </Row>
         </DataSection>
+
+        <DataSection title="Transfer endfeet location from NGV circuit to bloodflow" className="mt-4">
+          <Row gutter={32}>
+            <Col xs={24} md={24}>
+              <ImageAndDescriptionTemplate
+                textKey="transferEndfeet"
+                imagePath="transfer-endfeet.png"
+                assetsBase={assetsBase}
+              />
+            </Col>
+          </Row>
+        </DataSection>
       </DataContainer>
     </>
   );

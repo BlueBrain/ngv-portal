@@ -20,6 +20,8 @@ const textContent = {
       (C) NGV ensemble.
     </small>
   </>),
+
+  transferEndfeet: (<p>Astrocytes, a type of cell in the central nervous system, connect to the surface of the vasculature where they form astrocytic endfeet. Based on <a href="https://doi.org/10.1093/cercor/bhab254">Zisis et al. 2021</a>, we can place astrocytes within the vasculature where each astrocyte has two endfeet which connects to the blood vessels. We leverage the astrocytes morphology reconstruction from <a href="https://doi.org/10.1093/cercor/bhab254">Zisis et al. 2021</a> to obtain a list of endfoot positions on the vasculature.</p>),
 };
 
 export default textContent;
