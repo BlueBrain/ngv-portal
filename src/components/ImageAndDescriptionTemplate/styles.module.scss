@@ -1,1 +1,34 @@
+
 @import '@/styles/config/queries.scss';
+
+$display-grid: grid;
+$gap: 20px;
+
+.container {
+    display: $display-grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: $gap;
+    grid-template-areas: 
+        "text image";
+    
+    @media (max-width: $ant-breakpoint-sm) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas: 
+            "text"
+            "image";
+    }
+}
+.containerColumn {
+    display: $display-grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: $gap;
+    grid-template-areas: 
+        "text"
+        "image";
+}
+
+.text { grid-area: text; }
+.image { grid-area: image; }
