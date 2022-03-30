@@ -67,9 +67,15 @@ export default function BloodFlowExpDataView() {
           </Row>
         </DataSection>
 
-        <DataSection title="Placeholder 2" className="mt-4">
+        <DataSection title="Radii of vessels at endfeet locations" className="mt-4">
           <Row gutter={32}>
             <Col xs={24} md={24}>
+              <ImageAndDescriptionTemplate
+                textKey="radii"
+                imagePath="radii.png"
+                assetsBase={assetsBase}
+                imgLegend={textContent.radiiLegend}
+              />
             </Col>
           </Row>
         </DataSection>
