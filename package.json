@@ -8,9 +8,7 @@
     "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start -p 8000",
-    "lint": "next lint",
-    "build-static-data-proxy": "./scripts/build-static-data-proxy.sh",
-    "start-static-data-proxy": "docker run -it --rm -p 8000:8000 ngv-static-data-proxy"
+    "lint": "next lint"
   },
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
