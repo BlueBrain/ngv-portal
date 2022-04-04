@@ -30,7 +30,9 @@ const nextConfig = {
   },
   compress: false,
   experimental: {
-    staticPageGenerationTimeout: 120,
+    esmExternals: true,
+    staticPageGenerationTimeout: 240,
+    outputStandalone: true,
   },
   async redirects() {
     return [
