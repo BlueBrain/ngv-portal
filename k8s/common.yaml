@@ -1,0 +1,125 @@
+# NGV Portal NGINX for serving static data content.
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: ngv-portal-static-data
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 20Gi
+  storageClassName: netapp-ephemeral
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: ngv-portal-static-data
+  name: ngv-portal-static-data
+  namespace: bbp-ou-nse
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ngv-portal-static-data
+  template:
+    metadata:
+      labels:
+        app: ngv-portal-static-data
+    spec:
+      volumes:
+      - name: static-data
+        persistentVolumeClaim:
+          claimName: ngv-portal-static-data
+      containers:
+      - image: bbpgitlab.epfl.ch:5050/nse/ngv-portal:static-data-server
+        name: ngv-portal-static-data
+        imagePullPolicy: Always
+        volumeMounts:
+        - mountPath: /usr/share/nginx/html/data
+          name: static-data
+        ports:
+          - containerPort: 8000
+      imagePullSecrets:
+      - name: gitlab-nse-image-pull
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ngv-portal-static-data
+  namespace: bbp-ou-nse
+  labels:
+    app: ngv-portal-static-data
+spec:
+  ports:
+  - port: 8000
+    targetPort: 8000
+  selector:
+    app: ngv-portal-static-data
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  namespace: bbp-ou-nse
+  name: ngv-portal-static-data
+spec:
+  podSelector:
+    matchLabels:
+      app: ngv-portal-static-data
+  policyTypes:
+    - Ingress
+    - Egress
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              app: ngv-portal-dev
+  egress:
+    - ports:
+        - protocol: TCP
+          port: 53
+        - protocol: UDP
+          port: 53
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: ngv-portal
+  namespace: bbp-ou-nse
+spec:
+  secretName: ngv-portal-cert
+  issuerRef:
+    name: bbp-acme-issuer
+  dnsNames:
+  - ngv-portal.kcp.bbp.epfl.ch
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ngv-portal-static-data
+  namespace: bbp-ou-nse
+spec:
+  rules:
+  - host: ngv-portal.kcp.bbp.epfl.ch
+    http:
+      paths:
+      - pathType: Prefix
+        path: /ngv-portal/data
+        backend:
+          service:
+            name: ngv-portal-static-data
+            port:
+              number: 8000
+      - pathType: Prefix
+        path: /ngv-portal-dev/data
+        backend:
+          service:
+            name: ngv-portal-static-data
+            port:
+              number: 8000
+  tls:
+  - hosts:
+    - ngv-portal.kcp.bbp.epfl.ch
+    secretName: ngv-portal-cert
