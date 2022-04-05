@@ -44,6 +44,8 @@ build-img-prod:
     KUBERNETES_MEMORY_LIMIT: 8Gi
     KUBERNETES_CPU_REQUEST: 2
     KUBERNETES_CPU_LIMIT: 2
+  only:
+    - master
 
 build-img-dev:
   extends: .build-image-using-kaniko
@@ -61,6 +63,7 @@ build-img-dev:
     KANIKO_EXTRA_ARGS: >
       --build-arg=NEXT_PUBLIC_SENTRY_DSN
       --build-arg=NEXT_PUBLIC_SENTRY_ENV
+      --build-arg=NEXT_PUBLIC_BASE_PATH
       --build-arg=SENTRY_AUTH_TOKEN
       --build-arg=SITE_URL
       --build-arg=NEXT_PUBLIC_CLUSTER_STATIC_DATA_BASE_URL
