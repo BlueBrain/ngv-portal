@@ -17,17 +17,17 @@ spec:
         app: ngv-portal
     spec:
       containers:
-      - image: bbpgitlab.epfl.ch:5050/nse/hippocampus-model-portal:latest
+      - image: bbpgitlab.epfl.ch:5050/nse/ngv-portal:latest
         name: ngv-portal
         imagePullPolicy: Always
         ports:
           - containerPort: 8000
         resources:
           requests:
-            memory: 4Gi
-            cpu: 1
+            memory: 2Gi
+            cpu: 250m
           limits:
-            memory: 8Gi
+            memory: 4Gi
             cpu: 4
       imagePullSecrets:
       - name: gitlab-nse-image-pull

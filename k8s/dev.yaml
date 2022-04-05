@@ -17,7 +17,7 @@ spec:
         app: ngv-portal-dev
     spec:
       containers:
-      - image: bbpgitlab.epfl.ch:5050/nse/hippocampus-model-portal:dev
+      - image: bbpgitlab.epfl.ch:5050/nse/ngv-portal:dev
         name: ngv-portal-dev
         imagePullPolicy: Always
         ports:
@@ -25,7 +25,7 @@ spec:
         resources:
           requests:
             memory: 2Gi
-            cpu: 1
+            cpu: 250m
           limits:
             memory: 4Gi
             cpu: 4
