@@ -71,3 +71,5 @@ build-img-dev:
     KUBERNETES_MEMORY_LIMIT: 8Gi
     KUBERNETES_CPU_REQUEST: 2
     KUBERNETES_CPU_LIMIT: 2
+  only:
+    - develop
