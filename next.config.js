@@ -2,7 +2,7 @@ const { withSentryConfig } = require('@sentry/nextjs');
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
 
 const withBundleAnalyzer = require('@next/bundle-analyzer') ({
-  enabled: process.env.ANALYZE === "true",
+  enabled: process.env.ANALYZE === 'true',
 })
 
 
@@ -30,7 +30,9 @@ const nextConfig = {
   },
   compress: false,
   experimental: {
-    staticPageGenerationTimeout: 120,
+    esmExternals: true,
+    staticPageGenerationTimeout: 240,
+    outputStandalone: true,
   },
   async redirects() {
     return [

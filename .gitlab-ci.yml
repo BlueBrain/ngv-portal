@@ -1,15 +1,75 @@
-deploy_dev:
-  stage: deploy
-  image: curlimages/curl
+include:
+  - project: cs/gitlabci-templates
+    file: /build-image-using-kaniko.yml
+
+stages:
+  - lint
+  - build
+
+cache:
+  paths:
+  - node_modules/
+
+eslint:
+  image: node:16-alpine
+  stage: lint
+  before_script:
+    - npm ci
   script:
-    - curl -X POST -k -s -S -f -o /dev/null "$BUILD_DEV_WEBHOOK_URL"
+    - npm run lint
+
+build-img-prod:
+  extends: .build-image-using-kaniko
+  stage: build
+  variables:
+    NEXT_PUBLIC_GTM_ID: $GTM_ID
+    NEXT_PUBLIC_SENTRY_DSN: $SENTRY_DSN
+    NEXT_PUBLIC_SENTRY_ENV: prod
+    SENTRY_AUTH_TOKEN: $SENTRY_AUTH_TOKEN
+    SITE_URL: $SITE_URL_PROD
+    NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION_CODE: $GOOGLE_SITE_VERIFICATION_CODE
+    NEXT_PUBLIC_CLUSTER_STATIC_DATA_BASE_URL: $CLUSTER_STATIC_DATA_BASE_URL
+    CI_REGISTRY_IMAGE: $CI_REGISTRY/nse/ngv-portal
+    REGISTRY_IMAGE_TAG: latest
+    CI_PROJECT_DIR: /builds/nse/ngv-portal
+    KANIKO_EXTRA_ARGS: >
+      --build-arg=NEXT_PUBLIC_GTM_ID
+      --build-arg=NEXT_PUBLIC_SENTRY_DSN
+      --build-arg=NEXT_PUBLIC_SENTRY_ENV
+      --build-arg=SENTRY_AUTH_TOKEN
+      --build-arg=SITE_URL
+      --build-arg=NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION_CODE
+      --build-arg=NEXT_PUBLIC_CLUSTER_STATIC_DATA_BASE_URL
+    KUBERNETES_MEMORY_REQUEST: 4Gi
+    KUBERNETES_MEMORY_LIMIT: 8Gi
+    KUBERNETES_CPU_REQUEST: 2
+    KUBERNETES_CPU_LIMIT: 2
+  only:
+    - master
+
+build-img-dev:
+  extends: .build-image-using-kaniko
+  stage: build
+  variables:
+    NEXT_PUBLIC_SENTRY_DSN: $SENTRY_DSN
+    NEXT_PUBLIC_SENTRY_ENV: dev
+    SENTRY_AUTH_TOKEN: $SENTRY_AUTH_TOKEN
+    SITE_URL: $SITE_URL_DEV
+    NEXT_PUBLIC_BASE_PATH: /ngv-portal-dev
+    NEXT_PUBLIC_CLUSTER_STATIC_DATA_BASE_URL: $CLUSTER_STATIC_DATA_BASE_URL
+    CI_REGISTRY_IMAGE: $CI_REGISTRY/nse/ngv-portal
+    REGISTRY_IMAGE_TAG: dev
+    CI_PROJECT_DIR: /builds/nse/ngv-portal
+    KANIKO_EXTRA_ARGS: >
+      --build-arg=NEXT_PUBLIC_SENTRY_DSN
+      --build-arg=NEXT_PUBLIC_SENTRY_ENV
+      --build-arg=NEXT_PUBLIC_BASE_PATH
+      --build-arg=SENTRY_AUTH_TOKEN
+      --build-arg=SITE_URL
+      --build-arg=NEXT_PUBLIC_CLUSTER_STATIC_DATA_BASE_URL
+    KUBERNETES_MEMORY_REQUEST: 4Gi
+    KUBERNETES_MEMORY_LIMIT: 8Gi
+    KUBERNETES_CPU_REQUEST: 2
+    KUBERNETES_CPU_LIMIT: 2
   only:
     - develop
-
-deploy_prod:
-  stage: deploy
-  image: curlimages/curl
-  script:
-    - curl -X POST -k -s -S -f -o /dev/null "$BUILD_PROD_WEBHOOK_URL"
-  only:
-    - main
