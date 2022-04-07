@@ -12,6 +12,8 @@ import { antBreakpoint, basePath } from '@/config';
 import { Color } from '@/types';
 import { PageTitles } from '@/layouts/Navigation/constans';
 import ImageAndDescriptionTemplate from '@/components/ImageAndDescriptionTemplate';
+import Video, { composeSources } from '@/components/VideoPlayer';
+import ImageViewer from '@/components/ImageViewer';
 
 const primaryColor: Color = "red";
 const assetsBase = 'blood-flow/experimental-data';
@@ -70,12 +72,39 @@ export default function BloodFlowExpDataView() {
         <DataSection title="Radii of vessels at endfeet locations" className="mt-4">
           <Row gutter={32}>
             <Col xs={24} md={24}>
-              <ImageAndDescriptionTemplate
-                textKey="radii"
-                imagePath="radii.png"
-                assetsBase={assetsBase}
-                imgLegend={textContent.radiiLegend}
+              { textContent.radii }
+            </Col>
+          </Row>
+          <Row gutter={32}>
+            <Col xs={24} md={12}>
+              <ImageViewer
+                src={`${basePath}/assets/images/${assetsBase}/radii.png`}
+                alt="Radii of vessels at endfeet locations image"
               />
+              { textContent.radiiLegend }
+            </Col>
+            <Col xs={24} md={12}>
+              <div className="mt-1">
+                <Video
+                  sources={composeSources(`/${assetsBase}/radii/vasculature_4k_v5`)}
+                  muted
+                  autoplay
+                  loop
+                  defaultSize={360}
+                />
+              </div>
+              <span>{ textContent.vasculatureV5VideoLegend }</span>
+
+              <div className="mt-1">
+                <Video
+                  sources={composeSources(`/${assetsBase}/radii/vasculature_4k_v4`)}
+                  muted
+                  autoplay
+                  loop
+                  defaultSize={360}
+                />
+              </div>
+              <span>{ textContent.vasculatureV4VideoLegend }</span>
             </Col>
           </Row>
         </DataSection>
