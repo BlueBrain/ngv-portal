@@ -1538,6 +1538,10 @@ $data-section-padding-small: 0.5rem;
 
       li {
         height: 32px;
+        border-bottom: 1px solid white;
+        &:hover {
+          border-bottom-color: map-get($basePalette, "navy-4");
+        }
       }
     }
 
