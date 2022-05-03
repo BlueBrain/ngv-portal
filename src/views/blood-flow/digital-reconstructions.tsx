@@ -11,8 +11,10 @@ import textContent from '@/text-content/blood-flow/digital-reconstructions';
 import { antBreakpoint, basePath } from '@/config';
 import { Color } from '@/types';
 import { PageTitles } from '@/layouts/Navigation/constans';
+import ImageAndDescriptionTemplate from '@/components/ImageAndDescriptionTemplate';
 
 const primaryColor: Color = "red";
+const assetsBase = 'blood-flow/digital-reconstructions';
 
 export default function BloodFlowDigitalRecView() {
 
@@ -53,9 +55,15 @@ export default function BloodFlowDigitalRecView() {
       </Filters>
 
       <DataContainer>
-        <DataSection title="Placeholder">
+        <DataSection title="Mathematical modeling and Simulation of blood flow and blood pressure">
           <Row gutter={32}>
             <Col xs={24} md={24}>
+              <ImageAndDescriptionTemplate
+                textKey="mathematicalModelingAndSimulationFlowAndPressure"
+                imagePath="mathematical_model.png"
+                assetsBase={assetsBase}
+                imgLegend={textContent.mathematicalModelFigureLegend}
+              />
             </Col>
           </Row>
         </DataSection>

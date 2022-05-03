@@ -45,7 +45,7 @@ const ImageAndDescriptionTemplate: React.FC<ImageAndDescriptionTemplate> = ({
             src={`${imgBase}/${imagePath}`}
             alt={imageAlt || `${textKey} image`}
           />
-          { imgLegend }
+          <div className={styles.imageLegend}>{ imgLegend }</div>
         </div>
       </div>
 
