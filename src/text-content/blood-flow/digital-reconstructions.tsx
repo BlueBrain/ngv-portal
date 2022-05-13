@@ -1,12 +1,12 @@
 
 const textContent = {
-  pageDescriptionMeta: 'Mathematical models of cerebral microcirculation are widely used in order to run hemodynamic simulations. These models imply to combine biophysical principles with data from medical imaging. For instance, data from synchrotron radiation based X-ray tomographic microscopy data of rat somatosensory cortex was used in Reichold (2009). These models have increasingly become an obvious field of research for cerebral circulation to get the whole NGV ensemble working together. This would enable a better understanding of the anatomical principles and geometric constraint, a better prediction of cerebral blood flow and, a better characterization of metabolites exchanges from and to tissues, and this could deepen our knowledge of the mechanisms involved in the blood flow control.',
+  pageDescriptionMeta: 'Mathematical models of cerebral microcirculation are widely used in order to run hemodynamic simulations. These models imply to combine biophysical principles with data from medical imaging. For instance, data from synchrotron radiation based X-ray tomographic microscopy data of rat somatosensory cortex was used in Reichold (2009). These models have increasingly become an obvious field of research for cerebral circulation to get the whole NGV ensemble working together. This would enable a better understanding of the anatomical principles and geometric constraint, a better prediction of cerebral blood flow, a better characterization of metabolites exchanges from and to tissues, and this could deepen our knowledge of the mechanisms involved in the blood flow control.',
 
   pageDescription: (<p>
     Mathematical models of cerebral microcirculation are widely used in order to run hemodynamic simulations. These models imply to combine biophysical principles with data from medical imaging. For instance, data from synchrotron radiation based X-ray tomographic microscopy data of rat somatosensory cortex was used in <a 
     href="https://journals.sagepub.com/doi/10.1038/jcbfm.2009.58"
     target="_blank"
-    rel="noopener noreferrer">Reichold (2009)</a>. These models have increasingly become an obvious field of research for cerebral circulation to get the whole NGV ensemble working together. This would enable a better understanding of the anatomical principles and geometric constraint, a better prediction of cerebral blood flow and, a better characterization of metabolites exchanges from and to tissues, and this could deepen our knowledge of the mechanisms involved in the blood flow control.
+    rel="noopener noreferrer">Reichold (2009)</a>. These models have increasingly become an obvious field of research for cerebral circulation to get the whole NGV ensemble working together. This would enable a better understanding of the anatomical principles and geometric constraint, a better prediction of cerebral blood flow, a better characterization of metabolites exchanges from and to tissues, and this could deepen our knowledge of the mechanisms involved in the blood flow control.
   </p>),
 
   mathematicalModelingAndSimulationFlowAndPressure: (
@@ -23,7 +23,7 @@ const textContent = {
   mathematicalModelFigureLegend: (
     <small>
       <strong>Figure: </strong> 
-      Modeling blood flow in realistic vascular network:  equations solved for each section of the vasculature such as this section with a length L, a resistance R, a blood density \rho and a blood viscosity \eta.  A minimum of 3 variables should be taken into account: the area,  the pressure (P) and the flow (Q). Vascular network is represented by a graph, a collection of  nodes and an ensemble of edges that connect pairs of nodes. Between 2 black circles, sections are represented, while between 2 orange dashes, segment is highlighted.
+      Modeling blood flow in realistic vascular network:  equations solved for each section of the vasculature such as this section with a length L, a resistance R, a blood density ρ and a blood viscosity η.  A minimum of 3 variables should be taken into account: the area,  the pressure (P) and the flow (Q). Vascular network is represented by a graph, a collection of  nodes and an ensemble of edges that connect pairs of nodes. Between 2 black circles, sections are represented, while between 2 orange dashes, segment is highlighted.
     </small>
   )
 };
