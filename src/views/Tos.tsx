@@ -22,7 +22,7 @@ const TermsOfUse: React.FC = () => {
         <p>
           Here BBP provides you NGV data (collectively and as further described, the "<strong>Data</strong>"),
           which includes quantitative information or qualitative statements collected, owned by or
-          licensed to BBP in the course of its scientific work by experimentation, observation, modelling,
+          licensed to BBP in the course of its scientific work by experimentation, observation, modeling,
           interview or other methods, or information derived from existing evidence<sup>*</sup>.
           Data may be raw or primary (e.g. direct from measurement or collection) or derived from primary data for
           subsequent analysis or interpretation (e.g. cleaned up or as an extract from a larger data set), or derived
