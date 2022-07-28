@@ -230,10 +230,10 @@ const textContent = {
 
       legend: (<>
         <small>
-          <strong>Figure:</strong> The topological distance of each layer’s persistence diagram
-          compared to the bio (black continuous line) and its respective standard error (black dashed line).
-          (G, H) Validation of cumulative process surface area and volume as a function of the radial distance
-          from the soma between circuit astrocytes (orange) and bio (blue).
+          <strong>Figure:</strong> Per layer persistence diagrams overlap between the synthesized
+          and experimental astrocytes. The topological distance of each layer’s persistence diagram
+          compared with the experimental (black continuous line) and its respective standard error (black dashed line).
+          Path distance units are in microns.
         </small>
       </>),
     },
