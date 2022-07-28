@@ -174,8 +174,8 @@ export default function AnatomyValidationsView() {
             <Col span={24} className="column-count-2">{textContent.synthesizedCellValidation.topological.text}</Col>
             <Col span={24} className="mt-3 mb-2">
               <ImageViewer
-                src={`${imgBase}/validation_circuit_topologies.png`}
-                aspectRatio="4853 / 3177"
+                src={`${imgBase}/topological.png`}
+                aspectRatio="3066 / 2407 "
                 alt="Topological validation plots"
               />
             </Col>
