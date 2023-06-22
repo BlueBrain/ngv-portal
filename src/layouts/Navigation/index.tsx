@@ -42,9 +42,13 @@ export const SecondaryNav: React.FC<NavProps> = ({ canClose }) => {
   }, [router.pathname]);
   const [selectedTabId, setSelectedTabId] = React.useState<string>(initialSelectedTabId);
 
-  const handleClick = (id) => {
+  const handleClick = (item: NavItem) => {
+    const { id } = item;
+    const firstChildrenHref = item.children[0].href;
+
     if(id !== selectedTabId) {
       setSelectedTabId(id);
+      router.push(`${item.href}${firstChildrenHref}`);
     } else {
       setSelectedTabId(null);
     }
@@ -60,7 +64,7 @@ export const SecondaryNav: React.FC<NavProps> = ({ canClose }) => {
             <button
               className="top-level-btn"
               style={isActive ? { backgroundColor: item.color } : {}}
-              onClick={() => handleClick(item.id)}
+              onClick={() => handleClick(item)}
               onMouseEnter={() => !canClose && setPreviewTab(item)}
             >
               <span className="btn-text">
