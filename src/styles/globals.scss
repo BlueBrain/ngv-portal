@@ -1214,6 +1214,7 @@ $data-section-padding-small: 0.5rem;
       font-size: map-get($fontSize, "medium");
       font-weight: 700;
       text-decoration: none;
+
       &:hover {
         color: map-get($basePalette, "navy-4");
       }
@@ -1222,6 +1223,10 @@ $data-section-padding-small: 0.5rem;
 
   .top-level-btn:hover {
     color: map-get($basePalette, "white");
+  }
+
+  .top-level-btn {
+    cursor: default;
   }
 
   .secondary-nav {
