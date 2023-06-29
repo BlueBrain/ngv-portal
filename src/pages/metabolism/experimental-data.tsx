@@ -4,7 +4,6 @@ import MetabolismExpDataView from '@/views/metabolism/experimental-data';
 import textContent from '@/text-content/metabolism/experimental-data';
 import { basePath } from '@/config';
 
-
 export default function MetabolismExpDataPage() {
   return (
     <>
