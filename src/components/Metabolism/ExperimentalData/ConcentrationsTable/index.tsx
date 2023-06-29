@@ -9,13 +9,17 @@ import { downloadAsJson } from '@/utils';
 
 import styles from './styles.module.scss';
 
-// TODO: fetch this from nexus
 const data = require('@/../public/assets/files/concentration_table_full.json');
 
-type ConcentrationsData = {
-  id: string;
-  name: string;
-  value: string;
+type Indices = '#id' | 'id' | 'big_id' | 'name' | 'value' | 'references' | 'reference_info.title';
+
+type Column = {
+  dataIndex: Indices
+  title: string | ReactNode;
+  width?: number;
+}
+
+type ConcentrationsData = Record<Indices, string> & {
   references: ReactNode;
 }
 
@@ -24,16 +28,37 @@ type ReferenceInfo = {
   url: string;
 }
 
-const columns = [
-  { dataIndex: 'id' as keyof ConcentrationsData, title: 'ID', width: 150, },
-  { dataIndex: 'name' as keyof ConcentrationsData, title: 'Name', width: 250, },
-  { dataIndex: 'value' as keyof ConcentrationsData, title: 'Value', width: 120, },
-  { dataIndex: 'references' as keyof ConcentrationsData, title: 'Reference', },
+  
+const bigIdColumnTitle = (
+  <div
+    title='(format is u_ + bigg_id (if available) + compartment_id)'
+    className={styles.cursorHelp}
+  >
+    IDs using <a href="http://bigg.ucsd.edu" target="_blank" rel="noreferrer">http://bigg.ucsd.edu</a>
+  </div>
+)
+
+const columns: Column[] = [
+  { dataIndex: '#id', title: '#ID', width: 30, },
+  { dataIndex: 'id', title: 'ID', width: 150, },
+  { dataIndex: 'big_id', title: bigIdColumnTitle, width: 150, },
+  { dataIndex: 'name', title: 'Name', width: 250, },
+  { dataIndex: 'value', title: 'Value', width: 120, },
+  { dataIndex: 'references', title: 'Reference', width: 100 },
 ];
 
-const fuseOptions = {
+type FuseOptions = {
+  keys: {
+    name: Indices;
+    weight: number;
+  }[];
+}
+
+const fuseOptions: FuseOptions = {
   keys: [
+    { name: '#id', weight: 1 },
     { name: 'id', weight: 2 },
+    { name: 'big_id', weight: 1 },
     { name: 'name', weight: 1 },
     { name: 'value', weight: 0.5 },
     { name: 'reference_info.title', weight: 0.5 },
@@ -63,7 +88,6 @@ export default function MetabolismExpDataView() {
 
   return (
     <>
-      
       <Input.Search
         placeholder="Search term"
         value={searchStr}
