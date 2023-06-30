@@ -15,8 +15,6 @@ import { PageTitles } from '@/layouts/Navigation/constans';
 
 const primaryColor: Color = "purple"
 
-const imgBase = `${basePath}/assets/images/validations`;
-
 const assetsBase = 'metabolism/validations';
 const extraHtml = <div>{ textContent.supplementaryMaterialLegend }</div>;
 
@@ -58,12 +56,13 @@ export default function MetabolismValidationsView() {
       </Filters>
 
       <DataContainer>
-        <DataSection title="Concentration of molecules">
+        <DataSection title="Concentrations">
           <Row gutter={32}>
             <Col xs={24} md={24}>
               <ImageAndDescriptionTemplate
+                columnFormat
                 textKey="concentrations"
-                imagePath="concentrations.png"
+                imagePath="validations_1.png"
                 assetsBase={assetsBase}
                 extraHtml={extraHtml}
               />
@@ -71,51 +70,13 @@ export default function MetabolismValidationsView() {
           </Row>
         </DataSection>
 
-        <DataSection title="BOLD" className="mt-4">
+        <DataSection title="Michaelis constants" className="mt-4">
           <Row gutter={32}>
             <Col xs={24} md={24}>
               <ImageAndDescriptionTemplate
-                textKey="bold"
-                imagePath="bold.png"
-                assetsBase={assetsBase}
-                extraHtml={extraHtml}
-              />
-            </Col>
-          </Row>
-        </DataSection>
-
-        <DataSection title="OGI" className="mt-4">
-          <Row gutter={32}>
-            <Col xs={24} md={24}>
-              <ImageAndDescriptionTemplate
-                textKey="ogi"
-                imagePath="ogi.png"
-                assetsBase={assetsBase}
-                extraHtml={extraHtml}
-              />
-            </Col>
-          </Row>
-        </DataSection>
-
-        <DataSection title="ATP / Energy" className="mt-4">
-          <Row gutter={32}>
-            <Col xs={24} md={24}>
-              <ImageAndDescriptionTemplate
-                textKey="atp"
-                imagePath="atp.png"
-                assetsBase={assetsBase}
-                extraHtml={extraHtml}
-              />
-            </Col>
-          </Row>
-        </DataSection>
-
-        <DataSection title="Glucose" className="mt-4">
-          <Row gutter={32}>
-            <Col xs={24} md={24}>
-              <ImageAndDescriptionTemplate
-                textKey="glucose"
-                imagePath="glucose.png"
+                columnFormat
+                textKey="michaelisConstants"
+                imagePath="validations_2.png"
                 assetsBase={assetsBase}
                 extraHtml={extraHtml}
               />
@@ -127,8 +88,9 @@ export default function MetabolismValidationsView() {
           <Row gutter={32}>
             <Col xs={24} md={24}>
               <ImageAndDescriptionTemplate
+                columnFormat
                 textKey="lactate"
-                imagePath="lactate.png"
+                imagePath="validations_3.png"
                 assetsBase={assetsBase}
                 extraHtml={extraHtml}
               />
@@ -140,14 +102,31 @@ export default function MetabolismValidationsView() {
           <Row gutter={32}>
             <Col xs={24} md={24}>
               <ImageAndDescriptionTemplate
+                columnFormat
                 textKey="nadh"
-                imagePath="nadh.png"
+                imagePath="validations_4.png"
                 assetsBase={assetsBase}
                 extraHtml={extraHtml}
               />
             </Col>
           </Row>
         </DataSection>
+
+        <DataSection title="BOLD signal" className="mt-4">
+          <Row gutter={32}>
+            <Col xs={24} md={24}>
+              <ImageAndDescriptionTemplate
+                columnFormat
+                textKey="boldSignal"
+                imagePath="validations_5.png"
+                assetsBase={assetsBase}
+                extraHtml={extraHtml}
+              />
+            </Col>
+          </Row>
+        </DataSection>
+
+        
       </DataContainer>
     </>
   );
