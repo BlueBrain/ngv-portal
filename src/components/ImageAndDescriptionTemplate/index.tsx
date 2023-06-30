@@ -6,7 +6,7 @@ import { basePath } from '@/config';
 import styles from './styles.module.scss';
 
 type ImageAndDescriptionTemplate = {
-  textKey: string;
+  textKey?: string;
   imagePath: string;
   imageAlt?: string;
   assetsBase: string;
@@ -16,7 +16,7 @@ type ImageAndDescriptionTemplate = {
 }
 
 const ImageAndDescriptionTemplate: React.FC<ImageAndDescriptionTemplate> = ({
-  textKey,
+  textKey = '',
   imagePath,
   imageAlt,
   assetsBase,
