@@ -56,24 +56,60 @@ export default function MetabolismPredictionsView() {
       </Filters>
 
       <DataContainer>
-        <DataSection title="Glycolytic oscillations">
+        <DataSection title="Adenylate Energy Charge (AEC) in young and old neurons and astrocytes">
           <Row gutter={32}>
             <Col xs={24} md={24}>
               <ImageAndDescriptionTemplate
-                textKey="oscillation"
-                imagePath="oscillation.png"
+                columnFormat
+                imagePath="predictions_energy_1.png"
                 assetsBase={assetsBase}
               />
             </Col>
           </Row>
         </DataSection>
 
-        <DataSection title="Energy consumption" className="mt-4">
+        <DataSection title="Main energy consumption: Na/K-ATPase rate of ATP use" className="mt-4">
           <Row gutter={32}>
             <Col xs={24} md={24}>
               <ImageAndDescriptionTemplate
-                textKey="energy"
-                imagePath="energy.png"
+                columnFormat
+                imagePath="predictions_energy_2.png"
+                assetsBase={assetsBase}
+              />
+            </Col>
+          </Row>
+        </DataSection>
+
+        <DataSection title="Ratio of astrocyte to neuron Na/K pump rate" className="mt-4">
+          <Row gutter={32}>
+            <Col xs={24} md={24}>
+              <ImageAndDescriptionTemplate
+                columnFormat
+                imagePath="predictions_energy_3.png"
+                assetsBase={assetsBase}
+              />
+            </Col>
+          </Row>
+        </DataSection>
+
+        <DataSection title="Example metabolite level profiles in response to kinetic parameter perturbation and calculation of metabolic sensitivity to kinetic parameter perturbations" className="mt-4">
+          <Row gutter={32}>
+            <Col xs={24} md={24}>
+              <ImageAndDescriptionTemplate
+                columnFormat
+                imagePath="predictions_sensitivity_1.png"
+                assetsBase={assetsBase}
+              />
+            </Col>
+          </Row>
+        </DataSection>
+
+        <DataSection title="Metabolic responsivity to kinetic parameter perturbations" className="mt-4">
+          <Row gutter={32}>
+            <Col xs={24} md={24}>
+              <ImageAndDescriptionTemplate
+                columnFormat
+                imagePath="predictions_sensitivity_2.png"
                 assetsBase={assetsBase}
               />
             </Col>
