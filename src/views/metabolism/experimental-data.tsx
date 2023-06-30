@@ -12,6 +12,7 @@ import ConcentrationsTable from '@/components/Metabolism/ExperimentalData/Concen
 import { antBreakpoint, basePath } from '@/config';
 import { Color } from '@/types';
 import { PageTitles } from '@/layouts/Navigation/constans';
+import MetabolismDiffEquationsTable from '@/components/Metabolism/ExperimentalData/DifferentialEquationsTable';
 
 const primaryColor: Color = "purple"
 
@@ -59,6 +60,15 @@ export default function MetabolismExpDataView() {
             <Col xs={24} md={24}>{textContent.concentrationsOfMolecules}</Col>
             <Col xs={24} md={24}>
               <ConcentrationsTable />
+            </Col>
+          </Row>
+        </DataSection>
+
+        <DataSection title="System of differential equations for coupled simulation of metabolism, electrophysiology and blood flow" className="mt-4">
+          <Row gutter={32}>
+            <Col xs={24} md={24}>{textContent.diffEquations}</Col>
+            <Col xs={24} md={24}>
+            <MetabolismDiffEquationsTable />
             </Col>
           </Row>
         </DataSection>
