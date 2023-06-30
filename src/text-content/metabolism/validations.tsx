@@ -8,56 +8,36 @@ const textContent = {
     To reproduce figures please refer to supplementary <a href="#">material</a>
   </p>),
 
-  concentrations: (<div>
-    <p>
-    The figure shows (at natural log scale) comparison of simulated concentrations (orange) to the values reported in the literature (blue). Only a selection of the molecules of the most common interest is shown.
-    </p>
-  </div>),
-  
-  bold: (<div>
-    <p>
-      Blood-Oxygen-Level-Dependent signal.
-    </p>
-    <p>
-      BOLD signal measurement is a method in functional magnetic resonance imaging to evaluate neuronal activity in different brain areas based on the oxygenation levels of haemoglobin. The background theory of this method is that increased neuronal activity is associated with higher oxygen input to neurons from the blood.
-    </p>
-  </div>),
+  concentrations: (<p>
+    Simulated concentrations and the literature data {' '}
+    <a href="https://pubmed.ncbi.nlm.nih.gov/34654818/" target="_blank" rel="noreferrer">Ding et. al 2021</a>
+    {' '} and <a href="https://pubmed.ncbi.nlm.nih.gov/34858137" target="_blank" rel="noreferrer">
+    {' '} Shichkova et. al 2021</a>.
+  </p>),
 
-  ogi: (<div>
-    <p>
-      Oxygen Glucose Index.
-    </p>
-    <p>
-      OGI is a measure of relative contributions of oxidative and non-oxidative pathways to glucose consumption. 
-    </p>
-  </div>),
+  michaelisConstants: (<p>
+    Comparison of ratios of model K<sub>M</sub> to average mammalian data K<sub>M</sub> for the same pairs enzyme-metabolite to min/mean and max/mean ratios of that mammalian data for the same pairs enzyme-metabolite
+  </p>),
 
-  atp: (<div>
-    <p>
-      Neuronal energy budget on different type of processes as compared to the literature (please see the paper's main text for details).
-    </p>
-  </div>),
+  lactate: (<p>
+    Lactate dynamics compared to simulation of the other model from the literature
+    {' '} <a href="https://pubmed.ncbi.nlm.nih.gov/25719367/" target="_blank" rel="noreferrer">Jolivet et. al 2015</a>.
+  </p>),
 
-  glucose: (<div>
-    <p>
-      Glucose is one of the key energy substrates.
-    </p>
-    <p>
-      The figure shows glucose concentration dynamics in response to neuronal stimulation.
-    </p>
-  </div>),
+  nadh: (<p>
+    NADH dynamics in neuronal mitochondria and astrocyte cytosol compared to literature
+    {' '} <a href="https://pubmed.ncbi.nlm.nih.gov/25719367/" target="_blank" rel="noreferrer">Jolivet et. al 2015</a>.
+  </p>),
 
-  lactate: (<div>
-    <p>
-      Lactate role in the brain is getting a lot of interest for both its energy substrate and regulatory roles (please see the paper's main text for details). The figure shows lactate concentration dynamics in response to neuronal stimulation.
-    </p>
-  </div>),
+  boldSignal: (<p>
+    Blood-oxygen-level-dependent (BOLD) signal dynamics compared to literature. Reference simulations are based on 
+    {' '} <a href="https://pubmed.ncbi.nlm.nih.gov/25719367/" target="_blank" rel="noreferrer">Jolivet et. al 2015</a>
+    {' '} and
+    {' '} <a href="https://pubmed.ncbi.nlm.nih.gov/28271954/" target="_blank" rel="noreferrer">Winter et. al 2017</a>.
+    {' '} Reference data is reproduced from
+    {' '} <a href="https://pubmed.ncbi.nlm.nih.gov/33836602/" target="_blank" rel="noreferrer">Jung et. al 2021</a>.
+  </p>),
 
-  nadh: (<div>
-    <p>
-      NADH (reduced nicotinamide adenine dinucleotide) is an important reducing agent in biochemical reactions. Enzymes catalysing reactions involving NADH are attractive drug targets. 
-    </p>
-  </div>),
 };
 
 export default textContent;
