@@ -14,6 +14,7 @@ import SimulationResults from '@/components/Metabolism/DigitalReconstruction/Sim
 import { antBreakpoint, basePath } from '@/config';
 import { Color } from '@/types';
 import { PageTitles } from '@/layouts/Navigation/constans';
+import ImageAndDescriptionTemplate from '@/components/ImageAndDescriptionTemplate';
 
 const primaryColor: Color = "purple"
 
@@ -76,6 +77,18 @@ export default function MetabolismDigitalRecView() {
           <Row gutter={32}>
             <Col xs={24} md={24}>
               <SimulationResults />
+            </Col>
+          </Row>
+        </DataSection>
+
+        <DataSection title="Workflow components" className="mt-4">
+          <Row gutter={32}>
+            <Col xs={24} md={24}>
+              <ImageAndDescriptionTemplate
+                columnFormat
+                imagePath="MOPRO-659_Workflow_Preview_230525.png"
+                assetsBase={'metabolism/digital-reconstructions'}
+              />
             </Col>
           </Row>
         </DataSection>
