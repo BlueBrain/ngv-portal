@@ -1,37 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Select } from 'antd';
 
 import textContent from '@/text-content/metabolism/digital-reconstructions';
 import ImageViewer from '@/components/ImageViewer';
-import { basePath } from '@/config';
-import ImageAndDescriptionTemplate from '@/components/ImageAndDescriptionTemplate';
+import { basePath, clusterStaticDataBaseUrl } from '@/config';
+import { Option } from '@/types';
 
-const assetsBase = 'metabolism/digital-reconstructions';
+import style from './styles.module.scss';
+
+// obtain the variables to choose from
+const concentrations = require('@/../public/assets/files/concentration_table_full.json');
+const variableOptions: Option[] = concentrations.map((concentration) => (
+  {value: concentration.id, label: concentration.id}
+));
+
+const clusterAssetsBase = `${clusterStaticDataBaseUrl}/metabolism/digital-reconstruction/simulations`;
+const fixImagePath = 'fig_VNeu.png';
 
 export default function SimulationResults() {
+  const [selectedVariable, setSelectedVariable] = useState('ATP_n');
+  const imagePath = `fig_${selectedVariable}.png`;
+
   return (
     <>
       <h4>{textContent.simulationResults}</h4>
 
-      <p className="mt-4"></p>
-      <ImageAndDescriptionTemplate
-        textKey="simSynapticMetabolism"
-        imagePath="simulation/figure_placeholder_sim_synaptic_metabolism.png"
-        assetsBase={assetsBase}
+      <Select
+        showSearch
+        placeholder="Select variable"
+        defaultValue={'ATP_n'}
+        options={variableOptions}
+        filterOption={(input, option) =>
+          (option?.label ?? '').toLowerCase().includes(input.toLowerCase())
+        }
+        onSelect={setSelectedVariable}
+        optionFilterProp="children"
+        className={style.selector}
       />
 
-      <p className="mt-4"></p>
-      <ImageAndDescriptionTemplate
-        textKey="simMetabolismOneAP"
-        imagePath="simulation/sim_metabolism_one_AP.png"
-        assetsBase={assetsBase}
-      />
-
-      <p className="mt-4"></p>
-      <ImageAndDescriptionTemplate
-        textKey="simMetabolismSpikes"
-        imagePath="simulation/sim_metabolism_spikes.png"
-        assetsBase={assetsBase}
-      />
+      <div className={style.comparatorContainer}>
+        <ImageViewer
+          src={`${clusterAssetsBase}/${fixImagePath}`}
+          alt={''}
+          className={style.img}
+        />
+        <ImageViewer
+          src={`${clusterAssetsBase}/${imagePath}`}
+          alt={''}
+          className={style.img}
+        />
+      </div>
     </>
   );
 }
