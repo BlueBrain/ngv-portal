@@ -23,6 +23,10 @@ const textContent = {
   simMetabolismOneAP: (<p>The figure shows concentration dynamics as a percent deviation from the steady state for the selection of the key metabolites in response to a single action potential.</p>),
   
   simMetabolismSpikes: (<p>The figure shows concentration dynamics as a percent deviation from the steady state  for the selection of the key metabolites in response to a train of action potentials.</p>),
+
+  rateFnYoung: (<p>Rate functions in young state.</p>),
+
+  rateFnAged: (<p>Rate functions with coefficients for scaling enzyme and transporter concentrations  according to the aged brain RNA fold changes.</p>),
 };
 
 export default textContent;
