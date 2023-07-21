@@ -15,6 +15,8 @@ import { antBreakpoint, basePath } from '@/config';
 import { Color } from '@/types';
 import { PageTitles } from '@/layouts/Navigation/constans';
 import ImageAndDescriptionTemplate from '@/components/ImageAndDescriptionTemplate';
+import RatesFunctionsYoungTable from '@/components/Metabolism/DigitalReconstruction/RatesFunctionsYoungTable';
+import RatesFunctionsAgedTable from '@/components/Metabolism/DigitalReconstruction/RatesFunctionsAgedTable';
 
 const primaryColor: Color = "purple"
 
@@ -89,6 +91,24 @@ export default function MetabolismDigitalRecView() {
                 imagePath="MOPRO-659_Workflow_Preview_230525.png"
                 assetsBase={'metabolism/digital-reconstructions'}
               />
+            </Col>
+          </Row>
+        </DataSection>
+
+        <DataSection title="Rate equations in young state" className="mt-4">
+          <Row gutter={32}>
+            <Col xs={24} md={24}>{textContent.rateFnYoung}</Col>
+            <Col xs={24} md={24}>
+              <RatesFunctionsYoungTable />
+            </Col>
+          </Row>
+        </DataSection>
+
+        <DataSection title="Rate equations in aged state" className="mt-4">
+          <Row gutter={32}>
+            <Col xs={24} md={24}>{textContent.rateFnAged}</Col>
+            <Col xs={24} md={24}>
+              <RatesFunctionsAgedTable />
             </Col>
           </Row>
         </DataSection>
