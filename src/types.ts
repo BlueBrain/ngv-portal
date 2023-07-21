@@ -11,3 +11,8 @@ export type Color =
   | 'green'
   | 'grey'
   | 'orange';
+
+export type Option = {
+  value: string;
+  label: string;
+};
