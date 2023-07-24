@@ -10,15 +10,15 @@ import styles from './styles.module.scss';
 
 const data = require('@/../public/assets/files/metabolism/digital-reconstructions/reconstruction_params.json');
 
-type Indices = 'id' | 'parameter' | 'value';
+type Index = 'id' | 'parameter' | 'value';
 
 type Column = {
-  dataIndex: Indices;
+  dataIndex: Index;
   title: string | ReactNode;
   width?: number;
 }
 
-type ReconstructionParametersData = Record<Indices, string>;
+type ReconstructionParametersData = Record<Index, string>;
   
 const columns: Column[] = [
   { dataIndex: 'parameter', title: 'Parameter', width: 30, },
@@ -27,7 +27,7 @@ const columns: Column[] = [
 
 type FuseOptions = {
   keys: {
-    name: Indices;
+    name: Index;
     weight: number;
   }[];
 }
