@@ -6,9 +6,11 @@
   @media (max-width: $ant-breakpoint-sm) {
     background-color: map-get($basePalette, "grey-1");
   }
+  white-space: pre-wrap;
 }
 .responsiveTablEven {
   background-color: map-get($basePalette, "white");
+  white-space: pre-wrap;
 }
 
 .highlightBackground {

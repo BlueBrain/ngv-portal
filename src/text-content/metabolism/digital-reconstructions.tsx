@@ -24,6 +24,8 @@ const textContent = {
   
   simMetabolismSpikes: (<p>The figure shows concentration dynamics as a percent deviation from the steady state  for the selection of the key metabolites in response to a train of action potentials.</p>),
 
+  recParams: (<p>Parameters were collected from the literature and databases (data sources are listed in the supplementary file 2 of the paper) and optimised as described in the paper. Units are consistent with the parameter/variable type and the role of those parameters in the equations. Vmax type of parameter is mM/s; Km, Ki, Kact are mM; membrane potentials are in mV; concentrations are in mM. Please refer to the rate equations in case of doubt regarding the parameter type.</p>),
+
   rateFnYoung: (<p>Rate functions in young state.</p>),
 
   rateFnAged: (<p>Rate functions with coefficients for scaling enzyme and transporter concentrations  according to the aged brain RNA fold changes.</p>),

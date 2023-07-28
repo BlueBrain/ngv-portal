@@ -15,6 +15,7 @@ import { antBreakpoint, basePath } from '@/config';
 import { Color } from '@/types';
 import { PageTitles } from '@/layouts/Navigation/constans';
 import ImageAndDescriptionTemplate from '@/components/ImageAndDescriptionTemplate';
+import ReconstructionParametersTable from '@/components/Metabolism/DigitalReconstruction/ReconstructionParametersTable';
 import RatesFunctionsYoungTable from '@/components/Metabolism/DigitalReconstruction/RatesFunctionsYoungTable';
 import RatesFunctionsAgedTable from '@/components/Metabolism/DigitalReconstruction/RatesFunctionsAgedTable';
 
@@ -91,6 +92,15 @@ export default function MetabolismDigitalRecView() {
                 imagePath="MOPRO-659_Workflow_Preview_230525.png"
                 assetsBase={'metabolism/digital-reconstructions'}
               />
+            </Col>
+          </Row>
+        </DataSection>
+
+        <DataSection title="Reconstruction parameters" className="mt-4">
+          <Row gutter={32}>
+            <Col xs={24} md={24}>{textContent.recParams}</Col>
+            <Col xs={24} md={24}>
+              <ReconstructionParametersTable />
             </Col>
           </Row>
         </DataSection>
