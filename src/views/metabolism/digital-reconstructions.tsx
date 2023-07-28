@@ -9,15 +9,15 @@ import DataContainer from '@/components/DataContainer';
 import DataSection from '@/components/DataSection';
 import textContent from '@/text-content/metabolism/digital-reconstructions';
 import ModelComponents from '@/components/Metabolism/DigitalReconstruction/ModelComponents';
-import ModelOverview from '@/components/Metabolism/DigitalReconstruction/ModelOverview';
 import SimulationResults from '@/components/Metabolism/DigitalReconstruction/SimulationResults';
-import { antBreakpoint, basePath } from '@/config';
+import { antBreakpoint, basePath, clusterStaticDataBaseUrl } from '@/config';
 import { Color } from '@/types';
 import { PageTitles } from '@/layouts/Navigation/constans';
 import ImageAndDescriptionTemplate from '@/components/ImageAndDescriptionTemplate';
 import ReconstructionParametersTable from '@/components/Metabolism/DigitalReconstruction/ReconstructionParametersTable';
 import RatesFunctionsYoungTable from '@/components/Metabolism/DigitalReconstruction/RatesFunctionsYoungTable';
 import RatesFunctionsAgedTable from '@/components/Metabolism/DigitalReconstruction/RatesFunctionsAgedTable';
+import Video, { composeSources } from '@/components/VideoPlayer';
 
 const primaryColor: Color = "purple"
 
@@ -63,7 +63,12 @@ export default function MetabolismDigitalRecView() {
         <DataSection title="Model overview">
           <Row gutter={32}>
             <Col xs={24} md={24}>
-              <ModelOverview />
+              <Video
+                sources={composeSources('/metabolism/digital-reconstruction/video/Cyrille_ngv_metabolism_4k_v1')}
+                muted
+                defaultSize={720}
+                poster={`${clusterStaticDataBaseUrl}/metabolism/digital-reconstruction/video/Cyrille_ngv_metabolism_4k_v1-poster.png`}
+              />
             </Col>
           </Row>
         </DataSection>
