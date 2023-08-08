@@ -10,7 +10,7 @@ import DataSection from '@/components/DataSection';
 import textContent from '@/text-content/metabolism/digital-reconstructions';
 import ModelComponents from '@/components/Metabolism/DigitalReconstruction/ModelComponents';
 import SimulationResults from '@/components/Metabolism/DigitalReconstruction/SimulationResults';
-import { antBreakpoint, basePath, clusterStaticDataBaseUrl } from '@/config';
+import { antBreakpoint, basePath, staticDataBaseUrl } from '@/config';
 import { Color } from '@/types';
 import { PageTitles } from '@/layouts/Navigation/constans';
 import ImageAndDescriptionTemplate from '@/components/ImageAndDescriptionTemplate';
@@ -67,7 +67,7 @@ export default function MetabolismDigitalRecView() {
                 sources={composeSources('/metabolism/digital-reconstruction/video/Cyrille_ngv_metabolism_4k_v1')}
                 muted
                 defaultSize={720}
-                poster={`${clusterStaticDataBaseUrl}/metabolism/digital-reconstruction/video/Cyrille_ngv_metabolism_4k_v1-poster.png`}
+                poster={`${staticDataBaseUrl}/metabolism/digital-reconstruction/video/Cyrille_ngv_metabolism_4k_v1-poster.png`}
               />
             </Col>
           </Row>

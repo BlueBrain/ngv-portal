@@ -3,7 +3,7 @@ import { Select } from 'antd';
 
 import textContent from '@/text-content/metabolism/digital-reconstructions';
 import ImageViewer from '@/components/ImageViewer';
-import { basePath, clusterStaticDataBaseUrl } from '@/config';
+import { staticDataBaseUrl } from '@/config';
 import { Option } from '@/types';
 
 import style from './styles.module.scss';
@@ -14,7 +14,7 @@ const variableOptions: Option[] = concentrations.map((concentration) => (
   {value: concentration.id, label: concentration.id}
 ));
 
-const clusterAssetsBase = `${clusterStaticDataBaseUrl}/metabolism/digital-reconstruction/simulations`;
+const clusterAssetsBase = `${staticDataBaseUrl}/metabolism/digital-reconstruction/simulations`;
 const fixImagePath = 'fig_VNeu.png';
 
 export default function SimulationResults() {
