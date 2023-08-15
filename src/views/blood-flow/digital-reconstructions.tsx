@@ -55,11 +55,11 @@ export default function BloodFlowDigitalRecView() {
       </Filters>
 
       <DataContainer>
-        <DataSection title="Mathematical modeling and Simulation of blood flow and blood pressure">
+        <DataSection title="Mathematical framework of the blood-flow model and Simulation of blood flow and blood pressure">
           <Row gutter={32}>
             <Col xs={24} md={24}>
               <ImageAndDescriptionTemplate
-                textKey="mathematicalModelingAndSimulationFlowAndPressure"
+                textKey="mathematicalFramework"
                 imagePath="mathematical_model.png"
                 assetsBase={assetsBase}
                 imgLegend={textContent.mathematicalModelFigureLegend}
@@ -68,9 +68,16 @@ export default function BloodFlowDigitalRecView() {
           </Row>
         </DataSection>
 
-        <DataSection title="Placeholder 2" className="mt-4">
+        <DataSection title="Stochastic simulation of endfeet activity" className="mt-4">
           <Row gutter={32}>
             <Col xs={24} md={24}>
+              <ImageAndDescriptionTemplate
+                textKey="stochasticSimulation"
+                imagePath="ou_process.png"
+                assetsBase={assetsBase}
+                imgLegend={textContent.stochasticSimulationFigureLegend}
+                columnFormat={true}
+              />
             </Col>
           </Row>
         </DataSection>
