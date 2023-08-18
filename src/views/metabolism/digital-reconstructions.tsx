@@ -8,7 +8,7 @@ import InfoBox from '@/components/InfoBox';
 import DataContainer from '@/components/DataContainer';
 import DataSection from '@/components/DataSection';
 import textContent from '@/text-content/metabolism/digital-reconstructions';
-import ModelComponents from '@/components/Metabolism/DigitalReconstruction/ModelComponents';
+import CollabNotebook from '@/components/Metabolism/DigitalReconstruction/CollabNotebook';
 import SimulationResults from '@/components/Metabolism/DigitalReconstruction/SimulationResults';
 import { antBreakpoint, basePath, staticDataBaseUrl } from '@/config';
 import { Color } from '@/types';
@@ -73,10 +73,10 @@ export default function MetabolismDigitalRecView() {
           </Row>
         </DataSection>
 
-        <DataSection title="Model components" className="mt-4">
+        <DataSection title="Executable model to run and modify it online" className="mt-4">
           <Row gutter={32}>
             <Col xs={24} md={24}>
-              <ModelComponents />
+              <CollabNotebook />
             </Col>
           </Row>
         </DataSection>
