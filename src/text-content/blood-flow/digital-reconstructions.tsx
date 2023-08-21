@@ -9,13 +9,13 @@ const textContent = {
     rel="noopener noreferrer">Reichold (2009)</a>. These models have increasingly become an obvious field of research for cerebral circulation to get the whole NGV ensemble working together. This would enable a better understanding of the anatomical principles and geometric constraint, a better prediction of cerebral blood flow, a better characterization of metabolites exchanges from and to tissues, and this could deepen our knowledge of the mechanisms involved in the blood flow control.
   </p>),
 
-  mathematicalModelingAndSimulationFlowAndPressure: (
+  mathematicalFramework: (
     <>
       <p>
-        The blood flow is considered here as an incompressible viscous fluid modeled by the incompressible Euler equation with deformable walls. In this model, the independent variables are blood pressure, blood flow and area, closed by a linear tube law parametrized by the compliance of the vessels. This in order to find the boundary conditions by using the frequency solution. In this case, the vessel’s diameter depends linearly on the blood flow and blood pressure. If there is a non-linear regime, a static simulation is performed. Nevertheless, in terms of static solution we use for simulation, there is no compliance.
+        The vasculature is composed by many interconnected vessels and each of them is represented by a tube with circular section A(t) = π r(t)^2, where r(t) is the radius. The vessel section A(t) can change over time due to the effect of transmural pressure and endfeet, but it is considered constant along the longitudinal axis.
       </p>
       <p>
-        This model can be linearized to yield a wave equation for the blood pressure, from which the blood flow can be deduced. One of the simplest ways to solve a linear equation is by Fourier transform, giving explicit solutions on each edge (section), with two boundary conditions to be determined by imposing conservation of blood flow and continuity of blood pressure at each node (branching point). These boundary conditions can be written in terms of a node to node matrix, whose inverse is the transfer function of the vasculature between any two branching points.
+        The blood is considered as an incompressible viscous fluid that flows inside a vessel. We define the blood velocity u(t, x) and the pressure p(t, x) as the average velocity and pressure values computed over the section A(t). Thanks to this assumption, the system can be considered one-dimensional, i.e. we only consider the longitudinal dimension x. Once the pressure is computed, we can retrieve the flux vector. We solve equations of our model at each time point under different boundary conditions and different values of vessels radii. In brief, our approach to compute boundary conditions can be described as follows (1) Select the entry nodes i.e. the nodes where the blood is injected (2) Define a model for the time dependent injected flow inside the entry nodes (3) Compute the exit flows i.e. the amount of blood leaving the vasculature from the exit nodes. 
       </p>
     </>
   ),
@@ -23,9 +23,24 @@ const textContent = {
   mathematicalModelFigureLegend: (
     <small>
       <strong>Figure: </strong> 
-      Modeling blood flow in realistic vascular network:  equations solved for each section of the vasculature such as this section with a length L, a resistance R, a blood density ρ and a blood viscosity η.  A minimum of 3 variables should be taken into account: the area,  the pressure (P) and the flow (Q). Vascular network is represented by a graph, a collection of  nodes and an ensemble of edges that connect pairs of nodes. Between 2 black circles, sections are represented, while between 2 orange dashes, segment is highlighted.
+      Schematic representation of realistic microvascular network sample. The vasculature network is represented by a graph, a collection of nodes and an ensemble of edges that connect pairs of nodes on which the endfeet are placed. Between 2 black circles, sections (where bifurcation start or end) are represented, while between 2 orange dashes, segment is highlighted. Equations to compute blood flow and pressure are solved at each time point and each vessels radii under different  boundary conditions. The blood pressure is computed on each node of the vasculature, while the flow is computed on each edge.
     </small>
-  )
+  ),
+
+  stochasticSimulation: (
+    <>
+      <p>
+        We used an Ornstein Uhlenbeck (OU) process in order to model the dynamics of the radius of a vessel due to vasodilation. It is a stochastic process that always reverses to the resting state. We then introduce a reflecting boundary on the resting state such that the radius can never go below it. Since we decided to focus only on vasodilation, we introduced the reflecting barrier in order to prevent the process from becoming negative. The OU process is a common stochastic process, widely used in the literature and simple in terms of mathematical tractability. Furthermore, this is the only stochastic Gaussian process that is also Markovian and stationary.
+      </p>
+    </>
+  ),
+
+  stochasticSimulationFigureLegend: (
+    <small>
+      <strong>Figure: </strong> 
+      Model calibration: in this model we have 2 parameters, sigma and kappa for every vessels. Kappa stands for speed of reversion to the RS, while square sigma stands for the variance of the noise. On the left, sample path of a Reflected OU process with T = 1, kappa = 5 and sigma = 4. On the right: comparison of the asymptotic OU and ROU distributions. We simulated 5000 ROU paths and created an histogram with the values of XT at T = 1.
+    </small>
+  ),
 };
 
 export default textContent;
