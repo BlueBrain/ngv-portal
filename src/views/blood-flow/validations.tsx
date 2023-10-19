@@ -12,6 +12,7 @@ import textContent from '@/text-content/blood-flow/validations';
 import { Color } from '@/types';
 import { PageTitles } from '@/layouts/Navigation/constans';
 import ImageAndDescriptionTemplate from '@/components/ImageAndDescriptionTemplate';
+import CollabNotebook from '@/components/BloodFlow/CollabNotebook';
 
 const primaryColor: Color = "red";
 
@@ -165,6 +166,14 @@ export default function BloodFlowValidationsView() {
                 assetsBase={assetsBase}
                 columnFormat
               />
+            </Col>
+          </Row>
+        </DataSection>
+
+        <DataSection title="Executable model to run and modify it online" className="mt-4">
+          <Row gutter={32}>
+            <Col xs={24} md={24}>
+              <CollabNotebook />
             </Col>
           </Row>
         </DataSection>
