@@ -35,8 +35,3 @@ export const feedbackUrl = process.env.NEXT_PUBLIC_FEEDBACK_URL;
 export const gtm = {
   id: process.env.NEXT_PUBLIC_GTM_ID,
 };
-
-export const nexus = {
-  url: process.env.NEXT_PUBLIC_NEXUS_URL,
-  token: process.env.NEXT_PUBLIC_NEXUS_TOKEN,
-};
