@@ -10,9 +10,7 @@ import { isServer } from '../config';
 import '../styles/globals.scss';
 
 
-if (isServer) {
-  require('abort-controller/polyfill');
-} else {
+if (!isServer) {
   smoothscroll.polyfill();
 
   // Don't use smooth scrolling for Firefox as in some cases it's causing app not to scroll to the top
