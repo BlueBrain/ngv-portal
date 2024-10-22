@@ -3,7 +3,6 @@ import Head from 'next/head';
 import smoothscroll from 'smoothscroll-polyfill';
 
 import MainLayout from '../layouts/MainLayout';
-import Feedback from '../components/Feedback';
 import GoogleAnalytics from '../components/GoogleAnalytics';
 import { isServer } from '../config';
 
@@ -27,7 +26,6 @@ function App({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <Feedback />
       <GoogleAnalytics />
 
       <MainLayout>
