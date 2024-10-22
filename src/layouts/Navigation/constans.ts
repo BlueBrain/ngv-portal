@@ -16,7 +16,7 @@ export enum PageTitles {
   ANATOMY = 'Anatomy',
   METABOLISM_UNITARY_MODEL = 'Metabolism - Unitary Model',
   BLOOD_FLOW = 'Blood flow',
-  
+
   EXPERIMENTAL_DATA = 'Experimental data',
   RECONSTRUCION_DATA = 'Reconstruction data',
   DIGITAL_RECONSTRUCTIONS = 'Digital reconstructions',
