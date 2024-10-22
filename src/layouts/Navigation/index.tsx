@@ -48,7 +48,7 @@ export const SecondaryNav: React.FC<NavProps> = ({ canClose }) => {
 
     if(id !== selectedTabId) {
       setSelectedTabId(id);
-      router.push(`${item.href}${firstChildrenHref}`);
+      // router.push(`${item.href}${firstChildrenHref}`);
     } else {
       setSelectedTabId(null);
     }
