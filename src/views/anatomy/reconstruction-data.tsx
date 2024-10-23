@@ -159,7 +159,7 @@ export default function AnatomyRecDataView() {
             <Button
               size="small"
               type="primary"
-              href="https://bbp.epfl.ch/ngv-viewer"
+              href="/ngv-viewer"
               target="_blank"
               rel="noopener noreferrer"
               icon={<LinkOutlined />}
