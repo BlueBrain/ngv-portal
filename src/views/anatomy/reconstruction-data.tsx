@@ -200,7 +200,7 @@ export default function AnatomyRecDataView() {
           </Row>
           <div className="text-right mt-3">
             <Button
-              href={`${assetsBase}/vasculature-graph-model/raw_pruned_cap_circuit_coo_inscribed_spec_atlas_translated.h5`}
+              href={`${assetsBase}/vasculature-graph-model/raw_pruned_cap_circuit_coo_inscribed_spec_atlas_translated.h5.tar.xz`}
               type="primary"
               size="small"
               icon={<DownloadOutlined />}
@@ -244,7 +244,7 @@ export default function AnatomyRecDataView() {
           </Row>
           <div className="text-right mt-3">
             <Button
-              href={`${assetsBase}/overlapping-microdomains/overlapping_microdomains.h5`}
+              href={`${assetsBase}/overlapping-microdomains/overlapping_microdomains.h5.tar.xz`}
               type="primary"
               size="small"
               icon={<DownloadOutlined />}
