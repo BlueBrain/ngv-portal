@@ -142,7 +142,7 @@ export default function AnatomyExpDataView() {
           </Row>
           <div className="text-right mt-3">
             <Button
-              href={`${assetsBase}/vasculature-data/raw-vasculature-data.vtk`}
+              href={`${assetsBase}/vasculature-data/raw-vasculature-data.vtk.tar.xz`}
               type="primary"
               size="small"
               icon={<DownloadOutlined />}
