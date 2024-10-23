@@ -285,7 +285,7 @@ export default function AnatomyRecDataView() {
           </Row>
           <div className="text-right mt-3">
             <Button
-              href={`${assetsBase}/endfeet-data/endfeet_data.json`}
+              href={`${assetsBase}/endfeet-data/endfeet_data.json.tar.xz`}
               type="primary"
               size="small"
               icon={<DownloadOutlined />}
