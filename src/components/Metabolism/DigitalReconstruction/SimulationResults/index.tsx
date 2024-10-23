@@ -14,7 +14,7 @@ const variableOptions: Option[] = concentrations.map((concentration) => (
   {value: concentration.id, label: concentration.id}
 ));
 
-const clusterAssetsBase = `${staticDataBaseUrl}/metabolism/digital-reconstruction/simulations`;
+const assetsBase = `${staticDataBaseUrl}/metabolism/digital-reconstruction/simulations`;
 const fixImagePath = 'fig_VNeu.png';
 
 export default function SimulationResults() {
@@ -40,12 +40,12 @@ export default function SimulationResults() {
 
       <div className={style.comparatorContainer}>
         <ImageViewer
-          src={`${clusterAssetsBase}/${fixImagePath}`}
+          src={`${assetsBase}/${fixImagePath}`}
           alt={''}
           className={style.img}
         />
         <ImageViewer
-          src={`${clusterAssetsBase}/${imagePath}`}
+          src={`${assetsBase}/${imagePath}`}
           alt={''}
           className={style.img}
         />

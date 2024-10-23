@@ -11,12 +11,12 @@ import DataContainer from '../../components/DataContainer';
 import DataSection from '../../components/DataSection';
 import ImageViewer from '../../components/ImageViewer';
 import textContent from '../../text-content/anatomy/experimental-data';
-import { clusterStaticDataBaseUrl, antBreakpoint, basePath } from '../../config';
+import { staticDataBaseUrl, antBreakpoint, basePath } from '../../config';
 import { PageTitles } from '../../layouts/Navigation/constans';
 
 
 const imgBase = `${basePath}/assets/images/experimental-data`;
-const assetsBase = `${clusterStaticDataBaseUrl}/anatomy/experimental-data`;
+const assetsBase = `${staticDataBaseUrl}/anatomy/experimental-data`;
 
 const downloadableMorphologies = [{
   href: `${assetsBase}/astrocyte-morphologies/astrocyte-morphology-1.tar.xz`,
