@@ -20,7 +20,7 @@ const TermsOfUse: React.FC = () => {
         </p>
 
         <p>
-          Here BBP provides you NGV data (collectively and as further described, the "<strong>Data</strong>"),
+          Here BBP provides you NGV data (collectively and as further described, the &apos;<strong>Data</strong>&apos;),
           which includes quantitative information or qualitative statements collected, owned by or
           licensed to BBP in the course of its scientific work by experimentation, observation, modeling,
           interview or other methods, or information derived from existing evidence<sup>*</sup>.
@@ -34,7 +34,7 @@ const TermsOfUse: React.FC = () => {
 
         <p>
           By accessing, downloading and using the Portal and the Data, you agree to the following
-          terms of use (these "<strong>Terms</strong>"). If you do not agree with any of these Terms,
+          terms of use (these &apos;<strong>Terms</strong>&apos;). If you do not agree with any of these Terms,
           please do not use the Portal. We may change the Terms at any time without prior notice,
           and your continued use of any of the Sites following any changes is an agreement by you
           to the change in Terms. We may change, suspend, discontinue, or remove any part of the Portal

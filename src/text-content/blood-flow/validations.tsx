@@ -41,12 +41,12 @@ const textContent = {
     </small>
   ),
 
-  figure3Title: (<p>The zoomed-in portion offers a clearer view of the distribution's characteristics in the blood flow distribution for large vessels ranging in diameter superior to 14 μm.</p>),
+  figure3Title: (<p>The zoomed-in portion offers a clearer view of the distribution&apos;s characteristics in the blood flow distribution for large vessels ranging in diameter superior to 14 μm.</p>),
 
   figure3ImgLegend: (
     <small>
       <strong>Figure: </strong>
-      (A) Velocity distribution for capillaries ranging in diameter from 4 to 6 μm, (B) Velocity distribution for large vessels depicting a diameter <span>≥</span> 14 μm. The zoomed-in portion offers a clearer view of the distribution's characteristics.
+      (A) Velocity distribution for capillaries ranging in diameter from 4 to 6 μm, (B) Velocity distribution for large vessels depicting a diameter <span>≥</span> 14 μm. The zoomed-in portion offers a clearer view of the distribution&apos;s characteristics.
     </small>
   ),
 
