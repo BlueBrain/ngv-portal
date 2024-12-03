@@ -6,7 +6,6 @@
     "analyze": "ANALYZE=true next build",
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "next-sitemap",
     "start": "next start -p 8000",
     "export": "next export",
     "lint": "next lint"
