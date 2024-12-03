@@ -37,9 +37,9 @@ export const cardsData: Cards[] = [
         tissue with approximately 16,000 morphologically detailed neurons, its
         microvasculature, and approximately 2,500 morphologically detailed protoplasmic
         astrocytes. In order to maintain the local connectivity, the microcircuit was
-        surrounded by an NGV region, approximately 0.2% of the rat's brain. A total of
+        surrounded by an NGV region, approximately 0.2% of the rat&apos;s brain. A total of
         14,402 astrocytes populated the bounding region, co-localized with 88,541
-        neurons and 1.37 m of vasculature wiring. The reconstruction's consistency with
+        neurons and 1.37 m of vasculature wiring. The reconstruction&apos;s consistency with
         a wide array of experimental measurements allows novel predictions of the
         numbers and locations of astrocytes and astrocytic processes that support
         different types of neurons. This allows anatomical reconstruction of the spatial

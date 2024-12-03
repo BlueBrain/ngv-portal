@@ -14,7 +14,7 @@ import DataContainer from '../../components/DataContainer';
 import DataSection from '../../components/DataSection';
 import ImageViewer from '../../components/ImageViewer';
 import Video, { composeSources } from '../../components/VideoPlayer';
-import { clusterStaticDataBaseUrl, antBreakpoint, basePath } from '../../config';
+import { staticDataBaseUrl, antBreakpoint, basePath } from '../../config';
 import textContent from '../../text-content/anatomy/reconstruction-data';
 import { PageTitles } from '@/layouts/Navigation/constans';
 
@@ -33,7 +33,7 @@ const astrocyticPythonCodeStr = [
 ].join('\n');
 
 const imgBase = `${basePath}/assets/images/reconstruction-data`;
-const assetsBase = `${clusterStaticDataBaseUrl}/anatomy/reconstruction-data`;
+const assetsBase = `${staticDataBaseUrl}/anatomy/reconstruction-data`;
 
 const downloadableMorphologies = [{
   href: `${assetsBase}/synthesized-astrocyte-morphologies/GLIA_0000000004100.h5`,
@@ -104,7 +104,7 @@ export default function AnatomyRecDataView() {
             sources={composeSources('/anatomy/reconstruction-data/NGV_DISS149_MASTER_WITH_EFFECTS')}
             muted
             defaultSize={720}
-            poster={`${clusterStaticDataBaseUrl}/anatomy/reconstruction-data/NGV_DISS149_MASTER_WITH_EFFECTS-poster.jpg`}
+            poster={`${staticDataBaseUrl}/anatomy/reconstruction-data/NGV_DISS149_MASTER_WITH_EFFECTS-poster.jpg`}
           />
           <Row gutter={16} className="mt-2 mb-1">
             <Col xs={24} sm={8} className="mb-1">
@@ -145,7 +145,7 @@ export default function AnatomyRecDataView() {
           />
         </DataSection>
 
-        <DataSection title="Explore reconstructions" className="mt-4">
+        {/* <DataSection title="Explore reconstructions" className="mt-4">
           <p>Explore the NGV reconstructions interactively in your browser in 3D.</p>
 
           <ImageViewer
@@ -159,7 +159,7 @@ export default function AnatomyRecDataView() {
             <Button
               size="small"
               type="primary"
-              href="https://bbp.epfl.ch/ngv-viewer"
+              href="/ngv-viewer"
               target="_blank"
               rel="noopener noreferrer"
               icon={<LinkOutlined />}
@@ -167,7 +167,7 @@ export default function AnatomyRecDataView() {
               Open NGV Viewer
             </Button>
           </div>
-        </DataSection>
+        </DataSection> */}
 
         <DataSection title="Neuronal circuit" className="mt-4">
           <Row gutter={32}>
@@ -200,7 +200,7 @@ export default function AnatomyRecDataView() {
           </Row>
           <div className="text-right mt-3">
             <Button
-              href={`${assetsBase}/vasculature-graph-model/raw_pruned_cap_circuit_coo_inscribed_spec_atlas_translated.h5`}
+              href={`${assetsBase}/vasculature-graph-model/raw_pruned_cap_circuit_coo_inscribed_spec_atlas_translated.h5.tar.xz`}
               type="primary"
               size="small"
               icon={<DownloadOutlined />}
@@ -244,7 +244,7 @@ export default function AnatomyRecDataView() {
           </Row>
           <div className="text-right mt-3">
             <Button
-              href={`${assetsBase}/overlapping-microdomains/overlapping_microdomains.h5`}
+              href={`${assetsBase}/overlapping-microdomains/overlapping_microdomains.h5.tar.xz`}
               type="primary"
               size="small"
               icon={<DownloadOutlined />}
@@ -285,7 +285,7 @@ export default function AnatomyRecDataView() {
           </Row>
           <div className="text-right mt-3">
             <Button
-              href={`${assetsBase}/endfeet-data/endfeet_data.json`}
+              href={`${assetsBase}/endfeet-data/endfeet_data.json.tar.xz`}
               type="primary"
               size="small"
               icon={<DownloadOutlined />}

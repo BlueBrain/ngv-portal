@@ -16,7 +16,7 @@ export enum PageTitles {
   ANATOMY = 'Anatomy',
   METABOLISM_UNITARY_MODEL = 'Metabolism - Unitary Model',
   BLOOD_FLOW = 'Blood flow',
-  
+
   EXPERIMENTAL_DATA = 'Experimental data',
   RECONSTRUCION_DATA = 'Reconstruction data',
   DIGITAL_RECONSTRUCTIONS = 'Digital reconstructions',
@@ -67,11 +67,12 @@ export const navItems: NavItem[] = [
     id: 'dig',
     label: 'blood flow',
     href: Urls.BLOOD_FLOW,
+    disabled: true,
     children: [
-      {label: PageTitles.EXPERIMENTAL_DATA, href: Urls.EXPERIMENTAL_DATA},
-      {label: PageTitles.DIGITAL_RECONSTRUCTIONS, href: Urls.DIGITAL_RECONSTRUCTIONS},
-      {label: PageTitles.VALIDATION, href: Urls.VALIDATION},
-      {label: PageTitles.PREDICTION, href: Urls.PREDICTION},
+      {label: PageTitles.EXPERIMENTAL_DATA, href: Urls.EXPERIMENTAL_DATA, disabled: true},
+      {label: PageTitles.DIGITAL_RECONSTRUCTIONS, href: Urls.DIGITAL_RECONSTRUCTIONS, disabled: true},
+      {label: PageTitles.VALIDATION, href: Urls.VALIDATION, disabled: true},
+      {label: PageTitles.PREDICTION, href: Urls.PREDICTION, disabled: true},
     ]
   },
 ]

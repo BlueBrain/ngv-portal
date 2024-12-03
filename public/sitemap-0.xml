@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://bbp.epfl.ch/ngv-portal</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2024-10-23T09:55:08.762Z</lastmod></url>
+<url><loc>https://bbp.epfl.ch/ngv-portal/anatomy/experimental-data</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2024-10-23T09:55:08.763Z</lastmod></url>
+<url><loc>https://bbp.epfl.ch/ngv-portal/anatomy/predictions</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2024-10-23T09:55:08.763Z</lastmod></url>
+<url><loc>https://bbp.epfl.ch/ngv-portal/anatomy/reconstruction-data</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2024-10-23T09:55:08.763Z</lastmod></url>
+<url><loc>https://bbp.epfl.ch/ngv-portal/anatomy/validations</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2024-10-23T09:55:08.763Z</lastmod></url>
+<url><loc>https://bbp.epfl.ch/ngv-portal/blood-flow/digital-reconstructions</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2024-10-23T09:55:08.763Z</lastmod></url>
+<url><loc>https://bbp.epfl.ch/ngv-portal/blood-flow/experimental-data</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2024-10-23T09:55:08.763Z</lastmod></url>
+<url><loc>https://bbp.epfl.ch/ngv-portal/blood-flow/predictions</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2024-10-23T09:55:08.763Z</lastmod></url>
+<url><loc>https://bbp.epfl.ch/ngv-portal/blood-flow/validations</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2024-10-23T09:55:08.763Z</lastmod></url>
+<url><loc>https://bbp.epfl.ch/ngv-portal/glossary</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2024-10-23T09:55:08.763Z</lastmod></url>
+<url><loc>https://bbp.epfl.ch/ngv-portal/metabolism/digital-reconstructions</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2024-10-23T09:55:08.763Z</lastmod></url>
+<url><loc>https://bbp.epfl.ch/ngv-portal/metabolism/experimental-data</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2024-10-23T09:55:08.763Z</lastmod></url>
+<url><loc>https://bbp.epfl.ch/ngv-portal/metabolism/predictions</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2024-10-23T09:55:08.763Z</lastmod></url>
+<url><loc>https://bbp.epfl.ch/ngv-portal/metabolism/validations</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2024-10-23T09:55:08.763Z</lastmod></url>
+<url><loc>https://bbp.epfl.ch/ngv-portal/terms-of-use</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2024-10-23T09:55:08.763Z</lastmod></url>
+</urlset>
