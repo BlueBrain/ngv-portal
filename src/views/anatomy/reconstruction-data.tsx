@@ -145,7 +145,7 @@ export default function AnatomyRecDataView() {
           />
         </DataSection>
 
-        <DataSection title="Explore reconstructions" className="mt-4">
+        {/* <DataSection title="Explore reconstructions" className="mt-4">
           <p>Explore the NGV reconstructions interactively in your browser in 3D.</p>
 
           <ImageViewer
@@ -167,7 +167,7 @@ export default function AnatomyRecDataView() {
               Open NGV Viewer
             </Button>
           </div>
-        </DataSection>
+        </DataSection> */}
 
         <DataSection title="Neuronal circuit" className="mt-4">
           <Row gutter={32}>
